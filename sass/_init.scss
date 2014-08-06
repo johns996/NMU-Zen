@@ -1,0 +1,219 @@
+//
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import "init" declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+// - Last we define our custom mixins for this theme.
+//
+
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+//
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) Set $legacy-support-for-ie6
+//   and $legacy-support-for-ie7 to false.
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
+//   (use px for both or use % for both) and set the box-sizing variable to content-box.
+//
+// Zen does not require special handling for IE8 or later. But Compass uses that
+// variable for a couple edge cases. We include it for completeness sake. See
+// the documentation at http://compass-style.org/reference/compass/support/
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+
+//
+// Font faces, stacks and sizes.
+//
+
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $verdana; // The font family set on the html element.
+$font-body:        $verdana;
+$font-monospace:   $courier;
+
+//
+// NMU Fonts
+//
+/**
+ * @license
+ * MyFonts Webfont Build ID 2822837, 2014-06-03T19:26:12-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Humanist Slabserif 712 by Bitstream
+ * URL: http://www.myfonts.com//fonts/bitstream/humanist-slabserif-712/humanist-slabserif-712/
+ * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+ * Licensed pageviews: 10,000
+ *
+ * Webfont: Humanist Slabserif 712 Black by Bitstream
+ * URL: http://www.myfonts.com//fonts/bitstream/humanist-slabserif-712/black/
+ * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+ * Licensed pageviews: 10,000
+ *
+ * Webfont: Avenir 65 Medium by Linotype
+ * URL: http://www.myfonts.com//fonts/linotype/avenir/65-medium/
+ * Copyright: Copyright &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. Copyright &#x00A9; 1989 - 2002 Adobe Systems Incorporated.  All Rights Reserved.
+ * Licensed pageviews: 250,000
+ *
+ * Webfont: Avenir 95 Black by Linotype
+ * URL: http://www.myfonts.com//fonts/linotype/avenir/95-black/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 250,000
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2822837
+ *
+ * © 2014 MyFonts Inc
+ */
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2b12b5");
+@font-face {
+    font-family: 'HumanistSlabserif712BT-Roman';
+    src: url('../fonts/2B12B5_0_0.eot');
+    src: url('../fonts/2B12B5_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2B12B5_0_0.woff') format('woff'),url('../fonts/2B12B5_0_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'HumanistSlabserif712BT-Black';
+    src: url('../fonts/2B12B5_1_0.eot');
+    src: url('../fonts/2B12B5_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2B12B5_1_0.woff') format('woff'),url('../fonts/2B12B5_1_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url('../fonts/2B12B5_2_0.eot');
+    src: url('../fonts/2B12B5_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2B12B5_2_0.woff') format('woff'),url('../fonts/2B12B5_2_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Black';
+    src: url('../fonts/2B12B5_3_0.eot');
+    src: url('../fonts/2B12B5_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2B12B5_3_0.woff') format('woff'),url('../fonts/2B12B5_3_0.ttf') format('truetype');
+}
+
+// create some font stacks for each of the custom webfonts
+$humanist-roman: 		"HumanistSlabserif712BT-Roman","Times New Roman",Times,serif;
+$humanist-black:      "HumanistSlabserif712BT-Black","Times New Roman",Times,serif;
+$avenir-medium:		"AvenirLTStd-Medium","Helvetica Neue",Helvetica,Tahoma,Verdana,Arial,sans-serif;
+$avenir-black:       "AvenirLTStd-Black","Helvetica Neue",Helvetica,Tahoma,Verdana,Arial,sans-serif;
+
+//
+// Colors, etc.
+//
+
+$nmu-green: #00754d;
+$nmu-green-dark: #065540;
+$nmu-green-darker: #034030;
+
+$nmu-gold: #ffdc23;
+$nmu-gold-dark: #F6D703;
+$nmu-gold-darker: #e5c908;
+
+$nmu-black: #434345;
+$nmu-black-dark: #333333;
+
+$nmu-gray-lighter:#cccccc;
+$nmu-gray: #999999;
+$nmu-gray-dark: #848484;
+$nmu-gray-darker: #585858;
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px;
+
+// The height of the navigation container.
+$nav-height: 3em;
+
+// Tab styling.
+$tabs-container-bg: #fff;
+$tabs-border: #bbb;
+
+//
+// Set up some pre-defined media queries
+// call these with @media all and #{$mq-xxxx}
+//
+$mq-only-mobile: '(max-width 479px)'; //target only small screens, does not scale upwards
+$mq-narrow: '(min-width: 480px)';  //only screens larger than 480
+$mq-only-narrow: '(min-width: 480px) and (max-width: 959px)';  //target only narrow screens, does not scale upwards
+$mq-normal: '(min-width: 960px)';  //only screens larger than 960
+$mq-only-normal: '(min-width: 960px) and (max-width: 1224px)';  //target only normal screens, does not scale upwards
+$mq-wide: '(min-width: 1225px)';  //only screens larger than 1225
+
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+
+// Add Compass' IE and vendor prefix support variables.
+@import "compass/support";
+// Better than Drupal's clearfix.
+@import "compass/utilities/general/clearfix";
+// See http://compass-style.org/help/tutorials/spriting/
+@import "compass/utilities/sprites";
+// Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/css3";
+// Helps set up a vertical rhythm.
+@import "compass/typography/vertical_rhythm";
+// Add the Zen Grids responsive layout mixins.
+@import "zen";
+
+// Now we add our custom helper mixins.
+@import "mixins";

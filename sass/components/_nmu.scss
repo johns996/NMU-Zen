@@ -1,0 +1,72 @@
+/**
+ * @file
+ * SMACSS Modules - NMU Specific
+ *
+ * Adds modular sets of styles.
+ *
+ * Additional useful selectors can be found in Zen's online documentation.
+ * https://drupal.org/node/1707736
+ *
+ *	NMU Fonts
+ * $humanist-roman -serif
+ *	$humanist-black
+ *	$avenir-medium - sanserif
+ *	$avenir-black
+ *
+ */
+
+/**
+ * Header.
+ */
+
+.header {
+	background: $nmu-green;
+}
+#header_region_first {
+	float:left;
+}
+
+#header_region_second {
+	float:right;
+}
+
+/**
+ * Navigation.
+ */
+
+#navigation {
+	background:$nmu-green-darker;
+	ul {
+		margin:0;
+		padding:0;
+		list-style-type: none;
+	}
+	ul li {
+		display:inline-block;
+	}
+}
+
+/**
+ * Body.
+ */
+#main {background:$nmu-gray-lighter;}
+#content {background:white;}
+
+
+/**
+ * Footer.
+ */
+
+footer {background:$nmu-green;}
+
+.postscript_region {
+	font-size: .8em;
+	width: 160px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#footer_region_first,
+#footer_region_second {
+	float:left;
+}
