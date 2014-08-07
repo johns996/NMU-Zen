@@ -15,14 +15,23 @@ function zen_nmu_form_system_theme_settings_alter(&$form, &$form_state, $form_id
 
   // Create the form using Forms API: http://api.drupal.org/api/7
 
-  /* -- Delete this line if you want to use this setting
-  $form['zen_nmu_example'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('zen_nmu sample setting'),
-    '#default_value' => theme_get_setting('zen_nmu_example'),
-    '#description'   => t("This option doesn't do anything; it's just an example."),
+  $form['zen_nmu_framework_addins'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('NMU Framework Addins'),
   );
-  // */
+  $form['zen_nmu_framework_addins']['bootstrap'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable Bootstrap'),
+    '#default_value' => theme_get_setting('bootstrap'),
+    '#description'   => t("This option enables the bootstrap framework via the MaxCDN."),
+  );
+  $form['zen_nmu_framework_addins']['fontawesome'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable FontAwesome'),
+    '#default_value' => theme_get_setting('fontawesome'),
+    '#description'   => t("This option enables the Font Awesome web font via the MaxCDN."),
+  );
+
 
   // Remove some of the base theme's settings.
   /* -- Delete this line if you want to turn off this setting.

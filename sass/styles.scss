@@ -10,7 +10,8 @@
 @import "init";
 
 /* HTML element (SMACSS base) rules */
-@import "normalize";
+//we're using bootstrap's normalize instead
+//@import "normalize";
 
 /* Layout rules */
 @import "layouts/responsive";
@@ -25,3 +26,4 @@
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+
