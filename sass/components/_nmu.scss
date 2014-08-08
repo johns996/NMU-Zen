@@ -19,38 +19,24 @@
  * Header.
  */
 
-.header {
+.region-top-navigation {
+	background: $nmu-black;
+}
+.region-branding {
 	background: $nmu-green;
 }
-#header_region_first {
-	float:left;
-}
-
-#header_region_second {
-	float:right;
-}
-
-/**
- * Navigation.
- */
-
-#navigation {
+.region-main-navigation {
 	background:$nmu-green-darker;
-	ul {
-		margin:0;
-		padding:0;
-		list-style-type: none;
-	}
-	ul li {
-		display:inline-block;
-	}
 }
 
 /**
  * Body.
  */
 #main {background:$nmu-gray-lighter;}
-#content {background:white;}
+#content {
+	background:white;
+	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
+}
 
 
 /**

@@ -85,10 +85,11 @@ stylesheets[all][] = css/styles.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
-regions[header]         = Header
-regions[navigation]     = Navigation
-;regions[highlighted]    = Highlighted
-;regions[help]           = Help
+regions[top_navigation] = Top Navigation
+regions[branding]			= Branding
+regions[main_navigation]= Main Navigation
+;regions[highlighted]   = Highlighted
+;regions[help]          = Help
 regions[content]        = Content
 regions[sidebar_first]  = Sidebar First
 regions[sidebar_second] = Sidebar Second
