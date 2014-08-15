@@ -18,15 +18,8 @@ Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
     // Place your code here.
-		$(document).ready(function() {
-			$('#main-nav-li-one').mouseenter(function(){
-				$('#panel-one').show();
-				$('a', this).addClass('active');
-			});
-			$('#main-navigation-wrapper').mouseleave(function(){  //only hide the nav when the mouse leaves the wrapper div
-				$('.navigation-panel:visible').hide();  //hide any visible nav panel since we are leaving the wrapper area
-				$('.main-navigation a.active').removeClass('active');  //remove any active nav classes
-			});
+		$(document).on('click', '.yamm .dropdown-menu', function(e) {
+			e.stopPropagation()
 		});
 
   }

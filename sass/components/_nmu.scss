@@ -61,48 +61,17 @@
 	letter-spacing:.06em;
 	padding:.5em;
 }
+
 .region-main-navigation {
 	background:$nmu-green-darker;
 	padding:0;
 }
-.main-navigation {
-	color:white;
-	text-align:center;
-	ul {
-		margin: 0;
-		padding: 0;
-		line-height:2.476em;
-	}
-	li {
-		display: inline;
-		list-style-type: none;
-		margin:0 .02em;
-		padding:0;
-		a {
-			color:white;
-			padding: .625em 1.46em;
-			@include transition(all 0.3s ease-in-out);  //this has to be on the a for the out part of the ease to fire.  it will still transition anything done to the a tag
-		}
-		a:hover {
-			background:white;
-			color:$nmu-green-darker;
-			padding: .625em 1.46em;
-			text-decoration:none;
-		}
-		a.active {
-			background:white;
-			padding: .625em 1.46em;
-			color:$nmu-green-darker;
-		}
-	}
+.region-main-navigation nav {
+	@include border-radius(0);  //remove the rounded corners on the bootstrap navbar
 }
-.navigation-panel {
-	width:100%;
-	background:white;
-}
-#panel-one,
-#panel-two {
-	display:none;
+.dropdown-menu-width-wrapper {
+	max-width:1000px;
+	margin:0 auto;
 }
 /**
  * Body.
