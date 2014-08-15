@@ -60,7 +60,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and #{$mq-only-narrow} {
+@media all and #{$mq-bootstrap-only-sm} { //$mq-only-narrow was zen default
 
   $zen-column-count: 3;
 
@@ -138,7 +138,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 5 grid columns for larger screens.
  */
-@media all and #{$mq-normal} {
+@media all and #{$mq-bootstrap-md-min} { //$mq-normal was zen default
 
   $zen-column-count: 5;
 

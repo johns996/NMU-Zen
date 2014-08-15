@@ -191,17 +191,27 @@ $tabs-border: #bbb;
 // Set up some pre-defined media queries
 // call these with @media all and #{$mq-xxxx}
 //
-$mq-only-mobile: '(max-width 479px)'; //target only small screens, does not scale upwards
-$mq-narrow: '(min-width: 480px)';  //only screens larger than 480
-$mq-only-narrow: '(min-width: 480px) and (max-width: 959px)';  //target only narrow screens, does not scale upwards
-$mq-normal: '(min-width: 960px)';  //only screens larger than 960
-$mq-only-normal: '(min-width: 960px) and (max-width: 1224px)';  //target only normal screens, does not scale upwards
-$mq-wide: '(min-width: 1225px)';  //only screens larger than 1225
 
-//bootstrap has a different set of media query sizes
-//these need to be compared and merged with zen's
-//it's possible they could live next to each other, but then zen stuff will collapse and bootstrap stuff will not
-$mq-bootstrap-screem-sm-min: '(min-width: 768px)';
+/* these were the zen/old-nmu standard media queries
+	$mq-only-mobile: '(max-width 479px)'; //target only small screens, does not scale upwards
+	$mq-narrow: '(min-width: 480px)';  //only screens larger than 480
+	$mq-only-narrow: '(min-width: 480px) and (max-width: 959px)';  //target only narrow screens, does not scale upwards
+	$mq-normal: '(min-width: 960px)';  //only screens larger than 960
+	$mq-only-normal: '(min-width: 960px) and (max-width: 1224px)';  //target only normal screens, does not scale upwards
+	$mq-wide: '(min-width: 1225px)';  //only screens larger than 1225
+*/
+
+//these are the default bootstrap media query sizes. zen has been adapted to use these
+$mq-bootstrap-xs-min: '(min-width: 480px)';
+$mq-bootstrap-xs-max: '(max-width: 479px)';
+$mq-bootstrap-sm-min: '(min-width: 768px)';
+$mq-bootstrap-sm-max: '(max-width: 767px)';
+$mq-bootstrap-md-min: '(min-width: 992px)';
+$mq-bootstrap-md-max: '(max-width: 991px)';
+$mq-bootstrap-lg-min: '(min-width: 1200px)';
+
+$mq-bootstrap-only-sm: '(min-width: 480px) and (max-width: 991px)';  //target only smaller screens, does not scale upwards
+$mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target only normal screens, does not scale upwards
 
 // =============================================================================
 // Partials to be shared with all .scss files.

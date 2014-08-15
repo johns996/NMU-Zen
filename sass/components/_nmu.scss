@@ -19,6 +19,7 @@
  * Header.
  */
 
+//* top navigation
 .region-top-navigation {
 	background: $nmu-black;
 	color:white;
@@ -52,6 +53,7 @@
 	float:right;
 }
 
+//* branding
 .region-branding {
 	background: $nmu-green;
 	text-align:center;
@@ -62,16 +64,28 @@
 	padding:.5em;
 }
 
+//* main navigation
 .region-main-navigation {
 	background:$nmu-green-darker;
-	padding:0;
-}
-.region-main-navigation nav {
-	@include border-radius(0);  //remove the rounded corners on the bootstrap navbar
+	padding:0;  //make the nav bar fill up the space available
+	nav {
+		@include border-radius(0);  //remove the rounded corners on the bootstrap navbar
+	}
+	//adjust the margin on the nav elements based on screen size
+	@media all and #{$mq-bootstrap-sm-min} {
+		li.dropdown {
+			margin:0 18px;
+		}
+	}
+	@media all and #{$mq-bootstrap-md-min} {
+		li.dropdown {
+			margin:0 30px;
+		}
+	}
 }
 
-@media all and #{$mq-bootstrap-screem-sm-min} {
-	//center align the navbar text on all non mobile screens
+@media all and #{$mq-bootstrap-sm-min} {
+	//center align the navbar text on all non collapsed layouts
 	.navbar-center.navbar .nav,
 	.navbar-center.navbar .nav > li {
 			float:none;
@@ -177,4 +191,12 @@
 #footer_region_first,
 #footer_region_second {
 	float:left;
+}
+
+/**
+ * Generic Classes.
+ */
+
+.allcaps {
+	text-transform:uppercase;
 }

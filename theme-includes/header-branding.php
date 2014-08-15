@@ -2,4 +2,4 @@
 //nmu-zen
 ?>
 
-<div class="branding">Northern Michigan University</div>
+<div class="branding allcaps">Northern Michigan University</div>

@@ -2,41 +2,6 @@
 //nmu-zen
 ?>
 
-<?php
-/*
-<div id="main-navigation-wrapper">
-	<div class="main-navigation">
-		<ul>
-			<li id="main-nav-li-one" class="hover-class-one"><a href="">Item One</a></li>
-			<li id="main-nav-li-two"><a href="">Item Two</a></li>
-			<li><a href="">Item Three</a></li>
-			<li><a href="">Item Four</a></li>
-			<li><a href="">Item Five</a></li>
-			<li><a href="">Item Six</a></li>
-		<ul>
-	</div>
-	<div class="navigation-panel" id="panel-one">
-		<p>Navigation panel one</p>
-		<ul>
-			<li>one</li>
-			<li>two</li>
-			<li>three</li>
-		</ul>
-	</div>
-	<div class="navigation-panel" id="panel-two">
-		<p>Navigation panel two</p>
-		<ul>
-			<li>one</li>
-			<li>two</li>
-			<li>three</li>
-		</ul>
-	</div>
-</div>
-*/
-?>
-
-
-
 <nav class="navbar yamm navbar-default navbar-center" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,7 +20,7 @@
 
        <!-- one -->
         <li class="dropdown yamm-fw">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown #1</a>
+          <a href="#" class="dropdown-toggle allcaps" data-toggle="dropdown">About</a>
           <ul class="dropdown-menu yamm-content" role="menu">
 						<li class="dropdown-menu-width-wrapper">
 							<div class="row">
@@ -94,7 +59,7 @@
 
         <!-- two -->
         <li class="dropdown yamm-fw">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown #2</a>
+          <a href="#" class="dropdown-toggle allcaps" data-toggle="dropdown">Enroll</a>
 					<ul class="dropdown-menu yamm-content" role="menu">
 						<li class="dropdown-menu-width-wrapper">
 							<div class="row">
@@ -113,7 +78,97 @@
 									</ul>
 								</div>
 								<div class="col-sm-6">
-									<img src="http://lorempixel.com/200/150" align="right" />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									<img src="http://lorempixel.com/200/125" align="right" />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Sed egestas posuere mauris, at malesuada nibh pulvinar id. Morbi accumsan nibh diam, id ornare nisl lacinia hendrerit.
+									Pellentesque elementum a odio at tempor. Nulla est lorem, malesuada nec vehicula at, auctor in odio.
+								</div>
+							</div>
+						</li>
+					</ul>
+        </li>
+
+        <!-- three -->
+        <li class="dropdown yamm-fw">
+          <a href="#" class="dropdown-toggle allcaps" data-toggle="dropdown">Academics</a>
+					<ul class="dropdown-menu yamm-content" role="menu">
+						<li class="dropdown-menu-width-wrapper">
+							<div class="row">
+								<div class="col-sm-3">
+									<ul class="list-unstyled" role="menu">
+										<li><a href="#">one</a></li>
+										<li><a href="#">two</a></li>
+										<li><a href="#">three</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<ul class="list-unstyled" role="menu">
+										<li><a href="#">one</a></li>
+										<li><a href="#">two</a></li>
+										<li><a href="#">three</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-6">
+									<img src="http://lorempixel.com/200/125" align="right" />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Sed egestas posuere mauris, at malesuada nibh pulvinar id. Morbi accumsan nibh diam, id ornare nisl lacinia hendrerit.
+									Pellentesque elementum a odio at tempor. Nulla est lorem, malesuada nec vehicula at, auctor in odio.
+								</div>
+							</div>
+						</li>
+					</ul>
+        </li>
+
+        <!-- four -->
+        <li class="dropdown yamm-fw">
+          <a href="#" class="dropdown-toggle allcaps" data-toggle="dropdown">Sports</a>
+					<ul class="dropdown-menu yamm-content" role="menu">
+						<li class="dropdown-menu-width-wrapper">
+							<div class="row">
+								<div class="col-sm-3">
+									<ul class="list-unstyled" role="menu">
+										<li><a href="#">one</a></li>
+										<li><a href="#">two</a></li>
+										<li><a href="#">three</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<ul class="list-unstyled" role="menu">
+										<li><a href="#">one</a></li>
+										<li><a href="#">two</a></li>
+										<li><a href="#">three</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-6">
+									<img src="http://lorempixel.com/200/125" align="right" />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Sed egestas posuere mauris, at malesuada nibh pulvinar id. Morbi accumsan nibh diam, id ornare nisl lacinia hendrerit.
+									Pellentesque elementum a odio at tempor. Nulla est lorem, malesuada nec vehicula at, auctor in odio.
+								</div>
+							</div>
+						</li>
+					</ul>
+        </li>
+
+        <!-- five -->
+        <li class="dropdown yamm-fw">
+          <a href="#" class="dropdown-toggle allcaps" data-toggle="dropdown">Campus Life</a>
+					<ul class="dropdown-menu yamm-content" role="menu">
+						<li class="dropdown-menu-width-wrapper">
+							<div class="row">
+								<div class="col-sm-3">
+									<ul class="list-unstyled" role="menu">
+										<li><a href="#">one</a></li>
+										<li><a href="#">two</a></li>
+										<li><a href="#">three</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<ul class="list-unstyled" role="menu">
+										<li><a href="#">one</a></li>
+										<li><a href="#">two</a></li>
+										<li><a href="#">three</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-6">
+									<img src="http://lorempixel.com/200/125" align="right" />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									Sed egestas posuere mauris, at malesuada nibh pulvinar id. Morbi accumsan nibh diam, id ornare nisl lacinia hendrerit.
 									Pellentesque elementum a odio at tempor. Nulla est lorem, malesuada nec vehicula at, auctor in odio.
 								</div>
