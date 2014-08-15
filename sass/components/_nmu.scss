@@ -21,29 +21,162 @@
 
 .region-top-navigation {
 	background: $nmu-black;
+	color:white;
+	font-size:.85em;
+	ul {
+		margin: 0;
+		padding: 0;
+		line-height:2.5em;
+	}
+	li {
+		display: inline;
+		list-style-type: none;
+		margin:0 .02em;
+		padding:0;
+		a {
+			padding: .325em .73em;
+			color:$nmu-gray-lighter;
+			@include transition(all 0.3s ease-in-out);  //this has to be on the a for the out part of the ease to fire.  it will still transition anything done to the a tag
+		}
+		a:hover {
+			color:white;
+			text-decoration:underline;
+		}
+	}
 }
+
+.top-navigation-audience {
+	float:left;
+}
+.top-navigation-toolbox {
+	float:right;
+}
+
 .region-branding {
 	background: $nmu-green;
+	text-align:center;
+	font-size:3em;
+	font-family:$avenir-black;
+	color:white;
+	letter-spacing:.06em;
+	padding:.5em;
 }
 .region-main-navigation {
 	background:$nmu-green-darker;
+	padding:0;
 }
-
+.main-navigation {
+	color:white;
+	text-align:center;
+	ul {
+		margin: 0;
+		padding: 0;
+		line-height:2.476em;
+	}
+	li {
+		display: inline;
+		list-style-type: none;
+		margin:0 .02em;
+		padding:0;
+		a {
+			color:white;
+			padding: .625em 1.46em;
+			@include transition(all 0.3s ease-in-out);  //this has to be on the a for the out part of the ease to fire.  it will still transition anything done to the a tag
+		}
+		a:hover {
+			background:white;
+			color:$nmu-green-darker;
+			padding: .625em 1.46em;
+			text-decoration:none;
+		}
+		a.active {
+			background:white;
+			padding: .625em 1.46em;
+			color:$nmu-green-darker;
+		}
+	}
+}
+.navigation-panel {
+	width:100%;
+	background:white;
+}
+#panel-one,
+#panel-two {
+	display:none;
+}
 /**
  * Body.
  */
-#main {background:$nmu-gray-lighter;}
+#main {
+
+}
 #content {
+	padding-top:1em;
 	background:white;
 	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
+	min-height:500px;
 }
 
+.video-loop {
+	max-height:500px;
+	overflow:hidden;
+	margin-bottom:20px;
+	position:relative;
+}
+.video-frame {
+	width:100%;
+	height:auto;
+	margin-top:-10%;
+}
+.video-buttons {
+	position:absolute;
+	bottom:10%;
+	left:28%;
+	a {
+		width:250px;
+		background:white;
+		display:block;
+		float:left;
+		text-align:center;
+		margin:5px;
+		padding:10px;
+		@include opacity(0.5);
+		@include transition(all 0.3s ease-in-out);
+		&:hover {
+			@include opacity(0.8);
+			text-decoration:none;
+		}
+	}
+}
 
 /**
  * Footer.
  */
 
-#footer {background:$nmu-green;}
+#footer {
+	background: $nmu-black;
+}
+.footer-main {
+	color:$nmu-gray-lighter;
+	font-family:$humanist-roman;
+	text-align:center;
+	margin:4em 2em;
+	h5 {
+		font-size:1.2em;
+		font-family:$humanist-roman;
+	}
+	p {
+		margin-bottom:5px;
+	}
+	a {
+		color:$nmu-gray-lighter;
+		@include transition(all 0.3s ease-in-out);
+		&:hover {
+			color:white;
+		}
+	}
+
+}
 
 .postscript_region {
 	font-size: .8em;
