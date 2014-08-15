@@ -69,10 +69,30 @@
 .region-main-navigation nav {
 	@include border-radius(0);  //remove the rounded corners on the bootstrap navbar
 }
+
+@media all and #{$mq-bootstrap-screem-sm-min} {
+	//center align the navbar text on all non mobile screens
+	.navbar-center.navbar .nav,
+	.navbar-center.navbar .nav > li {
+			float:none;
+			display:inline-block;
+			vertical-align: top;
+	}
+	.navbar-center .navbar-collapse {
+			text-align:center;
+	}
+	.navbar-center .dropdown-menu {
+			text-align: left;
+	}
+}
+
+//wrap the navbar dropdowns in a max width div
 .dropdown-menu-width-wrapper {
-	max-width:1000px;
+	max-width:1200px;
 	margin:0 auto;
 }
+
+
 /**
  * Body.
  */

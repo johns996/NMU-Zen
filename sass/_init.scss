@@ -198,6 +198,11 @@ $mq-normal: '(min-width: 960px)';  //only screens larger than 960
 $mq-only-normal: '(min-width: 960px) and (max-width: 1224px)';  //target only normal screens, does not scale upwards
 $mq-wide: '(min-width: 1225px)';  //only screens larger than 1225
 
+//bootstrap has a different set of media query sizes
+//these need to be compared and merged with zen's
+//it's possible they could live next to each other, but then zen stuff will collapse and bootstrap stuff will not
+$mq-bootstrap-screem-sm-min: '(min-width: 768px)';
+
 // =============================================================================
 // Partials to be shared with all .scss files.
 // =============================================================================

@@ -37,7 +37,7 @@
 
 
 
-<nav class="navbar yamm navbar-default" role="navigation">
+<nav class="navbar yamm navbar-default navbar-center" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -57,7 +57,7 @@
         <li class="dropdown yamm-fw">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown #1</a>
           <ul class="dropdown-menu yamm-content" role="menu">
-						<li>
+						<li class="dropdown-menu-width-wrapper">
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
@@ -96,7 +96,7 @@
         <li class="dropdown yamm-fw">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown #2</a>
 					<ul class="dropdown-menu yamm-content" role="menu">
-						<li>
+						<li class="dropdown-menu-width-wrapper">
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
