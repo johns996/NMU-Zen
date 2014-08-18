@@ -73,14 +73,29 @@
 	}
 	//adjust the margin on the nav elements based on screen size
 	@media all and #{$mq-bootstrap-sm-min} {
+		.nav>li>a {  //add padding for the hover background color
+			padding-left:30px;
+			padding-right:30px;
+		}
 		li.dropdown {
-			margin:0 18px;
+			margin: 0 1px;
 		}
 	}
 	@media all and #{$mq-bootstrap-md-min} {
-		li.dropdown {
-			margin:0 30px;
+		.nav>li>a {  //add padding for the hover background color
+			padding-left:50px;
+			padding-right:50px;
 		}
+	}
+
+	.navbar-default .navbar-nav>li>a:hover,
+	.navbar-default .navbar-nav>li>a {
+		@include transition-duration(.3s);
+	}
+	.navbar-default .navbar-nav>li>a:hover,
+	.navbar-default .navbar-nav>li>a:focus {
+		background:$nmu-green;
+		color:white;
 	}
 }
 

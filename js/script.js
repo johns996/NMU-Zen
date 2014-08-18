@@ -22,6 +22,23 @@ Drupal.behaviors.my_custom_behavior = {
 			e.stopPropagation()
 		});
 
+		// add fade in animation to bootstrap dropdowns
+		$('.dropdown').on('show.bs.dropdown', function(e){
+			$(this).find('.dropdown-menu').first().stop(true, true).fadeIn(200);
+		});
+
+		// add fade out animation to bootstrap dropdowns
+		$('.dropdown').on('hide.bs.dropdown', function(e){
+			$(this).find('.dropdown-menu').first().stop(true, true).fadeOut(300);
+		});
+
+		$('#main-navigation-collapse a').click(function(){
+				//make a nav item loose its focus if a user clicks on the item to hide the dropdown menu
+				//not 100% sure why this lets the item come into focus on the first click
+				$(this).blur();
+		});
+
+
   }
 };
 
