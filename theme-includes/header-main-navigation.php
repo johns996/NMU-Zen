@@ -2,7 +2,7 @@
 //nmu-zen
 ?>
 
-<nav class="navbar yamm navbar-default navbar-center" role="navigation">
+<nav id="header-main-navigation" class="navbar yamm navbar-default navbar-center navbar-static-top" role="navigation" data-spy="affix" data-offset-top="131">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

@@ -79,6 +79,11 @@
 		@include box-shadow(none);
 	}
 
+	nav.affix {
+		width:100%;
+		top:0;
+	}
+
 	/* this css will make the dropdown menus show on hover
 	 * it still needs a lot of work before it will be fully functional
 	 * work includes some smoother animations and an active class being applied to hovered element
