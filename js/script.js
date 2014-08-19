@@ -38,6 +38,17 @@ Drupal.behaviors.my_custom_behavior = {
 				$(this).blur();
 		});
 
+		//* pause and play button
+		var videoID = document.getElementById('fearless-video');
+		function pauseHandler1() {
+				videoID.pause();
+				$(this).one('click', pauseHandler2);
+		}
+		function pauseHandler2() {
+				videoID.play();
+				$(this).one('click', pauseHandler1);
+		}
+		$('.video-controls').one('click', pauseHandler1);
 
   }
 };

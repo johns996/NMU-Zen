@@ -66,60 +66,106 @@
 
 //* main navigation
 .region-main-navigation {
-	background:$nmu-green-darker;
 	padding:0;  //make the nav bar fill up the space available
+
+	//* customize the bootstrap nav defaults
 	nav {
-		@include border-radius(0);  //remove the rounded corners on the bootstrap navbar
+		background:$nmu-green-darker;
+		border-left:none;
+		border-right:none;
+		border-top:1px solid $nmu-gray-lighter;
+		@include border-radius(0);
+		border-bottom:none;
+		@include box-shadow(none);
 	}
-	//adjust the margin on the nav elements based on screen size
+
+	/* this css will make the dropdown menus show on hover
+	 * it still needs a lot of work before it will be fully functional
+	 * work includes some smoother animations and an active class being applied to hovered element
+	.dropdown:hover .dropdown-menu {
+			display: block;
+	 }
+	*/
+
+	//* adjust the margin on the nav elements based on screen size
 	@media all and #{$mq-bootstrap-sm-min} {
-		.nav>li>a {  //add padding for the hover background color
-			padding-left:30px;
+		.nav>li>a {
+			padding-left:30px; //* add padding for the hover background color
 			padding-right:30px;
 		}
 		li.dropdown {
-			margin: 0 1px;
+			margin: 0 1px;  //* add just a small margin between the nav items
 		}
 	}
 	@media all and #{$mq-bootstrap-md-min} {
-		.nav>li>a {  //add padding for the hover background color
-			padding-left:50px;
+		.nav>li>a {
+			padding-left:50px; //* more padding for bigger screens
 			padding-right:50px;
 		}
 	}
 
-	.navbar-default .navbar-nav>li>a:hover,
 	.navbar-default .navbar-nav>li>a {
-		@include transition-duration(.3s);
+		color:$nmu-gray-lighter;
+		@include transition-duration(.3s);  //* add the transition to the a tag so it fires on mouseover and mouseout
+		text-shadow:none;
+		&:hover,
+		&:focus{
+			background:white;
+			color:$nmu-green;
+			text-shadow:none;
+		}
 	}
-	.navbar-default .navbar-nav>li>a:hover,
-	.navbar-default .navbar-nav>li>a:focus {
-		background:$nmu-green;
-		color:white;
+
+	//* make sure the nav item stays green even when the focus/hover is removed from the navbar item
+	.navbar-default .navbar-nav>.open>a {
+		color:$nmu-green;
+		background:white;
 	}
+
+	//* center align the navbar text on all non collapsed layouts
+	@media all and #{$mq-bootstrap-sm-min} {
+		.navbar-center.navbar .nav,
+		.navbar-center.navbar .nav > li {
+				float:none;
+				display:inline-block;
+				vertical-align: top;
+		}
+		.navbar-center .navbar-collapse {
+				text-align:center;
+		}
+		.navbar-center .dropdown-menu {
+				text-align: left;
+		}
+	}
+
+	//* wrap the navbar dropdowns in a max width div
+	.dropdown-menu-width-wrapper {
+		max-width:1200px;
+		margin:0 auto;
+	}
+
+	//* no need for bootstrap's border around the full width dropdown menus
+	.dropdown-menu {
+		border:none;
+	}
+
+	//*** collapsed view tweaks
+
+	//* make the toggle nav button (in collapsed view) have a background otherwise bootstrap makes it transparent
+	.navbar-toggle {
+		background:white;
+	}
+
+	//* make the dropdown menus have a white background when collapsed otherwise bootstrap makes it transparent
+	@media all and #{$mq-bootstrap-sm-max} {
+		.navbar-nav .open .dropdown-menu {
+			background:$nmu-off-white;
+		}
+	}
+
 }
 
-@media all and #{$mq-bootstrap-sm-min} {
-	//center align the navbar text on all non collapsed layouts
-	.navbar-center.navbar .nav,
-	.navbar-center.navbar .nav > li {
-			float:none;
-			display:inline-block;
-			vertical-align: top;
-	}
-	.navbar-center .navbar-collapse {
-			text-align:center;
-	}
-	.navbar-center .dropdown-menu {
-			text-align: left;
-	}
-}
 
-//wrap the navbar dropdowns in a max width div
-.dropdown-menu-width-wrapper {
-	max-width:1200px;
-	margin:0 auto;
-}
 
 
 /**
@@ -133,6 +179,10 @@
 	background:white;
 	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
 	min-height:500px;
+}
+
+.front .page__title {
+	display:none;
 }
 
 .video-loop {
@@ -164,6 +214,17 @@
 			@include opacity(0.8);
 			text-decoration:none;
 		}
+	}
+}
+.video-controls {
+	position:absolute;
+	top:10px;
+	right:20px;
+	color:$nmu-gray;
+	font-size:2em;
+	&:hover {
+		cursor:pointer;
+		color:white;
 	}
 }
 
