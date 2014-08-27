@@ -1,8 +1,13 @@
 <?php
 //nmu-zen
+
+//the data-offset-top tells the navbar when to start sticking to the top.  the greater the number, the farther you have to scroll before the stick happens
+//the stick just adds a class of affix which is then styled with CSS
+// 131 is the default stick point
+// with the fixed top nav, 106 is the stick point
 ?>
 
-<nav id="header-main-navigation" class="navbar yamm navbar-default navbar-center navbar-static-top" role="navigation" data-spy="affix" data-offset-top="131">
+<nav id="header-main-navigation" class="navbar yamm navbar-default navbar-center navbar-static-top" role="navigation" data-spy="affix" data-offset-top="87">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

@@ -78,12 +78,13 @@ $top-navigation-height: 25px;
 	font-family:$avenir-black;
 	color:white;
 	letter-spacing:.06em;
-	padding:.5em;
+	padding:.5em 0 .2em 0;
 }
 
 //* main navigation
 .region-main-navigation {
 	padding:0;  //make the nav bar fill up the space available
+	height:50px; //give this region a height so when the nav is removed, the page just not jump up to fill up the empty space
 
 	//* customize the bootstrap nav defaults
 	nav {
@@ -98,7 +99,7 @@ $top-navigation-height: 25px;
 
 	nav.affix {
 		width:100%;
-		top:0;
+		top:25px;
 		z-index:1;
 	}
 
