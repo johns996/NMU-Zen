@@ -21,9 +21,11 @@
 
 //* top navigation
 $top-navigation-height: 25px;
+
 .region-top-navigation {
 	padding:0;  //make the nav bar fill up the space available
 	height:$top-navigation-height;
+
 
 	//* customize the bootstrap nav defaults
 	nav {
@@ -35,6 +37,7 @@ $top-navigation-height: 25px;
 		@include border-radius(0);
 		@include box-shadow(none);
 		min-height:$top-navigation-height;
+		z-index:101; //the overlay is 500, so we want to make sure this stays below it
 	}
 	.nav>li>a {
 		padding: 0 10px;
@@ -73,13 +76,31 @@ $top-navigation-height: 25px;
 //* branding
 .region-branding {
 	background: $nmu-green;
+	max-height:90px;
+	height:90px;
+
 	text-align:center;
-	font-size:3em;
 	font-family:$avenir-black;
 	color:white;
 	letter-spacing:.06em;
+	font-size:1.5em;
+
 	padding:.5em 0 .2em 0;
 }
+
+@media all and #{$mq-bootstrap-sm-min} {
+	.region-branding {
+		font-size:2.7em;
+		padding-top:.6em;
+	}
+}
+@media all and #{$mq-bootstrap-md-min} {
+	.region-branding {
+		padding-top:.5em;  //reset the padding added for small screens
+		font-size:3em;
+	}
+}
+
 
 //* main navigation
 .region-main-navigation {
@@ -95,6 +116,7 @@ $top-navigation-height: 25px;
 		border-top:1px solid $nmu-gray-lighter;
 		@include border-radius(0);
 		@include box-shadow(none);
+		z-index:100; //the overlay is 500, so we want to make sure this stays below it
 	}
 
 	nav.affix {

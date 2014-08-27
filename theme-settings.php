@@ -19,6 +19,12 @@ function zen_nmu_form_system_theme_settings_alter(&$form, &$form_state, $form_id
     '#type'          => 'fieldset',
     '#title'         => t('NMU Framework Addins'),
   );
+  $form['zen_nmu_framework_addins']['enquire'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable Enquire.js'),
+    '#default_value' => theme_get_setting('enquire'),
+    '#description'   => t("This option enables the enquire.js library via the local js folder."),
+  );
   $form['zen_nmu_framework_addins']['bootstrap'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Enable Bootstrap'),
