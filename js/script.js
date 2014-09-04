@@ -38,20 +38,15 @@ Drupal.behaviors.my_custom_behavior = {
 				$(this).blur();
 		});
 
-		$('#header-main-navigation').click(function(){
+
+		//add or remove a class to the navbar to keep it opaque when actively showing navigation items
+		$('#header-main-navigation').on('show.bs.dropdown', function () {
 			$(this).addClass('nav-active');
 		});
-
-		$(document).mouseup(function (e)
-		{
-				var container = $('#header-main-navigation');
-
-				if (!container.is(e.target) // if the target of the click isn't the container...
-						&& container.has(e.target).length === 0) // ... nor a descendant of the container
-				{
-						container.removeClass('nav-active');
-				}
+		$('#header-main-navigation').on('hide.bs.dropdown', function () {
+			$(this).removeClass('nav-active');
 		});
+
 
 		//* pause and play button
 		var videoID = document.getElementById('fearless-video');
