@@ -78,26 +78,32 @@ $top-navigation-height: 25px;
 	background: $nmu-green-darker;
 	max-height:90px;
 	height:90px;
-
 	text-align:center;
-	font-family:$avenir-black;
-	color:white;
 	letter-spacing:.06em;
-	font-size:1.5em;
+	padding:22px 0;
 
-	padding:.5em 0 .2em 0;
+	.branding-one {
+		font-family:$avenir-black;
+		color:white;
+		font-size:2.1em;
+		line-height:1em;
+	}
+	.branding-two {
+		font-family:$avenir-medium;
+		color:$nmu-gold;
+		font-size:1.2em;
+	}
 }
+
 
 @media all and #{$mq-bootstrap-sm-min} {
 	.region-branding {
-		font-size:2.7em;
-		padding-top:.6em;
+
 	}
 }
 @media all and #{$mq-bootstrap-md-min} {
 	.region-branding {
-		padding-top:.5em;  //reset the padding added for small screens
-		font-size:3em;
+
 	}
 }
 

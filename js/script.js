@@ -61,7 +61,7 @@ Drupal.behaviors.my_custom_behavior = {
 		$('.video-controls').one('click', pauseHandler1);
 
 		//keep the video paused during dev
-		videoID.pause();
+		//videoID.pause();
   }
 };
 
