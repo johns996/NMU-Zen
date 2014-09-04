@@ -38,6 +38,21 @@ Drupal.behaviors.my_custom_behavior = {
 				$(this).blur();
 		});
 
+		$('#header-main-navigation').click(function(){
+			$(this).addClass('nav-active');
+		});
+
+		$(document).mouseup(function (e)
+		{
+				var container = $('#header-main-navigation');
+
+				if (!container.is(e.target) // if the target of the click isn't the container...
+						&& container.has(e.target).length === 0) // ... nor a descendant of the container
+				{
+						container.removeClass('nav-active');
+				}
+		});
+
 		//* pause and play button
 		var videoID = document.getElementById('fearless-video');
 		function pauseHandler1() {
@@ -50,7 +65,7 @@ Drupal.behaviors.my_custom_behavior = {
 		}
 		$('.video-controls').one('click', pauseHandler1);
 
-		//keep the video paused durin dev
+		//keep the video paused during dev
 		videoID.pause();
   }
 };
