@@ -167,7 +167,7 @@ $top-navigation-height: 25px;
 
 	.navbar-default .navbar-nav>li>a {
 		color:$nmu-gray-lighter;
-		@include transition-duration(.3s);  //* add the transition to the a tag so it fires on mouseover and mouseout
+		@include transition-duration(.5s);  //* add the transition to the a tag so it fires on mouseover and mouseout
 		text-shadow:none;
 		&:hover,
 		&:focus{
@@ -276,6 +276,49 @@ $top-navigation-height: 25px;
 	}
 }
 
+.video-overlay {
+	position:absolute;
+	color:white;
+	text-align:center;
+	left:28%;
+	top:20%;
+	letter-spacing:2px;
+	.video-text-1a {
+		font-size:2em;
+		line-height:1.2em;
+		& sup{
+			font-size:60%;
+			padding-right:5px;
+			letter-spacing:1px;
+			top: -.4em;
+		}
+	}
+	.video-text-1b  {
+		font-size:4em;
+		line-height:.9em;
+		margin-bottom:20px;
+	}
+	.video-text-2a {
+
+	}
+	.video-text-2b {
+		padding-top:40px;
+		img {
+			width:80px;
+			height:auto;
+			cursor:pointer;
+			@include opacity(0.7);
+			@include transition-duration(.5s);
+			&:hover,
+			&:focus {
+				@include opaque;
+			}
+		}
+	}
+}
+
+
+
 
 .video-buttons {
 	position:absolute;
@@ -290,7 +333,7 @@ $top-navigation-height: 25px;
 		margin:5px;
 		padding:10px;
 		@include opacity(0.5);
-		@include transition(all 0.3s ease-in-out);
+		@include transition(all 0.5s ease-in-out);
 		&:hover {
 			@include opacity(0.8);
 			text-decoration:none;
@@ -330,7 +373,7 @@ $top-navigation-height: 25px;
 	}
 	a {
 		color:$nmu-gray-lighter;
-		@include transition(all 0.3s ease-in-out);
+		@include transition(all 0.5s ease-in-out);
 		&:hover {
 			color:white;
 		}
