@@ -24,13 +24,13 @@
         <li><a class="allcaps" href="#">Visitors</a></li>
       </ul>
 
- 			<ul class="nav navbar-nav navbar-right">
+ 			<ul class="nav navbar-nav navbar-right nmu-toolbar-nav">
         <li><a href="#">MyNMU</a></li>
         <li><a class="allcaps" href="#">Events</a></li>
         <li><a class="allcaps" href="#">Apply</a></li>
         <li><a class="allcaps" href="#">A-Z</a></li>
         <li><a class="allcaps" href="#">Give</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+        <li class="toolbar-search"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->

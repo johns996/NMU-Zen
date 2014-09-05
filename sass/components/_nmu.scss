@@ -20,12 +20,13 @@
  */
 
 //* top navigation
-$top-navigation-height: 25px;
+
+//this height must correspond with the offset number applied to the main navigation so they stick together on scroll
+$top-navigation-height: 35px;
 
 .region-top-navigation {
 	padding:0;  //make the nav bar fill up the space available
 	height:$top-navigation-height;
-
 
 	//* customize the bootstrap nav defaults
 	nav {
@@ -41,8 +42,11 @@ $top-navigation-height: 25px;
 	}
 	.nav>li>a {
 		padding: 0 10px;
-		font-size:.7em;
+		font-size:.8em;
 		line-height:$top-navigation-height;
+	}
+	.nav>li.toolbar-search>a {
+		font-size:1em;
 	}
 
 	//* remove the padding when the menu is not collapsed
@@ -63,6 +67,16 @@ $top-navigation-height: 25px;
 			text-decoration:underline;
 		}
 	}
+	.navbar-default .nmu-toolbar-nav>li>a {
+		color:$nmu-gold;
+		@include transition-duration(.5s);
+		&:hover,
+		&:focus{
+			color:$nmu-gold-light;
+			text-shadow:none;
+			text-decoration:underline;
+		}
+	}
 
 	//*** collapsed view tweaks
 
@@ -70,7 +84,6 @@ $top-navigation-height: 25px;
 	.navbar-toggle {
 		background:white;
 	}
-
 }
 
 //* branding
@@ -113,6 +126,17 @@ $top-navigation-height: 25px;
 	padding:0;  //make the nav bar fill up the space available
 	height:50px; //give this region a height so when the nav is removed, the page just not jump up to fill up the empty space
 
+	img[align="right"],
+	img[style*="float: right"],
+	img[style*="float:right"]{
+		padding-left:5px;
+	}
+	img[align="left"],
+	img[style*="float: left"],
+	img[style*="float:left"]{
+		padding-right:5px;
+	}
+
 	//* customize the bootstrap nav defaults
 	nav {
 		background:$nmu-black;
@@ -134,7 +158,7 @@ $top-navigation-height: 25px;
 
 	nav.affix {  //* this class is applied when the nav bar is affixed to the top of the screen
 		width:100%;
-		top:25px;
+		top:$top-navigation-height;
 		z-index:1;
 		//should the nav bar become opaque on scroll?
 		//@include opaque;
@@ -240,7 +264,7 @@ $top-navigation-height: 25px;
 
 }
 #content {
-	padding-top:1em;
+	//padding-top:1em;
 	background:white;
 	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
 	min-height:500px;
@@ -251,6 +275,8 @@ $top-navigation-height: 25px;
 }
 
 .video-wrapper {
+		margin-top:-49px;
+		max-height:600px;
 	//we may need to change the dimensions of the video to fit better into the homepage
 	//or find a way to use the code below to clip the frame to our desired deminsions
 	//max-height:500px;
@@ -266,8 +292,7 @@ $top-navigation-height: 25px;
   padding-bottom: 56.25%; //* 4:3 : 75% (SD) - 16:9 : 56.25% (HD) - 1.85:1 : 54.05% (Cinema)
 	&  > .video-frame {
 		position: absolute;
-		top: -62px; //just to test opacity
-		//top: 0;
+		top: 0;
 		left: 0;
 
 		/* make the iframe/embed fill the wrapper */
@@ -317,32 +342,9 @@ $top-navigation-height: 25px;
 	}
 }
 
-
-
-
-.video-buttons {
-	position:absolute;
-	bottom:10%;
-	left:28%;
-	a {
-		width:250px;
-		background:white;
-		display:block;
-		float:left;
-		text-align:center;
-		margin:5px;
-		padding:10px;
-		@include opacity(0.5);
-		@include transition(all 0.5s ease-in-out);
-		&:hover {
-			@include opacity(0.8);
-			text-decoration:none;
-		}
-	}
-}
 .video-controls {
 	position:absolute;
-	top:10px;
+	bottom:90px;
 	right:20px;
 	color:$nmu-gray;
 	font-size:2em;
@@ -352,10 +354,39 @@ $top-navigation-height: 25px;
 	}
 }
 
+.hp-column-container {
+ background:$nmu-gray;
+}
+
+//this stuff was just added for the demo
+.hp-column-one, .hp-column-two, .hp-column-three {
+	padding:5px 0 0 0 !important;
+	img {
+		width:404px;
+	}
+}
+//end of demo stuff
+
+.hp-column-one {
+ background:$nmu-green-darker;
+}
+.hp-column-two {
+ background:$nmu-green-dark;
+}
+.hp-column-three {
+ background:$nmu-green;
+}
+
+.hp-events-section {
+	padding-top:5px;
+	background:$nmu-green;
+}
+
 /**
  * Footer.
  */
 
+/*
 #footer {
 	background: $nmu-black;
 }
@@ -380,17 +411,22 @@ $top-navigation-height: 25px;
 	}
 
 }
+*/
 
-.postscript_region {
-	font-size: .8em;
-	width: 160px;
-	display: inline-block;
-	vertical-align: top;
+//* Demo footer stuff
+#footer {
+	background: $nmu-green-darker;
+	margin-left:-15px;
+	margin-right:-15px;
+	.block {
+		margin-bottom:0;
+	}
 }
-
-#footer_region_first,
-#footer_region_second {
-	float:left;
+.footer-main {
+	text-align:center;
+	img {
+		width:100%;
+	}
 }
 
 /**
@@ -399,4 +435,7 @@ $top-navigation-height: 25px;
 
 .allcaps {
 	text-transform:uppercase;
+}
+#toolbar {
+	top:26px;  //* adjust the toolbar position to accommodate for the static top nav when logged in
 }
