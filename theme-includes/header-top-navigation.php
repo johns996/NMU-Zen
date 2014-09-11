@@ -17,6 +17,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navigation-collapse">
       <ul class="nav navbar-nav">
+	      <li class="toolbar-home"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
         <li><a class="allcaps" href="#">Future Students</a></li>
         <li><a class="allcaps" href="#">Current Students</a></li>
       	<li><a class="allcaps" href="#">Faculty & Staff</a></li>
@@ -36,6 +37,7 @@
 							<div class="row">
 
 								<div class="col-md-4 col-md-offset-2  col-sm-6 col-sm-offset-3">
+									<div class="allcaps search-label">Search Options:</div>
 									<div class="row">
 										<div class="col-sm-6 search-options">
 											<ul class="list-unstyled" role="menu">

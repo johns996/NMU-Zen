@@ -50,11 +50,15 @@ $top-navigation-height: 35px;
 			}
 		}
 	}
-
-
+	.search-label {
+		color:$nmu-green-darker;
+		font-weight:600;
+		letter-spacing:2px;
+		padding-bottom:5px;
+	}
 	.search-options {}
 	.search-inputs {
-		padding:17px 0  17px 20px;;
+		padding:26px 0  0 20px;
 		input[type="text"]{
 			padding:5px;
 			margin-right:5px;
@@ -75,7 +79,7 @@ $top-navigation-height: 35px;
 		border-left:none;
 		border-right:none;
 		border-top:none;
-		border-bottom:1px solid $nmu-gray-lighter;
+		border-bottom:1px solid $nmu-gray-light;
 		@include border-radius(0);
 		@include box-shadow(none);
 		min-height:$top-navigation-height;
@@ -86,7 +90,8 @@ $top-navigation-height: 35px;
 		font-size:.8em;
 		line-height:$top-navigation-height;
 	}
-	.nav>li.toolbar-search>a {
+	.nav>li.toolbar-search>a,
+	.nav>li.toolbar-home>a {
 		font-size:1em;
 	}
 
@@ -98,7 +103,7 @@ $top-navigation-height: 35px;
 	}
 
 	.navbar-default .navbar-nav>li>a {
-		color:$nmu-gray-lighter;
+		color:$nmu-gray-light;
 		@include transition-duration(.5s);  //* add the transition to the a tag so it fires on mouseover and mouseout
 		text-shadow:none;
 		&:hover,
@@ -113,7 +118,7 @@ $top-navigation-height: 35px;
 		@include transition-duration(.5s);
 		&:hover,
 		&:focus{
-			color:$nmu-gold-light;
+			color:$nmu-gold-highlight;
 			text-shadow:none;
 			text-decoration:underline;
 		}
@@ -186,7 +191,7 @@ $top-navigation-height: 35px;
 		border-left:none;
 		border-right:none;
 		border-bottom:none;
-		border-top:1px solid $nmu-gray-lighter;
+		border-top:1px solid $nmu-gray-light;
 		@include border-radius(0);
 		@include box-shadow(none);
 		@include opacity(0.8);
@@ -233,7 +238,7 @@ $top-navigation-height: 35px;
 	}
 
 	.navbar-default .navbar-nav>li>a {
-		color:$nmu-gray-lighter;
+		color:$nmu-gray-light;
 		@include transition-duration(.5s);  //* add the transition to the a tag so it fires on mouseover and mouseout
 		text-shadow:none;
 		&:hover,
@@ -434,7 +439,7 @@ $top-navigation-height: 35px;
 	background: $nmu-black;
 }
 .footer-main {
-	color:$nmu-gray-lighter;
+	color:$nmu-gray-light;
 	font-family:$humanist-roman;
 	text-align:center;
 	margin:4em 2em;
@@ -446,7 +451,7 @@ $top-navigation-height: 35px;
 		margin-bottom:5px;
 	}
 	a {
-		color:$nmu-gray-lighter;
+		color:$nmu-gray-light;
 		@include transition(all 0.5s ease-in-out);
 		&:hover {
 			color:white;

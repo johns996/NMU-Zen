@@ -161,22 +161,24 @@ $avenir-black:    "AvenirLTStd-Black","Helvetica Neue",Helvetica,Tahoma,Verdana,
 // Colors, etc.
 //
 
-$nmu-green: #00754d;
+$nmu-green: #006848;  //used for solid blocks of green (http://0to255.com/006848)
+$nmu-green-text: #01754e; //just following the genesis style of using this slightly lighter green for text
+$nmu-green-highlight: #008a60;  //used for navigation highlighting
 $nmu-green-dark: #065540;
 $nmu-green-darker: #034030;
 
-$nmu-gold-light: #fde198;
-$nmu-gold: #ffdc23;
+$nmu-gold: #ffdd00;  //http://0to255.com/ffdd00
+$nmu-gold-highlight: #ffef88;   //used for navigation highlighting
 $nmu-gold-dark: #F6D703;
 $nmu-gold-darker: #e5c908;
 
-$nmu-black: #434345;
+$nmu-black: #414042;
 $nmu-black-dark: #333333;
 
 $nmu-off-white:#eaeaea;
 
-$nmu-gray-lighter:#cccccc;
 $nmu-gray: #999999;
+$nmu-gray-light:#cac8c8;
 $nmu-gray-dark: #848484;
 $nmu-gray-darker: #585858;
 
