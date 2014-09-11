@@ -15,6 +15,13 @@
  *
  */
 
+.bg-blue {background:blue;}
+.bg-green {background:greed;}
+.bg-yellow {background:yellow;}
+.bg-gray {background:gray;}
+.bg-orange {background:orange;}
+.bg-red {background:red;}
+
 /**
  * Header.
  */
@@ -27,6 +34,40 @@ $top-navigation-height: 35px;
 .region-top-navigation {
 	padding:0;  //make the nav bar fill up the space available
 	height:$top-navigation-height;
+
+	//* search section
+	@media all and #{$mq-bootstrap-md-min} {  //give the two color background only on medium screens
+		.dropdown-menu {
+			//* all of the following are required for the multiple background images used in the search area to give two colors
+			background:
+				 url(../images/background-gray.jpg),  /* On top */
+				 url(../images/background-white.jpg);   /* On bottom */
+			background-repeat: no-repeat, no-repeat;
+			background-position: left, right;
+			background-size: 50.1%, 50%;
+			.no-multiplebgs & {
+				background:white;
+			}
+		}
+	}
+
+
+	.search-options {}
+	.search-inputs {
+		padding:17px 0  17px 20px;;
+		input[type="text"]{
+			padding:5px;
+			margin-right:5px;
+		}
+		input[type="submit"]{
+			padding:7px;
+		}
+	}
+
+	input.search-radio {
+		margin-right:8px;
+		//@include appearance(checkbox);
+	}
 
 	//* customize the bootstrap nav defaults
 	nav {
@@ -85,6 +126,8 @@ $top-navigation-height: 35px;
 		background:white;
 	}
 }
+
+
 
 //* branding
 .region-branding {
