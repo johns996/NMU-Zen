@@ -16,7 +16,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navigation-collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="audience-navigation">
 	      <li class="toolbar-home"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
         <li><a class="allcaps" href="#">Future Students</a></li>
         <li><a class="allcaps" href="#">Current Students</a></li>

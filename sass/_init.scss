@@ -209,14 +209,14 @@ $tabs-border: #bbb;
 
 //these are the default bootstrap media query sizes. zen has been adapted to use these
 $mq-bootstrap-xs-min: '(min-width: 480px)';
-$mq-bootstrap-xs-max: '(max-width: 479px)';
+	$mq-bootstrap-xs-max: '(max-width: 767px)';
 $mq-bootstrap-sm-min: '(min-width: 768px)';
-$mq-bootstrap-sm-max: '(max-width: 767px)';
+	$mq-bootstrap-sm-max: '(max-width: 991px)';
 $mq-bootstrap-md-min: '(min-width: 992px)';
-$mq-bootstrap-md-max: '(max-width: 991px)';
+	$mq-bootstrap-md-max: '(max-width: 1199px)';
 $mq-bootstrap-lg-min: '(min-width: 1200px)';
 
-$mq-bootstrap-only-sm: '(min-width: 480px) and (max-width: 991px)';  //target only smaller screens, does not scale upwards
+$mq-bootstrap-only-sm: '(min-width: 768px) and (max-width: 991px)';  //target only smaller screens, does not scale upwards
 $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target only normal screens, does not scale upwards
 
 // =============================================================================

@@ -53,51 +53,60 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 
 	.nav:first-child {
 		margin-left:-15px;  //remove the left padding so the home icon lines up with the edge of the screen
+		//bootstrap automatically provides one of these for the right navbar
 	}
 
 	.nav>li {
 		&>a {
-			padding: 0 15px;
+			padding: 0 14px;
 			font-size:.8em;
 			line-height:$top-navigation-height;
+			max-width:160px;  //set a max width here so the animation that fires when shrinking to tablet is smoother
+			@media all and #{$mq-bootstrap-only-sm} {
+				padding: 10px 10px;
+				max-width:80px;  //constrain the width of items so there is room in the navbar for everything
+				line-height:1.5em;
+				height:52px;  //set a height so the hover color shows over the entire area
+			}
 		}
 		&.toolbar-search>a,
 		&.toolbar-home>a {
 			font-size:1em;  //make the glyphicon elements bigger
-			padding: 0 20px;
+			padding: 0 17px;  //give them a little more spacing
+			@media all and #{$mq-bootstrap-only-sm} {
+				padding: 10px 15px;
+			}
 		}
 	}
 
-
-	//* remove the padding when the menu is not collapsed
-	@media all and #{$mq-bootstrap-sm-min} {
-		.navbar-collapse {
-			padding:0;
-		}
-	}
-
-	.navbar-default .navbar-nav>li>a {
-		color:$nmu-gray-light;
-		@include transition-duration(.5s);  //* add the transition to the a tag so it fires on mouseover and mouseout
-		text-shadow:none;
-		&:hover,
-		&:focus{
-			color:white;
+	.navbar-default  {
+		.navbar-nav>li>a {
+			color:$nmu-gray-light;
+			@include transition-duration(.5s);  //add the transition to the a tag so it fires on mouseover and mouseout
 			text-shadow:none;
-			//text-decoration:underline;
-			background:$nmu-green;
+			&:hover,
+			&:focus{
+				color:white;
+				text-shadow:none;
+				//text-decoration:underline;
+				background:$nmu-green;
+			}
 		}
-	}
-	.navbar-default .nmu-toolbar-nav>li>a {
-		color:$nmu-gold;
-		&:hover,
-		&:focus{
+		.nmu-toolbar-nav>li>a {
+			color:$nmu-gold;
+			&:hover,
+			&:focus{
+				color:$nmu-gold-highlight;
+			}
+		}
+		.nmu-toolbar-nav>li.open>a {  //this is needed for when the search icon looses hover/focus otherwise bootstrap will style it
 			color:$nmu-gold-highlight;
+			background:$nmu-green;
 		}
 	}
 
 	//* search section
-	@media all and #{$mq-bootstrap-md-min} {  //give the two color background only on medium screens
+	@media all and #{$mq-bootstrap-md-min} {  //give the two color background only on medium screens and larger
 		.dropdown-search { //styles for  multiple background images
 			background:
 				 url(../images/background-gray.jpg),  //On top
@@ -110,13 +119,21 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 			}
 		}
 	}
+
 	.search-label {
 		color:$nmu-green-darker;
 		font-weight:600;
 		letter-spacing:2px;
 		padding-bottom:5px;
 	}
-	.search-options {}
+
+	.search-options {
+		input.search-radio {
+			margin-right:8px;
+			//@include appearance(checkbox);
+		}
+	}
+
 	.search-inputs {
 		padding:26px 0  0 20px;
 		input[type="text"]{
@@ -128,16 +145,11 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		}
 	}
 
-	input.search-radio {
-		margin-right:8px;
-		//@include appearance(checkbox);
-	}
-
 
 
 	//*** collapsed view tweaks
 
-	//* make the toggle nav button (in collapsed view) have a background otherwise bootstrap makes it transparent
+	//* make the toggle nav button (shown only in collapsed view) have a background otherwise bootstrap makes it transparent
 	.navbar-toggle {
 		background:white;
 	}
@@ -153,6 +165,9 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 	text-align:center;
 	letter-spacing:.06em;
 	padding:22px 0;
+	@media all and #{$mq-bootstrap-only-sm} {
+		padding-top:31px;  //padding to accommodate the wider top nav
+	}
 
 	.branding-one {
 		font-family:$avenir-black;
@@ -164,18 +179,6 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		font-family:$avenir-medium;
 		color:$nmu-gold;
 		font-size:1.2em;
-	}
-}
-
-
-@media all and #{$mq-bootstrap-sm-min} {
-	.region-branding {
-
-	}
-}
-@media all and #{$mq-bootstrap-md-min} {
-	.region-branding {
-
 	}
 }
 
@@ -215,12 +218,13 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		}
 	}
 
-	nav.affix {  //* this class is applied when the nav bar is affixed to the top of the screen
+	nav.affix {  //navbar is affixed to the top of the screen
 		width:100%;
 		top:$top-navigation-height;
 		z-index:1;
-		//should the nav bar become opaque on scroll?
-		//@include opaque;
+		@media all and #{$mq-bootstrap-only-sm} {
+				top:$top-navigation-height + 16px;  //the navbar needs to move down some to accommodate the wider top nav on small screens
+		}
 	}
 
 	/* this css will make the dropdown menus show on hover
@@ -305,7 +309,7 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 	}
 
 	//* make the dropdown menus have a white background when collapsed otherwise bootstrap makes it transparent
-	@media all and #{$mq-bootstrap-sm-max} {
+	@media all and #{$mq-bootstrap-xs-max} {
 		.navbar-nav .open .dropdown-menu {
 			background:$nmu-off-white;
 		}

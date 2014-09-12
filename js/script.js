@@ -66,6 +66,9 @@ Drupal.behaviors.my_custom_behavior = {
 		{
 			videoID.pause();
 		}, 1000);
+
+		//force the audience nav to collapse for tablet view
+
   }
 };
 
