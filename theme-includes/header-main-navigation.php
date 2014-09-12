@@ -21,7 +21,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-navigation-collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav main-navigaiton-ul">
 
        <!-- one -->
         <li class="dropdown yamm-fw">

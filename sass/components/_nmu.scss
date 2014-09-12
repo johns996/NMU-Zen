@@ -39,6 +39,11 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 	padding:0;  //make the nav bar fill up the space available
 	height:$top-navigation-height;
 
+	.navbar-fixed-top .navbar-collapse,
+	.navbar-fixed-bottom .navbar-collapse {
+		max-height:none; //remove the max height bootstrap applies to fixed navbars
+	}
+
 	nav { //customize the bootstrap nav defaults
 		background:$nmu-green-dark;
 		border-left:none;
@@ -145,7 +150,11 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		}
 	}
 
-
+	@media all and #{$mq-bootstrap-sm-min} {
+		#top-navigation-collapse > .main-navigaiton-ul {
+			display:none; //hide the main navigation if JS has placed it in this region
+		}
+	}
 
 	//*** collapsed view tweaks
 
@@ -164,9 +173,9 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 	height:90px;
 	text-align:center;
 	letter-spacing:.06em;
-	padding:22px 0;
-	@media all and #{$mq-bootstrap-only-sm} {
-		padding-top:31px;  //padding to accommodate the wider top nav
+	padding:31px 0 22px 0;
+	@media all and #{$mq-bootstrap-md-min} {
+		padding-top:22px;  //remove some padding since the top nav is narrow again
 	}
 
 	.branding-one {
@@ -185,6 +194,11 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 
 //* main navigation
 .region-main-navigation {
+
+	@media all and #{$mq-bootstrap-xs-max} {
+		display:none;  //hide this navbar on xs screens
+	}
+
 	padding:0;  //make the nav bar fill up the space available
 	height:50px; //give this region a height so when the nav is removed, the page just not jump up to fill up the empty space
 
@@ -357,6 +371,9 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		position: absolute;
 		top: 0;
 		left: 0;
+		@media all and #{$mq-bootstrap-xs-max} {
+			top:50px;  //move the video down since the main navbar is hidden
+		}
 
 		/* make the iframe/embed fill the wrapper */
 		height: 100%;

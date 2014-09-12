@@ -47,6 +47,13 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).removeClass('nav-active');
 		});
 
+		/* watch for a single click on the top nav toggle button */
+		$('#top-nav-toggle').one( "click", function() {
+			/* store the html of the second navbar */
+			mainNavStored = $('#main-navigation-collapse').html();
+			/* append that html to the first navbar */
+			$('#top-navigation-collapse').append(mainNavStored);
+		});
 
 		//* pause and play button
 		var videoID = document.getElementById('fearless-video');
@@ -66,8 +73,6 @@ Drupal.behaviors.my_custom_behavior = {
 		{
 			videoID.pause();
 		}, 1000);
-
-		//force the audience nav to collapse for tablet view
 
   }
 };
