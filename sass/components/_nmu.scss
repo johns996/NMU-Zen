@@ -15,6 +15,11 @@
  *
  */
 
+
+/**
+ * Development Classes.
+ */
+
 .bg-blue {background:blue;}
 .bg-green {background:greed;}
 .bg-yellow {background:yellow;}
@@ -22,30 +27,85 @@
 .bg-orange {background:orange;}
 .bg-red {background:red;}
 
+
 /**
  * Header.
  */
 
 //* top navigation
-
-//this height must correspond with the offset number applied to the main navigation so they stick together on scroll
-$top-navigation-height: 35px;
+$top-navigation-height: 35px; //this height must correspond with the offset number applied to the main navigation so they stick together on scroll
 
 .region-top-navigation {
 	padding:0;  //make the nav bar fill up the space available
 	height:$top-navigation-height;
 
+	nav { //customize the bootstrap nav defaults
+		background:$nmu-green-dark;
+		border-left:none;
+		border-right:none;
+		border-top:none;
+		border-bottom:1px solid $nmu-gray-light;
+		@include border-radius(0);
+		@include box-shadow(none);
+		min-height:$top-navigation-height;
+		z-index:101; //the drupal overlay is 500, so we want to make sure this stays below it
+	}
+
+	.nav:first-child {
+		margin-left:-15px;  //remove the left padding so the home icon lines up with the edge of the screen
+	}
+
+	.nav>li {
+		&>a {
+			padding: 0 15px;
+			font-size:.8em;
+			line-height:$top-navigation-height;
+		}
+		&.toolbar-search>a,
+		&.toolbar-home>a {
+			font-size:1em;  //make the glyphicon elements bigger
+			padding: 0 20px;
+		}
+	}
+
+
+	//* remove the padding when the menu is not collapsed
+	@media all and #{$mq-bootstrap-sm-min} {
+		.navbar-collapse {
+			padding:0;
+		}
+	}
+
+	.navbar-default .navbar-nav>li>a {
+		color:$nmu-gray-light;
+		@include transition-duration(.5s);  //* add the transition to the a tag so it fires on mouseover and mouseout
+		text-shadow:none;
+		&:hover,
+		&:focus{
+			color:white;
+			text-shadow:none;
+			//text-decoration:underline;
+			background:$nmu-green;
+		}
+	}
+	.navbar-default .nmu-toolbar-nav>li>a {
+		color:$nmu-gold;
+		&:hover,
+		&:focus{
+			color:$nmu-gold-highlight;
+		}
+	}
+
 	//* search section
 	@media all and #{$mq-bootstrap-md-min} {  //give the two color background only on medium screens
-		.dropdown-menu {
-			//* all of the following are required for the multiple background images used in the search area to give two colors
+		.dropdown-search { //styles for  multiple background images
 			background:
-				 url(../images/background-gray.jpg),  /* On top */
-				 url(../images/background-white.jpg);   /* On bottom */
+				 url(../images/background-gray.jpg),  //On top
+				 url(../images/background-white.jpg);   //On bottom
 			background-repeat: no-repeat, no-repeat;
 			background-position: left, right;
 			background-size: 50.1%, 50%;
-			.no-multiplebgs & {
+			.no-multiplebgs & {  //fallback for devices without multiple backgrounds
 				background:white;
 			}
 		}
@@ -73,56 +133,7 @@ $top-navigation-height: 35px;
 		//@include appearance(checkbox);
 	}
 
-	//* customize the bootstrap nav defaults
-	nav {
-		background:$nmu-green-dark;
-		border-left:none;
-		border-right:none;
-		border-top:none;
-		border-bottom:1px solid $nmu-gray-light;
-		@include border-radius(0);
-		@include box-shadow(none);
-		min-height:$top-navigation-height;
-		z-index:101; //the overlay is 500, so we want to make sure this stays below it
-	}
-	.nav>li>a {
-		padding: 0 10px;
-		font-size:.8em;
-		line-height:$top-navigation-height;
-	}
-	.nav>li.toolbar-search>a,
-	.nav>li.toolbar-home>a {
-		font-size:1em;
-	}
 
-	//* remove the padding when the menu is not collapsed
-	@media all and #{$mq-bootstrap-sm-min} {
-		.navbar-collapse {
-			padding:0;
-		}
-	}
-
-	.navbar-default .navbar-nav>li>a {
-		color:$nmu-gray-light;
-		@include transition-duration(.5s);  //* add the transition to the a tag so it fires on mouseover and mouseout
-		text-shadow:none;
-		&:hover,
-		&:focus{
-			color:white;
-			text-shadow:none;
-			text-decoration:underline;
-		}
-	}
-	.navbar-default .nmu-toolbar-nav>li>a {
-		color:$nmu-gold;
-		@include transition-duration(.5s);
-		&:hover,
-		&:focus{
-			color:$nmu-gold-highlight;
-			text-shadow:none;
-			text-decoration:underline;
-		}
-	}
 
 	//*** collapsed view tweaks
 
