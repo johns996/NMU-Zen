@@ -41,7 +41,8 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 
 	.navbar-fixed-top .navbar-collapse,
 	.navbar-fixed-bottom .navbar-collapse {
-		max-height:none; //remove the max height bootstrap applies to fixed navbars
+		//without this max height style, you can't scroll down on xs screens because the nav blocks it all
+		//max-height:none; //remove the max height bootstrap applies to fixed navbars
 	}
 
 	nav { //customize the bootstrap nav defaults
@@ -151,8 +152,11 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 	}
 
 	@media all and #{$mq-bootstrap-sm-min} {
-		#top-navigation-collapse > .main-navigaiton-ul {
+		#top-navigation-collapse > #main-navigaiton-ul {
 			display:none; //hide the main navigation if JS has placed it in this region
+		}
+		#search-collapse-div {
+			display:none !important; //hide the search section used in the xs pulldown
 		}
 	}
 
@@ -215,6 +219,7 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 
 	//* customize the bootstrap nav defaults
 	nav {
+		width:100%;  //this is used to keep the nav full width when affixed.  must be in this selector so css animations don't animate it growing on an ipad scroll
 		background:$nmu-black;
 		border-left:none;
 		border-right:none;
@@ -233,7 +238,7 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 	}
 
 	nav.affix {  //navbar is affixed to the top of the screen
-		width:100%;
+
 		top:$top-navigation-height;
 		z-index:1;
 		@media all and #{$mq-bootstrap-only-sm} {

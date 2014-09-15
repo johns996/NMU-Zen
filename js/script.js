@@ -47,12 +47,20 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).removeClass('nav-active');
 		});
 
-		/* watch for a single click on the top nav toggle button */
-		$('#top-nav-toggle').one( "click", function() {
-			/* store the html of the second navbar */
-			mainNavStored = $('#main-navigation-collapse').html();
-			/* append that html to the first navbar */
-			$('#top-navigation-collapse').append(mainNavStored);
+		enquire.register("screen and (max-width: 767px)", {
+				match : function() {
+					//store the html of the main navbar and search section
+					mainNavStored = $('#main-navigation-collapse').html();
+					searchStored = $('#search-collapse').html();
+					// append that html to the top navbar
+					$('#top-navigation-collapse').append(mainNavStored);
+					$('#top-nav-container').append(searchStored);
+				},
+				unmatch : function() {
+					//remove the appended nav element when leaving the xs display
+					$('#top-navigation-collapse > #main-navigaiton-ul').remove();
+					$('#top-nav-container > #search-collapse-div').remove();
+				}
 		});
 
 		//* pause and play button
