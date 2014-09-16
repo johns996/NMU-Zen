@@ -47,19 +47,22 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).removeClass('nav-active');
 		});
 
+		$('#search-icon').one('click', function() {
+			//to avoid duplicating the search section, we copy over the content from the mobile collapse menu and put it in the nav dropdown
+			searchStored = $('#search-collapse-div').html();
+			$('#search-dropdown').append(searchStored);
+		});
+
 		enquire.register("screen and (max-width: 767px)", {
 				match : function() {
-					//store the html of the main navbar and search section
+					//store the html of the main navbar
 					mainNavStored = $('#main-navigation-collapse').html();
-					searchStored = $('#search-collapse').html();
 					// append that html to the top navbar
 					$('#top-navigation-collapse').append(mainNavStored);
-					$('#top-nav-container').append(searchStored);
 				},
 				unmatch : function() {
 					//remove the appended nav element when leaving the xs display
 					$('#top-navigation-collapse > #main-navigaiton-ul').remove();
-					$('#top-nav-container > #search-collapse-div').remove();
 				}
 		});
 
@@ -74,6 +77,7 @@ Drupal.behaviors.my_custom_behavior = {
 				$(this).one('click', pauseHandler1);
 		}
 		$('.video-controls').one('click', pauseHandler1);
+
 
 		//keep the video paused during dev
 		setTimeout(

@@ -6,15 +6,15 @@
   <div class="container-fluid" id="top-nav-container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" id="top-nav-toggle" data-toggle="collapse" data-target="#top-navigation-collapse">
+      <button type="button" class="navbar-toggle navbar-menu" id="top-nav-toggle" data-toggle="collapse" data-target="#top-navigation-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-			<button type="button" class="navbar-toggle navbar-search" id="search-nav-toggle" data-toggle="collapse" data-target="#search-collapse-div">
+			<div class="navbar-toggle navbar-search" id="search-nav-toggle" data-toggle="collapse" data-target="#search-collapse-div">
 				<span class="glyphicon glyphicon-search"></span>
-			</button>
+			</div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,9 +34,9 @@
         <li><a class="allcaps" href="#">Apply</a></li>
         <li><a class="allcaps" href="#">A-Z</a></li>
         <li><a class="allcaps" href="#">Give</a></li>
-        <li class="toolbar-search dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-search"></span></a>
+        <li class="toolbar-search dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="search-icon"><span class="glyphicon glyphicon-search"></span></a>
 					<ul class="dropdown-menu dropdown-search yamm-content" role="menu">
-						<li class="dropdown-menu-width-wrapper" id="search-collapse">
+						<li class="dropdown-menu-width-wrapper" id="search-dropdown">
 							<!-- js to add search dropdown stuff here -->
 						</li>
           </ul>

@@ -75,6 +75,12 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 				height:52px;  //set a height so the hover color shows over the entire area
 			}
 		}
+		&.toolbar-search{
+			display:none;  //don't show the search icon in the mobile menu
+			@media all and #{$mq-bootstrap-sm-min} {
+				display: block;
+			}
+		}
 		&.toolbar-search>a,
 		&.toolbar-home>a {
 			font-size:1em;  //make the glyphicon elements bigger
@@ -157,14 +163,30 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		}
 		#search-collapse-div {
 			display:none !important; //hide the search section used in the xs pulldown
+			//!important is needed to override the !important in bootstrap
 		}
 	}
 
 	//*** collapsed view tweaks
 
-	//* make the toggle nav button (shown only in collapsed view) have a background otherwise bootstrap makes it transparent
+	//* make the toggle nav buttons (shown only in collapsed view) have a background otherwise bootstrap makes it transparent
 	.navbar-toggle {
 		background:white;
+	}
+	.navbar-menu {
+		float:left;
+		margin-left:15px;
+		span.icon-bar {
+			background-color:$nmu-gray-darker;
+		}
+	}
+	.navbar-search {
+		height:35px;
+		font-size:1.2em;
+		.glyphicon {
+			top:-2px;
+			color:$nmu-gray-darker;
+		}
 	}
 }
 
