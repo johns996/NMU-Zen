@@ -12,9 +12,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-			<div class="navbar-toggle navbar-search" id="search-nav-toggle" data-toggle="collapse" data-target="#search-collapse-div">
+			<button type="button" class="navbar-toggle navbar-search" id="search-nav-toggle" data-toggle="collapse" data-target="#search-collapse-div">
 				<span class="glyphicon glyphicon-search"></span>
-			</div>
+			</button>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

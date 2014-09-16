@@ -181,10 +181,10 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		}
 	}
 	.navbar-search {
-		height:35px;
+		height:34px;  //need to set the height of the button since the font size will make it stretch
 		font-size:1.2em;
 		.glyphicon {
-			top:-2px;
+			top:-2px;  //move the search icon up a bit to center it
 			color:$nmu-gray-darker;
 		}
 	}
