@@ -33,33 +33,55 @@
  */
 
 //* top navigation
-$top-navigation-height: 35px; //this height must correspond with the offset number applied to the main navigation so they stick together on scroll
+$top-navigation-height: 60px; //this height must correspond with the offset number applied to the main navigation so they stick together on scroll
 
 .region-top-navigation {
 	padding:0;  //make the nav bar fill up the space available
 	height:$top-navigation-height;
 
-	.navbar-fixed-top .navbar-collapse,
-	.navbar-fixed-bottom .navbar-collapse {
-		//without this max height style, you can't scroll down on xs screens because the nav blocks it all
-		//max-height:none; //remove the max height bootstrap applies to fixed navbars
-	}
-
 	nav { //customize the bootstrap nav defaults
 		background:$nmu-green-dark;
-		border-left:none;
-		border-right:none;
-		border-top:none;
-		border-bottom:1px solid $nmu-gray-light;
+		border:none;
 		@include border-radius(0);
 		@include box-shadow(none);
 		min-height:$top-navigation-height;
 		z-index:101; //the drupal overlay is 500, so we want to make sure this stays below it
 	}
 
-	.nav:first-child {
-		margin-left:-15px;  //remove the left padding so the home icon lines up with the edge of the screen
-		//bootstrap automatically provides one of these for the right navbar
+	.navbar-toggle {
+		padding:20px;
+		//make the bootstrap button styles fit the mock
+		background:$nmu-green-dark;
+		border:none;
+		@include border-radius(0px);
+		height:60px;
+		margin:0;
+	}
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+			background: $nmu-green;  //must be background-color to overwrite bootstrap
+	}
+	.navbar-menu {
+		float:left;
+		span.icon-bar {
+			background-color:$nmu-off-white;
+			width:25px; //size the bootstrap icon-bars so they fit at the bigger size
+			height:3px;  //more sizing
+		}
+	}
+	.navbar-search {
+		font-size:1.5em;
+		.glyphicon {
+			top:-3px;  //move the search icon up a bit to center it
+			color:$nmu-off-white;
+		}
+	}
+
+	@media all and #{$mq-bootstrap-sm-min} {
+		.nav:first-child {
+			margin-left:-15px;  //remove the left padding so the home icon lines up with the edge of the screen
+			//bootstrap automatically provides one of these for the right-aligned navbar items
+		}
 	}
 
 	.nav>li {
@@ -167,27 +189,6 @@ $top-navigation-height: 35px; //this height must correspond with the offset numb
 		}
 	}
 
-	//*** collapsed view tweaks
-
-	//* make the toggle nav buttons (shown only in collapsed view) have a background otherwise bootstrap makes it transparent
-	.navbar-toggle {
-		background:white;
-	}
-	.navbar-menu {
-		float:left;
-		margin-left:15px;
-		span.icon-bar {
-			background-color:$nmu-gray-darker;
-		}
-	}
-	.navbar-search {
-		height:34px;  //need to set the height of the button since the font size will make it stretch
-		font-size:1.2em;
-		.glyphicon {
-			top:-2px;  //move the search icon up a bit to center it
-			color:$nmu-gray-darker;
-		}
-	}
 }
 
 
