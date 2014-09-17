@@ -5,6 +5,9 @@
 //the stick just adds a class of affix which is then styled with CSS
 // 131 is the default stick point
 // with the fixed top nav, 106 is the stick point
+
+//any changes to the primary navigation labels must also be made in the top navigation include
+
 ?>
 
 <nav id="header-main-navigation" class="navbar yamm navbar-default navbar-center navbar-static-top" role="navigation" data-spy="affix" data-offset-top="87">

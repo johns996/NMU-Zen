@@ -20,6 +20,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navigation-collapse">
       <ul class="nav navbar-nav" id="audience-navigation">
+	      <li class="toolbar-main-nav"><a class="allcaps" href="#">About</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Enroll</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Academics</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Sports</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Campus Life</a></li>
 	      <li class="toolbar-home"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
         <li><a class="allcaps" href="#">Future Students</a></li>
         <li><a class="allcaps" href="#">Current Students</a></li>

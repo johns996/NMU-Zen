@@ -39,6 +39,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	padding:0;  //make the nav bar fill up the space available
 	height:$top-navigation-height;
 
+	//* nav bar
 	nav { //customize the bootstrap nav defaults
 		background:$nmu-green-dark;
 		border:none;
@@ -47,7 +48,10 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		min-height:$top-navigation-height;
 		z-index:101; //the drupal overlay is 500, so we want to make sure this stays below it
 	}
+	//* end of nav bar
 
+
+	//* mobile icons
 	.navbar-toggle {
 		padding:20px;
 		//make the bootstrap button styles fit the mock
@@ -76,7 +80,10 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 			color:$nmu-off-white;
 		}
 	}
+	//* end of icons
 
+
+	//* nav bar items
 	@media all and #{$mq-bootstrap-sm-min} {
 		.nav:first-child {
 			margin-left:-15px;  //remove the left padding so the home icon lines up with the edge of the screen
@@ -85,6 +92,11 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	}
 
 	.nav>li {
+		&.toolbar-main-nav {
+			@media all and #{$mq-bootstrap-sm-min} {
+				display:none;  //these extra links are only shown in the mobile version
+			}
+		}
 		&>a {
 			padding: 0 14px;
 			font-size:.8em;
@@ -97,7 +109,8 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 				height:52px;  //set a height so the hover color shows over the entire area
 			}
 		}
-		&.toolbar-search{
+		&.toolbar-search,
+		&.toolbar-home{
 			display:none;  //don't show the search icon in the mobile menu
 			@media all and #{$mq-bootstrap-sm-min} {
 				display: block;
@@ -114,28 +127,53 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	}
 
 	.navbar-default  {
-		.navbar-nav>li>a {
-			color:$nmu-gray-light;
-			@include transition-duration(.5s);  //add the transition to the a tag so it fires on mouseover and mouseout
-			text-shadow:none;
-			&:hover,
-			&:focus{
-				color:white;
-				text-shadow:none;
-				//text-decoration:underline;
+		.navbar-collapse {
+			background:white;
+			border:none;
+			@media all and #{$mq-bootstrap-sm-min} {
+				background:none;
+			}
+		}
+		.navbar-nav {
+			margin-top:0;
+			margin-bottom:0;  //remove the top/bottom margin from bootstraps default so the mobile menu aligns to top/bottom
+			&>li {
+				border-bottom:1px solid $nmu-gray-lighter;
+				@media all and #{$mq-bootstrap-sm-min} {
+					border-bottom:none;
+					@include transition-duration(.5s);  //add the transition to the a tag so it fires on mouseover and mouseout
+				}
+				&:hover,
+				&:focus {
+					background:$nmu-green;
+					a {
+						color:white;  //color the a's here to make sure they keep this color whenever the li is in focus or hover
+						text-shadow:none;
+					}
+				}
+				&>a {
+					text-shadow:none;
+					color:$nmu-green-text;
+					font-weight:600;
+					@media all and #{$mq-bootstrap-sm-min} {
+						color:$nmu-gray;
+						@include transition-duration(.5s);  //add the transition to the a tag so it fires on mouseover and mouseout
+					}
+				}
+			}
+		}
+		@media all and #{$mq-bootstrap-sm-min} {
+			.nmu-toolbar-nav>li>a {
+				color:$nmu-gold;
+				&:hover,
+				&:focus{
+					color:$nmu-gold-highlight;
+				}
+			}
+			.nmu-toolbar-nav>li.open>a {  //this is needed for when the search icon looses hover/focus otherwise bootstrap will style it
+				color:$nmu-gold-highlight;
 				background:$nmu-green;
 			}
-		}
-		.nmu-toolbar-nav>li>a {
-			color:$nmu-gold;
-			&:hover,
-			&:focus{
-				color:$nmu-gold-highlight;
-			}
-		}
-		.nmu-toolbar-nav>li.open>a {  //this is needed for when the search icon looses hover/focus otherwise bootstrap will style it
-			color:$nmu-gold-highlight;
-			background:$nmu-green;
 		}
 	}
 
