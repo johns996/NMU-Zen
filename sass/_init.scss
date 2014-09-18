@@ -59,36 +59,6 @@ $h4-font-size: 1    * $base-font-size;
 $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.67 * $base-font-size;
 
-// The following font family declarations are based on the Microsoft core web
-// fonts which are common fonts available on most computer systems. The DejaVu
-// and Nimbus Sans fonts are commonly available on Linux systems where the MS
-// fonts are less common. Tahoma and Helvetica are also widely available.
-//
-// A user's web browser will look at the comma-separated list and will
-// attempt to use each font in turn until it finds one that is available
-// on the user's computer. The final "generic" font (sans-serif, serif or
-// monospace) hints at what type of font to use if the web browser doesn't
-// find any of the fonts in the list.
-
-// First, let's create some font stacks.
-$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
-
-$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
-$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
-$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
-
-// For an explanation of why "sans-serif" is at the end of this list, see
-// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
-
-// Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
-$font-monospace:   $courier;
-
 //
 // NMU Fonts
 //
@@ -157,6 +127,38 @@ $humanist-black:  "HumanistSlabserif712BT-Black","Times New Roman",Times,serif;
 $avenir-medium:		"AvenirLTStd-Medium","Helvetica Neue",Helvetica,Tahoma,Verdana,Arial,sans-serif;
 $avenir-black:    "AvenirLTStd-Black","Helvetica Neue",Helvetica,Tahoma,Verdana,Arial,sans-serif;
 
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $avenir-medium; // The font family set on the html element.
+$font-body:        $avenir-medium;
+$font-monospace:   $courier;
+
+
 //
 // Colors, etc.
 //
@@ -164,6 +166,7 @@ $avenir-black:    "AvenirLTStd-Black","Helvetica Neue",Helvetica,Tahoma,Verdana,
 $nmu-green: #006848;  //used for solid blocks of green (http://0to255.com/006848)
 $nmu-green-text: #01754e; //just following the genesis style of using this slightly lighter green for text
 $nmu-green-highlight: #008a60;  //used for navigation highlighting
+$nmu-green-border: #0b503c; //used for a barely visible green border on the green-darker color
 $nmu-green-dark: #065540;
 $nmu-green-darker: #034030;
 
