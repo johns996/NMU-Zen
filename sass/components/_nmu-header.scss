@@ -88,7 +88,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 			&>a {
 				padding: 0 12px;
 				font-size:.8em;
-				font-weight:700;
+				font-family: $avenir-black;
 				text-shadow:none;
 				line-height:$top-navigation-height;
 				max-width:160px;  //set a max width here so the animation that fires when shrinking to tablet is smoother
@@ -179,13 +179,14 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 
 	.search-label {
 		color:$nmu-green-darker;
-		font-weight:700;
+		font-family: $avenir-black;
 		letter-spacing:2px;
 		padding-bottom:5px;
 	}
 
 	.search-options {
 		label {
+			font-family: $avenir-medium;
 			color:$nmu-gray;
 			font-size:.8em;
 		}
@@ -196,13 +197,17 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	}
 
 	.search-inputs {
-		padding:26px 0  0 20px;
+		padding:31px 20px  0 35px;
+		text-align:center;
 		input[type="text"]{
-			padding:5px;
-			margin-right:5px;
+			@include border-radius(0px);
+			font-family:$avenir-medium;
 		}
 		input[type="submit"]{
-			padding:7px;
+			@include border-radius(0px);
+			margin-left:20px;
+			color:$nmu-green-darker;
+			font-family:$avenir-black;
 		}
 	}
 

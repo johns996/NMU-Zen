@@ -72,8 +72,12 @@
 					</div><!-- /.row -->
 				</div>
 				<div class="col-md-6 col-md-offset-1 col-sm-9 col-sm-offset-3 search-inputs">
-					<input type="text" size="50" class="search-txt-box" />
-					<input type="submit" value="Submit" name="submit" class="allcaps search-submit-button" />
+					<div class="input-group">
+						<input type="text" class="form-control search-txt-box" placeholder="SEARCH NMU">
+						  <span class="input-group-btn">
+    						<input type="submit" value="Submit" name="submit" class="allcaps search-submit-button btn btn-default" />
+  						</span>
+					</div>
 				</div>
 			</div><!-- /.row -->
 		</div><!-- /#search-collapse-div -->
