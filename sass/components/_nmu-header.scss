@@ -163,17 +163,19 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	}
 
 	//* search section
-	@media all and #{$mq-bootstrap-md-min} {  //give the two color background only on medium screens and larger
-		.dropdown-search { //styles for  multiple background images
+	.dropdown-search { //styles for  multiple background images
 			background:
 				 url(../images/background-gray.jpg),  //On top
 				 url(../images/background-white.jpg);   //On bottom
 			background-repeat: no-repeat, no-repeat;
-			background-position: left, right;
-			background-size: 50.1%, 50%;
+			background-position: top, bottom;
+			background-size: 100% 63.1%, 100% 38%;
 			.no-multiplebgs & {  //fallback for devices without multiple backgrounds
 				background:white;
 			}
+		@media all and #{$mq-bootstrap-md-min} {  //switch the backgrounds around for md screens and up
+				background-position: left, right;
+				background-size: 50.1%, 50%;
 		}
 	}
 
@@ -182,6 +184,15 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		font-family: $avenir-black;
 		letter-spacing:2px;
 		padding-bottom:5px;
+	}
+
+	.search-options-container {
+		background:url(../images/background-gray.jpg);
+		padding:22px 26px 10px 26px;
+		@media all and #{$mq-bootstrap-sm-min} {
+			background-image:none;
+			padding:0;
+		}
 	}
 
 	.search-options {
@@ -197,7 +208,10 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	}
 
 	.search-inputs {
-		padding:31px 20px  0 35px;
+		padding:15px 36px 15px 35px;
+		@media all and #{$mq-bootstrap-sm-min} {
+			padding:31px 20px  0 35px;
+		}
 		text-align:center;
 		input[type="text"]{
 			@include border-radius(0px);
@@ -230,10 +244,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	height:90px;
 	text-align:center;
 	letter-spacing:.06em;
-	padding:31px 0 22px 0;
-	@media all and #{$mq-bootstrap-md-min} {
-		padding-top:22px;  //remove some padding since the top nav is narrow again
-	}
+	padding:22px 0 22px 0;
 
 	.branding-one {
 		font-family:$avenir-black;
@@ -274,10 +285,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	nav {
 		width:100%;  //this is used to keep the nav full width when affixed.  must be in this selector so css animations don't animate it growing on an ipad scroll
 		background:$nmu-black;
-		border-left:none;
-		border-right:none;
-		border-bottom:none;
-		border-top:1px solid $nmu-gray-light;
+		border:none;
 		@include border-radius(0);
 		@include box-shadow(none);
 		@include opacity(0.8);
@@ -290,12 +298,21 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		}
 	}
 
-	nav.affix {  //navbar is affixed to the top of the screen
+	.navbar-brand {
+		display:none;
+		text-shadow:none;
+		color:$nmu-gold !important;
+		font-family:$avenir-black;
+	}
 
+	nav.affix {  //navbar is affixed to the top of the screen
 		top:$top-navigation-height;
 		z-index:1;
-		@media all and #{$mq-bootstrap-only-sm} {
-				top:$top-navigation-height + 16px;  //the navbar needs to move down some to accommodate the wider top nav on small screens
+		.navbar-brand {
+			display:block;
+			position:absolute;
+			top:0;
+			left:20px;
 		}
 	}
 

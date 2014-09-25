@@ -52,17 +52,17 @@
 
 		<div class="collapse navbar-collapse" id="search-collapse-div">
 			<div class="row">
-				<div class="col-md-4 col-md-offset-1  col-sm-6 col-sm-offset-3">
+				<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-1 search-options-container">
 					<div class="allcaps search-label">Search Options:</div>
 					<div class="row">
-						<div class="col-sm-6 search-options">
+						<div class="col-xs-6 search-options">
 							<ul class="list-unstyled" role="menu">
 								<li><label><input type="radio" class="search-radio" name="search-option" value="az" />A-Z Index</label></li>
 								<li><label><input type="radio" class="search-radio" name="search-option" value="keyword" checked />Keyword Search</label></li>
 								<li><label><input type="radio" class="search-radio" name="search-option" value="map" />Campus Map</label></li>
 							</ul>
 						</div>
-						<div class="col-sm-6 search-options">
+						<div class="col-xs-6 search-options">
 							<ul class="list-unstyled" role="menu">
 								<li><label><input type="radio" class="search-radio" name="search-option" value="directory" />Department Directory</label></li>
 								<li><label><input type="radio" class="search-radio" name="search-option" value="calendar" />Master Calendar</label></li>
@@ -71,7 +71,7 @@
 						</div>
 					</div><!-- /.row -->
 				</div>
-				<div class="col-md-6 col-md-offset-1 col-sm-9 col-sm-offset-3 search-inputs">
+				<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-1 search-inputs">
 					<div class="input-group">
 						<input type="text" class="form-control search-txt-box" placeholder="SEARCH NMU">
 						  <span class="input-group-btn">
