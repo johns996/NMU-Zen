@@ -259,7 +259,6 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	}
 }
 
-
 //* main navigation
 .region-main-navigation {
 
@@ -406,5 +405,8 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 
 }
 
-
+//* This tweak only applied to users logged into drupal.  it makes the main nav stick in the right spot when the drupal toolbar is present
+body.logged-in .region-main-navigation nav.affix {
+	top:#{$top-navigation-height +30};
+}
 

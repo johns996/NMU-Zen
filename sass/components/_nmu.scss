@@ -29,6 +29,14 @@
 
 
 /**
+ * Drupal fixes
+ */
+body.logged-in .region-top-navigation .navbar-fixed-top {
+	margin-top:30px;
+}
+
+
+/**
  * Body.
  */
 #main {
@@ -209,7 +217,4 @@
 
 .allcaps {
 	text-transform:uppercase;
-}
-#toolbar {
-	top:60px;  //* adjust the toolbar position to accommodate for the static top nav when logged in
 }
