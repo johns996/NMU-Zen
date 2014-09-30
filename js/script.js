@@ -72,23 +72,24 @@ Drupal.behaviors.my_custom_behavior = {
 
 		//* pause and play button
 		var videoID = document.getElementById('fearless-video');
-		function pauseHandler1() {
+		if(videoID != null){
+			function pauseHandler1() {
+					videoID.pause();
+					$(this).one('click', pauseHandler2);
+			}
+			function pauseHandler2() {
+					videoID.play();
+					$(this).one('click', pauseHandler1);
+			}
+			$('.video-controls').one('click', pauseHandler1);
+
+			//keep the video paused during dev
+			setTimeout(
+			function()
+			{
 				videoID.pause();
-				$(this).one('click', pauseHandler2);
+			}, 1000);
 		}
-		function pauseHandler2() {
-				videoID.play();
-				$(this).one('click', pauseHandler1);
-		}
-		$('.video-controls').one('click', pauseHandler1);
-
-
-		//keep the video paused during dev
-		setTimeout(
-		function()
-		{
-			videoID.pause();
-		}, 1000);
 
   }
 };

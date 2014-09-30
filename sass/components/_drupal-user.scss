@@ -1,0 +1,60 @@
+/* This SCSS file contains module styles for drupal user pages
+	Modules:
+		User Login
+		User Profile
+*/
+
+
+.boss_login {
+	margin:0 20px; padding:10px;
+	background-color:#e5e5e5;
+	width:450px;
+	border:1px dotted red;
+}
+#cms_login {
+	margin:5px 20px;
+	padding:10px;
+	background-color:#e5e5e5;
+	width:250px;
+	border:1px dotted #000;
+}
+
+#drupal_user_profile {
+	#div_cm_users {
+		display:none;
+	}
+	.user_msg {
+		margin:10px;
+		padding:10px;
+		border-width:1px;
+		border-style:dotted;
+	}
+	.first_timer {
+		background-color:#FEF5F1;
+		border-color:red;
+	}
+	.new_feature {
+		background-color:#FFE1BA;  // DDFFE3 -- green
+		border-color:orange;
+	}
+	.read_more {
+		background-color:#FFC882;
+		border-color:orange;
+		display:none;
+	}
+	#read_more_link,
+	#view_all_link {
+		color:blue;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	#view_all_link,
+	.class_cm_user {
+		color:gray;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	#sites_list {
+		display:none;
+	}
+}
