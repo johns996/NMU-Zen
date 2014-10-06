@@ -263,7 +263,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 .region-main-navigation {
 
 	@media all and #{$mq-bootstrap-xs-max} {
-		display:none;  //hide this navbar on xs screens
+		visibility:hidden;  //hide the navbar on xs screens but keep the flow of the page
 	}
 
 	padding:0;  //make the nav bar fill up the space available
@@ -306,7 +306,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 
 	nav.affix {  //navbar is affixed to the top of the screen
 		top:$top-navigation-height;
-		z-index:1;
+		//z-index:1;  //why is this a 1 here?
 		.navbar-brand {
 			display:block;
 			position:absolute;

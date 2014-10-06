@@ -53,45 +53,25 @@ Drupal.behaviors.my_custom_behavior = {
 			$('#search-dropdown').append(searchStored);
 		});
 
-/*		enquire.register("screen and (max-width: 767px)", {
-				match : function() {
-					//store the html of the main navbar
-					mainNavStored = $('#main-navigation-collapse').html();
-					// append that html to the top navbar
-					$('#top-navigation-collapse').prepend(mainNavStored);
-				},
-				unmatch : function() {
-					//remove the appended nav element when leaving the xs display
-					$('#top-navigation-collapse > #main-navigaiton-ul').remove();
-				}
-		});
+/*
 //no longer used because it's difficult to remove the dropdowns
 //and because this seems like a lot of extra work for just a list of 5 links
 //so it's being duplicated at the block level
+		enquire.register("screen and (max-width: 767px)", {
+			match : function() {
+				//store the html of the main navbar
+				mainNavStored = $('#main-navigation-collapse').html();
+				// append that html to the top navbar
+				$('#top-navigation-collapse').prepend(mainNavStored);
+			},
+			unmatch : function() {
+				//remove the appended nav element when leaving the xs display
+				$('#top-navigation-collapse > #main-navigaiton-ul').remove();
+			}
+		});
 */
 
-		//* pause and play button
-		var videoID = document.getElementById('fearless-video');
-		if(videoID != null){
-			function pauseHandler1() {
-					videoID.pause();
-					$(this).one('click', pauseHandler2);
-			}
-			function pauseHandler2() {
-					videoID.play();
-					$(this).one('click', pauseHandler1);
-			}
-			$('.video-controls').one('click', pauseHandler1);
-
-			//keep the video paused during dev
-			setTimeout(
-			function()
-			{
-				videoID.pause();
-			}, 1000);
-		}
-
-  }
+  } // end attach
 };
 
 

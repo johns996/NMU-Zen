@@ -53,33 +53,23 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 	display:none;
 }
 
-.video-wrapper {
-		margin-top:-49px;
-		max-height:600px;
-	//we may need to change the dimensions of the video to fit better into the homepage
-	//or find a way to use the code below to clip the frame to our desired deminsions
-	//max-height:500px;
-	//overflow:hidden;
-}
 
-//* ios does not load the video prior to creating a container for it on the page.  this container is 150x300 and does not scale after the video has been loaded
-//* for that reason, you either need to specify a dimension for the video or use the styles below (found: http://blog.omgmog.net/post/fluid-video-embeds-for-your-responsive-website/)
-.video-loop {
-	position: relative;
-  width: 100%; //* Use percentage width, so it scales
-  height: 0; //* and this is where the magic happens
-  padding-bottom: 56.25%; //* 4:3 : 75% (SD) - 16:9 : 56.25% (HD) - 1.85:1 : 54.05% (Cinema)
-	&  > .video-frame {
-		position: absolute;
-		top: 0;
-		left: 0;
-		@media all and #{$mq-bootstrap-xs-max} {
-			top:50px;  //move the video down since the main navbar is hidden
-		}
-
-		/* make the iframe/embed fill the wrapper */
-		height: 100%;
-		width: 100%;
+.video-row {
+	#fearless-video {
+		width:100%;
+		height:500px;
+		position:absolute;
+		left:0;
+		margin-top:-50px;
+		display:block;
+		z-index:95;
+	}
+	&:after {
+		width:100%;
+		height:500px;
+		position:relative;
+		margin-top:-50px;
+		content:"";
 	}
 }
 
@@ -88,7 +78,8 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 	color:white;
 	text-align:center;
 	left:28%;
-	top:20%;
+	top:280px;
+	z-index:99;
 	letter-spacing:2px;
 	.video-text-1a {
 		font-size:2em;
