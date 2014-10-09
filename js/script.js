@@ -47,11 +47,59 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).removeClass('nav-active');
 		});
 
+		//the default search menu is stored in the mobile-visible dropdown
+		//enquire uses a media query to detect desktop display and then moves that search menu into the desktop region
+		//if a user resizes their browser, enquire will move the search menu back into the mobile div
+		enquire.register("screen and (min-width: 768px)", {
+			match : function() {
+				$('#search-collapse-div').empty();
+				$('#search-dropdown').append(searchStored);
+				searchBindChange();
+			},
+			unmatch : function() {
+				$('#search-dropdown').empty();
+				$('#search-collapse-div').append(searchStored);
+				searchBindChange();
+			},
+			setup : function() {
+				searchStored = $('#search-collapse-div').html();
+				searchBindChange();
+			}
+		});
+
+		//we add the change events to a function so they can be re-bound as enquire re-writes the search menu
+		function searchBindChange(){
+			$('#search-az').bind('change', function(){
+				$('#search-query').attr('placeholder', 'ENTER A LETTER');
+			});
+			$('#search-keyword').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH NMU');
+			});
+			$('#search-map').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH CAMPUS MAP');
+			});
+			$('#search-directory').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH DEPARTMENT DIRECTORY');
+			});
+			$('#search-calendar').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH CALENDAR');
+			});
+			$('#search-people').bind('change', function(){
+				$('#search-query').attr('placeholder', 'ENTER A LAST NAME');
+			});
+		}
+
+/*
+//not used anymore in favor of enquire method above
+//using this method, i can't target any of the elements appended to the desktop search div
+//likely because the id's have been duplicated with this script
 		$('#search-icon').one('click', function() {
 			//to avoid duplicating the search section, we copy over the content from the mobile collapse menu and put it in the nav dropdown
 			searchStored = $('#search-collapse-div').html();
 			$('#search-dropdown').append(searchStored);
+
 		});
+*/
 
 /*
 //no longer used because it's difficult to remove the dropdowns
