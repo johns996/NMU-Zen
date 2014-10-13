@@ -75,7 +75,7 @@
 						</div>
 						<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-1 search-inputs">
 							<div class="input-group">
-								<input type="text" id="search-query" class="form-control search-txt-box" name="query" placeholder="SEARCH NMU">
+								<input type="text" id="search-query" class="form-control search-txt-box" name="query" placeholder="SEARCH NMU" autofocus>
 									<span class="input-group-btn">
 										<input type="submit" class="allcaps search-submit-button btn btn-default" name="submit" value="Submit" />
 									</span>

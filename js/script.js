@@ -71,23 +71,31 @@ Drupal.behaviors.my_custom_behavior = {
 		function searchBindChange(){
 			$('#search-az').bind('change', function(){
 				$('#search-query').attr('placeholder', 'ENTER A LETTER');
+				$('#search-query').focus();
 			});
 			$('#search-keyword').bind('change', function(){
 				$('#search-query').attr('placeholder', 'SEARCH NMU');
+				$('#search-query').focus();
 			});
 			$('#search-map').bind('change', function(){
 				$('#search-query').attr('placeholder', 'SEARCH CAMPUS MAP');
+				$('#search-query').focus();
 			});
 			$('#search-directory').bind('change', function(){
 				$('#search-query').attr('placeholder', 'SEARCH DEPARTMENT DIRECTORY');
+				$('#search-query').focus();
 			});
 			$('#search-calendar').bind('change', function(){
 				$('#search-query').attr('placeholder', 'SEARCH CALENDAR');
+				$('#search-query').focus();
 			});
 			$('#search-people').bind('change', function(){
 				$('#search-query').attr('placeholder', 'ENTER A LAST NAME');
+				$('#search-query').focus();
 			});
 		}
+
+
 
 /*
 //not used anymore in favor of enquire method above
