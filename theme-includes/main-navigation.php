@@ -69,7 +69,7 @@
 										<li><a href="#">Admitted Students</a></li>
 										<li><a href="#">Apply Online</a></li>
 										<li><a href="#">Contact a Counselor</a></li>
-										<li><a href="#">Financial Aid</a></li>
+										<li><a href="#">Financial Aid and Scholarships</a></li>
 										<li><a href="#">Graduate Students</a></li>
 										<li><a href="#">International Students</a></li>
 									</ul>

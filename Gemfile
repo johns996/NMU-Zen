@@ -15,5 +15,5 @@ source "https://rubygems.org"
 
 ## these latest gemfiles are not fully compatabile with zen
 #gem 'breakpoint', '~>2.5.0'
-#gem 'compass', '~>1.0.0.alpha.16'
-#gem 'sass', '~>3.3.14'
+gem 'compass', '1.0.1'
+gem 'sass', '3.4.5'

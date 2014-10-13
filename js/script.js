@@ -47,51 +47,87 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).removeClass('nav-active');
 		});
 
+		//the default search menu is stored in the mobile-visible dropdown
+		//enquire uses a media query to detect desktop display and then moves that search menu into the desktop region
+		//if a user resizes their browser, enquire will move the search menu back into the mobile div
+		enquire.register("screen and (min-width: 768px)", {
+			match : function() {
+				$('#search-collapse-div').empty();
+				$('#search-dropdown').append(searchStored);
+				searchBindChange();
+			},
+			unmatch : function() {
+				$('#search-dropdown').empty();
+				$('#search-collapse-div').append(searchStored);
+				searchBindChange();
+			},
+			setup : function() {
+				searchStored = $('#search-collapse-div').html();
+				searchBindChange();
+			}
+		});
+
+		//we add the change events to a function so they can be re-bound as enquire re-writes the search menu
+		function searchBindChange(){
+			$('#search-az').bind('change', function(){
+				$('#search-query').attr('placeholder', 'ENTER A LETTER');
+				$('#search-query').focus();
+			});
+			$('#search-keyword').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH NMU');
+				$('#search-query').focus();
+			});
+			$('#search-map').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH CAMPUS MAP');
+				$('#search-query').focus();
+			});
+			$('#search-directory').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH DEPARTMENT DIRECTORY');
+				$('#search-query').focus();
+			});
+			$('#search-calendar').bind('change', function(){
+				$('#search-query').attr('placeholder', 'SEARCH CALENDAR');
+				$('#search-query').focus();
+			});
+			$('#search-people').bind('change', function(){
+				$('#search-query').attr('placeholder', 'ENTER A LAST NAME');
+				$('#search-query').focus();
+			});
+		}
+
+
+
+/*
+//not used anymore in favor of enquire method above
+//using this method, i can't target any of the elements appended to the desktop search div
+//likely because the id's have been duplicated with this script
 		$('#search-icon').one('click', function() {
 			//to avoid duplicating the search section, we copy over the content from the mobile collapse menu and put it in the nav dropdown
 			searchStored = $('#search-collapse-div').html();
 			$('#search-dropdown').append(searchStored);
-		});
 
-/*		enquire.register("screen and (max-width: 767px)", {
-				match : function() {
-					//store the html of the main navbar
-					mainNavStored = $('#main-navigation-collapse').html();
-					// append that html to the top navbar
-					$('#top-navigation-collapse').prepend(mainNavStored);
-				},
-				unmatch : function() {
-					//remove the appended nav element when leaving the xs display
-					$('#top-navigation-collapse > #main-navigaiton-ul').remove();
-				}
 		});
+*/
+
+/*
 //no longer used because it's difficult to remove the dropdowns
 //and because this seems like a lot of extra work for just a list of 5 links
 //so it's being duplicated at the block level
+		enquire.register("screen and (max-width: 767px)", {
+			match : function() {
+				//store the html of the main navbar
+				mainNavStored = $('#main-navigation-collapse').html();
+				// append that html to the top navbar
+				$('#top-navigation-collapse').prepend(mainNavStored);
+			},
+			unmatch : function() {
+				//remove the appended nav element when leaving the xs display
+				$('#top-navigation-collapse > #main-navigaiton-ul').remove();
+			}
+		});
 */
 
-		//* pause and play button
-		var videoID = document.getElementById('fearless-video');
-		if(videoID != null){
-			function pauseHandler1() {
-					videoID.pause();
-					$(this).one('click', pauseHandler2);
-			}
-			function pauseHandler2() {
-					videoID.play();
-					$(this).one('click', pauseHandler1);
-			}
-			$('.video-controls').one('click', pauseHandler1);
-
-			//keep the video paused during dev
-			setTimeout(
-			function()
-			{
-				videoID.pause();
-			}, 1000);
-		}
-
-  }
+  } // end attach
 };
 
 
