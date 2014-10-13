@@ -72,15 +72,21 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 		content:"";
 	}
 }
-
-.video-overlay {
+.overlay-wrapper {
+	width:100%;
 	position:absolute;
 	color:white;
 	text-align:center;
-	left:28%;
 	top:280px;
 	z-index:99;
+	left:0;
+}
+
+.video-overlay {
+
 	letter-spacing:2px;
+	margin-left:auto;
+	margin-right:auto;
 	.video-text-1a {
 		font-size:2em;
 		line-height:1.2em;
@@ -114,6 +120,7 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 		}
 	}
 }
+
 
 .video-controls {
 	position:absolute;

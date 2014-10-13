@@ -279,7 +279,10 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	img[style*="float:left"]{
 		padding-right:5px;
 	}
-
+	//This is used when the youtube video begins playing on the homepage to make the nav more transparent
+	.nav-transparent {
+		@include opacity(0.2);
+	}
 	//* customize the bootstrap nav defaults
 	nav {
 		width:100%;  //this is used to keep the nav full width when affixed.  must be in this selector so css animations don't animate it growing on an ipad scroll
