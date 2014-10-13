@@ -8,7 +8,7 @@
 	<p>&copy; 2014 by the NMU Board of Trustees. NMU is an equal opportunity institution.</p>
 	<div class="reporting">
 		<a href="/budget-reporting">
-			<img style="width: 50px; height: 50px" src="images/budget.png"/>
+			<img style="width: 50px; height: 50px" src="/sites/all/themes/zen_nmu/images/budget.png"/>
 			<p>Budget and Performance Transparency Reporting</p>
 		</a>
 	</div>
