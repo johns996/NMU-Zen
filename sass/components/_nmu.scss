@@ -136,28 +136,7 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 	}
 }
 
-.hp-column-container {
- background:$nmu-gray;
-}
-
-//this stuff was just added for the demo
-.hp-column-one, .hp-column-two, .hp-column-three {
-	padding:5px 0 0 0 !important;
-	img {
-		width:404px;
-	}
-}
-//end of demo stuff
-
-.hp-column-one {
- background:$nmu-green-darker;
-}
-.hp-column-two {
- background:$nmu-green-dark;
-}
-.hp-column-three {
- background:$nmu-green;
-}
+@import 'components/nmu-hp-columns';
 
 .hp-events-section {
 	padding-top:5px;
@@ -167,49 +146,7 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 /**
  * Footer.
  */
-
-/*
-#footer {
-	background: $nmu-black;
-}
-.footer-main {
-	color:$nmu-gray-light;
-	font-family:$humanist-roman;
-	text-align:center;
-	margin:4em 2em;
-	h5 {
-		font-size:1.2em;
-		font-family:$humanist-roman;
-	}
-	p {
-		margin-bottom:5px;
-	}
-	a {
-		color:$nmu-gray-light;
-		@include transition(all 0.5s ease-in-out);
-		&:hover {
-			color:white;
-		}
-	}
-
-}
-*/
-
-//* Demo footer stuff
-#footer {
-	background: $nmu-green-darker;
-	margin-left:-15px;
-	margin-right:-15px;
-	.block {
-		margin-bottom:0;
-	}
-}
-.footer-main {
-	text-align:center;
-	img {
-		width:100%;
-	}
-}
+@import 'components/footer';
 
 /**
  * Generic Classes.
