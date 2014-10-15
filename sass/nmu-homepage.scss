@@ -1,0 +1,9 @@
+//these styles should be included only on the NMU homepage
+//the template.php file is looking for a specific content type
+//when it finds it, it will append this stylesheet to the css array
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+@import 'components/nmu-hp-video';
+@import 'components/nmu-hp-columns';

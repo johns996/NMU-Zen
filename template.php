@@ -66,18 +66,21 @@ function zen_nmu_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function zen_nmu_preprocess_node(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+	//add a css and js file to the fearless_nmu_homepage content type
+	//this will appear above the main styles.css include so these styles can be overwritten
+	if($variables['type'] == 'fearless_nmu_homepage'){
+		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/nmu-homepage.css');
+		$css = drupal_add_css();
+		$styles = drupal_get_css($css);
 
-  // Optionally, run node-type-specific preprocess functions, like
-  // zen_nmu_preprocess_node_page() or zen_nmu_preprocess_node_story().
-  $function = __FUNCTION__ . '_' . $variables['node']->type;
-  if (function_exists($function)) {
-    $function($variables, $hook);
-  }
+		//not yet turned on
+		//drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/homepage-v2.js');
+		//$js = drupal_add_js();
+		//$scripts = drupal_get_js($js);
+	}
 }
-// */
+//
 
 /**
  * Override or insert variables into the comment templates.

@@ -70,28 +70,56 @@ Drupal.behaviors.my_custom_behavior = {
 		//we add the change events to a function so they can be re-bound as enquire re-writes the search menu
 		function searchBindChange(){
 			$('#search-az').bind('change', function(){
+				resetSearch();
 				$('#search-query').attr('placeholder', 'ENTER A LETTER');
 				$('#search-query').focus();
 			});
 			$('#search-keyword').bind('change', function(){
+				resetSearch();
 				$('#search-query').attr('placeholder', 'SEARCH NMU');
 				$('#search-query').focus();
 			});
 			$('#search-map').bind('change', function(){
+				resetSearch();
 				$('#search-query').attr('placeholder', 'SEARCH CAMPUS MAP');
 				$('#search-query').focus();
 			});
-			$('#search-directory').bind('change', function(){
-				$('#search-query').attr('placeholder', 'SEARCH DEPARTMENT DIRECTORY');
-				$('#search-query').focus();
-			});
 			$('#search-calendar').bind('change', function(){
+				resetSearch();
 				$('#search-query').attr('placeholder', 'SEARCH CALENDAR');
 				$('#search-query').focus();
 			});
+			$('#search-directory').bind('change', function(){
+				resetSearch();
+				$('#search-query').hide();
+				$('#search-department').show();
+				$('#search-department').focus();
+				$('#searchform').attr({
+					action: '//aditweb3.nmu.edu/telephone/directory/web/dept_listing.php',
+					method: 'post'
+				});
+			});
 			$('#search-people').bind('change', function(){
+				resetSearch();
 				$('#search-query').attr('placeholder', 'ENTER A LAST NAME');
 				$('#search-query').focus();
+				$('#search-query').attr('name', 'searchname');
+				$('#search-department').attr('name', 'dept-searchname');  //change this name to prevent its data from blocking the people search
+				$('#searchform').attr({
+					action: '//aditweb3.nmu.edu/telephone/directory/web/default.php',
+					method: 'post'
+				});
+			});
+		}
+
+		function resetSearch() {
+			$('#search-query').show();
+			$('#search-department').hide();
+			$('#search-query').attr('name', 'query');
+			$('#search-department').attr('name', 'searchname');
+			$('#searchform').attr({
+				action: '/searchquery',
+				method: 'get'
 			});
 		}
 

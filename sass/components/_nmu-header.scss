@@ -18,7 +18,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		@include border-radius(0);
 		@include box-shadow(none);
 		min-height:$top-navigation-height;
-		z-index:102; //the drupal overlay is 500, so we want to make sure this stays below it
+		z-index:103; //the drupal overlay is 500, so we want to make sure this stays below it
 	}
 	//* end of nav bar
 

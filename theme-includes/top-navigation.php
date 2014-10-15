@@ -1,5 +1,13 @@
 <?php
 //nmu-zen
+
+require_once "/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php";
+
+$classSqlQuery = new SqlDataQueries();
+$classSqlQuery->SpecifyDB(Const_connHostWWW, Const_connDBWWW, Const_connUserWWW, Const_connPSWWWW);
+$strQuery = "SELECT dept, display FROM department_pulldown";
+$aResults = $classSqlQuery->MySQL_Queries($strQuery);
+
 ?>
 
 <nav class="navbar yamm navbar-default navbar-fixed-top" role="navigation">
@@ -61,24 +69,36 @@
 								<ul class="list-unstyled" role="menu">
 									<li><label><input type="radio" id="search-az" class="search-radio" name="search-option" value="az" />A-Z Index</label></li>
 									<li><label><input type="radio" id="search-keyword" class="search-radio" name="search-option" value="keyword" checked />Keyword Search</label></li>
-									<li><label><input type="radio" id="search-map" class="search-radio" name="search-option" value="map" />Campus Map</label></li>
+									<li><label><input type="radio" id="search-calendar" class="search-radio" name="search-option" value="calendar" />Master Calendar</label></li>
 								</ul>
 							</div>
 							<div class="col-xs-6 search-options">
 								<ul class="list-unstyled" role="menu">
 									<li><label><input type="radio" id="search-directory" class="search-radio" name="search-option" value="directory" />Department Directory</label></li>
-									<li><label><input type="radio" id="search-calendar" class="search-radio" name="search-option" value="calendar" />Master Calendar</label></li>
 									<li><label><input type="radio" id="search-people" class="search-radio" name="search-option" value="people" />NMU People Search</label></li>
 								</ul>
 							</div>
 						</div><!-- /.row -->
 						</div>
 						<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-1 search-inputs">
-							<div class="input-group">
+							<div class="input-group" id="general-search">
 								<input type="text" id="search-query" class="form-control search-txt-box" name="query" placeholder="SEARCH NMU" autofocus>
-									<span class="input-group-btn">
-										<input type="submit" class="allcaps search-submit-button btn btn-default" name="submit" value="Submit" />
-									</span>
+								<input type="hidden" name="return" value="yes">
+								<select name="searchname" id="search-department" class="form-control search-txt-box" style="display:none;">
+									<?php
+										if(count($aResults) > 0)
+										{
+											foreach($aResults as $aRow)
+												if($aRow['dept'] != '')
+													print'<option value="'.$aRow['dept'].'">'.$aRow['display'].'</option>'."\n";
+										}
+										else
+											echo '<option value="">An error has occurred.  Please notify edesign@nmu.edu if this error persists.</option>';
+									?>
+								</select>
+								<span class="input-group-btn">
+									<input type="submit" class="allcaps search-submit-button btn btn-default" name="submit" value="Submit" />
+								</span>
 							</div>
 						</div>
 				</div><!-- /.row -->
