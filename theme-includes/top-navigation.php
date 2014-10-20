@@ -1,6 +1,6 @@
 <?php
 //nmu-zen
-$aResults = [];
+$aResults = array();
 $theRequire = '/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php';
 if (is_file($theRequire)) {
   require_once($theRequire);
