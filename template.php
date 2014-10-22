@@ -35,7 +35,6 @@ function zen_nmu_preprocess_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered ("html" in this case.)
  */
 function zen_nmu_preprocess_html(&$variables, $hook) {
-  $variables['add_enquire'] = theme_get_setting('enquire');
   $variables['add_bootstrap'] = theme_get_setting('bootstrap');
   $variables['add_fontawesome'] = theme_get_setting('fontawesome');
 
