@@ -77,3 +77,19 @@
 		color:white;
 	}
 }
+
+//fixes for drupal elements hidden by the video
+
+body.logged-in {
+	.tabs-primary {
+		position:absolute;
+		top:134px;
+		.tabs-primary__tab.is-active {
+			background:white;
+		}
+	}
+	.ok, .messages--status {
+		position: absolute;
+		top: 80px;
+	}
+}
