@@ -21,12 +21,12 @@ jQuery(document).ready(function($) {
 				"autoplay": true, //Autoplay at start
 				"muted": true, //Muted at start
 
-				"mp4": "http://ericjohnpc.nmu.edu/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/Silent-Fearless.mp4", //mp4 video link
-				"webm": "http://ericjohnpc.nmu.edu/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/Silent-Fearless.webm", //Path to video webm format
+				"mp4": "/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.mp4", //mp4 video link
+				"webm": "/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.webm", //Path to video webm format
 
 				"video_ratio": 1.7777778, // width/height -> If none provided sizing of the video is set to adjust
 
-				"fallback_image": "testImage.png", //Fallback image path
+				"fallback_image": "/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.png", //Fallback image path
 		});
 		$("#playYoutube").click(function() {
 				$("#fearless-video").empty();
@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
                         "start": 0, //Start with X seconds offset
 						"video_ratio": 1.7777778, // width/height -> If none provided sizing of the video is set to adjust
 
-						"fallback_image": "testImage.png", //Fallback image path
+						"fallback_image": "/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.png", //Fallback image path
 				});
 				});
 		});
