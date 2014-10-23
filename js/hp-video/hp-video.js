@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+                var idleTime = 0;
                 var idleInterval = setInterval(timerIncrement, 60000); //1 minute intervals
                 $(this).mousemove(function(e) {
                     idleTime = 0;
