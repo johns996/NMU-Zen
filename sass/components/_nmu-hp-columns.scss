@@ -16,46 +16,48 @@
   }
  }
  /* Styles applying to all three columns */
- .hp-column-one, .hp-column-two, .hp-column-three {
-  padding: 30px 0 0 0;
-  background-color: $nmu-gray-evenlighter;
-  text-align: center;
-  overflow: hidden;
-  h2 {
-   color: $nmu-green-darker;
-   font-size: 1em;
-   font-family: $avenir-black;
-  }
-  section:first-of-type {
-   padding-top: 0; /* no space between header of column and heading of the first section */
-  }
-  section {
-   padding: 20px;
-   h3 {
-    margin: 5px 0;
-	color: $nmu-green;
-	text-transform: uppercase;
-	font-size: 1.8em;
-	font-family: $avenir-black;
-   }
-   hr {
-    width: 1.5em;
-    height: 1px;
-	margin-bottom: 25px;
-	border: none;
-	background: $nmu-gray-light;
-   }
-   p {
-    margin: 0;
-	color: $nmu-black-dark;
-	font-size: .9em;
-	line-height: 2;
-    a {
-     color: $nmu-green;
-	 text-decoration: none;
-	}
-   }
-  }
+ .hp-column-one,
+ .hp-column-two,
+ .hp-column-three {
+		padding: 30px 0 0 0;
+		background-color: $nmu-gray-evenlighter;
+		text-align: center;
+		overflow: hidden;
+		h2 {
+		 color: $nmu-green-darker;
+		 font-size: 1em;
+		 font-family: $avenir-black;
+		}
+		section:first-of-type {
+		 padding-top: 0; /* no space between header of column and heading of the first section */
+		}
+	 h3 {
+		margin: 5px 0;
+		color: $nmu-green;
+		text-transform: uppercase;
+		font-size: 1.8em;
+		font-family: $avenir-black;
+	 }
+		section {
+		 padding: 20px;
+
+		 hr {
+			width: 1.5em;
+			height: 1px;
+			margin-bottom: 25px;
+			border: none;
+			background: $nmu-gray-light;
+		 }
+		 p {
+			margin: 0;
+			color: $nmu-black-dark;
+			font-size: .9em;
+			line-height: 2;
+			a {
+			 color: $nmu-green;
+			}
+		 }
+		}
   #campus-map {
    text-decoration: none;
    img {
@@ -95,6 +97,14 @@
    }
   }
  }
+ 	.hp-column-two {
+		max-height:965px;
+		section {
+			height:900px;
+			overflow-y:auto;
+			padding:20px;
+		}
+	}
  /* specific columns */
  /* first column */
  .hp-column-one {
@@ -168,7 +178,7 @@
    span {
     font-size: .96em;
     display: inline-block;
-	
+
    }
   }
   .apply-link {
@@ -201,9 +211,13 @@
 /* tablet */
 @media all and #{$mq-bootstrap-xs-min} {
  .hp-column-container {
-  .hp-column-one, .hp-column-two, .hp-column-three {
+  .hp-column-one,
+  .hp-column-three {
    section {
     padding: 40px;
+   }
+   .hp-column-two {
+   	padding:10px;
    }
   }
   .hp-column-three {
