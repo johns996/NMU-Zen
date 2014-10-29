@@ -53,6 +53,45 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 	display:none;
 }
 
+/* Styles used in a number of large sections spanning several homepages */
+.homepage-section {
+	h3 {
+		margin: 5px 0;
+		color: $nmu-green;
+		text-transform: uppercase;
+		font-size: 1.6em;
+		font-family: $avenir-black;
+		strong {
+			color: $nmu-green-dark;
+		}
+	}
+	hr { /* seperator between title and text */
+		width: 1.5em;
+		height: 1px;
+		margin-bottom: 25px;
+		border: none;
+		background: $nmu-gray-light;
+	}
+	p {
+		color: $nmu-black-dark;
+		font-size: .9em;
+		line-height: 2;
+	}
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		li {
+			margin: .25em;
+		}
+	}
+	a, a:visited {
+		color: $nmu-green;
+	}
+	a:hover {
+		color: $nmu-black-dark;
+	}
+}
+
 .hp-events-section {
 	padding-top:5px;
 	background:$nmu-green;

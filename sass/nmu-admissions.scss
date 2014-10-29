@@ -1,0 +1,47 @@
+//these styles should be included only on the NMU admissions homepage
+//the template.php file is looking for a specific content type
+//when it finds it, it will append this stylesheet to the css array
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+@import 'components/nmu-slideshow';
+
+#admissions-homepage {
+	section {
+		overflow: hidden;
+	}
+}
+.cycle-nav-caption {
+	background-color: $nmu-gray-evenlighter;
+}
+
+.cycle-slideshow {
+	overflow: hidden;
+}
+
+@media not all and #{$mq-bootstrap-xs-min} {
+ .cycle-overlay {
+ 	text-align: left;
+ 	& > a {
+ 		padding-left: 30px;
+ 		padding-right: 30px;
+ 	}
+ 	.button {
+ 		display: none;
+ 	}
+ }
+}
+
+/* tablet */
+@media all and #{$mq-bootstrap-sm-min} {
+	#admissions-homepage > section {
+		@include display-flex();
+		.cycle-slideshow {
+			order: 1;
+		}
+		.cycle-nav-caption {
+			order: 2;
+		}
+	}
+}

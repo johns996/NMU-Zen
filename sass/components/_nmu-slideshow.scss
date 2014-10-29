@@ -1,0 +1,152 @@
+/* if there is no js enabled, hide all the slideshow images exepct the first */
+.no-js {
+ .cycle-slideshow {
+  img + img {
+   display: none;
+  }
+ }
+}
+
+/* 
+ * Cycle slideshow 
+ */
+.cycle-slideshow {
+ padding: 0;
+ img {
+  width: 100%;
+ }
+ .cycle-pager-active {
+  color: $nmu-green;
+ }
+ .cycle-pager {
+  width: 100%;
+  color: $nmu-gray;
+  font-size: 3.3em;
+  text-align: center;
+  position: absolute;
+  top: -80px; /* positioned well above the slideshow */
+  span {
+   text-shadow: 1px 1px 1px #ccc;
+   display: inline-block;
+   margin: auto 5px;
+   cursor: pointer;
+  }
+ }
+}
+
+/* 
+ * Variables used in calculations to position the prev/next controls when present
+ */
+$nav-size: 2.1em; /* size of the prev/next controls when present */
+$title-size: 2.8em; /* size of the title of the caption when prev/next buttons are present */
+$caption-padding: 4.5em; /* padding around caption, used to position prev/next controls */
+$nav-spacing: 1em; /* space between prev and next buttons */
+
+/* Style the prev/next controls */
+.cycle-nav { /* container of the prev/next controls */
+ position: absolute;
+ right: $caption-padding;
+ top: $caption-padding + ($title-size / 2) - ($nav-size / 2); /* position the prev/next controls with the title */
+ .cycle-next, .cycle-prev {
+  color: $nmu-green;
+  font-size: 1em;
+  border: thin solid $nmu-green;
+  width: $nav-size;
+  height: $nav-size;
+  float: left;
+  line-height: 1.8em;
+  text-align: center;
+  cursor: pointer;
+ }
+ .cycle-prev {
+  transform: scaleX(-1);
+  margin-right: $nav-spacing;
+ }
+ .cycle-next {
+  color: white;
+  background-color: $nmu-green;
+ }
+}
+.cycle-nav-caption { /* container of .cycle-nav and .cycle-caption */
+ position: relative;
+ .cycle-caption {
+  padding: $caption-padding;
+  padding-right: $caption-padding + ($nav-size * 2) + $nav-spacing;
+  h3 {
+   font-size: $title-size;
+   padding: 0;
+   margin: 0;
+  }
+ }
+}
+
+$phone-query: $mq-bootstrap-xs-min + ', (min-width: 767px) and (max-width: 860px)';
+/* phone */
+@media not all and #{$phone-query} {
+	.cycle-nav-caption {
+		.cycle-caption {
+			padding: 2.5em 20px;
+			h3 {
+				font-size: 1.9em;
+				margin-bottom: 1em;
+			}
+		}
+		.cycle-nav {
+			right: 2.5em;
+			top: 2.3em;
+		}
+	}
+}
+
+/* 
+ * The following styles apply to classes generated with slideshow text. 
+ * Elements with these class do not need to be inside of the .cycle-slideshow. 
+ */
+
+/* Cycle caption is positioned adjacent to the image. */
+.cycle-caption {
+ padding: 0 20px 20px 20px;
+ h3 { /* the caption title */
+  margin: 5px 0;
+  color: $nmu-green;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-family: $avenir-black;
+  strong {
+   color: $nmu-green-dark;
+  }
+ }
+ hr { /* seperator between the caption title and the text */
+  width: 1.5em;
+  height: 1px;
+  margin-bottom: 25px;
+  border: none;
+  background: $nmu-gray-light;
+ }
+ & > div { /* the caption content */
+  margin: 0;
+ }
+ a {
+  text-decoration: underline;
+  font-style: italic;
+ }
+}
+
+@import "components/nmu-image-overlays";
+.cycle-overlay {
+ @include image-overlay();
+}
+
+.responsive-cycle-overlay {
+ @include responsive-overlay-additions();
+}
+
+/* tablet */
+@media all and #{$mq-overlay-tablet} {
+ .cycle-caption {
+  ul li { /* display lists in two columns */
+   display: inline-block;
+   width: 40%;
+  }
+ }
+}

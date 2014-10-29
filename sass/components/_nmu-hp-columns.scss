@@ -1,19 +1,12 @@
-.no-js {
- .cycle-slideshow {
-  img + img {
-   display: none;
-  }
- }
-}
+@import "components/nmu-slideshow";
 
 .hp-column-container {
  overflow: hidden;
- h1,h2,h3,h4,h5 {
-  margin: 0;
-  em {
-   font-family: $avenir-black;
-   font-style: normal;
-  }
+ a {
+  color: $nmu-green;
+ }
+ a:hover, a:visited {
+  color: $nmu-green;
  }
  /* Styles applying to all three columns */
  .hp-column-one, .hp-column-two, .hp-column-three {
@@ -31,30 +24,6 @@
   }
   section {
    padding: 20px;
-   h3 {
-    margin: 5px 0;
-	color: $nmu-green;
-	text-transform: uppercase;
-	font-size: 1.8em;
-	font-family: $avenir-black;
-   }
-   hr {
-    width: 1.5em;
-    height: 1px;
-	margin-bottom: 25px;
-	border: none;
-	background: $nmu-gray-light;
-   }
-   p {
-    margin: 0;
-	color: $nmu-black-dark;
-	font-size: .9em;
-	line-height: 2;
-    a {
-     color: $nmu-green;
-	 text-decoration: none;
-	}
-   }
   }
   #campus-map {
    text-decoration: none;
@@ -68,32 +37,6 @@
   .img-wrapper {
    position: relative;
   }
-  .bottom-caption {
-   width: 100%;
-   position: absolute;
-   bottom: 0;
-   right: 0;
-   z-index: 101;
-   text-align: center;
-   background-color: rgba(0,0,0,.6);
-   a {
-    text-decoration: none;
-    display: block;
-    height: 100%;
-    text-transform: uppercase;
-    color: $nmu-gold;
-   }
-   h4 {
-    color: white;
-    font-size: 1em;
-   }
-   h5 {
-    color: $nmu-gold;
-    font-size: 1.3em;
-    font-family: $avenir-black;
-    text-transform: uppercase;
-   }
-  }
  }
  /* specific columns */
  /* first column */
@@ -101,56 +44,10 @@
   position: relative;
   background-color: white;
   border-top: solid 5px $nmu-green-darker;
-  .slideshow-link {
-   margin: 15px 30px;
-   display: inline-block;
-   a {
-    color: $nmu-green;
-    font-style: italic;
-    text-decoration: underline;
-    font-size: .9em;
-    text-transform: capitalize;
-   }
+  .cycle-slideshow { /* make room above the slideshow for the pager */
+   margin-top: 60px;
   }
-  .button {
-   z-index: 1000;
-   border: thin solid $nmu-gold;
-   max-width: 13em;
-   margin: 25px auto 0 auto;
   }
-  .bottom-caption {
-   padding: 30px 0;
-   a {
-    font-size: 1em;
-    color: white;
-    padding: 15px 0;
-   }
-  }
-  /* Slideshow related to first column */
-  .cycle-slideshow {
-   margin-top: 45px;
-   img {
-    width: 100%;
-   }
-  }
-  .cycle-pager-active {
-   color: $nmu-green;
-  }
-  .cycle-pager {
-   width: 100%;
-   color: $nmu-gray;
-   font-size: 3.3em;
-   text-align: center;
-   position: absolute;
-   top: -80px;
-   margin: 0 auto;
-   span {
-    text-shadow: 1px 1px 1px #ccc;
-    display: inline-block;
-    margin: auto 5px;
-   }
-  }
- }
  .hp-column-two {
   border-top: solid 5px $nmu-green-dark;
  }
@@ -199,11 +96,11 @@
 
 
 /* tablet */
-@media all and #{$mq-bootstrap-xs-min} {
+@media all and #{$mq-overlay-tablet} {
  .hp-column-container {
   .hp-column-one, .hp-column-two, .hp-column-three {
-   section {
-    padding: 40px;
+   .homepage-section {
+    padding: 40px 150px;
    }
   }
   .hp-column-three {
@@ -242,23 +139,21 @@
 }
 
 /* desktop */
-@media all and #{$mq-bootstrap-sm-min} {
+@media all and #{$mq-overlay-desktop} {
  .hp-column-container {
   @include display-flex();
   .hp-column-one, .hp-column-two, .hp-column-three {
-   section {
+   .homepage-section {
+    text-align: left;
+	padding: 40px;
     &:first-of-type {
 	 text-align: center;
+	 padding-top: 0;
 	}
-    text-align: left;
    }
   }
   .hp-column-one {
    background-color: $nmu-gray-lightest;
-   .cycle-slideshow {
-    position: absolute;
-    bottom: 0;
-   }
   }
   .hp-column-three {
    background-color: $nmu-gray-lighter;

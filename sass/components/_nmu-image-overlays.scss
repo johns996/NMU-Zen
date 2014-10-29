@@ -1,0 +1,128 @@
+$mq-overlay-tablet: $mq-bootstrap-xs-min;
+$mq-overlay-desktop: $mq-bootstrap-sm-min;
+
+$overlay-padding: 30px 0;
+
+@mixin image-overlay() {
+ width: 100%;
+ padding: $overlay-padding; /* default padding for overlay when not clickable */
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ z-index: 101; /* must be more than the image which cycle2 sets to 100 */
+ text-align: center;
+ background-color: rgba(0,0,0,.6); /* make slightly transparent */
+ & > a {
+  display: block;
+  margin: -$overlay-padding; /* undo the padding of the container if we want the whole overlay to be clickable */
+  padding: $overlay-padding; /* apply the padding to the a to get the same look */
+ }
+ a, a:hover, a:visited {
+  font-style: normal;
+  text-decoration: none;
+ }
+ h4 { /* white overlay title */
+  color: white;
+  font-size: 1em;
+  font-family: $avenir-black;
+  text-transform: uppercase;
+ }
+ h5 { /* gold overlay title */
+  color: $nmu-gold;
+  font-size: 1.3em;
+  font-family: $avenir-black;
+  text-transform: uppercase;
+ }
+ p { /* used for when you have more text */
+  color: white;
+ }
+ /* Buttons live inside overlays which means they are positioned on top
+    of the image. */
+ .button {
+  border: thin solid $nmu-gold;
+  max-width: 13em;
+  margin: 25px auto 0 auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: white;
+ }
+ /* tablet */
+ @media all and #{$mq-overlay-tablet} {
+  /* only show the cursor when hovering over the button */
+  & > a {
+   cursor: auto;
+   .button {
+    cursor: pointer;
+   }
+  }
+ }
+}
+
+@mixin responsive-overlay-additions() {
+ /* tablet */
+ @media all and #{$mq-overlay-tablet} {
+  $tbpad: 10px;
+  $lrpad: 30px;
+  text-align: left;
+  padding: $tbpad $lrpad;
+
+  & > a { /* override the padding so the entire overlay is clickable */
+   margin-top: -$tbpad;
+   margin-bottom: -$tbpad;
+   margin-left: -$lrpad;
+   margin-right: -$lrpad;
+   padding: $tbpad $lrpad;
+  }
+  
+  & > div:first-of-type, & > a > div:first-of-type {
+   text-align: left;
+   display: inline-block;
+   max-width: 60%;
+  }
+  .button {
+   margin-top: 0;
+   right: 30px;
+   top: 50%; /* center the button vertically */
+   transform: translateY(-50%);
+   position: absolute;
+   display: inline-block;
+   padding-left: 1.7em;
+   padding-right: 1.7em;
+  }
+ }
+}
+
+
+/* Default image overlay class
+ * Styles a semi-transparent overlay ontop of an image
+ * with text and optionally a button */
+.image-overlay {
+ @include image-overlay();
+}
+
+/* Add to the default styles for the image overlay to adapt when the screen is big enough.
+ * This works better when the images are landscape instead of portrait */
+.responsive-image-overlay {
+ @include image-overlay();
+ @include responsive-overlay-additions();
+}
+
+/* Another style option for overlays */
+.image-overlay2 {
+	@include image-overlay();
+	@include responsive-overlay-additions();
+	h4, h5 {
+		font-size: 1.3em;
+		display: inline;
+	}
+	.button {
+		padding: 0;
+		font-size: 1.3em;
+		width: 1.7em;
+		height: 1.7em;
+		line-height: 1.7em;
+		text-align: center;
+		border-color: $nmu-green;
+		color: $nmu-gold;
+	}
+}
