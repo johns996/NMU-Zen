@@ -52,7 +52,7 @@
 									</ul>
 								</div>
 								<div class="col-sm-6">
-									<img src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/nav-about.png" align="right" />Northern Michigan University, located in Marquette, Michigan, is a dynamic four-year, public, comprehensive university that has grown its reputation based on its award-winning leadership programs, cutting-edge technology initiatives and nationally recognized academic programs.  Northern has a population of about 9,000 undergraduate and graduate students.
+									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-about.png" align="right" />Northern Michigan University, located in Marquette, Michigan, is a dynamic four-year, public, comprehensive university that has grown its reputation based on its award-winning leadership programs, cutting-edge technology initiatives and nationally recognized academic programs.  Northern has a population of about 9,000 undergraduate and graduate students.
 							</div>
 						</li>
           </ul>
@@ -84,7 +84,7 @@
 									</ul>
 								</div>
 								<div class="col-sm-6">
-									<img src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/nav-enroll.png" align="right" />Ask a few Northern students what drew them to our university and you will get a variety of answers. That's because there is no single thing that make students want to go to Northern; it is ALL the things that we do here.  Northern is big enough to offer a wide variety of academic programs but is also small enough that every time you walk across campus, you'll probably wave "hi" to someone you know.
+									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-enroll.png" align="right" />Ask a few Northern students what drew them to our university and you will get a variety of answers. That's because there is no single thing that make students want to go to Northern; it is ALL the things that we do here.  Northern is big enough to offer a wide variety of academic programs but is also small enough that every time you walk across campus, you'll probably wave "hi" to someone you know.
 								</div>
 							</div>
 						</li>
@@ -115,7 +115,7 @@
 									</ul>
 								</div>
 								<div class="col-sm-6">
-									<img src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/nav-academics.png" align="left" />Curiosity is the raw ingredient of knowledge. It causes us to ask questions, to seek answers, to learn. At Northern Michigan University, natural curiosity and intellectual challenge meet in stimulating classes grounded in the liberal arts. So wherever your curiosity leads you, you can count on the support you need to take the next step, ask the next question, propose the next hypothesis.
+									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-academics.png" align="left" />Curiosity is the raw ingredient of knowledge. It causes us to ask questions, to seek answers, to learn. At Northern Michigan University, natural curiosity and intellectual challenge meet in stimulating classes grounded in the liberal arts. So wherever your curiosity leads you, you can count on the support you need to take the next step, ask the next question, propose the next hypothesis.
 								</div>
 							</div>
 						</li>
@@ -129,7 +129,7 @@
 						<li class="dropdown-menu-width-wrapper">
 							<div class="row">
 								<div class="col-sm-9">
-									<img src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/nav-sports.png" align="left" />The mission of the Northern Michigan University Department of Intercollegiate Athletics, Recreational Sports and the United States Olympic Training Site is to create an environment that promotes academic excellence, interpersonal growth and social development; embraces diversity; teaches lifetime leisure skills; fosters spirit and tradition; and builds a lifelong connection to NMU.
+									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-sports.png" align="left" />The mission of the Northern Michigan University Department of Intercollegiate Athletics, Recreational Sports and the United States Olympic Training Site is to create an environment that promotes academic excellence, interpersonal growth and social development; embraces diversity; teaches lifetime leisure skills; fosters spirit and tradition; and builds a lifelong connection to NMU.
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
@@ -154,7 +154,7 @@
 						<li class="dropdown-menu-width-wrapper">
 							<div class="row">
 								<div class="col-sm-6">
-									<img src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/nav-campus-life.png" align="left" />Yes, you’ll attend your classes, but what else will you be doing as a student at Northern?  There’s so much stuff to choose from. There’s a student organization or club – almost 300 at last count-- for just about every interest. If you’re into investigating the paranormal, anime or improv comedy, there’s a group. Cheer on your fellow Wildcats at a hockey game or volleyball match. Join a competitive club sport or an intramural team.  The sky is the limit.
+									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-campus-life.png" align="left" />Yes, you’ll attend your classes, but what else will you be doing as a student at Northern?  There’s so much stuff to choose from. There’s a student organization or club – almost 300 at last count-- for just about every interest. If you’re into investigating the paranormal, anime or improv comedy, there’s a group. Cheer on your fellow Wildcats at a hockey game or volleyball match. Join a competitive club sport or an intramural team.  The sky is the limit.
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">

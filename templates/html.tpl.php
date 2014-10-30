@@ -39,9 +39,6 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
     <![endif]-->
   <?php endif; ?>
-  <?php if ($add_enquire): ?>
-    <script src="/sites/all/themes/zen_nmu/js/enquire.min.js"></script>
-  <?php endif; ?>
   <?php if ($add_bootstrap): ?>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
