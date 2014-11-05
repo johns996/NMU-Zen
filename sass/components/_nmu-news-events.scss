@@ -1,70 +1,84 @@
-.EventEditWrapper {
+.events-section {
+	padding-top:5px;
+}
+.events-label {
+	font-family:$avenir-black;
+	color:white;
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+	text-align:center;
+	font-size:3em;
+	line-height:1em;
+	padding-top:80px;
+}
+.events-sub-label {
+	font-family:$avenir-medium;
+	color:$nmu-gold;
+}
+.events-header {
+	border-top:5px solid $nmu-green;
+	background-image:url(/sites/all/themes/zen_nmu/images/news-and-events.jpg);
+	height:234px;
+	width:1210px;
+	margin-left:-15px;
+	margin-right:-15px;
+}
 
+
+
+div.day-wrapper { //this div wraps around the displayed events, must be more specific than the bootstrap row margins
+	margin:0 40px;
+}
+.EventHeader {
+	border-top:5px solid $nmu-green;  //the border must be here to prevent jagged edges
+	padding:5px 20px;
+	.EventHeaderType {
+		float:left;
+		width:65px;
+		text-transform: uppercase;
+		font-size:larger;
+		padding:5px 0px 0px 5px;
+	}
+	.EventHeaderDate {
+		float:right;
+		padding:8px 5px 1px 0px;
+		font-size:smaller;
+	}
 }
 
 .EventLeft {
 	border-left:1px solid $nmu-gray-lighter;
 	border-right:1px solid $nmu-gray-lighter;
 	border-bottom:1px solid $nmu-gray-lighter;
-	min-height:250px;
-}
-.Title,
-.Text,
-.Footer {
-	margin-left:20px;
-	margin-right:20px;
-}
-.EventLeft .Title {
-	border-top:1px solid $nmu-gray-lighter;
-	font-weight:bold;
-	padding:10px 5px 5px 5px;
-	color:green;
-	font-size:larger;
-}
-.EventLeft .Text {
-	padding:0px 5px 5px 5px;
+	height:300px;
+	overflow:hidden;
+	.Title,
+	.Text,
+	.Footer {
+		margin:0 20px;
+		padding:5px;
+	}
+	.Title {
+		border-top:1px solid $nmu-gray-lighter;
+		font-weight:bold;
+		padding-top:10px;
+		color:green;
+		font-size:larger;
+	}
+	.Text {
+		padding-top:0px;
+		max-height:140px;
+		overflow:hidden;
+	}
+	.Footer {
 
-
-
-
-}
-.EventLeft .Footer {
-	padding:0px 5px 5px 5px;
-}
-.EventLeft .Text .ReadMore a:link, .EventLeft .Text .ReadMore a:visited, .EventLeft .Text .ReadMore a:hover, .EventLeft .Text .ReadMore a:active,
-.EventLeft .Footer a:link, .EventLeft .Footer a:visited, .EventLeft .Footer a:hover, .EventLeft .Footer a:active,
-.EventLeft a:link, .EventLeft a:visited, .EventLeft a:hover, .EventLeft a:active {
-	text-decoration:none;
-	color:green !important;
-}
-
-.EventHeader {
-	border-top:5px solid $nmu-green;  //the border must be here to prevent jagged edges
-	padding:5px 20px;
-}
-.EventHeader .EventHeaderType {
-	float:left;
-	width:65px;
-	text-transform: uppercase;
-	font-size:larger;
-	padding:5px 0px 0px 5px;
-}
-.EventHeader .EventHeaderDate {
-	float:right;
-	padding:8px 5px 1px 0px;
-	font-size:smaller;
-}
-
-.EventLeft a:link, .EventLeft a:visited, {
-	text-decoration:none;
-	color:black;
-}
-
-.EventLeft a:hover, .EventLeft a:active, {
-	text-decoration:none;
-	color:black;
-}
-
-.EventControls {
-	padding-left:5px;
+	}
+	a,
+	a:visited,
+	a:hover,
+	a:active {
+		text-decoration:none;
+		color:green;
+	}
 }
