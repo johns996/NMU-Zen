@@ -30,25 +30,25 @@ if (is_file($theRequire)) {
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navigation-collapse">
       <ul class="nav navbar-nav nmu-audience-nav" id="audience-navigation">
-	      <li class="toolbar-main-nav"><a class="allcaps" href="#">About</a></li>
-	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Enroll</a></li>
-	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Academics</a></li>
-	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Sports</a></li>
-	      <li class="toolbar-main-nav"><a class="allcaps" href="#">Campus Life</a></li>
-	      <li class="toolbar-home"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-        <li><a class="allcaps" href="#">Future Students</a></li>
-        <li><a class="allcaps" href="#">Current Students</a></li>
-      	<li><a class="allcaps" href="#">Faculty & Staff</a></li>
-        <li><a class="allcaps audience-single-word-nav" href="#">Alumni</a></li>
-        <li><a class="allcaps audience-single-word-nav" href="#">Visitors</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="/about">About</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="/admissions/applyto">Enroll</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="/academics">Academics</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="/sports">Sports</a></li>
+	      <li class="toolbar-main-nav"><a class="allcaps" href="/admissions/life">Campus Life</a></li>
+	      <li class="toolbar-home"><a href="./"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a class="allcaps" href="/admissions">Future Students</a></li>
+        <li><a class="allcaps" href="/students">Current Students</a></li>
+      	<li><a class="allcaps" href="/facultystaff">Faculty & Staff</a></li>
+        <li><a class="allcaps audience-single-word-nav" href="/friends">Alumni</a></li>
+        <li><a class="allcaps audience-single-word-nav" href="/admissions/visit">Visitors</a></li>
       </ul>
 
  			<ul class="nav navbar-nav navbar-right nmu-toolbar-nav">
-        <li><a href="#">MyNMU</a></li>
-        <li><a class="allcaps" href="#">Events</a></li>
-        <li><a class="allcaps" href="#">Apply</a></li>
-        <li><a class="allcaps" href="#">A-Z</a></li>
-        <li><a class="allcaps" href="#">Give</a></li>
+        <li><a href="https://mynmu.nmu.edu/">MyNMU</a></li>
+        <li><a class="allcaps" href="/calendar">Events</a></li>
+        <li><a class="allcaps" href="/apply">Apply</a></li>
+        <li><a class="allcaps" href="/atozsearch">A-Z</a></li>
+        <li><a class="allcaps" href="https://payment.nmu.edu/alumni/foundation_cc.php">Give</a></li>
         <li class="toolbar-search dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="search-icon"><span class="glyphicon glyphicon-search"></span></a>
 					<ul class="dropdown-menu dropdown-search yamm-content" role="menu">
 						<li class="dropdown-menu-width-wrapper" id="search-dropdown">

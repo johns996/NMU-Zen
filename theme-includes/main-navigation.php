@@ -20,7 +20,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">NMU</a>
+      <a class="navbar-brand" href="/">NMU</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -35,20 +35,20 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">About</a></li>
-										<li><a href="#">Achievements</a></li>
-										<li><a href="#">Campus</a></li>
-										<li><a href="#">Clery Act Statistics</a></li>
-										<li><a href="#">Marquette Area</a></li>
+										<li><a href="/about">About</a></li>
+										<li><a href="/achievements">Achievements</a></li>
+										<li><a href="/nmucampus">Campus</a></li>
+										<li><a href="/publicsafety/clery-act">Clery Act Statistics</a></li>
+										<li><a href="/naturalwonders">Marquette Area</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Mission and Vision</a></li>
-										<li><a href="#">People</a></li>
-										<li><a href="#">President's Office</a></li>
-										<li><a href="#">Technology Program</a></li>
-										<li><a href="#">Tuition and Fees</a></li>
+										<li><a href="/mission">Mission and Vision</a></li>
+										<li><a href="/profile">People</a></li>
+										<li><a href="/president">President's Office</a></li>
+										<li><a href="/technology">Technology Program</a></li>
+										<li><a href="/tuition">Tuition and Fees</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-6">
@@ -66,21 +66,21 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Admitted Students</a></li>
-										<li><a href="#">Apply Online</a></li>
-										<li><a href="#">Contact a Counselor</a></li>
-										<li><a href="#">Financial Aid and Scholarships</a></li>
-										<li><a href="#">Graduate Students</a></li>
-										<li><a href="#">International Students</a></li>
+										<li><a href="/admissions/admitted">Admitted Students</a></li>
+										<li><a href="/admissions/applyto">Apply Online</a></li>
+										<li><a href="/admissions/contactcounselor">Contact a Counselor</a></li>
+										<li><a href="/financialaid">Financial Aid and Scholarships</a></li>
+										<li><a href="/graduatestudies">Graduate Students</a></li>
+										<li><a href="/internationalprograms/international-students">International Students</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Military Veteran Students</a></li>
-										<li><a href="#">Request Information</a></li>
-										<li><a href="#">Transfer Students</a></li>
-										<li><a href="#">Undergraduate Students</a></li>
-										<li><a href="#">Visit Us</a></li>
+										<li><a href="/admissions/veterans">Military Veteran Students</a></li>
+										<li><a href="/why/#enough">Request Information</a></li>
+										<li><a href="/transfer">Transfer Students</a></li>
+										<li><a href="/admissions">Undergraduate Students</a></li>
+										<li><a href="/admissions/visit">Visit Us</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-6">
@@ -100,18 +100,18 @@
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
 										<li><a href="#">Academic Computing</a></li>
-										<li><a href="#">Course Catalog</a></li>
-										<li><a href="#">EduCat</a></li>
-										<li><a href="#">Graduate Course Catalog</a></li>
-										<li><a href="#">Graduate Programs</a></li>
+										<li><a href="/bulletin">Course Catalog</a></li>
+										<li><a href="https://www.nmu.edueducat.nmu.edu">EduCat</a></li>
+										<li><a href="/gradbulletin">Graduate Course Catalog</a></li>
+										<li><a href="/graduatestudies/programs">Graduate Programs</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Grants and Research</a></li>
-										<li><a href="#">Library</a></li>
-										<li><a href="#">Majors and Minors</a></li>
-										<li><a href="#">Study Abroad</a></li>
+										<li><a href="/grantsandresearch">Grants and Research</a></li>
+										<li><a href="http://library.nmu.edu/">Library</a></li>
+										<li><a href="/programs">Majors and Minors</a></li>
+										<li><a href="/internationalprograms">Study Abroad</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-6">
@@ -133,13 +133,13 @@
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Complete Athletics Schedule</a></li>
-										<li><a href="#">Intercollegiate Athletics</a></li>
-										<li><a href="#">Recreational Sports</a></li>
-										<li><a href="#">Sports Camps</a></li>
-										<li><a href="#">Tickets</a></li>
-										<li><a href="#">U.S. Olympic Training Site</a></li>
-										<li><a href="#">Wellness</a></li>
+										<li><a href="/sports/schedule">Complete Athletics Schedule</a></li>
+										<li><a href="http://www.nmuwildcats.com/">Intercollegiate Athletics</a></li>
+										<li><a href="/sportsrecsports/">Recreational Sports</a></li>
+										<li><a href="http://www.nmuwildcats.com/information/SportCamps">Sports Camps</a></li>
+										<li><a href="/tickets">Tickets</a></li>
+										<li><a href="/sportsusoec">U.S. Olympic Training Site</a></li>
+										<li><a href="/wellness">Wellness</a></li>
 									</ul>
 								</div>
 							</div>
@@ -158,18 +158,18 @@
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Bookstore</a></li>
-										<li><a href="#">Center for Student Enrichment</a></li>
-										<li><a href="#">Dean of Students</a></li>
-										<li><a href="#">Health Center</a></li>
+										<li><a href="http://www.nmubookstore.com/">Bookstore</a></li>
+										<li><a href="/studentenrichment">Center for Student Enrichment</a></li>
+										<li><a href="/dso">Dean of Students</a></li>
+										<li><a href="/healthcenter">Health Center</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Housing</a></li>
-										<li><a href="#">Master Calendar</a></li>
-										<li><a href="#">Multicultural Education and Resource Center</a></li>
-										<li><a href="#">Student Organizations</a></li>
+										<li><a href="/housing">Housing</a></li>
+										<li><a href="/calendar">Master Calendar</a></li>
+										<li><a href="/multiculturaledandres">Multicultural Education and Resource Center</a></li>
+										<li><a href="/organizations">Student Organizations</a></li>
 									</ul>
 								</div>
 							</div>
