@@ -12,6 +12,7 @@
 	background-color:$nmu-green-darker;
 	@media all and #{$mq-bootstrap-sm-min} {
 		background-image: url('/sites/all/themes/zen_nmu/images/footer.jpg');
+		background-position:center;
 	}
 	h4 {
 		font-size: 1em;

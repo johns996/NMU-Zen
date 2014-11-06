@@ -293,6 +293,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		@include opacity(0.8);
 		@include transition-duration(.5s);
 		z-index:102; //the overlay is 500, so we want to make sure this stays below it
+		margin-top:-1px;  //fix the phantom line that shows up on the ipad
 		&:hover,
 		&:focus,
 		&.nav-active{
@@ -410,6 +411,6 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 
 //* This tweak only applied to users logged into drupal.  it makes the main nav stick in the right spot when the drupal toolbar is present
 body.logged-in .region-main-navigation nav.affix {
-	top:#{$top-navigation-height +30};
+	top:#{$top-navigation-height +30};  //switched to 29.2 to remove the phantom line that shows up on tablets above the nav bar
 }
 
