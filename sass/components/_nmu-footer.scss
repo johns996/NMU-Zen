@@ -1,5 +1,5 @@
-/* 
- * Footer 
+/*
+ * Footer
  */
 
 #footer {
@@ -7,23 +7,8 @@
 	font-size: small;
 	text-align: center;
 	color: #979797;
-	background-color: rgba(0,29,11,.9);
-	position: relative;
 	overflow: hidden;
-
-	&:after {
-		content: "";
-		background-image: url('/sites/all/themes/zen_nmu/images/footer.jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		display: block; /* override the zen theme. display: table doesn't work */
-	}
+	background-image: url('/sites/all/themes/zen_nmu/images/footer.jpg');
 	h1 {
 		font-size: 1em;
 		color: #ccc;

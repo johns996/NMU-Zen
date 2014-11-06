@@ -2,15 +2,21 @@
 	padding-top:5px;
 }
 .events-label {
-	font-family:$avenir-black;
-	color:white;
-	margin-left:auto;
-	margin-right:auto;
-	width:500px;
-	text-align:center;
-	font-size:3em;
-	line-height:1em;
-	padding-top:80px;
+		margin-left:auto;
+		margin-right:auto;
+		width:300px;
+		text-align:center;
+		font-family:$avenir-black;
+		color:white;
+		font-size:2.2em;
+		line-height:1em;
+		padding-top:40px;
+		@media all and #{$mq-bootstrap-md-min} {
+			width:500px;
+			font-size:3em;
+			line-height:1em;
+			padding-top:80px;
+		}
 }
 .events-sub-label {
 	font-family:$avenir-medium;
@@ -18,17 +24,26 @@
 }
 .events-header {
 	border-top:5px solid $nmu-green;
-	background-image:url(/sites/all/themes/zen_nmu/images/news-and-events.jpg);
-	height:234px;
-	width:1210px;
+	background-color:$nmu-green;
 	margin-left:-15px;
 	margin-right:-15px;
+	height:148px;
+	background-image:url(/sites/all/themes/zen_nmu/images/news-and-events-767.jpg);
+	background-position:center;
+	@media all and #{$mq-bootstrap-md-min} {
+		//max-width:1210px;
+		height:234px;
+		background-image:url(/sites/all/themes/zen_nmu/images/news-and-events.jpg);
+	}
 }
 
 
 
 div.day-wrapper { //this div wraps around the displayed events, must be more specific than the bootstrap row margins
-	margin:0 40px;
+	margin:0 5px;
+	@media all and #{$mq-bootstrap-md-min} {
+		margin:0 40px;
+	}
 }
 .EventHeader {
 	border-top:5px solid $nmu-green;  //the border must be here to prevent jagged edges
@@ -51,8 +66,15 @@ div.day-wrapper { //this div wraps around the displayed events, must be more spe
 	border-left:1px solid $nmu-gray-lighter;
 	border-right:1px solid $nmu-gray-lighter;
 	border-bottom:1px solid $nmu-gray-lighter;
+	margin-bottom:10px;
 	height:300px;
 	overflow:hidden;
+	@media all and #{$mq-bootstrap-only-md} {
+		height:350px;
+	}
+	@media all and #{$mq-bootstrap-md-min} {
+		margin-bottom:0;
+	}
 	.Title,
 	.Text,
 	.Footer {
@@ -69,6 +91,9 @@ div.day-wrapper { //this div wraps around the displayed events, must be more spe
 	.Text {
 		padding-top:0px;
 		max-height:140px;
+		@media all and #{$mq-bootstrap-only-md} {
+			max-height:180px;
+		}
 		overflow:hidden;
 	}
 	.Footer {
