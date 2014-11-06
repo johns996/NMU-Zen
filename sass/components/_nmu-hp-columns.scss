@@ -54,7 +54,7 @@
 	.hp-column-one {
 		position: relative;
 		background-color: white;
-		border-top: solid 5px $nmu-green-darker;
+		border-top: solid 6px $nmu-green-darker;  //borders are 6 but displayed at 5 because 1px is hidden my the ::after on the video
 		.cycle-slideshow {
 			margin-top: 60px; // make room above the slideshow for the pager
 		}
@@ -62,10 +62,12 @@
 
  	//second column
 	.hp-column-two {
-		border-top: solid 5px $nmu-green-dark;
+		border-top: solid 6px $nmu-green-dark;
 
 		section {
-			height:900px;
+			@media all and #{$mq-bootstrap-sm-min} {
+				height:900px;
+			}
 			overflow-y:auto;
 			padding:20px;
 		}
@@ -73,7 +75,7 @@
 
 	// third column
 	.hp-column-three {
-		border-top: solid 5px $nmu-green;
+		border-top: solid 6px $nmu-green;
 		.img-wrapper {
 			font-family: $avenir-black;
 			img {

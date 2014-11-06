@@ -35,6 +35,15 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 	margin-top:30px;
 }
 
+body,
+#page
+{
+	//keep everything on the page within the viewport
+	//this was done to attempt to prevent the side scrolling in ios
+	//does not fully work but it does trim the columns down on the homepage and force them to fit
+	max-width: 100%;
+	overflow-x: hidden;
+}
 
 /**
  * Body.
