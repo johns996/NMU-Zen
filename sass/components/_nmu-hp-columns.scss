@@ -15,7 +15,9 @@
 		background-color: $nmu-gray-evenlighter;
 		text-align: center;
 		overflow: hidden;
-		max-height:950px;
+		@media all and #{$mq-bootstrap-sm-min} {
+			max-height:950px;
+		}
 		h2 {
 			color: $nmu-green-darker;
 			font-size: 1em;
