@@ -132,7 +132,7 @@
 
 
 /* tablet */
-@media all and #{$mq-overlay-tablet} {
+@media all and #{$mq-bootstrap-xs-min} {
 	.hp-column-container {
 		.hp-column-one,
 		.hp-column-three {
@@ -179,7 +179,7 @@
 }
 
 /* desktop */
-@media all and #{$mq-overlay-desktop} {
+@media all and #{$mq-bootstrap-sm-min} {
 	.hp-column-container {
 		@include display-flex();
 		.hp-column-one,

@@ -142,7 +142,7 @@ $phone-query: $mq-bootstrap-xs-min + ', (min-width: 767px) and (max-width: 860px
 }
 
 /* tablet */
-@media all and #{$mq-overlay-tablet} {
+@media all and #{$mq-bootstrap-xs-min} {
  .cycle-caption {
   ul li { /* display lists in two columns */
    display: inline-block;
