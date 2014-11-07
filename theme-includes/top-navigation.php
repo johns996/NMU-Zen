@@ -67,14 +67,14 @@ if (is_file($theRequire)) {
 						<div class="allcaps search-label">Search Options:</div>
 						<div class="row">
 							<input type="hidden" value="20" name="datasource" />
-							<div class="col-xs-6 search-options">
+							<div class="col-sm-6 search-options">
 								<ul class="list-unstyled" role="menu">
 									<li><label><input type="radio" id="search-az" class="search-radio" name="search-option" value="az" />A-Z Index</label></li>
 									<li><label><input type="radio" id="search-keyword" class="search-radio" name="search-option" value="keyword" checked />Keyword Search</label></li>
 									<li><label><input type="radio" id="search-calendar" class="search-radio" name="search-option" value="calendar" />Master Calendar</label></li>
 								</ul>
 							</div>
-							<div class="col-xs-6 search-options search-options-second">
+							<div class="col-sm-6 search-options search-options-second">
 								<ul class="list-unstyled" role="menu">
 									<li><label><input type="radio" id="search-directory" class="search-radio" name="search-option" value="directory" />Department Directory</label></li>
 									<li><label><input type="radio" id="search-people" class="search-radio" name="search-option" value="people" />NMU People Search</label></li>
@@ -84,7 +84,7 @@ if (is_file($theRequire)) {
 						</div>
 						<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-1 search-inputs">
 							<div class="input-group" id="general-search">
-								<input type="text" id="search-query" class="form-control search-txt-box" name="query" placeholder="SEARCH NMU" autofocus>
+								<input type="text" id="search-query" class="form-control search-txt-box" name="query" placeholder="SEARCH NMU">
 								<input type="hidden" name="return" value="yes">
 								<select name="searchname" id="search-department" class="form-control search-txt-box" style="display:none;">
 									<?php

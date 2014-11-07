@@ -78,7 +78,9 @@
 			width: 0 !important;
 		}
 		.stacklafw {
-			margin-bottom:70px;  //this is needed to ensure that you can always scroll down to the load more content button.
+			@media all and #{$mq-bootstrap-sm-min} {
+				margin-bottom:70px;  //this is needed to ensure that you can always scroll down to the load more content button.
+			}
 		}
 	}
 
