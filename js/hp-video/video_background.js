@@ -55,12 +55,54 @@
             });
             this.ismobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
             this.supports_flash = 9 < swfobject.getFlashPlayerVersion().major && (!1 !== this.parameters.mp4 || !1 !== this.parameters.flv);
-            this.supports_video = Modernizr.video && (Modernizr.video.h264 && !1 !== this.parameters.mp4 || Modernizr.video.ogg && !1 !== this.parameters.ogg || Modernizr.video.webm &&
-                !1 !== this.parameters.webm);
+            //This supports_video isn't working correctly in my dev environment. Removing and defaulting to supporting video now. 
+            //this.supports_video = Modernizr.video && (Modernizr.video.h264 && !1 !== this.parameters.mp4 || Modernizr.video.ogg && !1 !== this.parameters.ogg || Modernizr.video.webm && !1 !== this.parameters.webm);
+            this.supports_video = true;
             this.decision = "image";
-            this.ismobile || !this.supports_flash && !this.supports_video && !1 === this.parameters.youtube || (this.decision = this.parameters.priority, !1 !== this.parameters.youtube ? this.decision = "youtube" : "flash" == this.parameters.priority && this.supports_flash ? this.decision = "flash" : "html5" == this.parameters.priority && this.supports_video ? this.decision = "html5" : this.supports_flash ? this.decision = "flash" : this.supports_video && (this.decision = "html5"));
-            "image" == this.decision ? this.make_image() :
-                "youtube" == this.decision ? this.make_youtube() : "html5" == this.decision ? this.make_video() : this.make_flash();
+
+            //Decide what to use
+            if (!this.ismobile && (this.supports_flash || this.supports_video || this.parameters.youtube !== false)) {
+                this.decision = this.parameters.priority;
+                if (this.parameters.youtube !== false) {
+                    this.decision = "youtube";
+                } else if (this.parameters.priority == "flash" && this.supports_flash) {
+                    this.decision = "flash";
+                } else if (this.parameters.priority == "html5" && this.supports_video) {
+                    this.decision = "html5";
+                } else if (this.supports_flash) {
+                    this.decision = "flash";
+                } else if (this.supports_video) {
+                    this.decision = "html5";
+                }
+            }
+            if (this.parameters.youtube) {
+                console.log(this.parameters.youtube)
+                this.decision = "youtube"
+                this.make_youtube()
+                return this
+            }
+            //Image Fallback
+            if (this.decision == "image") {
+                this.make_image();
+            }
+
+            //Youtube
+            else if (this.decision == "youtube") {
+                this.make_youtube();
+            }
+
+            //Video
+            else {
+                //Html5 video
+                if (this.decision == "html5") {
+                    this.make_video();
+                }
+                //Flash
+                else {
+                    this.make_flash();
+                }
+            }
+
             return this
         };
         video_background.prototype = {
@@ -119,18 +161,21 @@
             },
             build_youtube: function() {
                 /* NMU - Makes Nav visible again when youtube video stops */
-                function onStateChanged(event){
-                    if (event.data == YT.PlayerState.PLAYING){
-                    	jQuery(".region-main-navigation nav").addClass("nav-transparent")
+                function onStateChanged(event) {
+                    if (event.data == YT.PlayerState.PLAYING) {
+                        jQuery(".region-main-navigation nav").addClass("nav-transparent")
                     }
-                    if (event.data == YT.PlayerState.ENDED || event.data == YT.PlayerState.PAUSED){
+                    if (event.data == YT.PlayerState.ENDED || event.data == YT.PlayerState.PAUSED) {
                         jQuery(".region-main-navigation nav").removeClass("nav-transparent")
                     }
                 }
                 var a = {
-                    loop: this.parameters.loop ? 1 : 0,
-                    start: this.parameters.start,
-                    autoplay: this.parameters.autoplay ? 1 : 0,
+                    //loop: this.parameters.loop ? 1 : 0,
+                    loop: 0,
+                    //start: this.parameters.start,
+                    start: 0,
+                    //autoplay: this.parameters.autoplay ? 1 : 0,
+                    autoplay: 1, //If we load a youtube video, we want to play it no matter what.
                     controls: 0,
                     showinfo: 0,
                     wmode: "transparent",
@@ -159,11 +204,10 @@
                     this.resize_timeout = setTimeout(b.proxy(this.video_resize,
                         this), 10)
                 }, this)), this.video_resize());
-                this.parameters.muted && this.mute()
+                this.parameters.muted && this.mute();
+                this.player.playVideo();
             },
-            /*youtube_add_event_listener: function(a, b) {
-            	this.player.addEventListener(a,b)
-            },*/
+
             make_flash: function() {
                 var a = {
                     url: !1 != this.parameters.mp4 ? this.parameters.mp4 : this.parameters.flv,
@@ -233,7 +277,7 @@
                 return "html5" == this.decision ? !this.video.volume : "flash" == this.decision ? video.isMute() : "youtube" == this.decision && this.youtube_ready ? this.player.isMuted() : !1
             },
             isStopped: function() {
-            	return "youtube" == this.decision && this.youtube_ready ? this.player.onStateChange() : 1
+                return "youtube" == this.decision && this.youtube_ready ? this.player.onStateChange() : 1
             },
             mute: function() {
                 "html5" == this.decision ? this.video.volume = 0 : "flash" == this.decision ? this.video.mute() : "youtube" == this.decision && this.youtube_ready && this.player.mute()
