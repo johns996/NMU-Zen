@@ -206,6 +206,9 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 			@include appearance(checkbox);
 		}
 	}
+	.search-options-second {
+		padding-right:14px;
+	}
 
 	.search-inputs {
 		padding:15px 36px 15px 35px;

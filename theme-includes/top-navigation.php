@@ -74,7 +74,7 @@ if (is_file($theRequire)) {
 									<li><label><input type="radio" id="search-calendar" class="search-radio" name="search-option" value="calendar" />Master Calendar</label></li>
 								</ul>
 							</div>
-							<div class="col-xs-6 search-options">
+							<div class="col-xs-6 search-options search-options-second">
 								<ul class="list-unstyled" role="menu">
 									<li><label><input type="radio" id="search-directory" class="search-radio" name="search-option" value="directory" />Department Directory</label></li>
 									<li><label><input type="radio" id="search-people" class="search-radio" name="search-option" value="people" />NMU People Search</label></li>
