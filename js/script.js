@@ -17,7 +17,8 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    // Place all code here.
+
 		$(document).on('click', '.yamm .dropdown-menu', function(e) {
 			e.stopPropagation()
 		});
@@ -55,6 +56,7 @@ Drupal.behaviors.my_custom_behavior = {
 				$('#search-collapse-div').empty();
 				$('#search-dropdown').append(searchStored);
 				searchBindChange();
+				$('#search-query').attr('autofocus', 'true');  //no autofocus on small screens
 			},
 			unmatch : function() {
 				$('#search-dropdown').empty();
