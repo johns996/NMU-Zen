@@ -63,13 +63,22 @@
  	//second column
 	.hp-column-two {
 		border-top: solid 6px $nmu-green-dark;
-
 		section {
 			@media all and #{$mq-bootstrap-sm-min} {
 				height:900px;
 			}
+			-webkit-overflow-scrolling: touch;  //allow an iframe to scroll in webkit browsers
 			overflow-y:auto;
 			padding:20px;
+			-ms-overflow-style: none;  //hide the social scrollbar on IE
+			//there is no firefox way to hide this scrollbar...
+		}
+		section::-webkit-scrollbar {
+			//the scrollbar is hidden on webkit to prevent the auto showing>hiding loop that appears when the elements are just the right size to trigger it
+			width: 0 !important;
+		}
+		.stacklafw {
+			margin-bottom:70px;  //this is needed to ensure that you can always scroll down to the load more content button.
 		}
 	}
 

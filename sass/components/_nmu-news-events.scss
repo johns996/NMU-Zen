@@ -83,7 +83,7 @@ div.day-wrapper { //this div wraps around the displayed events, must be more spe
 		border-top:1px solid $nmu-gray-lighter;
 		font-weight:bold;
 		padding-top:10px;
-		color:green;
+		color:$nmu-green;
 		font-size:larger;
 	}
 	.Text {
@@ -102,6 +102,6 @@ div.day-wrapper { //this div wraps around the displayed events, must be more spe
 	a:hover,
 	a:active {
 		text-decoration:none;
-		color:green;
+		color:$nmu-green;
 	}
 }
