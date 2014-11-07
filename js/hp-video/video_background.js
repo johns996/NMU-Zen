@@ -162,6 +162,9 @@
             build_youtube: function() {
                 /* NMU - Makes Nav visible again when youtube video stops */
                 function onStateChanged(event) {
+                    if (event.data == YT.PlayerState.UNSTARTED) {
+                        this.player.playVideo()
+                    }
                     if (event.data == YT.PlayerState.PLAYING) {
                         jQuery(".region-main-navigation nav").addClass("nav-transparent")
                     }
@@ -175,7 +178,7 @@
                     //start: this.parameters.start,
                     start: 0,
                     //autoplay: this.parameters.autoplay ? 1 : 0,
-                    autoplay: 1, //If we load a youtube video, we want to play it no matter what.
+                    autoplay: 0, //If we load a youtube video, we want to play it no matter what.
                     controls: 0,
                     showinfo: 0,
                     wmode: "transparent",
@@ -205,7 +208,8 @@
                         this), 10)
                 }, this)), this.video_resize());
                 this.parameters.muted && this.mute();
-                this.player.playVideo();
+                //this.playVideo();
+
             },
 
             make_flash: function() {
