@@ -17,22 +17,25 @@
 	}
 }
 .overlay-wrapper {
-	width:100%;
-	position:absolute;
-	color:white;
-	text-align:center;
-	top:280px;
-	z-index:99;
-	left:0;
+	position:relative;
 }
 
 .video-overlay {
-
+	position:absolute;
+	top:70px;
+	left:0;
+	width:100%;  //this is needed to center the text
+	color:white;
+	text-align:center;
+	z-index:99;
 	letter-spacing:2px;
 	margin-left:auto;
 	margin-right:auto;
 	.video-text-1a {
-		font-size:2em;
+		font-size:1.7em;
+		@media all and #{$mq-bootstrap-sm-min} {
+			font-size:2em;
+		}
 		line-height:1.2em;
 		& sup{
 			font-size:60%;
@@ -42,7 +45,10 @@
 		}
 	}
 	.video-text-1b  {
-		font-size:4em;
+		font-size:3em;
+		@media all and #{$mq-bootstrap-sm-min} {
+			font-size:4em;
+		}
 		line-height:.9em;
 		margin-bottom:20px;
 	}

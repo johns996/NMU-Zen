@@ -110,3 +110,16 @@ body,
 .allcaps {
 	text-transform:uppercase;
 }
+
+.sm-break {
+	display:inline;
+	@media all and #{$mq-bootstrap-sm-min} {
+		display:block;
+	}
+}
+.xs-break {
+display:block;
+	@media all and #{$mq-bootstrap-sm-min} {
+		display:inline;
+	}
+}
