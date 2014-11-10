@@ -173,12 +173,12 @@
                     }
                 }
                 var a = {
-                    //loop: this.parameters.loop ? 1 : 0,
-                    loop: 0,
-                    //start: this.parameters.start,
-                    start: 0,
-                    //autoplay: this.parameters.autoplay ? 1 : 0,
-                    autoplay: 0, //If we load a youtube video, we want to play it no matter what.
+                    loop: this.parameters.loop ? 1 : 0,
+                    //loop: 0,
+                    start: this.parameters.start,
+                    //start: 0,
+                    autoplay: this.parameters.autoplay ? 1 : 0,
+                    //autoplay: 0, //If we load a youtube video, we want to play it no matter what.
                     controls: 0,
                     showinfo: 0,
                     wmode: "transparent",

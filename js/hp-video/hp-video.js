@@ -46,20 +46,22 @@ jQuery(document).ready(function($) {
 
         "fallback_image": "/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.png", //Fallback image path
     });
-    $("#playYoutube").click(function() {
-                $("#fearless-video").empty();
-                $(".video-overlay").hide();
-                var Video_back = new video_background($("#fearless-video"), {
-                    "position": "absolute", //Stick within the div
-                    "z-index": "-1", //Behind everything
+    if (!isAndroid) {
+        $("#playYoutube").click(function() {
+            $("#fearless-video").empty();
+            $(".video-overlay").hide();
+            var Video_back = new video_background($("#fearless-video"), {
+                "position": "absolute", //Stick within the div
+                "z-index": "-1", //Behind everything
 
-                    "loop": false, //Not looping
-                    "autoplay": true, //Autoplay at start
-                    "muted": false, //Not Muted
+                "loop": false, //Not looping
+                "autoplay": true, //Autoplay at start
+                "muted": false, //Not Muted
 
-                    "youtube": "JtpUN4_mXhI",
-                    "start": 0, //Start with X seconds offset
-                    "video_ratio": 1.7777778, // width/height -> If none provided sizing of the video is set to adjust
-                });
+                "youtube": "JtpUN4_mXhI",
+                "start": 0, //Start with X seconds offset
+                "video_ratio": 1.7777778, // width/height -> If none provided sizing of the video is set to adjust
             });
+        });
+    }
 });
