@@ -112,7 +112,7 @@ Drupal.behaviors.my_custom_behavior = {
 					method: 'post'
 				});
 			});
-		}
+		};
 
 		function resetSearch() {
 			$('#search-query').show();
@@ -123,8 +123,31 @@ Drupal.behaviors.my_custom_behavior = {
 				action: '/searchquery',
 				method: 'get'
 			});
-		}
+		};
 
+		if ($('#nmu-alert').length){
+			var alertHeight = $('#nmu-alert').height();
+			alertHeight = alertHeight + 62;  //62 is the margin (30) padding (30) and border (2)
+			currentOffset = $('#header-main-navigation').attr('data-offset-top');
+			var theFullHeight = parseInt(currentOffset,10) + parseInt(alertHeight,10);
+			$('#header-main-navigation').attr('data-offset-top', theFullHeight);
+		};
+
+		$('#nmu-alert').on('closed.bs.alert', function () {
+
+
+			//have to find a way to reset the scroll spy
+
+			//$('[data-spy="scroll"]').each(function () {
+			//	var $spy = $(this).scrollspy('refresh')
+			//});
+
+			//$(window).off('.affix')
+			//$('#header-main-navigation').removeData('bs.affix').removeClass('affix affix-top affix-bottom')
+
+
+			$('#header-main-navigation').attr('data-offset-top', currentOffset);
+		});
 
 
 /*
