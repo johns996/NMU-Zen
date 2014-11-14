@@ -68,7 +68,7 @@ div.day-wrapper { //this div wraps around the displayed events, must be more spe
 	height:300px;
 	overflow:hidden;
 	@media all and #{$mq-bootstrap-only-md} {
-		height:350px;
+		height:370px;
 	}
 	@media all and #{$mq-bootstrap-md-min} {
 		margin-bottom:0;
