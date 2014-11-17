@@ -65,9 +65,6 @@ stylesheets[all][] = css/styles.css
 
 
 ; Optionally add some JavaScripts to your theme.
-
-;enquire must be added here because script.js depends on this file existing (imce will fail to load properly if loaded through the theme settings)
-scripts[] = js/vendor/enquire.min.js
 scripts[] = js/script.js
 
 
