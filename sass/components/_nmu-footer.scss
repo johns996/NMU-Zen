@@ -1,8 +1,11 @@
 /*
  * Footer
  */
+#footer .block.last {  //we only want to target the last block in the footer to make sure it goes to the bottom of the page
+	margin-bottom:0;
+}
 
-#footer {
+.footer-main {
 	padding: 50px 20px;
 	font-size: .95em;
 	text-align: center;
