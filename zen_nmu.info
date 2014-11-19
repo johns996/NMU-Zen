@@ -63,7 +63,6 @@ stylesheets[all][] = css/styles.css
 ;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
 
 
-
 ; Optionally add some JavaScripts to your theme.
 scripts[] = js/script.js
 

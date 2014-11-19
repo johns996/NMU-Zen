@@ -72,6 +72,7 @@
 			});
 		};
 
+		//this function makes sure the default search behavior is available when switching between search types
 		function resetSearch() {
 			$('#search-query').show();
 			$('#search-department').hide();

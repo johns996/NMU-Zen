@@ -75,37 +75,6 @@ Drupal.behaviors.my_custom_behavior = {
 			$('#header-main-navigation').data('bs.affix').options.offset = currentOffset;
 		});
 
-
-/*
-//not used anymore in favor of enquire method above
-//using this method, i can't target any of the elements appended to the desktop search div
-//likely because the id's have been duplicated with this script
-		$('#search-icon').one('click', function() {
-			//to avoid duplicating the search section, we copy over the content from the mobile collapse menu and put it in the nav dropdown
-			searchStored = $('#search-collapse-div').html();
-			$('#search-dropdown').append(searchStored);
-
-		});
-*/
-
-/*
-//no longer used because it's difficult to remove the dropdowns
-//and because this seems like a lot of extra work for just a list of 5 links
-//so it's being duplicated at the block level
-		enquire.register("screen and (max-width: 767px)", {
-			match : function() {
-				//store the html of the main navbar
-				mainNavStored = $('#main-navigation-collapse').html();
-				// append that html to the top navbar
-				$('#top-navigation-collapse').prepend(mainNavStored);
-			},
-			unmatch : function() {
-				//remove the appended nav element when leaving the xs display
-				$('#top-navigation-collapse > #main-navigaiton-ul').remove();
-			}
-		});
-*/
-
   } // end attach
 };
 
