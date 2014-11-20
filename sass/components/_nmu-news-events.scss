@@ -1,5 +1,9 @@
-.news-events {
+.news-events-wrapper {
 	@extend #main;
+}
+.news-events {
+	margin-left:-14px;
+	margin-right:-14px;
 }
 
 .events-header {
