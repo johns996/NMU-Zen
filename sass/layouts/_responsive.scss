@@ -6,19 +6,8 @@
  * depending on whether blocks are placed in the left or right sidebars.
  */
 
-
-
-	/**
-	 * Center the page.
-	 *
-	 * For screen sizes larger than 1200px, prevent excessively long lines of text
-	 * by setting a max-width.
-	 */
 	#main {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 1170px;  //everything contained in the template will be in a bootstrap row and have a -15/-15 margin so we cap the max width to accommodate this
-		//this class is extended in the news-events css file, so any changes here will be duplicated there
+		//everything handled by bootstrap now....
 	}
 
 //all zen grids stuff was pulled out in favor of bootstrap's grid system

@@ -16,7 +16,7 @@
     <?php print render($page['main_navigation']); ?>
   </header>
 
-  <div id="main" class="container-fluid">
+  <div id="main" class="container">
   	<div class="row">
 
 			<?php
