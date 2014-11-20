@@ -1,0 +1,716 @@
+@charset "UTF-8";
+/* Import Sass mixins, variables, Compass modules, etc. */
+/**
+ * @license
+ * MyFonts Webfont Build ID 2822837, 2014-06-03T19:26:12-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Humanist Slabserif 712 by Bitstream
+ * URL: http://www.myfonts.com//fonts/bitstream/humanist-slabserif-712/humanist-slabserif-712/
+ * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+ * Licensed pageviews: 10,000
+ *
+ * Webfont: Humanist Slabserif 712 Black by Bitstream
+ * URL: http://www.myfonts.com//fonts/bitstream/humanist-slabserif-712/black/
+ * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+ * Licensed pageviews: 10,000
+ *
+ * Webfont: Avenir 65 Medium by Linotype
+ * URL: http://www.myfonts.com//fonts/linotype/avenir/65-medium/
+ * Copyright: Copyright &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. Copyright &#x00A9; 1989 - 2002 Adobe Systems Incorporated.  All Rights Reserved.
+ * Licensed pageviews: 250,000
+ *
+ * Webfont: Avenir 95 Black by Linotype
+ * URL: http://www.myfonts.com//fonts/linotype/avenir/95-black/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 250,000
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2822837
+ *
+ * © 2014 MyFonts Inc
+ */
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2b12b5");
+@font-face {
+  font-family: 'HumanistSlabserif712BT-Roman';
+  src: url("../fonts/2B12B5_0_0.eot");
+  src: url("../fonts/2B12B5_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2B12B5_0_0.woff") format("woff"), url("../fonts/2B12B5_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'HumanistSlabserif712BT-Black';
+  src: url("../fonts/2B12B5_1_0.eot");
+  src: url("../fonts/2B12B5_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2B12B5_1_0.woff") format("woff"), url("../fonts/2B12B5_1_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'AvenirLTStd-Medium';
+  src: url("../fonts/2B12B5_2_0.eot");
+  src: url("../fonts/2B12B5_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2B12B5_2_0.woff") format("woff"), url("../fonts/2B12B5_2_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'AvenirLTStd-Black';
+  src: url("../fonts/2B12B5_3_0.eot");
+  src: url("../fonts/2B12B5_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2B12B5_3_0.woff") format("woff"), url("../fonts/2B12B5_3_0.ttf") format("truetype");
+}
+/* these were the zen/old-nmu standard media queries
+	$mq-only-mobile: '(max-width 479px)'; //target only small screens, does not scale upwards
+	$mq-narrow: '(min-width: 480px)';  //only screens larger than 480
+	$mq-only-narrow: '(min-width: 480px) and (max-width: 959px)';  //target only narrow screens, does not scale upwards
+	$mq-normal: '(min-width: 960px)';  //only screens larger than 960
+	$mq-only-normal: '(min-width: 960px) and (max-width: 1224px)';  //target only normal screens, does not scale upwards
+	$mq-wide: '(min-width: 1225px)';  //only screens larger than 1225
+*/
+/* if there is no js enabled, hide all the slideshow images exepct the first */
+/* line 4, ../sass/components/_nmu-slideshow.scss */
+.no-js .cycle-slideshow img + img {
+  display: none;
+}
+
+/* 
+ * Cycle slideshow 
+ */
+/* line 13, ../sass/components/_nmu-slideshow.scss */
+.cycle-slideshow {
+  padding: 0;
+}
+/* line 15, ../sass/components/_nmu-slideshow.scss */
+.cycle-slideshow img {
+  width: 100%;
+}
+/* line 18, ../sass/components/_nmu-slideshow.scss */
+.cycle-slideshow .cycle-pager-active {
+  color: #006848;
+}
+/* line 21, ../sass/components/_nmu-slideshow.scss */
+.cycle-slideshow .cycle-pager {
+  width: 100%;
+  color: #aaaaaa;
+  font-size: 3.3em;
+  text-align: center;
+  position: absolute;
+  top: -80px;
+  /* positioned well above the slideshow */
+}
+/* line 28, ../sass/components/_nmu-slideshow.scss */
+.cycle-slideshow .cycle-pager span {
+  text-shadow: 1px 1px 1px #ccc;
+  display: inline-block;
+  margin: auto 5px;
+  cursor: pointer;
+}
+
+/* 
+ * Variables used in calculations to position the prev/next controls when present
+ */
+/* size of the prev/next controls when present */
+/* size of the title of the caption when prev/next buttons are present */
+/* padding around caption, used to position prev/next controls */
+/* space between prev and next buttons */
+/* Style the prev/next controls */
+/* line 46, ../sass/components/_nmu-slideshow.scss */
+.cycle-nav {
+  /* container of the prev/next controls */
+  position: absolute;
+  right: 4.5em;
+  top: 4.85em;
+  /* position the prev/next controls with the title */
+}
+/* line 50, ../sass/components/_nmu-slideshow.scss */
+.cycle-nav .cycle-next, .cycle-nav .cycle-prev {
+  color: #006848;
+  font-size: 1em;
+  border: thin solid #006848;
+  width: 2.1em;
+  height: 2.1em;
+  float: left;
+  line-height: 1.8em;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 61, ../sass/components/_nmu-slideshow.scss */
+.cycle-nav .cycle-prev {
+  transform: scaleX(-1);
+  margin-right: 1em;
+}
+/* line 65, ../sass/components/_nmu-slideshow.scss */
+.cycle-nav .cycle-next {
+  color: white;
+  background-color: #006848;
+}
+
+/* line 70, ../sass/components/_nmu-slideshow.scss */
+.cycle-nav-caption {
+  /* container of .cycle-nav and .cycle-caption */
+  position: relative;
+}
+/* line 72, ../sass/components/_nmu-slideshow.scss */
+.cycle-nav-caption .cycle-caption {
+  padding: 4.5em;
+  padding-right: 9.7em;
+}
+/* line 75, ../sass/components/_nmu-slideshow.scss */
+.cycle-nav-caption .cycle-caption h3 {
+  font-size: 2.8em;
+  padding: 0;
+  margin: 0;
+}
+
+/* phone */
+@media not all and (min-width: 480px), (min-width: 767px) and (max-width: 860px) {
+  /* line 87, ../sass/components/_nmu-slideshow.scss */
+  .cycle-nav-caption .cycle-caption {
+    padding: 2.5em 20px;
+  }
+  /* line 89, ../sass/components/_nmu-slideshow.scss */
+  .cycle-nav-caption .cycle-caption h3 {
+    font-size: 1.9em;
+    margin-bottom: 1em;
+  }
+  /* line 94, ../sass/components/_nmu-slideshow.scss */
+  .cycle-nav-caption .cycle-nav {
+    right: 2.5em;
+    top: 2.3em;
+  }
+}
+/* 
+ * The following styles apply to classes generated with slideshow text. 
+ * Elements with these class do not need to be inside of the .cycle-slideshow. 
+ */
+/* Cycle caption is positioned adjacent to the image. */
+/* line 107, ../sass/components/_nmu-slideshow.scss */
+.cycle-caption {
+  padding: 0 20px 20px 20px;
+}
+/* line 109, ../sass/components/_nmu-slideshow.scss */
+.cycle-caption h3 {
+  /* the caption title */
+  margin: 5px 0;
+  color: #006848;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+}
+/* line 115, ../sass/components/_nmu-slideshow.scss */
+.cycle-caption h3 strong {
+  color: #065540;
+}
+/* line 119, ../sass/components/_nmu-slideshow.scss */
+.cycle-caption hr {
+  /* seperator between the caption title and the text */
+  width: 1.5em;
+  height: 1px;
+  margin-bottom: 25px;
+  border: none;
+  background: #cac8c8;
+}
+/* line 126, ../sass/components/_nmu-slideshow.scss */
+.cycle-caption > div {
+  /* the caption content */
+  margin: 0;
+}
+/* line 129, ../sass/components/_nmu-slideshow.scss */
+.cycle-caption a {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* Default image overlay class
+ * Styles a semi-transparent overlay ontop of an image
+ * with text and optionally a button */
+/* line 96, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay {
+  width: 100%;
+  padding: 30px 0;
+  /* default padding for overlay when not clickable */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  /* must be more than the image which cycle2 sets to 100 */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* make slightly transparent */
+  /* Buttons live inside overlays which means they are positioned on top
+     of the image. */
+  /* tablet */
+}
+/* line 12, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay > a {
+  display: block;
+  margin: -30px 0;
+  /* undo the padding of the container if we want the whole overlay to be clickable */
+  padding: 30px 0;
+  /* apply the padding to the a to get the same look */
+}
+/* line 17, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay a, .image-overlay a:hover, .image-overlay a:visited {
+  font-style: normal;
+  text-decoration: none;
+}
+/* line 21, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay h4 {
+  /* white overlay title */
+  color: white;
+  font-size: 1em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 27, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay h5 {
+  /* gold overlay title */
+  color: #ffdd00;
+  font-size: 1.3em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 33, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay p {
+  /* used for when you have more text */
+  color: white;
+}
+/* line 38, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay .button {
+  border: thin solid #ffdd00;
+  max-width: 13em;
+  margin: 25px auto 0 auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: white;
+}
+@media all and (min-width: 480px) {
+  /* line 96, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay {
+    /* only show the cursor when hovering over the button */
+  }
+  /* line 49, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay > a {
+    cursor: auto;
+  }
+  /* line 51, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay > a .button {
+    cursor: pointer;
+  }
+}
+
+/* Add to the default styles for the image overlay to adapt when the screen is big enough.
+ * This works better when the images are landscape instead of portrait */
+/* line 102, ../sass/components/_nmu-image-overlays.scss */
+.responsive-image-overlay {
+  width: 100%;
+  padding: 30px 0;
+  /* default padding for overlay when not clickable */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  /* must be more than the image which cycle2 sets to 100 */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* make slightly transparent */
+  /* Buttons live inside overlays which means they are positioned on top
+     of the image. */
+  /* tablet */
+  /* tablet */
+}
+/* line 12, ../sass/components/_nmu-image-overlays.scss */
+.responsive-image-overlay > a {
+  display: block;
+  margin: -30px 0;
+  /* undo the padding of the container if we want the whole overlay to be clickable */
+  padding: 30px 0;
+  /* apply the padding to the a to get the same look */
+}
+/* line 17, ../sass/components/_nmu-image-overlays.scss */
+.responsive-image-overlay a, .responsive-image-overlay a:hover, .responsive-image-overlay a:visited {
+  font-style: normal;
+  text-decoration: none;
+}
+/* line 21, ../sass/components/_nmu-image-overlays.scss */
+.responsive-image-overlay h4 {
+  /* white overlay title */
+  color: white;
+  font-size: 1em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 27, ../sass/components/_nmu-image-overlays.scss */
+.responsive-image-overlay h5 {
+  /* gold overlay title */
+  color: #ffdd00;
+  font-size: 1.3em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 33, ../sass/components/_nmu-image-overlays.scss */
+.responsive-image-overlay p {
+  /* used for when you have more text */
+  color: white;
+}
+/* line 38, ../sass/components/_nmu-image-overlays.scss */
+.responsive-image-overlay .button {
+  border: thin solid #ffdd00;
+  max-width: 13em;
+  margin: 25px auto 0 auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: white;
+}
+@media all and (min-width: 480px) {
+  /* line 102, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-image-overlay {
+    /* only show the cursor when hovering over the button */
+  }
+  /* line 49, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-image-overlay > a {
+    cursor: auto;
+  }
+  /* line 51, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-image-overlay > a .button {
+    cursor: pointer;
+  }
+}
+@media all and (min-width: 480px) {
+  /* line 102, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-image-overlay {
+    text-align: left;
+    padding: 10px 30px;
+  }
+  /* line 66, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-image-overlay > a {
+    /* override the padding so the entire overlay is clickable */
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 10px 30px;
+  }
+  /* line 74, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-image-overlay > div:first-of-type, .responsive-image-overlay > a > div:first-of-type {
+    text-align: left;
+    display: inline-block;
+    max-width: 60%;
+  }
+  /* line 79, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-image-overlay .button {
+    margin-top: 0;
+    right: 30px;
+    top: 50%;
+    /* center the button vertically */
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    display: inline-block;
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+  }
+}
+
+/* Another style option for overlays */
+/* line 108, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 {
+  width: 100%;
+  padding: 30px 0;
+  /* default padding for overlay when not clickable */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  /* must be more than the image which cycle2 sets to 100 */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* make slightly transparent */
+  /* Buttons live inside overlays which means they are positioned on top
+     of the image. */
+  /* tablet */
+  /* tablet */
+}
+/* line 12, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 > a {
+  display: block;
+  margin: -30px 0;
+  /* undo the padding of the container if we want the whole overlay to be clickable */
+  padding: 30px 0;
+  /* apply the padding to the a to get the same look */
+}
+/* line 17, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 a, .image-overlay2 a:hover, .image-overlay2 a:visited {
+  font-style: normal;
+  text-decoration: none;
+}
+/* line 21, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 h4 {
+  /* white overlay title */
+  color: white;
+  font-size: 1em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 27, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 h5 {
+  /* gold overlay title */
+  color: #ffdd00;
+  font-size: 1.3em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 33, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 p {
+  /* used for when you have more text */
+  color: white;
+}
+/* line 38, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 .button {
+  border: thin solid #ffdd00;
+  max-width: 13em;
+  margin: 25px auto 0 auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: white;
+}
+@media all and (min-width: 480px) {
+  /* line 108, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay2 {
+    /* only show the cursor when hovering over the button */
+  }
+  /* line 49, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay2 > a {
+    cursor: auto;
+  }
+  /* line 51, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay2 > a .button {
+    cursor: pointer;
+  }
+}
+@media all and (min-width: 480px) {
+  /* line 108, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay2 {
+    text-align: left;
+    padding: 10px 30px;
+  }
+  /* line 66, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay2 > a {
+    /* override the padding so the entire overlay is clickable */
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 10px 30px;
+  }
+  /* line 74, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay2 > div:first-of-type, .image-overlay2 > a > div:first-of-type {
+    text-align: left;
+    display: inline-block;
+    max-width: 60%;
+  }
+  /* line 79, ../sass/components/_nmu-image-overlays.scss */
+  .image-overlay2 .button {
+    margin-top: 0;
+    right: 30px;
+    top: 50%;
+    /* center the button vertically */
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    display: inline-block;
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+  }
+}
+/* line 111, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 h4, .image-overlay2 h5 {
+  font-size: 1.3em;
+  display: inline;
+}
+/* line 115, ../sass/components/_nmu-image-overlays.scss */
+.image-overlay2 .button {
+  padding: 0;
+  font-size: 1.3em;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.7em;
+  text-align: center;
+  border-color: #006848;
+  color: #ffdd00;
+}
+
+/* line 136, ../sass/components/_nmu-slideshow.scss */
+.cycle-overlay {
+  width: 100%;
+  padding: 30px 0;
+  /* default padding for overlay when not clickable */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  /* must be more than the image which cycle2 sets to 100 */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* make slightly transparent */
+  /* Buttons live inside overlays which means they are positioned on top
+     of the image. */
+  /* tablet */
+}
+/* line 12, ../sass/components/_nmu-image-overlays.scss */
+.cycle-overlay > a {
+  display: block;
+  margin: -30px 0;
+  /* undo the padding of the container if we want the whole overlay to be clickable */
+  padding: 30px 0;
+  /* apply the padding to the a to get the same look */
+}
+/* line 17, ../sass/components/_nmu-image-overlays.scss */
+.cycle-overlay a, .cycle-overlay a:hover, .cycle-overlay a:visited {
+  font-style: normal;
+  text-decoration: none;
+}
+/* line 21, ../sass/components/_nmu-image-overlays.scss */
+.cycle-overlay h4 {
+  /* white overlay title */
+  color: white;
+  font-size: 1em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 27, ../sass/components/_nmu-image-overlays.scss */
+.cycle-overlay h5 {
+  /* gold overlay title */
+  color: #ffdd00;
+  font-size: 1.3em;
+  font-family: "AvenirLTStd-Black", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 33, ../sass/components/_nmu-image-overlays.scss */
+.cycle-overlay p {
+  /* used for when you have more text */
+  color: white;
+}
+/* line 38, ../sass/components/_nmu-image-overlays.scss */
+.cycle-overlay .button {
+  border: thin solid #ffdd00;
+  max-width: 13em;
+  margin: 25px auto 0 auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: white;
+}
+@media all and (min-width: 480px) {
+  /* line 136, ../sass/components/_nmu-slideshow.scss */
+  .cycle-overlay {
+    /* only show the cursor when hovering over the button */
+  }
+  /* line 49, ../sass/components/_nmu-image-overlays.scss */
+  .cycle-overlay > a {
+    cursor: auto;
+  }
+  /* line 51, ../sass/components/_nmu-image-overlays.scss */
+  .cycle-overlay > a .button {
+    cursor: pointer;
+  }
+}
+
+/* line 140, ../sass/components/_nmu-slideshow.scss */
+.responsive-cycle-overlay {
+  /* tablet */
+}
+@media all and (min-width: 480px) {
+  /* line 140, ../sass/components/_nmu-slideshow.scss */
+  .responsive-cycle-overlay {
+    text-align: left;
+    padding: 10px 30px;
+  }
+  /* line 66, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-cycle-overlay > a {
+    /* override the padding so the entire overlay is clickable */
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 10px 30px;
+  }
+  /* line 74, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-cycle-overlay > div:first-of-type, .responsive-cycle-overlay > a > div:first-of-type {
+    text-align: left;
+    display: inline-block;
+    max-width: 60%;
+  }
+  /* line 79, ../sass/components/_nmu-image-overlays.scss */
+  .responsive-cycle-overlay .button {
+    margin-top: 0;
+    right: 30px;
+    top: 50%;
+    /* center the button vertically */
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    display: inline-block;
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+  }
+}
+
+/* tablet */
+@media all and (min-width: 480px) {
+  /* line 147, ../sass/components/_nmu-slideshow.scss */
+  .cycle-caption ul li {
+    /* display lists in two columns */
+    display: inline-block;
+    width: 40%;
+  }
+}
+/* line 11, ../sass/nmu-admissions.scss */
+#admissions-homepage section {
+  overflow: hidden;
+}
+
+/* line 15, ../sass/nmu-admissions.scss */
+.cycle-nav-caption {
+  background-color: #F0F0F0;
+}
+
+/* line 19, ../sass/nmu-admissions.scss */
+.cycle-slideshow {
+  overflow: hidden;
+}
+
+@media not all and (min-width: 480px) {
+  /* line 24, ../sass/nmu-admissions.scss */
+  .cycle-overlay {
+    text-align: left;
+  }
+  /* line 26, ../sass/nmu-admissions.scss */
+  .cycle-overlay > a {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  /* line 30, ../sass/nmu-admissions.scss */
+  .cycle-overlay .button {
+    display: none;
+  }
+}
+/* tablet */
+@media all and (min-width: 768px) {
+  /* line 38, ../sass/nmu-admissions.scss */
+  #admissions-homepage > section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  /* line 40, ../sass/nmu-admissions.scss */
+  #admissions-homepage > section .cycle-slideshow {
+    order: 1;
+  }
+  /* line 43, ../sass/nmu-admissions.scss */
+  #admissions-homepage > section .cycle-nav-caption {
+    order: 2;
+  }
+}
