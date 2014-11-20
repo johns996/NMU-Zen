@@ -32,7 +32,9 @@
 					$sidebar_class = 'col-md-10 col-md-push-2';
 				elseif (!$sidebar_first && $sidebar_second)
 					$sidebar_class = 'col-md-10';
-				else  //no sidebars
+				elseif(drupal_is_front_page())
+					$sidebar_class = 'col-md-12-nmu';
+				else  //no sidebars, not the front page
 					$sidebar_class = 'col-md-12';
 			?>
 

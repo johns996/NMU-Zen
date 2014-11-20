@@ -106,6 +106,19 @@ body,
 /**
  * Generic Classes.
  */
+ //this is nmu's bootstrap helper class.  we can't use bootstraps 12 column class on the main body area because it breaks the homepage video
+ //so this is just a basic replacement to give most of the same styles without the relative posistion
+.col-md-12-nmu {
+
+ //everything removed because I don't know if we need this or not
+
+ //padding-right:15px;
+ //padding-left:15px;
+ //width:100%;
+ //@media all and #{$mq-bootstrap-md-min} {
+ 	//float:left;
+ //}
+}
 
 .allcaps {
 	text-transform:uppercase;
