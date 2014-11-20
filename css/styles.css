@@ -80,8 +80,6 @@
  *
  * Define CSS classes to create a fluid grid layout with optional sidebars
  * depending on whether blocks are placed in the left or right sidebars.
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
 /**
  * Center the page.
@@ -89,249 +87,13 @@
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
-/* line 33, ../sass/layouts/_responsive.scss */
+/* line 17, ../sass/layouts/_responsive.scss */
 #main {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
 }
 
-/* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 40, ../sass/layouts/_responsive.scss */
-.region-top-navigation,
-.region-branding,
-.region-main-navigation,
-#content,
-.region-sidebar-first,
-.region-sidebar-second,
-#footer {
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-/* Containers for grid items and flow items. */
-/* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-#header:before, #header:after,
-#main:before,
-#main:after,
-#footer:before,
-#footer:after {
-  content: "";
-  display: table;
-}
-/* line 50, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-#header:after,
-#main:after,
-#footer:after {
-  clear: both;
-}
-
-/**
- * Use 3 grid columns for smaller screens.
- */
-@media all and (min-width: 768px) and (max-width: 991px) {
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-  /* line 70, ../sass/layouts/_responsive.scss */
-  .sidebar-first {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
-  /* line 72, ../sass/layouts/_responsive.scss */
-  .sidebar-first #content {
-    float: left;
-    width: 200%;
-    margin-left: 100%;
-    margin-right: -300%;
-  }
-  /* line 77, ../sass/layouts/_responsive.scss */
-  .sidebar-first .region-sidebar-first {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-  /* line 85, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 3rd column from left. */
-  }
-  /* line 87, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: left;
-    width: 200%;
-    margin-left: 0%;
-    margin-right: -200%;
-  }
-  /* line 92, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: left;
-    width: 100%;
-    margin-left: 200%;
-    margin-right: -300%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  /* line 100, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Start a new row and span all 3 columns. */
-  }
-  /* line 102, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: left;
-    width: 200%;
-    margin-left: 100%;
-    margin-right: -300%;
-  }
-  /* line 107, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-  /* line 112, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
-    float: left;
-    width: 300%;
-    margin-left: 0%;
-    margin-right: -300%;
-    padding-left: 0;
-    padding-right: 0;
-    clear: left;
-    /* Apply the shared properties of grid items in a single, efficient ruleset. */
-    /* Span 1 column, starting in the 1st column from left. */
-    /* Span 1 column, starting in the 2nd column from left. */
-    /* Span 1 column, starting in the 3rd column from left. */
-  }
-  /* line 118, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block {
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  /* line 122, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-    clear: left;
-  }
-  /* line 127, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
-    float: left;
-    width: 100%;
-    margin-left: 100%;
-    margin-right: -200%;
-  }
-  /* line 131, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
-    float: left;
-    width: 100%;
-    margin-left: 200%;
-    margin-right: -300%;
-  }
-}
-/**
- * Use 5 grid columns for larger screens.
- */
-@media all and (min-width: 992px) {
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-  /* line 148, ../sass/layouts/_responsive.scss */
-  .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
-  /* line 150, ../sass/layouts/_responsive.scss */
-  .sidebar-first #content {
-    float: left;
-    width: 400%;
-    margin-left: 100%;
-    margin-right: -500%;
-  }
-  /* line 155, ../sass/layouts/_responsive.scss */
-  .sidebar-first .region-sidebar-first {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-  /* line 163, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 4 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
-  }
-  /* line 165, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: left;
-    width: 400%;
-    margin-left: 0%;
-    margin-right: -400%;
-  }
-  /* line 170, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: left;
-    width: 100%;
-    margin-left: 400%;
-    margin-right: -500%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  /* line 178, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 3 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
-  }
-  /* line 180, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: left;
-    width: 300%;
-    margin-left: 100%;
-    margin-right: -400%;
-  }
-  /* line 185, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-  /* line 190, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
-    float: left;
-    width: 100%;
-    margin-left: 400%;
-    margin-right: -500%;
-  }
-}
 /* Component (SMACSS module) rules */
 /**
  * @file
@@ -1635,8 +1397,13 @@ body.logged-in .region-main-navigation nav.affix {
 /*
  * Footer
  */
-/* line 5, ../sass/components/_nmu-footer.scss */
-#footer {
+/* line 4, ../sass/components/_nmu-footer.scss */
+#footer .block.last {
+  margin-bottom: 0;
+}
+
+/* line 8, ../sass/components/_nmu-footer.scss */
+.footer-main {
   padding: 50px 20px;
   font-size: .95em;
   text-align: center;
@@ -1646,23 +1413,23 @@ body.logged-in .region-main-navigation nav.affix {
   background-color: #034030;
 }
 @media all and (min-width: 768px) {
-  /* line 5, ../sass/components/_nmu-footer.scss */
-  #footer {
+  /* line 8, ../sass/components/_nmu-footer.scss */
+  .footer-main {
     background-image: url("/sites/all/themes/zen_nmu/images/footer.jpg");
     background-position: center;
   }
 }
-/* line 17, ../sass/components/_nmu-footer.scss */
-#footer h4 {
+/* line 20, ../sass/components/_nmu-footer.scss */
+.footer-main h4 {
   font-size: 1em;
   color: #ccc;
 }
-/* line 21, ../sass/components/_nmu-footer.scss */
-#footer .bullet {
+/* line 24, ../sass/components/_nmu-footer.scss */
+.footer-main .bullet {
   padding: 0 5px;
 }
-/* line 25, ../sass/components/_nmu-footer.scss */
-#footer a {
+/* line 28, ../sass/components/_nmu-footer.scss */
+.footer-main a {
   color: inherit;
   text-decoration: none;
   -moz-transition-duration: 0.5s;
@@ -1670,68 +1437,73 @@ body.logged-in .region-main-navigation nav.affix {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 29, ../sass/components/_nmu-footer.scss */
-#footer a:hover {
+/* line 32, ../sass/components/_nmu-footer.scss */
+.footer-main a:hover {
   color: white;
 }
-/* line 34, ../sass/components/_nmu-footer.scss */
-#footer .reporting {
+/* line 37, ../sass/components/_nmu-footer.scss */
+.footer-main .reporting {
   margin-top: 25px;
   display: inline-block;
 }
-/* line 37, ../sass/components/_nmu-footer.scss */
-#footer .reporting img {
+/* line 40, ../sass/components/_nmu-footer.scss */
+.footer-main .reporting img {
   padding-bottom: 20px;
 }
-/* line 40, ../sass/components/_nmu-footer.scss */
-#footer .reporting a {
+/* line 43, ../sass/components/_nmu-footer.scss */
+.footer-main .reporting a {
   display: block;
   height: 100%;
 }
-/* line 46, ../sass/components/_nmu-footer.scss */
-#footer hr {
+/* line 49, ../sass/components/_nmu-footer.scss */
+.footer-main hr {
   width: 1.5em;
   height: 1px;
   margin-bottom: 40px;
   border: none;
   background: #ccc;
 }
-/* line 54, ../sass/components/_nmu-footer.scss */
-#footer nav ul {
+/* line 57, ../sass/components/_nmu-footer.scss */
+.footer-main nav ul {
   list-style: none;
   padding: 0;
 }
 @media all and (min-width: 768px) {
-  /* line 58, ../sass/components/_nmu-footer.scss */
-  #footer nav ul li {
+  /* line 61, ../sass/components/_nmu-footer.scss */
+  .footer-main nav ul li {
     display: inline-block;
   }
-  /* line 60, ../sass/components/_nmu-footer.scss */
-  #footer nav ul li + li:before {
+  /* line 63, ../sass/components/_nmu-footer.scss */
+  .footer-main nav ul li + li:before {
     content: '|';
     padding: 0 1.5em;
   }
 }
 
 /* line 1, ../sass/components/_nmu-news-events.scss */
+.news-events {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* line 7, ../sass/components/_nmu-news-events.scss */
 .events-header {
   border-top: 5px solid #006848;
   background-color: #006848;
-  margin-left: -15px;
-  margin-right: -15px;
   height: 148px;
   background-image: url(/sites/all/themes/zen_nmu/images/news-and-events-767.jpg);
   background-position: center;
 }
 @media all and (min-width: 992px) {
-  /* line 1, ../sass/components/_nmu-news-events.scss */
+  /* line 7, ../sass/components/_nmu-news-events.scss */
   .events-header {
     height: 234px;
     background-image: url(/sites/all/themes/zen_nmu/images/news-and-events.jpg);
   }
 }
 
-/* line 15, ../sass/components/_nmu-news-events.scss */
+/* line 19, ../sass/components/_nmu-news-events.scss */
 .events-label {
   margin-left: auto;
   margin-right: auto;
@@ -1744,7 +1516,7 @@ body.logged-in .region-main-navigation nav.affix {
   padding-top: 40px;
 }
 @media all and (min-width: 992px) {
-  /* line 15, ../sass/components/_nmu-news-events.scss */
+  /* line 19, ../sass/components/_nmu-news-events.scss */
   .events-label {
     width: 500px;
     font-size: 3em;
@@ -1753,34 +1525,34 @@ body.logged-in .region-main-navigation nav.affix {
   }
 }
 
-/* line 32, ../sass/components/_nmu-news-events.scss */
+/* line 36, ../sass/components/_nmu-news-events.scss */
 .events-sub-label {
   font-family: "AvenirLTStd-Medium", "Helvetica Neue", Helvetica, Tahoma, Verdana, Arial, sans-serif;
   color: #ffdd00;
 }
 
-/* line 37, ../sass/components/_nmu-news-events.scss */
+/* line 41, ../sass/components/_nmu-news-events.scss */
 .events-section {
   padding-top: 5px;
 }
 
-/* line 40, ../sass/components/_nmu-news-events.scss */
+/* line 44, ../sass/components/_nmu-news-events.scss */
 div.day-wrapper {
   margin: 0 5px;
 }
 @media all and (min-width: 992px) {
-  /* line 40, ../sass/components/_nmu-news-events.scss */
+  /* line 44, ../sass/components/_nmu-news-events.scss */
   div.day-wrapper {
     margin: 0 40px;
   }
 }
 
-/* line 46, ../sass/components/_nmu-news-events.scss */
+/* line 50, ../sass/components/_nmu-news-events.scss */
 .EventHeader {
   border-top: 5px solid #006848;
   padding: 5px 20px;
 }
-/* line 49, ../sass/components/_nmu-news-events.scss */
+/* line 53, ../sass/components/_nmu-news-events.scss */
 .EventHeader .EventHeaderType {
   float: left;
   width: 65px;
@@ -1788,14 +1560,14 @@ div.day-wrapper {
   font-size: larger;
   padding: 5px 0px 0px 5px;
 }
-/* line 56, ../sass/components/_nmu-news-events.scss */
+/* line 60, ../sass/components/_nmu-news-events.scss */
 .EventHeader .EventHeaderDate {
   float: right;
   padding: 8px 5px 1px 0px;
   font-size: smaller;
 }
 
-/* line 63, ../sass/components/_nmu-news-events.scss */
+/* line 67, ../sass/components/_nmu-news-events.scss */
 .EventLeft {
   border-left: 1px solid #e9e9e9;
   border-right: 1px solid #e9e9e9;
@@ -1805,25 +1577,25 @@ div.day-wrapper {
   overflow: hidden;
 }
 @media all and (min-width: 992px) and (max-width: 1199px) {
-  /* line 63, ../sass/components/_nmu-news-events.scss */
+  /* line 67, ../sass/components/_nmu-news-events.scss */
   .EventLeft {
     height: 370px;
   }
 }
 @media all and (min-width: 992px) {
-  /* line 63, ../sass/components/_nmu-news-events.scss */
+  /* line 67, ../sass/components/_nmu-news-events.scss */
   .EventLeft {
     margin-bottom: 0;
   }
 }
-/* line 76, ../sass/components/_nmu-news-events.scss */
+/* line 80, ../sass/components/_nmu-news-events.scss */
 .EventLeft .Title,
 .EventLeft .Text,
 .EventLeft .Footer {
   margin: 0 20px;
   padding: 5px;
 }
-/* line 82, ../sass/components/_nmu-news-events.scss */
+/* line 86, ../sass/components/_nmu-news-events.scss */
 .EventLeft .Title {
   border-top: 1px solid #e9e9e9;
   font-weight: bold;
@@ -1831,19 +1603,19 @@ div.day-wrapper {
   color: #006848;
   font-size: larger;
 }
-/* line 89, ../sass/components/_nmu-news-events.scss */
+/* line 93, ../sass/components/_nmu-news-events.scss */
 .EventLeft .Text {
   padding-top: 0px;
   max-height: 140px;
   overflow: hidden;
 }
 @media all and (min-width: 992px) and (max-width: 1199px) {
-  /* line 89, ../sass/components/_nmu-news-events.scss */
+  /* line 93, ../sass/components/_nmu-news-events.scss */
   .EventLeft .Text {
     max-height: 180px;
   }
 }
-/* line 100, ../sass/components/_nmu-news-events.scss */
+/* line 104, ../sass/components/_nmu-news-events.scss */
 .EventLeft a,
 .EventLeft a:visited,
 .EventLeft a:hover,
@@ -4691,3 +4463,5 @@ body,
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+
+/*# sourceMappingURL=styles.css.map */
