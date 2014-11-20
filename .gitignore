@@ -40,7 +40,4 @@ Thumbs.db
 # Project Specific ignores #
 ############################
 .sass-cache
-
-# Going to track CSS for easy branch switching #
-################################################
-#/css
+/css
