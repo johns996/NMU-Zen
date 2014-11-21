@@ -10,12 +10,12 @@
 # Change this to :production when ready to deploy the CSS to the live server.
 environment = :development
 #environment = :production
-disable_warnings = true
 
 # In development, we can turn on the FireSass-compatible debug_info.
 firesass = false
 #firesass = true
 
+disable_warnings = true
 sourcemap = true
 
 # Location of the theme's resources.
