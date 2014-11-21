@@ -36,10 +36,12 @@
 // variable for a couple edge cases. We include it for completeness sake. See
 // the documentation at http://compass-style.org/reference/compass/support/
 //
-// newer versions of compass do not suppor this
-//$legacy-support-for-ie6: false;
-//$legacy-support-for-ie7: false;
-//$legacy-support-for-ie8: false;
+// newer versions of compass do not support this
+// add in disable_warnings = true to the config.rb file to suppress the warnings
+// these are necessary because they are referenced in the misc and mixins files
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: false;
 
 
 //
@@ -241,8 +243,6 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 @import "compass/css3";
 // Helps set up a vertical rhythm.
 @import "compass/typography/vertical_rhythm";
-// Add the Zen Grids responsive layout mixins.
-@import "zen";
 
 // Now we add our custom helper mixins.
 @import "mixins";
