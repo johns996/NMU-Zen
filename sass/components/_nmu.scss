@@ -49,7 +49,7 @@ body,
  * Body.
  */
 #main {
-
+	background-color: $nmu-gray-evenlighter;
 }
 #content {
 	//padding-top:1em;
@@ -101,6 +101,28 @@ body,
 	}
 }
 
+/**
+ * Sidebar First
+ */
+
+.region-sidebar-first {
+	.nav-pills>li>a{
+		@include border-radius(0);
+	}
+	.nav-pills>li.active>a{
+		background-color:$nmu-green;
+		&:hover{
+			background-color:$nmu-green;
+		}
+	}
+	.nav>li>a {
+		margin:0 -15px;
+		&:hover{
+			background-color:$nmu-green;
+			color:white;
+		}
+	}
+}
 
 
 /**
