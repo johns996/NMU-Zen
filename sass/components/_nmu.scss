@@ -49,11 +49,12 @@ body,
  * Body.
  */
 #main {
-	background-color: $nmu-gray-evenlighter;
+	background-image: url(../images/nav-background.png);
+	background-repeat:repeat-y;
 }
 #content {
-	//padding-top:1em;
-	background:white;
+	padding-top:1em;
+	background-color:white;
 	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
 	min-height:500px;
 }
@@ -107,21 +108,63 @@ body,
 
 .region-sidebar-first {
 	.nav-pills>li>a{
-		@include border-radius(0);
-	}
-	.nav-pills>li.active>a{
-		background-color:$nmu-green;
-		&:hover{
-			background-color:$nmu-green;
-		}
+		@include border-radius(0);  //remove bootstrap style
 	}
 	.nav>li>a {
 		margin:0 -15px;
-		&:hover{
-			background-color:$nmu-green;
-			color:white;
+		color:$nmu-green;
+		text-transform: uppercase;
+		position: relative;
+		&:hover,
+		&:active,
+		&:focus{
+			background-color:$nmu-gray-evenlighter;
+		}
+		&::after{
+			content:'>';
+			position: absolute;
+			right:12px;
+			top:10px;
+			font-size:0.8em;
+			@include transform(rotate(90deg) scale(-1, -1));
+			@include transition-duration(.5s);
 		}
 	}
+	.nav>li>ul {
+		padding:0;
+		margin:20px 0;
+	}
+	.nav>li>ul>li {
+		text-transform: none;
+		list-style:none;
+		padding:5px 5px 0;
+		&:first-child{
+			padding-top:0;
+		}
+		&>a {
+			color:$nmu-green;
+		}
+	}
+	.nav-pills>li.active>a{
+		background-color:$nmu-gray-evenlighter;
+		color:$nmu-green;
+		&:hover,
+		&:active,
+		&:focus{
+			background-color:$nmu-gray-evenlighter;
+			color:$nmu-green;
+		}
+		&::after{
+			//@include simple-transform(1, 90deg);
+			@include transform(rotate(90deg) scale(1, -1));
+		}
+	}
+	.nav-pills>li.nav-label>a{
+		background-color:$nmu-green;
+		color:white;
+
+	}
+
 }
 
 
