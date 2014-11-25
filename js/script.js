@@ -62,6 +62,7 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).removeClass('nav-active');
 		});
 
+		//move the stick point for the nav bar based on the presence of the alert
 		if ($('#nmu-alert').length){
 			var alertHeight = $('#nmu-alert').height();
 			alertHeight = alertHeight + 62;  //62 is the margin (30) padding (30) and border (2)
@@ -73,6 +74,17 @@ Drupal.behaviors.my_custom_behavior = {
 
 		$('#nmu-alert').on('closed.bs.alert', function () {
 			$('#header-main-navigation').data('bs.affix').options.offset = currentOffset;
+		});
+
+		//left navigation functionality
+		$('#left-nav li ul').hide(); //hide all of the sub nav lists
+		$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
+
+		$('#left-nav li:not(.nav-label)').click(function(){
+			$('#left-nav li ul').not($(this).find('ul')).slideUp();  //start by sliding up all other nav lists, except the one that was just clicked on
+			$('#left-nav li').not(this).removeClass('active');  //remove all active classes, except the one that was just clicked on
+			$(this).find('ul').slideDown();
+			$(this).addClass('active');
 		});
 
   } // end attach
