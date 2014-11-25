@@ -77,8 +77,8 @@ Drupal.behaviors.my_custom_behavior = {
 		});
 
 		//left navigation functionality
-		$('#left-nav li ul').hide(); //hide all of the sub nav lists
-		$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
+		//$('#left-nav li ul').hide(); //hide all of the sub nav lists
+		//$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
 
 		$('#left-nav li:not(.nav-label)').click(function(){
 			$('#left-nav li ul').not($(this).find('ul')).slideUp();  //start by sliding up all other nav lists, except the one that was just clicked on
@@ -92,3 +92,18 @@ Drupal.behaviors.my_custom_behavior = {
 
 
 })(jQuery, Drupal, this, this.document);
+
+		function selectNavItem(){
+			jQuery(document).ready(function($) {
+				$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
+				var passedItem = $('.field-name-field-nav-expand div div').text();
+				if(!passedItem){  //show the first one by default
+					$('#left-nav li').first().addClass('active');
+					$('#left-nav li ul').first().show();
+				}else{ //else show a nav based on what's selected
+					$('#' + passedItem).addClass('active');
+					$('#' + passedItem + ' ul').show();
+				}
+				//maybe show the first item by default in case nothing is set?
+			});
+		}
