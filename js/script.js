@@ -80,11 +80,12 @@ Drupal.behaviors.my_custom_behavior = {
 		//$('#left-nav li ul').hide(); //hide all of the sub nav lists
 		//$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
 
-		$('#left-nav li:not(.nav-label)').click(function(){
+		$('#left-nav li:not(.nav-label)').click(function(e){
 			$('#left-nav li ul').not($(this).find('ul')).slideUp();  //start by sliding up all other nav lists, except the one that was just clicked on
 			$('#left-nav li').not(this).removeClass('active');  //remove all active classes, except the one that was just clicked on
 			$(this).find('ul').slideDown();
 			$(this).addClass('active');
+			e.preventDefault();  //stop the page from returning to the top on click
 		});
 
   } // end attach
@@ -104,6 +105,5 @@ Drupal.behaviors.my_custom_behavior = {
 					$('#' + passedItem).addClass('active');
 					$('#' + passedItem + ' ul').show();
 				}
-				//maybe show the first item by default in case nothing is set?
 			});
 		}
