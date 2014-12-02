@@ -72,7 +72,7 @@ Drupal.behaviors.my_custom_behavior = {
 			//$('#header-main-navigation').data('bs.affix').options.offset = theFullHeight;
 		};
 
-		$('#nmu-alert').on('closed.bs.alert', function () {
+		$('#nmu-alert').on('closed.bs.alert', function(){
 			$('#header-main-navigation').data('bs.affix').options.offset = currentOffset;
 		});
 
@@ -95,7 +95,7 @@ Drupal.behaviors.my_custom_behavior = {
 })(jQuery, Drupal, this, this.document);
 
 		function selectNavItem(){
-			jQuery(document).ready(function($) {
+			jQuery(document).ready(function($){
 				$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
 				var passedItem = $('.field-name-field-nav-expand div div').text();
 				if(!passedItem){  //show the first one by default

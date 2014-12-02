@@ -73,11 +73,12 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 
-		//not yet turned on
-		//drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/homepage-v2.js');
-		//$js = drupal_add_js();
-		//$scripts = drupal_get_js($js);
-	//add a css file to the fearless_nmu_admissions
+	//not yet turned on
+	//drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/homepage-v2.js');
+	//$js = drupal_add_js();
+	//$scripts = drupal_get_js($js);
+
+	//add a css file to the fearless_nmu_admissions content type
 	} else if($variables['type'] == 'fearless_nmu_admissions'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/nmu-admissions.css');
 		$css = drupal_add_css();

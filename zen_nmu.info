@@ -83,10 +83,11 @@ scripts[] = js/script.js
 ;   <?php print $header_top; ?>
 
 regions[top_navigation] = Top Navigation
-regions[branding]			= Branding
+regions[branding]				= Branding
 regions[main_navigation]= Main Navigation
 ;regions[highlighted]   = Highlighted
 ;regions[help]          = Help
+regions[breadcrumbs]    = Breadcrumbs
 regions[content]        = Content
 regions[sidebar_first]  = Sidebar First
 regions[sidebar_second] = Sidebar Second
