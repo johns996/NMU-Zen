@@ -19,31 +19,34 @@ Drupal.behaviors.my_custom_behavior = {
 
     // Place all code here.
 
-		//load enquire.js and a polyfill if needed
-		Modernizr.load([
-    //first test need for polyfill
-    {
-        test: window.matchMedia,
-        nope: "/sites/all/themes/zen_nmu/js/vendor/matchMedia.js"
-    },
+		//first check if modernizr is there (this helps the file browser since it does not load the js properly)
+		if(typeof(Modernizr) == "object"){
+			//load enquire.js and a polyfill if needed
+			Modernizr.load([
+				//first test need for polyfill
+				{
+						test: window.matchMedia,
+						nope: "/sites/all/themes/zen_nmu/js/vendor/matchMedia.js"
+				},
 
-    //and then load enquire
-    "/sites/all/themes/zen_nmu/js/vendor/enquire.min.js",
-    //finally, load the scripts that depend on enquire
-    "/sites/all/themes/zen_nmu/js/enquire-helper.js"
-		]);
+				//and then load enquire
+				"/sites/all/themes/zen_nmu/js/vendor/enquire.min.js",
+				//finally, load the scripts that depend on enquire
+				"/sites/all/themes/zen_nmu/js/enquire-helper.js"
+			]);
+		}
 
 		$(document).on('click', '.yamm .dropdown-menu', function(e) {
-			e.stopPropagation()
+			e.stopPropagation();
 		});
 
 		// add fade in animation to bootstrap dropdowns
-		$('.dropdown').on('show.bs.dropdown', function(e){
+		$('.dropdown').on('show.bs.dropdown', function(){
 			$(this).find('.dropdown-menu').first().stop(true, true).fadeIn(200);
 		});
 
 		// add fade out animation to bootstrap dropdowns
-		$('.dropdown').on('hide.bs.dropdown', function(e){
+		$('.dropdown').on('hide.bs.dropdown', function(){
 			$(this).find('.dropdown-menu').first().stop(true, true).fadeOut(300);
 		});
 
@@ -66,11 +69,11 @@ Drupal.behaviors.my_custom_behavior = {
 		if ($('#nmu-alert').length){
 			var alertHeight = $('#nmu-alert').height();
 			alertHeight = alertHeight + 62;  //62 is the margin (30) padding (30) and border (2)
-			currentOffset = $('#header-main-navigation').attr('data-offset-top');
+			var currentOffset = $('#header-main-navigation').attr('data-offset-top');
 			var theFullHeight = parseInt(currentOffset,10) + parseInt(alertHeight,10);
 			$('#header-main-navigation').attr('data-offset-top', theFullHeight);
 			//$('#header-main-navigation').data('bs.affix').options.offset = theFullHeight;
-		};
+		}
 
 		$('#nmu-alert').on('closed.bs.alert', function(){
 			$('#header-main-navigation').data('bs.affix').options.offset = currentOffset;

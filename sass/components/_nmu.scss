@@ -52,12 +52,69 @@ body,
 	//this is the method I use to make the columns to always appear equal in height.
 	//background-image: url(../images/nav-background.png);
 	//background-repeat:repeat-y;
+	.page__title {
+		margin-bottom:20px;
+		&::after{
+			content:' ';
+			display:block;
+			width:20px;
+			border-bottom:1px solid $nmu-gray;
+			margin:20px 0 20px;
+		}
+	}
 }
+
+.breadcrumbs {
+	color:$nmu-gray;
+	a {
+		color: $nmu-green-text;
+		padding:0 10px;
+		&:last-child{
+			font-weight:600;
+		}
+	}
+}
+
 #content {
 	//there was a background color here at one point, it has been removed to prevent the sidebar background image being clipped when zoomed in
 	padding-top:1em;
 	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
 	min-height:500px;
+}
+
+//styles specific to internal pages
+.not-front {
+	#content {
+
+		//*** styles copied in from the old theme to fix various mobile issues
+		word-wrap: break-word;
+		img {
+			//width:100%;  //this will blow up all images to fit into the content zone and that would be undesired  -- keep this comment
+			max-width:100%;
+			height:auto;
+		}
+		table img {
+			max-width:inherit;  //this is needed for images in tables without fixed sizes.  it stops the images from shrinking down to accommodate the text
+		}
+		table img.gs-image {
+			max-width:100%; //a special case for the google search images otherwise inherit will make them too big
+		}
+		img[align="left"],
+		img[style*="float: left"],
+		img[style*="float:left"]{
+			margin-right:5px;
+		}
+		img[align="right"],
+		img[style*="float: right"],
+		img[style*="float:right"]{
+			margin-left:5px;
+		}
+		table {
+			//width:100%;  //with this option enabled, tables used for image captions take up the whole screen in mobile view  -- keep this comment
+			max-width:100%;
+		}
+		//*** end of copied styles
+	}
 }
 
 //styles specific to front pages
@@ -74,7 +131,7 @@ body,
 .homepage-section {
 	h3 {
 		margin: 5px 0;
-		color: $nmu-green;
+		color: $nmu-green-text;
 		text-transform: uppercase;
 		font-size: 1.6em;
 		font-family: $avenir-black;
@@ -102,7 +159,7 @@ body,
 		}
 	}
 	a, a:visited {
-		color: $nmu-green;
+		color: $nmu-green-text;
 	}
 	a:hover {
 		color: $nmu-black-dark;
@@ -126,7 +183,7 @@ body,
 	//apply nmu styles
 	.nav>li>a {
 		margin:0 -15px;  //make the nav item box extend to the sides of the nav column
-		color:$nmu-green;
+		color:$nmu-green-text;
 		text-transform: uppercase;
 		position: relative;
 		border:1px solid $nmu-gray-yetanother;
@@ -150,12 +207,12 @@ body,
 	}
 	.nav-pills>li.active>a{
 		background-color:$nmu-gray-lighter;
-		color:$nmu-green;
+		color:$nmu-green-text;
 		&:hover,
 		&:active,
 		&:focus{
 			background-color:$nmu-gray-lighter;
-			color:$nmu-green;
+			color:$nmu-green-text;
 		}
 		&::after{
 			@include transform(rotate(90deg) scale(1, -1));  //rotate the caret so it points down when a menu is active
@@ -187,7 +244,7 @@ body,
 			padding-top:0;
 		}
 		&>a {
-			color:$nmu-green;
+			color:$nmu-green-text;
 		}
 	}
 }

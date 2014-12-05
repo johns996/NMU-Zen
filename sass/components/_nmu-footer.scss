@@ -5,6 +5,70 @@
 	margin-bottom:0;
 }
 
+.postscript {
+	width:1170px;
+	margin:20px auto -21px;
+	img {
+		width:585px;
+		height:auto;
+	}
+	.gallery,
+	.share {
+		position:relative;
+		display:inline-block;
+	}
+	.gallery-text,
+	.share-text {
+		position:absolute;
+		color:white;
+		text-align:center;
+		top:0;
+		left:0;
+		margin:0 auto;
+		width:100%;
+		padding-top:20%;
+		font-size:2em;
+		line-height:1.4em;
+	}
+	.gallery-visit,
+	.share-share {
+		font-weight:600;
+		color:$nmu-gold;
+	}
+	.gallery-button {
+		font-size:.5em;
+		border:1px solid $nmu-gold;
+		width:200px;
+		margin:20px auto 0;
+	}
+	.share-buttons {
+		margin-top:20px;
+		.share-facebook,
+		.share-linkedin,
+		.share-instagram,
+		.share-twitter {
+			background-image:url(/sites/all/themes/zen_nmu/images/social-icons.png);
+			width:35px;
+			height:35px;
+			display:inline-block;
+			margin:2px;
+		}
+		.share-facebook {
+			background-position:0px 0px;
+		}
+		.share-twitter {
+			background-position:35px 0px;
+		}
+		.share-instagram {
+			background-position:77px 70px;
+		}
+		.share-linkedin {
+			background-position:123px 0px;
+		}
+	}
+}
+
+
 .footer-main {
 	padding: 50px 20px;
 	font-size: .95em;
