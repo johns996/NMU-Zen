@@ -114,7 +114,52 @@
 			}
 		}
 	}
+	.resources {
+		text-align: center;
+		h2 {
+			width: 100%;
+			padding: 1em 0;
+			margin: 0;
+			font-size: 1.7em;
+			font-family: $avenir-black;
+			text-transform: uppercase;
+			color: $nmu-green-dark;
+			border-bottom: solid thin $nmu-gray-lighter;			
+		}
+		ul {
+			list-style-type: none;
+			font-weight: bold;
+			color: $nmu-black;
+			& > li {
+				margin: 1em 0;
+				position: relative;
+				bottom: 1em;
+				a, a:visited { 
+					color: $nmu-green;
+					text-decoration: underline;
+				}
+				a:hover {
+					color: $nmu-black;
+				}
+				h3 {
+					text-transform: uppercase;
+					font-family: $avenir-black;
+					font-size: 1.5em;
+				}
+				&:first-of-type {
+					position: static;
+					&:after {
+						content: "_";
+						font-size: 2em;
+						position: relative;
+						bottom: 1em;
+					}
+				}
+			}
+		}
+	}
 }
+
 .cycle-nav-caption {
 	background-color: $nmu-gray-evenlighter;
 }
@@ -182,6 +227,11 @@
 		.apply-section {
 			& > ul {
 				display: block;
+			}
+		}
+		.resources {
+			h2 {
+				font-size: 3em;
 			}
 		}
 	}
