@@ -6,10 +6,113 @@
 @import "init";
 
 @import 'components/nmu-slideshow';
+@import "compass/css3/user-interface";
 
 #admissions-homepage {
 	section {
 		overflow: hidden;
+	}
+	.search-section {
+		position: relative;
+		text-align: center;
+		& > img {
+			float: right;
+			max-width: 200%;
+		}
+		& > .form-group {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 75%;
+			@include transform(translate(-50%, -50%));
+			color: white;
+			font-size: 1.5em;
+			input[type="text"] {
+				border: thin solid #888;
+				@include border-radius(1px);
+				background: transparent;
+				color: white;
+				font-size: 1em;
+				@include input-placeholder {
+					color: white;
+				}
+			}
+			& > span {
+				font-size: .9em;
+				top: 2.1em;
+				right: .5em;
+			}
+		}
+	}
+	.apply-section {
+		text-align: center;
+		padding-top: 3em;
+		font-size: .9em;
+		background-color: $nmu-gray-lightest;
+		h2 {
+			font-size: 1em;
+			color: $nmu-green-darker;
+			font-family: $avenir-black;
+		}
+		h3 {
+			font-size: 2.3em;
+			font-family: $avenir-medium;
+		}
+		& > p {
+			max-width: 600px;
+			margin: auto;
+			font-size: 1em;
+		}
+		.button {
+			display: block;
+			width: 12em;
+			line-height: 4em;
+			background-color: $nmu-green-darker;
+			margin: 1.5em auto;
+			font-family: $avenir-black;
+			text-transform: uppercase;
+			a, a:hover, a:visited {
+				color: white;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		& > ul {
+			display: none;
+			list-style-type: none;
+			margin: 5em auto 1em auto;
+			padding-top: 1em;
+			border-top: thin solid lightgrey;
+			width: 100%;
+			text-align: center;
+			li {
+				display: inline-block;
+				margin: 0 3em;
+				padding: 1em;
+				text-transform: uppercase;
+				font-family: $avenir-black;
+				border-radius: 2px;
+				@include box-sizing(border-box);
+				&:hover {
+					background-color: #f5f5f5;
+					transition: background-color 0.5s ease;
+				}
+				& a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					&:hover, &:visited {
+						text-decoration: none;
+						color: $nmu-green;
+					}
+				}
+			}
+		}
 	}
 }
 .cycle-nav-caption {
@@ -20,6 +123,7 @@
 	overflow: hidden;
 }
 
+/* small phones */
 @media not all and #{$mq-bootstrap-xs-min} {
  .cycle-overlay {
  	text-align: left;
@@ -33,15 +137,75 @@
  }
 }
 
-/* tablet */
+/* high res phones */
+@media all and #{$mq-bootstrap-xs-min} {
+ #admissions-homepage {
+	 .search-section {
+		 & > img {
+			 max-width: 150%;
+		 }
+		 & > .form-group {
+			 font-size: 2em;
+			input[type="text"] {
+				height: 2.5em;
+			}
+			& > span {
+				top: 2.7em;
+			}
+		 }
+	 }
+	 .apply-section {
+		.button {
+			display: inline-block;
+			margin-left: .5em;
+			margin-right: .5em;
+		}
+	 }
+ }
+}
+
+/* high res tablets */
 @media all and #{$mq-bootstrap-sm-min} {
-	#admissions-homepage > section {
+	#admissions-homepage {
+		.search-section {
+			& > img {
+				max-width: 100%;
+			}
+			& > .form-group {
+				width: 50%;
+			}
+		}
+		.slideshow-section {
+			max-width: 767px;
+			margin: auto;
+		}
+		.apply-section {
+			& > ul {
+				display: block;
+			}
+			div.button {
+				display: block;
+				background-color: transparent;
+				margin: 0 auto;
+				width: auto;
+				line-height: 1;
+				text-transform: none;
+				& > a, & > a:hover, & > a:visited {
+					color: $nmu-green;
+					display: inline;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+/* wide */
+@media all and #{$mq-bootstrap-md-min} {
+	#admissions-homepage > .slideshow-section {
 		@include display-flex();
-		.cycle-slideshow {
-			order: 1;
-		}
-		.cycle-nav-caption {
-			order: 2;
-		}
+		margin-left: -15px;
+		margin-right: -15px;
+		max-width: 1210px;
 	}
 }
