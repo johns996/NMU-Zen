@@ -183,19 +183,6 @@
 			& > ul {
 				display: block;
 			}
-			div.button {
-				display: block;
-				background-color: transparent;
-				margin: 0 auto;
-				width: auto;
-				line-height: 1;
-				text-transform: none;
-				& > a, & > a:hover, & > a:visited {
-					color: $nmu-green;
-					display: inline;
-					text-decoration: underline;
-				}
-			}
 		}
 	}
 }
