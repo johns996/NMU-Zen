@@ -19,17 +19,34 @@ Drupal.behaviors.my_custom_behavior = {
 
     // Place all code here.
 
+		//first check if modernizr is there (this helps the file browser since it does not load the js properly)
+		if(typeof(Modernizr) == "object"){
+			//load enquire.js and a polyfill if needed
+			Modernizr.load([
+				//first test need for polyfill
+				{
+						test: window.matchMedia,
+						nope: "/sites/all/themes/zen_nmu/js/vendor/matchMedia.js"
+				},
+
+				//and then load enquire
+				"/sites/all/themes/zen_nmu/js/vendor/enquire.min.js",
+				//finally, load the scripts that depend on enquire
+				"/sites/all/themes/zen_nmu/js/enquire-helper.js"
+			]);
+		}
+
 		$(document).on('click', '.yamm .dropdown-menu', function(e) {
-			e.stopPropagation()
+			e.stopPropagation();
 		});
 
 		// add fade in animation to bootstrap dropdowns
-		$('.dropdown').on('show.bs.dropdown', function(e){
+		$('.dropdown').on('show.bs.dropdown', function(){
 			$(this).find('.dropdown-menu').first().stop(true, true).fadeIn(200);
 		});
 
 		// add fade out animation to bootstrap dropdowns
-		$('.dropdown').on('hide.bs.dropdown', function(e){
+		$('.dropdown').on('hide.bs.dropdown', function(){
 			$(this).find('.dropdown-menu').first().stop(true, true).fadeOut(300);
 		});
 
@@ -48,117 +65,48 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).removeClass('nav-active');
 		});
 
-		//the default search menu is stored in the mobile-visible dropdown
-		//enquire uses a media query to detect desktop display and then moves that search menu into the desktop region
-		//if a user resizes their browser, enquire will move the search menu back into the mobile div
-		enquire.register("screen and (min-width: 768px)", {
-			match : function() {
-				$('#search-collapse-div').empty();
-				$('#search-dropdown').append(searchStored);
-				searchBindChange();
-				$('#search-query').attr('autofocus', 'true');  //no autofocus on small screens
-			},
-			unmatch : function() {
-				$('#search-dropdown').empty();
-				$('#search-collapse-div').append(searchStored);
-				searchBindChange();
-			},
-			setup : function() {
-				searchStored = $('#search-collapse-div').html();
-				searchBindChange();
-			}
-		});
-
-		//we add the change events to a function so they can be re-bound as enquire re-writes the search menu
-		function searchBindChange(){
-			$('#search-az').bind('change', function(){
-				resetSearch();
-				$('#search-query').attr('placeholder', 'ENTER A LETTER');
-				$('#search-query').focus();
-			});
-			$('#search-keyword').bind('change', function(){
-				resetSearch();
-				$('#search-query').attr('placeholder', 'SEARCH NMU');
-				$('#search-query').focus();
-			});
-			$('#search-map').bind('change', function(){
-				resetSearch();
-				$('#search-query').attr('placeholder', 'SEARCH CAMPUS MAP');
-				$('#search-query').focus();
-			});
-			$('#search-calendar').bind('change', function(){
-				resetSearch();
-				$('#search-query').attr('placeholder', 'SEARCH CALENDAR');
-				$('#search-query').focus();
-			});
-			$('#search-directory').bind('change', function(){
-				resetSearch();
-				$('#search-query').hide();
-				$('#search-department').show();
-				$('#search-department').focus();
-				$('#searchform').attr({
-					action: '//aditweb3.nmu.edu/telephone/directory/web/dept_listing.php',
-					method: 'post'
-				});
-			});
-			$('#search-people').bind('change', function(){
-				resetSearch();
-				$('#search-query').attr('placeholder', 'ENTER A LAST NAME');
-				$('#search-query').focus();
-				$('#search-query').attr('name', 'searchname');
-				$('#search-department').attr('name', 'dept-searchname');  //change this name to prevent its data from blocking the people search
-				$('#searchform').attr({
-					action: '//aditweb3.nmu.edu/telephone/directory/web/default.php',
-					method: 'post'
-				});
-			});
+		//move the stick point for the nav bar based on the presence of the alert
+		if ($('#nmu-alert').length){
+			var alertHeight = $('#nmu-alert').height();
+			alertHeight = alertHeight + 62;  //62 is the margin (30) padding (30) and border (2)
+			var currentOffset = $('#header-main-navigation').attr('data-offset-top');
+			var theFullHeight = parseInt(currentOffset,10) + parseInt(alertHeight,10);
+			$('#header-main-navigation').attr('data-offset-top', theFullHeight);
+			//$('#header-main-navigation').data('bs.affix').options.offset = theFullHeight;
 		}
 
-		function resetSearch() {
-			$('#search-query').show();
-			$('#search-department').hide();
-			$('#search-query').attr('name', 'query');
-			$('#search-department').attr('name', 'searchname');
-			$('#searchform').attr({
-				action: '/searchquery',
-				method: 'get'
-			});
-		}
-
-
-
-/*
-//not used anymore in favor of enquire method above
-//using this method, i can't target any of the elements appended to the desktop search div
-//likely because the id's have been duplicated with this script
-		$('#search-icon').one('click', function() {
-			//to avoid duplicating the search section, we copy over the content from the mobile collapse menu and put it in the nav dropdown
-			searchStored = $('#search-collapse-div').html();
-			$('#search-dropdown').append(searchStored);
-
+		$('#nmu-alert').on('closed.bs.alert', function(){
+			$('#header-main-navigation').data('bs.affix').options.offset = currentOffset;
 		});
-*/
 
-/*
-//no longer used because it's difficult to remove the dropdowns
-//and because this seems like a lot of extra work for just a list of 5 links
-//so it's being duplicated at the block level
-		enquire.register("screen and (max-width: 767px)", {
-			match : function() {
-				//store the html of the main navbar
-				mainNavStored = $('#main-navigation-collapse').html();
-				// append that html to the top navbar
-				$('#top-navigation-collapse').prepend(mainNavStored);
-			},
-			unmatch : function() {
-				//remove the appended nav element when leaving the xs display
-				$('#top-navigation-collapse > #main-navigaiton-ul').remove();
-			}
+		//left navigation functionality
+		//$('#left-nav li ul').hide(); //hide all of the sub nav lists
+		//$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
+
+		$('#left-nav li:not(.nav-label)').click(function(e){
+			$('#left-nav li ul').not($(this).find('ul')).slideUp();  //start by sliding up all other nav lists, except the one that was just clicked on
+			$('#left-nav li').not(this).removeClass('active');  //remove all active classes, except the one that was just clicked on
+			$(this).find('ul').slideDown();
+			$(this).addClass('active');
+			e.preventDefault();  //stop the page from returning to the top on click
 		});
-*/
 
   } // end attach
 };
 
 
 })(jQuery, Drupal, this, this.document);
+
+		function selectNavItem(){
+			jQuery(document).ready(function($){
+				$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
+				var passedItem = $('.field-name-field-nav-expand div div').text();
+				if(!passedItem){  //show the first one by default
+					$('#left-nav li').first().addClass('active');
+					$('#left-nav li ul').first().show();
+				}else{ //else show a nav based on what's selected
+					$('#' + passedItem).addClass('active');
+					$('#' + passedItem + ' ul').show();
+				}
+			});
+		}

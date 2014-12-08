@@ -63,11 +63,7 @@ stylesheets[all][] = css/styles.css
 ;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
 
 
-
 ; Optionally add some JavaScripts to your theme.
-
-;enquire must be added here because script.js depends on this file existing (imce will fail to load properly if loaded through the theme settings)
-scripts[] = js/vendor/enquire.min.js
 scripts[] = js/script.js
 
 
@@ -87,10 +83,11 @@ scripts[] = js/script.js
 ;   <?php print $header_top; ?>
 
 regions[top_navigation] = Top Navigation
-regions[branding]			= Branding
+regions[branding]				= Branding
 regions[main_navigation]= Main Navigation
 ;regions[highlighted]   = Highlighted
 ;regions[help]          = Help
+regions[breadcrumbs]    = Breadcrumbs
 regions[content]        = Content
 regions[sidebar_first]  = Sidebar First
 regions[sidebar_second] = Sidebar Second

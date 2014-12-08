@@ -11,15 +11,7 @@ jQuery(document).ready(function($) {
         idleTime = 0;
     });
 
-    function androidVideoHandler() {
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.indexOf("android") > -1) {
-            $("#playYoutube").click(function() {
-                console.log("Your playYoutube click was detected!")
-                window.open("https://www.youtube.com/watch?v=JtpUN4_mXhI");
-            });
-        }
-    }
+
 
     function timerIncrement() {
         idleTime = idleTime + 1
@@ -27,11 +19,7 @@ jQuery(document).ready(function($) {
             Video_back.pause();
         }
     }
-    enquire.register("screen and (max-width:768px)", {
-        match: function() {
-            androidVideoHandler();
-        }
-    });
+
     var Video_back = new video_background($("#fearless-video"), {
         "position": "absolute", //Stick within the div
         "z-index": "-1", //Behind everything

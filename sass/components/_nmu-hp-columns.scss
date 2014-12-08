@@ -16,7 +16,7 @@
 		text-align: center;
 		overflow: hidden;
 		@media all and #{$mq-bootstrap-sm-min} {
-			max-height:950px;
+			height:950px;
 		}
 		h2 {
 			color: $nmu-green-darker;
@@ -107,6 +107,9 @@
 						color:white;
 					}
 				}
+				h5 {
+					white-space: nowrap;
+				}
 				h5,
 				.button {
 					a,
@@ -174,12 +177,12 @@
 						span {
 							position: relative;
 							top: 50%;
-							transform: translateY(-50%);
+							@include transform(translateY(-50%));
 						}
 						.button {
 							margin: 0;
 							float: right;
-							transform: translateY(-60%);
+							@include transform(translateY(-60%));
 						}
 					}
 				}

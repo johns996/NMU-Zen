@@ -1,8 +1,10 @@
+.news-events {
+
+}
+
 .events-header {
 	border-top:5px solid $nmu-green;
 	background-color:$nmu-green;
-	margin-left:-15px;
-	margin-right:-15px;
 	height:148px;
 	background-image:url(/sites/all/themes/zen_nmu/images/news-and-events-767.jpg);
 	background-position:center;
@@ -68,7 +70,7 @@ div.day-wrapper { //this div wraps around the displayed events, must be more spe
 	height:300px;
 	overflow:hidden;
 	@media all and #{$mq-bootstrap-only-md} {
-		height:350px;
+		height:370px;
 	}
 	@media all and #{$mq-bootstrap-md-min} {
 		margin-bottom:0;
@@ -76,7 +78,7 @@ div.day-wrapper { //this div wraps around the displayed events, must be more spe
 	.Title,
 	.Text,
 	.Footer {
-		margin:0 20px;
+		margin:0 15px;
 		padding:5px;
 	}
 	.Title {

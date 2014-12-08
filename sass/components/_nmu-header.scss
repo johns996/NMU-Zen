@@ -4,6 +4,13 @@
  */
 
 
+//styles specific to front pages
+.front {
+	.region-main-navigation {
+		height:50px;  //set the height to 50 for front pages, removing the extra space added when a page has the top image displayed (line 282 // search for region-main-navigation)
+	}
+}
+
 //* top navigation
 $top-navigation-height: 60px; //this height must correspond with the offset number applied to the main navigation so they stick together on scroll
 
@@ -267,12 +274,18 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 //* main navigation
 .region-main-navigation {
 
+	.header-spanning-image {
+		margin-top:-70px;
+		text-align:center;
+	}
+
 	@media all and #{$mq-bootstrap-xs-max} {
 		visibility:hidden;  //hide the navbar on xs screens but keep the flow of the page
 	}
 
 	padding:0;  //make the nav bar fill up the space available
-	height:50px; //give this region a height so when the nav is removed, the page just not jump up to fill up the empty space
+	//height of 100 is needed to make space for the header-spaning image.  this value is reset for front pages to 50px
+	height:100px; //give this region a height so when the nav is removed, the page just not jump up to fill up the empty space
 
 	img[align="right"],
 	img[style*="float: right"],
