@@ -9,6 +9,11 @@
 @import "compass/css3/user-interface";
 
 
+#main.container {
+	position: relative;
+	top: -50px; /* underneath the nav */
+}
+
 .row #content {
 	padding-top:0;  //remove the padding added for internal pages
 }
