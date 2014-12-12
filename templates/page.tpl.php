@@ -26,10 +26,29 @@
 			?>
 
 			<?php
+				if ($sidebar_first && $sidebar_second){
+					print '<aside class="sidebars">';
+						print '<div class="col-md-3">'.$sidebar_first.'</div>';
+						print '<div class="col-md-2">'.$sidebar_second.'</div>';
+					print '</aside>';
+				}
+				elseif ($sidebar_first && !$sidebar_second){
+					print '<aside class="sidebars">';
+						print '<div class="col-md-2">'.$sidebar_first.'</div>';
+					print '</aside>';
+				}
+				elseif (!$sidebar_first && $sidebar_second){
+					print '<aside class="sidebars">';
+						print '<div class="col-md-2">'.$sidebar_second.'</div>';
+					print '</aside>';
+				}
+			?>
+
+			<?php
 				if ($sidebar_first && $sidebar_second)
-					$sidebar_class = 'col-md-8 col-md-push-2';
+					$sidebar_class = 'col-md-8';
 				elseif ($sidebar_first && !$sidebar_second)
-					$sidebar_class = 'col-md-10 col-md-push-2';
+					$sidebar_class = 'col-md-10';
 				elseif (!$sidebar_first && $sidebar_second)
 					$sidebar_class = 'col-md-10';
 				elseif(drupal_is_front_page())
@@ -57,25 +76,6 @@
 				<?php print render($page['content']); ?>
 				<?php print $feed_icons; ?>
 			</div>
-
-			<?php
-				if ($sidebar_first && $sidebar_second){
-					print '<aside class="sidebars">';
-						print '<div class="col-md-3 col-md-pull-7">'.$sidebar_first.'</div>';
-						print '<div class="col-md-2">'.$sidebar_second.'</div>';
-					print '</aside>';
-				}
-				elseif ($sidebar_first && !$sidebar_second){
-					print '<aside class="sidebars">';
-						print '<div class="col-md-2 col-md-pull-10">'.$sidebar_first.'</div>';
-					print '</aside>';
-				}
-				elseif (!$sidebar_first && $sidebar_second){
-					print '<aside class="sidebars">';
-						print '<div class="col-md-2">'.$sidebar_second.'</div>';
-					print '</aside>';
-				}
-			?>
 
 		</div>
   </div>
