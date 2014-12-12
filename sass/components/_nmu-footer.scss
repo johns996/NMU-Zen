@@ -1,21 +1,21 @@
 /*
  * Footer
  */
-#footer .block.last {  //we only want to target the last block in the footer to make sure it goes to the bottom of the page
+#footer .block {  //we want the footer blocks to sit right on top of each other, so no bottom margin
 	margin-bottom:0;
 }
 
 .postscript {
-	width:1170px;
-	margin:20px auto -21px;
+	margin-top:20px;
 	img {
-		width:585px;
+		width:100%;
 		height:auto;
 	}
 	.gallery,
 	.share {
 		position:relative;
 		display:inline-block;
+		padding:0;
 	}
 	.gallery-text,
 	.share-text {
