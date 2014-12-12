@@ -23,7 +23,7 @@ function zen_nmu_form_system_theme_settings_alter(&$form, &$form_state, $form_id
     '#type'          => 'checkbox',
     '#title'         => t('Enable Bootstrap'),
     '#default_value' => theme_get_setting('bootstrap'),
-    '#description'   => t("This option enables the bootstrap framework via the MaxCDN."),
+    '#description'   => t("This option enables the bootstrap framework."),
   );
   $form['zen_nmu_framework_addins']['fontawesome'] = array(
     '#type'          => 'checkbox',
