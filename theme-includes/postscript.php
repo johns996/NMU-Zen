@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="postscript row">
-		<div class="gallery col-md-6">
+		<div class="gallery col-sm-6">
 			<img src="/sites/all/themes/zen_nmu/images/photo-gallery.jpg">
 			<div class="gallery-text allcaps">
 				<span class="gallery-visit">Visit Our</span><br />
@@ -11,7 +11,7 @@
 			</div>
 		</div>
 
-		<div class="share col-md-6">
+		<div class="share col-sm-6">
 			<img src="/sites/all/themes/zen_nmu/images/share-nmu.jpg">
 			<div class="share-text allcaps">
 				<span class="share-share">Share NMU</span><br />

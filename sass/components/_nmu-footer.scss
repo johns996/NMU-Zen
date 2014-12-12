@@ -17,6 +17,11 @@
 		display:inline-block;
 		padding:0;
 	}
+	.gallery {
+		@media all and #{$mq-bootstrap-xs-max} {
+			margin-bottom:5px;
+		}
+	}
 	.gallery-text,
 	.share-text {
 		position:absolute;
@@ -26,9 +31,12 @@
 		left:0;
 		margin:0 auto;
 		width:100%;
-		padding-top:20%;
 		font-size:2em;
 		line-height:1.4em;
+		padding-top:10%;
+		@media all and #{$mq-bootstrap-md-min} {
+			padding-top:20%;
+		}
 	}
 	.gallery-visit,
 	.share-share {
