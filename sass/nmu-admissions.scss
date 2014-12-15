@@ -222,13 +222,17 @@ header .region-main-navigation {
 .academics-header {
 	border-top:5px solid $nmu-green;
 	background-color: $nmu-green;
-	margin:0 -15px 0 -15px;
-	background-image:url("../images/admissions-academics-banner.jpg");
-	background-position:center;
+	//margin:0 -15px 0 -15px;
+	background-image:url("../images/admissions/admissions-academics-banner-767.jpg");
+	background-position:60%;
 	height:148px;
-
-}
-.academics-label {
+	@media all and #{$mq-bootstrap-md-min} {
+		height:148px;
+		background-image:url(../images/admissions/admissions-academics-banner.jpg);
+		background-position:center;
+	}
+	
+	.academics-label {
 		margin-left:auto;
 		margin-right:auto;
 		width:400px;
@@ -237,31 +241,97 @@ header .region-main-navigation {
 		color:white;
 		font-size:2.2em;
 		line-height:1em;
-		padding-top:50px;
-}
-.admissions-boxes {
-	height:300px;
-	margin:10px 0;
-}
-.adm-box1 {
-	background-image: url("http://lorempixel.com/400/400/nature/1");
-}
-.adm-box2 {
-	background-image: url("http://lorempixel.com/400/400/nature/2");
-}
-.adm-box3 {
-	background-image: url("http://lorempixel.com/400/400/nature/3");
-}
-.adm-box4 {
-	background-image: url("http://lorempixel.com/400/400/nature/4");
-}
-.adm-box5 {
-	background-image: url("http://lorempixel.com/400/400/nature/5");
-}
-.adm-box6 {
-	background-image: url("http://lorempixel.com/400/400/nature/6");
+		padding-top:40px;
+		@media all and #{$mq-bootstrap-md-min} {
+			width:500px;
+			font-size:3em;
+			line-height:1em;
+			padding-top:60px;
+		}
+	}
 }
 
+.admissions-boxes {
+	height:240px;
+	width:240px;
+	margin:10px auto;
+	margin-bottom:150px;
+
+	.adm-box-overlay {
+		text-align:center;
+		margin-left:auto;
+		margin-right:auto;
+		width:240px;
+		font-family:$avenir-medium;
+		color:white;
+		font-size:2.2em;
+		line-height:1em;
+		padding-top:80px;
+		height:100%;
+
+		.adm-yellow-numbers {
+			color:$nmu-gold;
+			font-family:$avenir-black;
+		}
+		.adm-yellow-text {
+			color:$nmu-gold;
+			font-family:$avenir-medium;
+			padding-bottom:10px;
+		}
+	}
+
+	.adm-caption {
+		text-align:center;
+		width:240px;
+		margin-top:20px;
+		color:$nmu-gray-darker;
+	    a {
+			line-height:3em;
+			text-decoration:underline;
+			color:$nmu-green;
+		}
+	}
+}
+
+.adm-box1 {
+	background-image: url("../images/admissions/baja.jpg");
+	margin-right:-10%;
+}
+.adm-box2 {
+	background-image: url("../images/admissions/painter.jpg");
+}
+.adm-box3 {
+	background-image: url("../images/admissions/soccer.jpg");
+	margin-left:-10%;
+}
+.adm-box4 {
+	background-image: url("../images/admissions/football.jpg");
+	margin-right:-10%;
+}
+.adm-box5 {
+	background-image: url("../images/admissions/sailors.jpg");
+}
+.adm-box6 {
+	background-image: url("../images/admissions/blacksmith.jpg");
+	margin-left:-10%;
+}
+@media all and #{$mq-bootstrap-sm-max}{
+	.adm-box1, .adm-box3, .adm-box4, .adm-box6 {
+		margin:10px auto 150px auto;
+	}
+	.adm-box1, .adm-box3, .adm-box5 {
+		margin-right: 0px;
+	}
+	.adm-box2, .adm-box4, .adm-box6 {
+		margin-left: 0px;
+	}
+
+}
+@media all and #{$mq-bootstrap-xs-max}{
+	.adm-box1, .adm-box2, .adm-box3, .adm-box4, .adm-box5, .adm-box6{
+		margin:10px auto 150px auto;
+	}
+}
 /* small phones */
 @media not all and #{$mq-bootstrap-xs-min} {
  .cycle-overlay {
