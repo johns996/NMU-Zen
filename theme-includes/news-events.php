@@ -15,4 +15,8 @@
 			?>
 		</div>
 	</div>
+	<div class="events-footer row">
+		<a href="" class="events-link allcaps">Events Calendar</a>
+		<div class="news-link"><a href="">View Latest News</a></div>
+	</div>
 </div>

@@ -69,31 +69,38 @@ $nav-spacing: 1em; /* space between prev and next buttons */
 }
 .cycle-nav-caption { /* container of .cycle-nav and .cycle-caption */
  position: relative;
+ &.col-md-6 {
+	 padding: 0; /* override the bootstrap style */
+ }
  .cycle-caption {
   padding: $caption-padding;
-  padding-right: $caption-padding + ($nav-size * 2) + $nav-spacing;
   h3 {
    font-size: $title-size;
    padding: 0;
    margin: 0;
+   margin-right: $nav-size;
+  }
+  ul li {
+   margin-top: 1em;
   }
  }
 }
 
-$phone-query: $mq-bootstrap-xs-min + ', (min-width: 767px) and (max-width: 860px)';
 /* phone */
-@media not all and #{$phone-query} {
+@media not all and #{$mq-bootstrap-xs-min} {
 	.cycle-nav-caption {
+		$caption-padding: 1.5em;
+		$header-size: 1.9em;
 		.cycle-caption {
-			padding: 2.5em 20px;
+			padding: $caption-padding;
 			h3 {
-				font-size: 1.9em;
+				font-size: $header-size;
 				margin-bottom: 1em;
 			}
 		}
 		.cycle-nav {
-			right: 2.5em;
-			top: 2.3em;
+			right: $caption-padding;
+			top: $caption-padding + $header-size;
 		}
 	}
 }
@@ -128,7 +135,6 @@ $phone-query: $mq-bootstrap-xs-min + ', (min-width: 767px) and (max-width: 860px
  }
  a {
   text-decoration: underline;
-  font-style: italic;
  }
 }
 

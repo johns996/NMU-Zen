@@ -1,9 +1,81 @@
 /*
  * Footer
  */
-#footer .block.last {  //we only want to target the last block in the footer to make sure it goes to the bottom of the page
+#footer .block {  //we want the footer blocks to sit right on top of each other, so no bottom margin
 	margin-bottom:0;
 }
+
+.postscript {
+	margin-top:20px;
+	img {
+		width:100%;
+		height:auto;
+	}
+	.gallery,
+	.share {
+		position:relative;
+		display:inline-block;
+		padding:0;
+	}
+	.gallery {
+		@media all and #{$mq-bootstrap-xs-max} {
+			margin-bottom:5px;
+		}
+	}
+	.gallery-text,
+	.share-text {
+		position:absolute;
+		color:white;
+		text-align:center;
+		top:0;
+		left:0;
+		margin:0 auto;
+		width:100%;
+		font-size:2em;
+		line-height:1.4em;
+		padding-top:10%;
+		@media all and #{$mq-bootstrap-md-min} {
+			padding-top:20%;
+		}
+	}
+	.gallery-visit,
+	.share-share {
+		font-weight:600;
+		color:$nmu-gold;
+	}
+	.gallery-button {
+		font-size:.5em;
+		border:1px solid $nmu-gold;
+		width:200px;
+		margin:20px auto 0;
+	}
+	.share-buttons {
+		margin-top:20px;
+		.share-facebook,
+		.share-linkedin,
+		.share-instagram,
+		.share-twitter {
+			background-image:url(/sites/all/themes/zen_nmu/images/social-icons.png);
+			width:35px;
+			height:35px;
+			display:inline-block;
+			margin:2px;
+		}
+		.share-facebook {
+			background-position:0px 0px;
+		}
+		.share-twitter {
+			background-position:35px 0px;
+		}
+		.share-instagram {
+			background-position:77px 70px;
+		}
+		.share-linkedin {
+			background-position:123px 0px;
+		}
+	}
+}
+
 
 .footer-main {
 	padding: 50px 20px;
