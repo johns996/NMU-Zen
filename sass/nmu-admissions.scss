@@ -20,6 +20,49 @@
 	overflow: hidden;
 }
 
+.academics-header {
+	border-top:5px solid $nmu-green;
+	background-color: $nmu-green;
+	margin:0 -15px 0 -15px;
+	background-image:url("../images/admissions-academics-banner.jpg");
+	background-position:center;
+	height:148px;
+
+}
+.academics-label {
+		margin-left:auto;
+		margin-right:auto;
+		width:400px;
+		text-align:center;
+		font-family:$avenir-black;
+		color:white;
+		font-size:2.2em;
+		line-height:1em;
+		padding-top:50px;
+}
+.admissions-boxes {
+	height:300px;
+	margin:10px 0;
+}
+.adm-box1 {
+	background-image: url("http://lorempixel.com/400/400/nature/1");
+}
+.adm-box2 {
+	background-image: url("http://lorempixel.com/400/400/nature/2");
+}
+.adm-box3 {
+	background-image: url("http://lorempixel.com/400/400/nature/3");
+}
+.adm-box4 {
+	background-image: url("http://lorempixel.com/400/400/nature/4");
+}
+.adm-box5 {
+	background-image: url("http://lorempixel.com/400/400/nature/5");
+}
+.adm-box6 {
+	background-image: url("http://lorempixel.com/400/400/nature/6");
+}
+
 @media not all and #{$mq-bootstrap-xs-min} {
  .cycle-overlay {
  	text-align: left;
