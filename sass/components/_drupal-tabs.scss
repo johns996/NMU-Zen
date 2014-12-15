@@ -1,0 +1,19 @@
+/* This SCSS file contains module styles intended to fix the tab position on certain pages
+	Used on:
+		NMU Homepage
+		Admissions Homepage
+*/
+
+body.logged-in {
+	.tabs-primary {
+		position:absolute;
+		top:134px;
+		.tabs-primary__tab.is-active {
+			background:white;
+		}
+	}
+	.ok, .messages--status {
+		position: absolute;
+		top: 80px;
+	}
+}
