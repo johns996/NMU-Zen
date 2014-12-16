@@ -276,11 +276,17 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 
 	.header-spanning-image {
 		margin-top:-70px;
-		text-align:center;
+		background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/grads-pano.jpg);
+		background-repeat:repeat-x;
+		background-position:center;
+		height:100px;
 	}
 
-	@media all and #{$mq-bootstrap-xs-max} {
-		visibility:hidden;  //hide the navbar on xs screens but keep the flow of the page
+	#header-main-navigation {
+		@media all and #{$mq-bootstrap-xs-max} {
+			visibility:hidden;  //hide the navbar on xs screens but keep the flow of the page
+			@include transition-duration(0s);
+		}
 	}
 
 	padding:0;  //make the nav bar fill up the space available

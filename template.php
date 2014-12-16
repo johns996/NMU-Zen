@@ -8,6 +8,26 @@
  */
 
 
+//tell zen to use my custom user-login and user-profile templates
+function zen_nmu_theme() {
+	$items = array();
+	$items['user_login'] = array(
+		'render element' => 'form',
+		'template' => 'templates/user-login'
+	);
+	$items['user_profile'] = array(
+		'render element' => 'form',
+		'template' => 'templates/user-profile'
+	);
+	return $items;
+}
+
+//write the login form to be used for the 'boss mode' login
+function zen_nmu_preprocess_user_login(&$variables) {
+  $variables['login_link'] = t('saml_login');
+  $variables['rendered'] = drupal_render_children($variables['form']);
+}
+
 /**
  * Override or insert variables into the maintenance page template.
  *

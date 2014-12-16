@@ -40,4 +40,6 @@ Thumbs.db
 # Project Specific ignores #
 ############################
 .sass-cache
-/css
+/css/*.css
+/css/*.map
+!/css/bootstrap*
