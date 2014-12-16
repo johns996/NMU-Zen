@@ -84,12 +84,16 @@ Drupal.behaviors.my_custom_behavior = {
 		//$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
 
 		$('#left-nav li:not(.nav-label)').click(function(e){
-			$('#left-nav li ul').not($(this).find('ul')).slideUp();  //start by sliding up all other nav lists, except the one that was just clicked on
-			$('#left-nav li').not(this).removeClass('active');  //remove all active classes, except the one that was just clicked on
-			$(this).find('ul').slideDown();
-			$(this).addClass('active');
-			e.preventDefault();  //stop the page from returning to the top on click
+			var activate = !$(this).hasClass('active');
+			$('#left-nav li ul').slideUp();  //start by sliding up all nav lists
+			$('#left-nav li').removeClass('active');  //remove all active classes
+			if(activate) {
+				$(this).find('ul').slideDown();
+				$(this).addClass('active');
+			}
 		});
+
+		//makeLeftNavExpandable();
 
   } // end attach
 };
@@ -97,16 +101,16 @@ Drupal.behaviors.my_custom_behavior = {
 
 })(jQuery, Drupal, this, this.document);
 
-		function selectNavItem(){
-			jQuery(document).ready(function($){
-				$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
-				var passedItem = $('.field-name-field-nav-expand div div').text();
-				if(!passedItem){  //show the first one by default
-					$('#left-nav li').first().addClass('active');
-					$('#left-nav li ul').first().show();
-				}else{ //else show a nav based on what's selected
-					$('#' + passedItem).addClass('active');
-					$('#' + passedItem + ' ul').show();
-				}
-			});
+function selectNavItem(){
+	jQuery(document).ready(function($){
+		$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
+		var passedItem = $('.field-name-field-nav-expand div div').text();
+		if(!passedItem){  //show the first one by default
+			$('#left-nav li').first().addClass('active');
+			$('#left-nav li ul').first().show();
+		}else{ //else show a nav based on what's selected
+			$('#' + passedItem).addClass('active');
+			$('#' + passedItem + ' ul').show();
 		}
+	});
+}

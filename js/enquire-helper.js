@@ -93,5 +93,28 @@
 							window.open("https://www.youtube.com/watch?v=JtpUN4_mXhI");
 					});
 			}
-    }
+		}
+
+
+		// left nav responsive
+		enquire.register("all and (max-width:991px)", {
+			match: function() {
+				// add click listener to the mobile menu label to expand/collapse it
+				$('.nav-label').on('click', function(e){
+					if($('#left-nav').hasClass('expanded')) {
+						$('#left-nav').removeClass('expanded');
+						$('#left-nav').slideUp();
+					} else {
+						$('#left-nav').slideDown();
+						$('#left-nav').addClass('expanded');
+					}	
+				});
+			},
+			unmatch: function() {
+				// remove the click listener and ensure the menu is expanded
+				$('#left-nav').slideDown();
+				$('.nav-label').off('click');
+			}
+		});
+
 })(jQuery, Drupal, this, this.document);
