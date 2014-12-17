@@ -8,3 +8,7 @@
 @import 'components/nmu-hp-video';
 @import 'components/nmu-hp-columns';
 @import 'components/drupal-tabs';
+
+body.logged-in .tabs-primary {
+	top:136px; // adjust the tabs just for the homepage
+}
