@@ -35,7 +35,7 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 	margin-top:30px;
 }
 
-body,
+body > #page,
 #page
 {
 	//keep everything on the page within the viewport
@@ -43,6 +43,12 @@ body,
 	//does not fully work but it does trim the columns down on the homepage and force them to fit
 	max-width: 100%;
 	overflow-x: hidden;
+
+
+	//currently we're using bootstrap's helvetica for all fonts
+	//switching everything to avenir does not give us the most readable text so i don't think switching is the best idea
+	//however, all headings should probably be avenir to follow the standards developed by seagulls
+	//font-family: $base-font-family;
 }
 
 /**
@@ -266,7 +272,7 @@ body,
 			color:$nmu-green-text;
 		}
 	}
-	
+
 	/* responsive sidebar */
 	@media all and #{$mq-bootstrap-sm-max} {
 		.nav-label a {
@@ -306,6 +312,7 @@ body,
 
 .allcaps {
 	text-transform:uppercase;
+	font-family: $base-font-family;  //if we're converting to allcaps, it is probably a type of heading and should be in avenir
 }
 
 .sm-break {
