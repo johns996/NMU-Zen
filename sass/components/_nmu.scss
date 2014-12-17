@@ -186,29 +186,31 @@ body,
 		margin: 0 -15px;
 		text-transform: uppercase;
 	}
-	.nav>li>a {
-		margin:0 -15px;  //make the nav item box extend to the sides of the nav column
-		color:$nmu-green-text;
-		text-transform: uppercase;
-		position: relative;
-		border:1px solid $nmu-gray-yetanother;
-		border-top:none;
-		background-color:$nmu-gray-lightest;
-		cursor: pointer;
-		&:hover,
-		&:active,
-		&:focus{
-			background-color:$nmu-gray-lighter;
-		}
-		&::after{
-			content:'>';
-			position: absolute;
-			right:12px;
-			top:14px;
-			font-size:0.78em;
-			color:$nmu-gray;
-			@include transform(rotate(90deg) scale(-1, -1));  //rotate the caret so it points up and flip it with scale
-			@include transition-duration(.5s);  //animate the caret movement when the active class is applied
+	.nav {
+		margin:0 -15px;  //make the nav extend to the sides of the nav column
+		&>li>a {
+			color:$nmu-green-text;
+			text-transform: uppercase;
+			position: relative;
+			border:1px solid $nmu-gray-yetanother;
+			border-top:none;
+			background-color:$nmu-gray-lightest;
+			cursor: pointer;
+			&:hover,
+			&:active,
+			&:focus{
+				background-color:$nmu-gray-lighter;
+			}
+			&::after{
+				content:'>';
+				position: absolute;
+				right:12px;
+				top:14px;
+				font-size:0.78em;
+				color:$nmu-gray;
+				@include transform(rotate(90deg) scale(-1, -1));  //rotate the caret so it points up and flip it with scale
+				@include transition-duration(.5s);  //animate the caret movement when the active class is applied
+			}
 		}
 	}
 	.nav-pills>li.active>a{
@@ -249,7 +251,6 @@ body,
   //secondary nav menu
 	.nav>li>ul {
 		padding:0;
-		margin:0 -15px;
 		padding:20px 15px;
 		border:1px solid $nmu-gray-yetanother;
 		border-top:none;
