@@ -315,6 +315,10 @@ body > #page,
 	font-family: $base-font-family;  //if we're converting to allcaps, it is probably a type of heading and should be in avenir
 }
 
+.column-container {
+	@include break-inside(avoid);
+}
+
 .sm-break {
 	display:inline;
 	@media all and #{$mq-bootstrap-sm-min} {

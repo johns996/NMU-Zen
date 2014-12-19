@@ -33,20 +33,50 @@ header .region-main-navigation {
 
 	position:absolute;
 
-	width:800px;
-
 	border:1px solid $nmu-gold;
 	background-color:$nmu-gray-evenlighter;
 	padding:20px;
 
 	z-index:100;
-	margin-top:250px;
-	margin-left:170px;
+
+	@media all and #{$mq-bootstrap-sm-min} {
+		top:4.75%;
+		left:5%;
+		width:90%;
+		@include columns(300px 2);
+	}
+	@media all and #{$mq-bootstrap-md-min} {
+		top:8.3%;
+		left:9%;
+		width:800px;
+		@include columns(370px 2);
+	}
+	@media all and #{$mq-bootstrap-lg-min} {
+		top:9.3%;
+		left:15.85%;
+	}
+
+
+	a,
+	a:visited{
+		color:$nmu-green-text;
+	}
+	a:active,
+	a:focus,
+	a:hover {
+		color:$nmu-black;
+	}
 
 	h2:first-child{
 		margin-top:0;
 	}
-	h2{}
+	h2{
+		font-size:1.5em;
+		color:$nmu-green-dark;
+		.search-level {
+			//font-family:$avenir-black;
+		}
+	}
 }
 
 
