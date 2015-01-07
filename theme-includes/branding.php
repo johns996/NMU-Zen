@@ -13,8 +13,6 @@
 
 $alertMessageFile = "/htdocs/Webb/DynamicallyCreatedFiles/NMU/emergency_alert_msg.shtml";
 
-printR(filesize($alertMessageFile));
-
 if(filesize($alertMessageFile) >  0){
 	echo '
 		<div class="alert alert-danger alert-dismissible alert-nmu" id="nmu-alert" role="alert">
