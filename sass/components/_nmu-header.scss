@@ -277,10 +277,28 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 
 	.header-spanning-image {
 		margin-top:-70px;
-		background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/grads-pano.jpg);
+		//background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/grads-pano.jpg);
 		background-repeat:repeat-x;
 		background-position:center;
 		height:100px;
+		&.image1 {
+			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-1.jpg);
+		}
+		&.image2 {
+			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-2.jpg);
+		}
+		&.image3 {
+			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-3.jpg);
+		}
+		&.image4 {
+			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-4.jpg);
+		}
+		&.image5 {
+			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-5.jpg);
+		}
+		&.image6 {
+			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-6.jpg);
+		}
 	}
 
 	#header-main-navigation {
