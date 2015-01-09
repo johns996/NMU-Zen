@@ -83,23 +83,15 @@ Drupal.behaviors.my_custom_behavior = {
 		});
 
 		//left navigation functionality
-		//$('#left-nav li ul').hide(); //hide all of the sub nav lists
-		//$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
-
-		$('#left-nav li:not(.nav-label)').click(function(e){
-			var activate = !$(this).hasClass('active');
+		$('#left-nav li a:not([href])').click(function(){
+			var parentSelector = $(this).parent();
+			var activate = !$(parentSelector).hasClass('active');
 			$('#left-nav li ul').slideUp();  //start by sliding up all nav lists
 			$('#left-nav li').removeClass('active');  //remove all active classes
 			if(activate) {
-				$(this).find('ul').slideDown();
-				$(this).addClass('active');
+				$(parentSelector).find('ul').slideDown();
+				$(parentSelector).addClass('active');
 			}
-		});
-	    $('#left-nav li ul a').click(function(e){
-			e.stopPropagation(); //don't slide up when a link is clicked
-		});
-	    $('#left-nav li ul').click(function(e){
-			e.stopPropagation(); //stop bouncing up and down when clicked inside
 		});
 		selectNavItem();
 
