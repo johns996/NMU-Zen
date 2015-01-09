@@ -23,10 +23,11 @@ Drupal.behaviors.my_custom_behavior = {
 		if(typeof(Modernizr) == "object"){
 			//load enquire.js and a polyfill if needed
 			Modernizr.load([
+
 				//first test need for polyfill
 				{
 						test: window.matchMedia,
-						nope: "/sites/all/themes/zen_nmu/js/vendor/matchMedia.js"
+						nope: ["/sites/all/themes/zen_nmu/js/vendor/matchMedia.js", "/sites/all/themes/zen_nmu/js/vendor/matchMedia.addListener.js"]
 				},
 
 				//and then load enquire
