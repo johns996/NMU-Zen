@@ -77,7 +77,9 @@ Drupal.behaviors.my_custom_behavior = {
 		}
 
 		$('#nmu-alert').on('closed.bs.alert', function(){
-			$('#header-main-navigation').data('bs.affix').options.offset = currentOffset;
+			var bsAffix = $('#header-main-navigation').data('bs.affix');
+			offset = parseInt(currentOffset, 10);
+			bsAffix.options.offset.top = bsAffix.options.offsetTop = offset;
 		});
 
 		//left navigation functionality
@@ -93,8 +95,7 @@ Drupal.behaviors.my_custom_behavior = {
 				$(this).addClass('active');
 			}
 		});
-
-		//makeLeftNavExpandable();
+		selectNavItem();
 
   } // end attach
 };
@@ -109,7 +110,7 @@ function selectNavItem(){
 		if(!passedItem){  //show the first one by default
 			$('#left-nav li').first().addClass('active');
 			$('#left-nav li ul').first().show();
-		}else{ //else show a nav based on what's selected
+		}else if(passedItem != 'none'){ //else show a nav based on what's selected, show nothing if 'none'
 			$('#' + passedItem).addClass('active');
 			$('#' + passedItem + ' ul').show();
 		}
