@@ -66,6 +66,7 @@ body > #page,
 	}
 }
 
+//this is in place to hide all first-child h2's so there is not duplicate titles on all pages
 .not-front .field-name-body .field-item {
 	h2:first-child{
 		display:none;
@@ -125,6 +126,10 @@ body > #page,
 		table {
 			//width:100%;  //with this option enabled, tables used for image captions take up the whole screen in mobile view  -- keep this comment
 			max-width:100%;
+			td,
+			th {
+				padding:2px;  //restore the browser default since botstrap removes it
+			}
 		}
 		//*** end of copied styles
 	}
