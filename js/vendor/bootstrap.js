@@ -2208,7 +2208,7 @@ if (typeof jQuery === 'undefined') {
     }
 
     var initializing   = this.affixed == null
-    var colliderTop    = initializing ? scrollTop : position.top
+    var colliderTop    = initializing ? scrollTop : scrollTop//position.top /* modified by nmu */
     var colliderHeight = initializing ? targetHeight : height
 
     if (offsetTop != null && colliderTop <= offsetTop) return 'top'
@@ -2243,7 +2243,6 @@ if (typeof jQuery === 'undefined') {
     if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
 
     var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
-
     if (this.affixed != affix) {
       if (this.unpin != null) this.$element.css('top', '')
 

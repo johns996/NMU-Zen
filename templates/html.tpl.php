@@ -42,7 +42,7 @@
   <?php if ($add_bootstrap): ?>
     <link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap-theme.min.css">
-    <script src="<?php print $base_path . $path_to_zen; ?>_nmu/js/vendor/bootstrap.min.js"></script>
+    <script src="<?php print $base_path . $path_to_zen; ?>_nmu/js/vendor/bootstrap.js"></script>
   <?php endif; ?>
   <?php if ($add_fontawesome): ?>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
