@@ -81,6 +81,11 @@ body > #page,
 		padding:0 10px;
 		&:last-child{
 			font-weight:600;
+			color: $nmu-gray;
+			&:hover {
+				text-decoration:none;
+				color: $nmu-gray;
+			}
 		}
 	}
 }

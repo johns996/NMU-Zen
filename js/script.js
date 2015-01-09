@@ -114,3 +114,22 @@ function selectNavItem(){
 		}
 	});
 }
+
+function breadcrumbBuilder(){
+	jQuery(document).ready(function($){
+		//nmu link
+		var nmuLink = '<a href="/">NMU</a>';
+
+		//department home
+		var dept = $( ".nav-label" ).text();
+		var dept = $.trim(dept) + " Home";
+		var dept = ' / <a href="../">'+dept+'</a>'
+
+		//nav section currently expanded
+		var section = $( ".field-name-field-nav-expand" ).text();
+		var sectionLabel = $('#' + section).find("a").eq(0).text();
+		var sectionLabel = ' / <a>'+sectionLabel+'</a>';
+
+		$('div.breadcrumbs').html(nmuLink + dept + sectionLabel);
+	});
+}

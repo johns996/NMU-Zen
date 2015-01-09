@@ -6,7 +6,7 @@
 				<span class="gallery-visit">Visit Our</span><br />
 				Photo Gallery
 				<div class="gallery-button allcaps">
-					NMU Photo Gallery
+					<a href="/admissions/gallery">NMU Photo Gallery</a>
 				</div>
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 				<span class="share-share">Share NMU</span><br />
 				Connect With Us
 				<div class="share-buttons allcaps">
-					<a href="#" class="share-facebook"></a> <a href="#" class="share-twitter"></a> <a href="#" class="share-instagram"></a> <a href="#" class="share-linkedin"></a>
+					<a href="http://www.facebook.com/NorthernMichiganU" class="share-facebook"></a> <a href="http://twitter.com/NorthernMichU" class="share-twitter"></a> <a href="http://instagram.com/northernmichiganu?ref=badge" class="share-instagram"></a> <a href="https://www.linkedin.com/edu/northern-michigan-university-18619" class="share-linkedin"></a>
 				</div>
 			</div>
 		</div>
