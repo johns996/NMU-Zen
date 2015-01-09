@@ -27,7 +27,6 @@ header .region-main-navigation {
 	}
 }
 
-
 .major-searchbox {
 	display:none;
 
@@ -43,13 +42,17 @@ header .region-main-navigation {
 		top:4.75%;
 		left:5%;
 		width:90%;
-		@include columns(300px 2);
+		.major-list {
+			@include columns(300px 2);
+		}
 	}
 	@media all and #{$mq-bootstrap-md-min} {
 		top:8.3%;
 		left:9%;
 		width:800px;
-		@include columns(370px 2);
+		.major-list {
+			@include columns(370px 2);
+		}
 	}
 	@media all and #{$mq-bootstrap-lg-min} {
 		top:9.3%;

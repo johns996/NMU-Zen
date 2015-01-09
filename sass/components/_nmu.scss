@@ -20,14 +20,6 @@
  * Development Classes.
  */
 
-.bg-blue {background:blue;}
-.bg-green {background:greed;}
-.bg-yellow {background:yellow;}
-.bg-gray {background:gray;}
-.bg-orange {background:orange;}
-.bg-red {background:red;}
-
-
 /**
  * Drupal fixes
  */
@@ -71,6 +63,12 @@ body > #page,
 			border-bottom:1px solid $nmu-gray;
 			margin:20px 0 20px;
 		}
+	}
+}
+
+.not-front .field-name-body .field-item {
+	h2:first-child{
+		display:none;
 	}
 }
 
