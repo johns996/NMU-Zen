@@ -95,6 +95,12 @@ Drupal.behaviors.my_custom_behavior = {
 				$(this).addClass('active');
 			}
 		});
+	    $('#left-nav li ul a').click(function(e){
+			e.stopPropagation(); //don't slide up when a link is clicked
+		});
+	    $('#left-nav li ul').click(function(e){
+			e.stopPropagation(); //stop bouncing up and down when clicked inside
+		});
 		selectNavItem();
 
   } // end attach
