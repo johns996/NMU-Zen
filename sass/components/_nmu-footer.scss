@@ -45,9 +45,14 @@
 	}
 	.gallery-button {
 		font-size:.5em;
-		border:1px solid $nmu-gold;
 		width:200px;
 		margin:20px auto 0;
+		a {
+			color:white;
+			text-decoration:none;
+			border:1px solid $nmu-gold;
+			padding:10px 20px;
+		}
 	}
 	.share-buttons {
 		margin-top:20px;
@@ -65,13 +70,13 @@
 			background-position:0px 0px;
 		}
 		.share-twitter {
-			background-position:35px 0px;
+			background-position:123px 0px;
 		}
 		.share-instagram {
 			background-position:77px 70px;
 		}
 		.share-linkedin {
-			background-position:123px 0px;
+			background-position:35px 0px;
 		}
 	}
 }

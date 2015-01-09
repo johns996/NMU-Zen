@@ -35,6 +35,10 @@ body.logged-in .region-top-navigation .navbar-fixed-top {
 	margin-top:30px;
 }
 
+.page-user .page__title {
+	display: none;
+}
+
 body > #page,
 #page
 {
@@ -77,6 +81,11 @@ body > #page,
 		padding:0 10px;
 		&:last-child{
 			font-weight:600;
+			color: $nmu-gray;
+			&:hover {
+				text-decoration:none;
+				color: $nmu-gray;
+			}
 		}
 	}
 }
@@ -313,6 +322,10 @@ body > #page,
 .allcaps {
 	text-transform:uppercase;
 	font-family: $base-font-family;  //if we're converting to allcaps, it is probably a type of heading and should be in avenir
+}
+
+.column-container {
+	@include break-inside(avoid);
 }
 
 .sm-break {

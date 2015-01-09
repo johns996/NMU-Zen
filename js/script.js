@@ -23,10 +23,11 @@ Drupal.behaviors.my_custom_behavior = {
 		if(typeof(Modernizr) == "object"){
 			//load enquire.js and a polyfill if needed
 			Modernizr.load([
+
 				//first test need for polyfill
 				{
 						test: window.matchMedia,
-						nope: "/sites/all/themes/zen_nmu/js/vendor/matchMedia.js"
+						nope: ["/sites/all/themes/zen_nmu/js/vendor/matchMedia.js", "/sites/all/themes/zen_nmu/js/vendor/matchMedia.addListener.js"]
 				},
 
 				//and then load enquire
@@ -112,5 +113,24 @@ function selectNavItem(){
 			$('#' + passedItem).addClass('active');
 			$('#' + passedItem + ' ul').show();
 		}
+	});
+}
+
+function breadcrumbBuilder(){
+	jQuery(document).ready(function($){
+		//nmu link
+		var nmuLink = '<a href="/">NMU</a>';
+
+		//department home
+		var dept = $( ".nav-label" ).text();
+		var dept = $.trim(dept) + " Home";
+		var dept = ' / <a href="../">'+dept+'</a>'
+
+		//nav section currently expanded
+		var section = $( ".field-name-field-nav-expand" ).text();
+		var sectionLabel = $('#' + section).find("a").eq(0).text();
+		var sectionLabel = ' / <a>'+sectionLabel+'</a>';
+
+		$('div.breadcrumbs').html(nmuLink + dept + sectionLabel);
 	});
 }

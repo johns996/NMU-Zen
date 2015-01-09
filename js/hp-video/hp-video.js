@@ -27,12 +27,12 @@ jQuery(document).ready(function($) {
         "autoplay": true, //Autoplay at start
         "muted": true, //Muted at start
 
-        "mp4": "/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.mp4", //mp4 video link (splash-video.mp4 to see unl's video)
-        "webm": "/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.webm", //Path to video webm format
+        "mp4": "/sites/default/files/UserFiles/hp-video/Silent-Fearless.mp4", //mp4 video link (splash-video.mp4 to see unl's video)
+        "webm": "/sites/default/files/UserFiles/hp-video/Silent-Fearless.webm", //Path to video webm format
         "priority": "html5",
         "video_ratio": 1.7777778, // width/height -> If none provided sizing of the video is set to adjust
 
-        "fallback_image": "/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/hp-video/Silent-Fearless.png", //Fallback image path
+        "fallback_image": "/sites/default/files/UserFiles/hp-video/Silent-Fearless.png", //Fallback image path
     });
     if (!isAndroid) {
         $("#playYoutube").click(function() {
