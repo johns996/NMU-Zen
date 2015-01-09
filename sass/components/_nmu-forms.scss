@@ -1,0 +1,88 @@
+//form classes inherited from nmu omega
+
+.form_indent,
+.form_border_indent {
+	margin-left:10px;
+}
+.form_indent_double,
+.form_border_indent_double {
+	margin-left:30px;
+}
+.form_indent_triple,
+.form_border_indent_triple{
+	margin-left:50px;
+}
+.form_border_indent,
+.form_border_indent_double,
+.form_border_indent_triple
+{
+	padding-left: 5px;
+	border-left:1px dotted #ccc;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.form_optional {
+	padding-left:10px;
+	border-left:1px dashed #ccc;
+}
+.form_l_float {
+	float:left;
+	padding-right:10px;
+	margin-top:0;
+	margin-bottom:0;
+}
+.form_clear {
+	clear:both;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.form_field_spaced {
+	width:70px;
+	display:inline-block;
+}
+.form_note {
+	font-size:80%;
+	font-style: italic;
+}
+.form_green_submit {
+	background-color: #063;
+	border: 1px solid #CCCCCC;
+	color: #FFFFFF;
+	cursor: default;
+	font-size: 15px;
+	height: 30px;
+	width: 90px;
+}
+.form_no_indent {
+	margin-left:0px;
+}
+.form_error {  //this class has to be set in the validate plugin as a custom class, otherwise it will just be 'error'
+	float: none;
+	color: red;
+	padding-left: .5em;
+	vertical-align: top;
+	font-style:italic;
+	display:none;
+}
+.form_required_item {
+	color: red;
+	vertical-align: top;
+	font-style:italic;
+	padding-left:2px;
+	padding-right:2px;
+}
+.form_hidden {
+	display:none;
+}
+
+.form_heading_h3 {
+	color: #5e5e5e;
+	width:90%;
+	border-bottom:solid 1px #adadad;
+	padding-bottom:0px;
+	margin-bottom:15px;
+	margin-top:15px;
+}
+.forms_radio_label {
+	//added to form builder, no customizations needed yet
+}

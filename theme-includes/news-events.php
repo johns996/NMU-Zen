@@ -2,7 +2,7 @@
 //nmu-zen
 ?>
 
-<div class="container">
+<div class="container"><a name="events"></a>
 	<div class="news-events row">
 		<div class="events-header">
 			<div class="events-label allcaps">News &<br /><span class="events-sub-label">Upcoming Events</span></div>
