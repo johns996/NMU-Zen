@@ -1,5 +1,11 @@
 //form classes inherited from nmu omega
 
+#content article.node{
+	textarea, select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+		margin-bottom:5px;  //make sure form elements in the body of the page don't sit on top of each other
+	}
+}
+
 .form_indent,
 .form_border_indent {
 	margin-left:10px;

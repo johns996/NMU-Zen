@@ -98,7 +98,7 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Academic Computing</a></li>
+										<li><a href="//it.nmu.edu/">Academic Computing</a></li>
 										<li><a href="/bulletin">Course Catalog</a></li>
 										<li><a href="https://www.nmu.edueducat.nmu.edu">EduCat</a></li>
 										<li><a href="/gradbulletin">Graduate Course Catalog</a></li>

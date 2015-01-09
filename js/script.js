@@ -131,7 +131,7 @@ function breadcrumbBuilder(){
 		//department home
 		var dept = $( ".nav-label" ).text();
 		var dept = $.trim(dept) + " Home";
-		var dept = ' / <a href="../">'+dept+'</a>'
+		var dept = ' / <a href=".">'+dept+'</a>'
 
 		//nav section currently expanded
 		var section = $( ".field-name-field-nav-expand" ).text();
