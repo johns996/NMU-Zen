@@ -120,10 +120,14 @@ function breadcrumbBuilder(){
 		//nmu link
 		var nmuLink = '<a href="/">NMU</a>';
 
+
+
 		//department home
 		var dept = $( ".nav-label" ).text();
 		var dept = $.trim(dept) + " Home";
-		var dept = ' / <a href=".">'+dept+'</a>'
+		var locLink = location.pathname.split("/");
+		var locLink = locLink[1];
+		var dept = ' / <a href="/'+locLink+'">'+dept+'</a>';
 
 		//nav section currently expanded
 		var section = $( ".field-name-field-nav-expand" ).text();

@@ -35,7 +35,7 @@
 	float:left;
 	padding-right:10px;
 	margin-top:0;
-	margin-bottom:0;
+	margin-bottom:10px;
 }
 .form_clear {
 	clear:both;
@@ -91,4 +91,16 @@
 }
 .forms_radio_label {
 	//added to form builder, no customizations needed yet
+}
+
+form {
+	//reset bootstrap's blockquote for forms
+	blockquote {
+		font-size:inherit;
+		border-left:none;
+	}
+	//reset bootstrat's label for forms
+	label {
+		font-weight:inherit;
+	}
 }
