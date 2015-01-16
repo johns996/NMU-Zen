@@ -115,23 +115,28 @@ function selectNavItem(){
 	});
 }
 
-function breadcrumbBuilder(){
+function breadcrumbBuilder(siteIdentifier){
 	jQuery(document).ready(function($){
 		//nmu link
 		var nmuLink = '<a href="/">NMU</a>';
 
-
-
-		//department home
-		var dept = $( ".nav-label" ).text();
-		var dept = $.trim(dept) + " Home";
-		var locLink = location.pathname.split("/");
-		var locLink = locLink[1];
-		var dept = ' / <a href="/'+locLink+'">'+dept+'</a>';
+		if(siteIdentifier !== 'Drupal'){
+			//department home
+			var dept = $( ".nav-label" ).text();
+			var dept = $.trim(dept) + " Home";
+			var locLink = location.pathname.split("/");
+			var locLink = locLink[1];
+			var dept = ' / <a href="/'+locLink+'">'+dept+'</a>';
+		} else {
+			var dept = '';
+		}
 
 		//nav section currently expanded
 		var section = $( ".field-name-field-nav-expand" ).text();
 		var sectionLabel = $('#' + section).find("a").eq(0).text();
+		if(sectionLabel =='' || sectionLabel == 'Undefined'){
+			sectionLabel = 'Northern Michigan University';
+		}
 		var sectionLabel = ' / <a>'+sectionLabel+'</a>';
 
 		$('div.breadcrumbs').html(nmuLink + dept + sectionLabel);

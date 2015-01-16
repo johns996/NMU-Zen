@@ -1,0 +1,39 @@
+//use this partial for page-specific classes that are too small to merit their own partial but too large and specific to be included in the generic classes area
+
+//used on tuition and fees page: http://www.nmu.edu/tuition
+.tuitionDiv {
+	padding:20px 0 20px 10px;
+	border-bottom:1px dashed $nmu-gray;
+}
+.tuitionNote {
+	padding-top:20px;
+	padding-left:20px;
+	font-size:80%;
+}
+.tuitionTable {
+	width:80%;
+}
+
+//used on calendar overview page:  http://www.nmu.edu/calendars
+.horiz_block {
+	clear: both;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #e5e5e5;
+	min-height: 140px;
+	width: 75%;
+	margin: 20px auto;
+}
+
+//used on the emeritus page: http://www.nmu.edu/emeritusfaculty
+.emeritus {
+	padding: 8px 3px 8px 8px;
+	float: left;
+	height: 95px;
+	width: 280px;
+	border: 1px solid #DFDFDF;
+}
+.emeritus-wrapper {
+	width:90%;
+	margin:0 auto;
+}
+//there is a print version of the emeritus page used for the campus directory each year with custom styles: http://www.nmu.edu/cgi-bin/Departments/HR/emeritus.shtml
