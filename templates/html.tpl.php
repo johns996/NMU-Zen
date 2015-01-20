@@ -44,9 +44,6 @@
     <link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap-theme.min.css">
     <script src="<?php print $base_path . $path_to_zen; ?>_nmu/js/vendor/bootstrap.js"></script>
   <?php endif; ?>
-  <?php if ($add_fontawesome): ?>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <?php endif; ?>
 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
