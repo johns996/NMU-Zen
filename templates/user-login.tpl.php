@@ -3,6 +3,8 @@ require_once "/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php";
 
 $strBaseURL = $GLOBALS['base_url'];
 $strURL = $strBaseURL.'/saml_login';
+
+//this file is included for all other theme login pages
 ?>
 <style>
 #drupal_tabs{display:none;}

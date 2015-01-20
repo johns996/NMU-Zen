@@ -12,6 +12,14 @@ jQuery(document).ready(function($) {
     });
 
 
+		var typedWord = '';
+		window.addEventListener('keypress', function(e){
+			var c = String.fromCharCode(e.keyCode);
+			typedWord += c.toLowerCase();
+			if(typedWord.length > 4) typedWord = typedWord.slice(1);
+			if(typedWord == 'stop') Video_back.pause();
+			if(typedWord == 'play') Video_back.play();
+		});
 
     function timerIncrement() {
         idleTime = idleTime + 1

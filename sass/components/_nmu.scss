@@ -65,7 +65,7 @@ body > #page,
 //this is in place to hide all first-child h2's so there is not duplicate titles on all pages
 .not-front .field-name-body .field-item {
 	h2:first-child{
-		display:none;
+		//display:none;
 	}
 }
 
