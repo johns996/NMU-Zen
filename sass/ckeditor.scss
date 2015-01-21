@@ -3,3 +3,25 @@
 
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
+@import "components/misc";
+@import "components/nmu";
+@import "components/nmu-forms";
+@import "components/nmu-misc";
+
+body.cke_ltr {
+	background: transparent;  //this is for the heading pull down box.  without it, it turns green
+}
+
+body.cke_editable
+{
+	font-size: 13px;
+	background-color: white;
+
+	//visual helper for column breaks
+	.column-break:after {
+		content: '## column break ##';
+		width: 100%;
+		background-color: rgb(228, 176, 176);
+		padding: 2px;
+	}
+}
