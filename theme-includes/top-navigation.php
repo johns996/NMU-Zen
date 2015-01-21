@@ -5,11 +5,9 @@ $theRequire = '/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php';
 if (is_file($theRequire)) {
   require_once($theRequire);
   $classSqlQuery = new SqlDataQueries();
-	$classSqlQuery->SpecifyDB(Const_connHostWWW, Const_connDBWWW, Const_connUserWWW, Const_connPSWWWW);
-	$strQuery = "SELECT dept, display FROM department_pulldown";
+	$strQuery = "SELECT dept, display FROM www_adit.department_pulldown";
 	$aResults = $classSqlQuery->MySQL_Queries($strQuery);
 }
-
 ?>
 
 <nav class="navbar yamm navbar-default navbar-fixed-top" role="navigation">
