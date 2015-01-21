@@ -8,14 +8,14 @@
 @import "components/nmu-forms";
 @import "components/nmu-misc";
 
-body.cke_ltr {
-	background: transparent;  //this is for the heading pull down box.  without it, it turns green
-}
+//since bootstrap isn't a sass file, we have to import the css here
+@import '../css/bootstrap.css';
 
 body.cke_editable
 {
-	font-size: 13px;
-	background-color: white;
+	margin:8px;  //bootstrap will reset this, so put it back
+
+	//add any other zen_nmu specific styles below
 
 	//visual helper for column breaks
 	.column-break:after {
