@@ -18,10 +18,13 @@ body.cke_editable
 	//add any other zen_nmu specific styles below
 
 	//visual helper for column breaks
-	.column-break:after {
-		content: '## column break ##';
-		width: 100%;
-		background-color: rgb(228, 176, 176);
-		padding: 2px;
+	.column-break {
+		padding-bottom:20px;
+		&:after {
+			content: '## column break ##';
+			width: 100%;
+			background-color: rgb(228, 176, 176);
+			padding: 2px;
+		}
 	}
 }
