@@ -128,14 +128,6 @@ body > #page,
 			}
 		}
 		//*** end of copied styles
-
-		h5 {  //this is the callout type of heading to be used within text areas
-		 color:$nmu-green-text;
-		 font-size:18px;
-		 line-height:24px;
-		 font-weight:600;
-		 padding:10px;
-		}
 	}
 }
 
@@ -342,8 +334,16 @@ body > #page,
 .column-container {
 	@include break-inside(avoid);
 }
-.column-break:after {
+.column-break {
 	@include column-break(after, always);
+}
+
+.callout-text-block {  //this is the callout type of heading to be used within text areas (the class is defined in ckeditor.style.js and applied to a div)
+ color:$nmu-green-text;
+ font-size:18px;
+ line-height:24px;
+ font-weight:600;
+ padding:10px;
 }
 
 .sm-break {
