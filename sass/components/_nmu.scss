@@ -128,6 +128,14 @@ body > #page,
 			}
 		}
 		//*** end of copied styles
+
+		h5 {  //this is the callout type of heading to be used within text areas
+		 color:$nmu-green-text;
+		 font-size:18px;
+		 line-height:24px;
+		 font-weight:600;
+		 padding:10px;
+		}
 	}
 }
 
@@ -301,6 +309,14 @@ body > #page,
 	}
 }
 
+/**
+ * Two Column Layout.
+ */
+.node-fearless-internal-page-2-column {
+	@media all and #{$mq-bootstrap-md-min} {
+		@include columns(2);
+	}
+}
 
 /**
  * Generic Classes.
