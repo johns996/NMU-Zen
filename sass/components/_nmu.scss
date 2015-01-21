@@ -342,6 +342,9 @@ body > #page,
 .column-container {
 	@include break-inside(avoid);
 }
+.column-break:after {
+	@include column-break(after, always);
+}
 
 .sm-break {
 	display:inline;
