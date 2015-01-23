@@ -59,6 +59,7 @@ h2, h3, h4 {
 
 .learning-career {
 	background-color: $nmu-gray;
+	position: relative;
 	.learning {
 		background-color: $nmu-gray-evenlighter;
 		color: $nmu-gray-dark;
@@ -76,6 +77,10 @@ h2, h3, h4 {
 	.career {
 		background-color: $nmu-gray;
 		color: white;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
 	}
 }
 
@@ -211,7 +216,7 @@ h2, h3, h4 {
 		border: solid thin $nmu-green-dark;
 		color: $nmu-green-dark;
 		display: inline-block;
-		font-family: $avenir-black;
+		font-weight: bold;
 		font-size: 1.2em;
 		padding: 1em 2em;
 		margin: 1em;
