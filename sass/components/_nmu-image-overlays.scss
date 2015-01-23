@@ -18,13 +18,15 @@ $overlay-padding: 30px 0;
   font-style: normal;
   text-decoration: none;
  }
- h4 { /* white overlay title */
+ h4,
+ h4 a{ /* white overlay title */
   color: white;
   font-size: 1em;
   font-family: $avenir-black;
   text-transform: uppercase;
  }
- h5 { /* gold overlay title */
+ h5,
+ h5 a{ /* gold overlay title */
   color: $nmu-gold;
   font-size: 1.3em;
   font-family: $avenir-black;
@@ -42,6 +44,9 @@ $overlay-padding: 30px 0;
   padding: 15px 0;
   text-transform: uppercase;
   color: white;
+  a {
+  	color: white;
+  }
  }
  /* tablet */
  @media all and #{$mq-bootstrap-xs-min} {
