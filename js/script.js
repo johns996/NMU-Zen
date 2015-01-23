@@ -83,23 +83,15 @@ Drupal.behaviors.my_custom_behavior = {
 		});
 
 		//left navigation functionality
-		//$('#left-nav li ul').hide(); //hide all of the sub nav lists
-		//$('#left-nav li').removeClass('active');  //make sure nothing is marked as active
-
-		$('#left-nav li:not(.nav-label)').click(function(e){
-			var activate = !$(this).hasClass('active');
+		$('#left-nav li a:not([href])').click(function(){
+			var parentSelector = $(this).parent();
+			var activate = !$(parentSelector).hasClass('active');
 			$('#left-nav li ul').slideUp();  //start by sliding up all nav lists
 			$('#left-nav li').removeClass('active');  //remove all active classes
 			if(activate) {
-				$(this).find('ul').slideDown();
-				$(this).addClass('active');
+				$(parentSelector).find('ul').slideDown();
+				$(parentSelector).addClass('active');
 			}
-		});
-	    $('#left-nav li ul a').click(function(e){
-			e.stopPropagation(); //don't slide up when a link is clicked
-		});
-	    $('#left-nav li ul').click(function(e){
-			e.stopPropagation(); //stop bouncing up and down when clicked inside
 		});
 		selectNavItem();
 
@@ -125,19 +117,28 @@ function selectNavItem(){
 	});
 }
 
-function breadcrumbBuilder(){
+function breadcrumbBuilder(siteIdentifier){
 	jQuery(document).ready(function($){
 		//nmu link
 		var nmuLink = '<a href="/">NMU</a>';
 
-		//department home
-		var dept = $( ".nav-label" ).text();
-		var dept = $.trim(dept) + " Home";
-		var dept = ' / <a href="../">'+dept+'</a>'
+		if(siteIdentifier !== 'Drupal'){
+			//department home
+			var dept = $( ".nav-label" ).text();
+			var dept = $.trim(dept) + " Home";
+			var locLink = location.pathname.split("/");
+			var locLink = locLink[1];
+			var dept = ' / <a href="/'+locLink+'">'+dept+'</a>';
+		} else {
+			var dept = '';
+		}
 
 		//nav section currently expanded
 		var section = $( ".field-name-field-nav-expand" ).text();
 		var sectionLabel = $('#' + section).find("a").eq(0).text();
+		if(sectionLabel =='' || sectionLabel == 'Undefined'){
+			sectionLabel = 'Northern Michigan University';
+		}
 		var sectionLabel = ' / <a>'+sectionLabel+'</a>';
 
 		$('div.breadcrumbs').html(nmuLink + dept + sectionLabel);

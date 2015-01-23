@@ -101,13 +101,14 @@
 			match: function() {
 				// add click listener to the mobile menu label to expand/collapse it
 				$('.nav-label').on('click', function(e){
+					e.preventDefault();  //make sure the nav label opens the mobile menu on small screens
 					if($('#left-nav').hasClass('expanded')) {
 						$('#left-nav').removeClass('expanded');
 						$('#left-nav').slideUp();
 					} else {
 						$('#left-nav').slideDown();
 						$('#left-nav').addClass('expanded');
-					}	
+					}
 				});
 			},
 			unmatch: function() {

@@ -38,11 +38,13 @@
 										<li><a href="/achievements">Achievements</a></li>
 										<li><a href="/nmucampus">Campus</a></li>
 										<li><a href="/publicsafety/clery-act">Clery Act Statistics</a></li>
+										<li><a href="/hr">Human Resources</a></li>
 										<li><a href="/naturalwonders">Marquette Area</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
+
 										<li><a href="/mission">Mission and Vision</a></li>
 										<li><a href="/profile">People</a></li>
 										<li><a href="/president">President's Office</a></li>
@@ -65,16 +67,18 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
+										<li><a href="/admissions">Admissions Office</a></li>
 										<li><a href="/admissions/admitted">Admitted Students</a></li>
 										<li><a href="/admissions/applyto">Apply Online</a></li>
 										<li><a href="/admissions/contactcounselor">Contact a Counselor</a></li>
 										<li><a href="/financialaid">Financial Aid and Scholarships</a></li>
 										<li><a href="/graduatestudies">Graduate Students</a></li>
-										<li><a href="/internationalprograms/international-students">International Students</a></li>
+
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
+										<li><a href="/internationalprograms/international-students">International Students</a></li>
 										<li><a href="/admissions/veterans">Military Veteran Students</a></li>
 										<li><a href="/why/#enough">Request Information</a></li>
 										<li><a href="/transfer">Transfer Students</a></li>
@@ -98,9 +102,9 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="#">Academic Computing</a></li>
+										<li><a href="//it.nmu.edu/">Academic Computing</a></li>
 										<li><a href="/bulletin">Course Catalog</a></li>
-										<li><a href="https://www.nmu.edueducat.nmu.edu">EduCat</a></li>
+										<li><a href="https://educat.nmu.edu">EduCat</a></li>
 										<li><a href="/gradbulletin">Graduate Course Catalog</a></li>
 										<li><a href="/graduatestudies/programs">Graduate Programs</a></li>
 									</ul>
@@ -160,6 +164,7 @@
 										<li><a href="http://www.nmubookstore.com/">Bookstore</a></li>
 										<li><a href="/studentenrichment">Center for Student Enrichment</a></li>
 										<li><a href="/dso">Dean of Students</a></li>
+										<li><a href="/dining">Dining Services</a></li>
 										<li><a href="/healthcenter">Health Center</a></li>
 									</ul>
 								</div>

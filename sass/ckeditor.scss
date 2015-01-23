@@ -1,0 +1,30 @@
+//these styles will only be included in ckeditor
+//only styles that apply to the body should be inserted here
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+@import "components/misc";
+@import "components/nmu";
+@import "components/nmu-forms";
+@import "components/nmu-misc";
+
+//since bootstrap isn't a sass file, we have to import the css here
+@import '../css/bootstrap.css';
+
+body.cke_editable
+{
+	margin:8px;  //bootstrap will reset this, so put it back
+
+	//add any other zen_nmu specific styles below
+
+	//visual helper for column breaks
+	.column-break {
+		padding-bottom:20px;
+		&:after {
+			content: '## column break ##';
+			width: 100%;
+			background-color: rgb(228, 176, 176);
+			padding: 2px;
+		}
+	}
+}

@@ -56,7 +56,6 @@ function zen_nmu_preprocess_maintenance_page(&$variables, $hook) {
  */
 function zen_nmu_preprocess_html(&$variables, $hook) {
   $variables['add_bootstrap'] = theme_get_setting('bootstrap');
-  $variables['add_fontawesome'] = theme_get_setting('fontawesome');
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().

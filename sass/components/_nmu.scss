@@ -17,10 +17,6 @@
 
 
 /**
- * Development Classes.
- */
-
-/**
  * Drupal fixes
  */
 body.logged-in .region-top-navigation .navbar-fixed-top {
@@ -66,9 +62,10 @@ body > #page,
 	}
 }
 
+//this is in place to hide all first-child h2's so there is not duplicate titles on all pages
 .not-front .field-name-body .field-item {
 	h2:first-child{
-		display:none;
+		//display:none;
 	}
 }
 
@@ -125,6 +122,10 @@ body > #page,
 		table {
 			//width:100%;  //with this option enabled, tables used for image captions take up the whole screen in mobile view  -- keep this comment
 			max-width:100%;
+			td,
+			th {
+				padding:2px;  //restore the browser default since botstrap removes it
+			}
 		}
 		//*** end of copied styles
 	}
@@ -300,6 +301,14 @@ body > #page,
 	}
 }
 
+/**
+ * Two Column Layout.
+ */
+.node-fearless-internal-page-2-column {
+	@media all and #{$mq-bootstrap-md-min} {
+		@include columns(2);
+	}
+}
 
 /**
  * Generic Classes.
@@ -325,6 +334,17 @@ body > #page,
 .column-container {
 	@include break-inside(avoid);
 }
+.column-break {
+	@include column-break(after, always);
+}
+
+.callout-text-block {  //this is the callout type of heading to be used within text areas (the class is defined in ckeditor.style.js and applied to a div)
+ color:$nmu-green-text;
+ font-size:18px;
+ line-height:24px;
+ font-weight:600;
+ padding:10px;
+}
 
 .sm-break {
 	display:inline;
@@ -341,4 +361,9 @@ display:block;
 
 .field-name-field-nav-expand {
 	display:none;
+}
+
+.overflow-table {  //allow a table to scroll to the left and right in mobile view (this will be placed on a div surrounding the table)
+	width:101%;  //having this at 101% allows webkit browsers to hide the scrollbar when there actually is room for the content
+	overflow-x: auto;
 }
