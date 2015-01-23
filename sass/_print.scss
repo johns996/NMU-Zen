@@ -68,7 +68,7 @@
   .region-main-navigation,
   .region-sidebar-first,
   .region-sidebar-second,
-  #footer,
+//  #footer,
   .breadcrumb,
   .tabs,
   .action-links,
@@ -79,5 +79,17 @@
   .feed-icons {
     visibility: hidden;
     display: none;
+  }
+
+  #footer{
+	  div {
+		  visibility: hidden;
+	  }
+	  .footer-main {
+		  visibility: visible;
+		  .reporting, hr, nav {
+			  visibility: hidden;
+		  }
+	  }
   }
 }
