@@ -1,0 +1,233 @@
+//these styles should be included only on the fearless homepage
+//the template.php file is looking for a specific content type
+//when it finds it, it will append this stylesheet to the css array
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+@import 'components/nmu-slideshow';
+
+//font-size: 12px;
+//line-height: 1.75em;
+
+.tabs-primary.tabs.primary {
+	position: absolute;
+	top: -144px;
+}
+
+.page__title {
+	display: none;
+}
+
+h2, h3, h4 {
+	text-transform: uppercase;
+	font-family: $avenir-black !important;
+}
+
+.title-section {
+	position: relative;
+	& > .overlay {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 100, 0, .5);
+		}
+	}
+	& > .right {
+		position: absolute;
+		top: 50px;
+		right: 10px;
+	}
+	& > .left {
+		position: absolute;
+		top: 50px;
+		left: 10px;
+	}
+	h2 {
+		color: $nmu-gold;
+		font-size: 2.8em;
+	}
+	p {
+		color: white;
+	}
+}
+
+.learning-career {
+	background-color: $nmu-gray;
+	.learning {
+		background-color: $nmu-gray-evenlighter;
+		color: $nmu-gray-dark;
+		padding: 0;
+		h3 {
+			color: $nmu-green-dark;
+			padding: 25px 25px 25px 50px;
+			border-bottom: solid thin $nmu-gray-light;
+		}
+		p {
+			padding: 20px 215px 30px 50px;
+		}
+	}
+	
+	.career {
+		background-color: $nmu-gray;
+		color: white;
+	}
+}
+
+.slideshow-section {
+	overflow: hidden;
+	background-color: $nmu-green;
+	.cycle-caption {
+		padding: 35px;
+		text-align: center;
+		color: white;
+		.button {
+			font-family: $avenir-black;
+			font-size: 2em;
+			color: $nmu-gold;
+			border: solid thin $nmu-gold;
+			text-transform: uppercase;
+			padding: 1em 1.5em;
+			line-height: 1.5em;
+			margin: 25px 10px 50px 10px;
+		}
+	}
+	.cycle-overlay {
+		height: 100%;
+		background-color: rgba(0, 104, 72, .6);
+		.button {
+			font-family: $avenir-black;
+			font-size: 1.5em;
+			padding: 0;
+			line-height: 2em;
+			margin: 0 0 0 5%;
+			max-width: none;
+			width: 65%;
+			position: absolute;
+			bottom: 20px;
+		}
+		.cycle-nav {
+			bottom: 20px;
+			top: auto;
+			right: 5%;
+			.cycle-prev, .cycle-next {
+				border: none;
+				font-size: 1.5em;
+			}
+			.cycle-prev {
+				background-color: $nmu-gold;
+				color: $nmu-green;
+			}
+		}
+	}
+}
+
+.degrees {
+	background-color: $nmu-gray-evenlighter;
+	color: $nmu-black;
+	border-top: solid 10px $nmu-green-dark;
+	h3 {
+		text-align: center;
+		padding: 40px;
+		margin: 0;
+		background-color: $nmu-gray-lighter;
+		color: $nmu-green-dark;
+	}
+	h4 {
+		color: $nmu-green-dark;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	& > div > ul {
+		list-style-type: none;
+		padding-left: 0;
+		& > li {
+			padding: 10px 0;
+		}
+		ul {
+			list-style-type: disc;
+		}
+	}
+	.majors, .minors, .masters {
+		border-top: solid 2px $nmu-gray-light;
+	}
+	.minors, .masters {
+		border-left: solid 2px $nmu-gray-light;
+		text-align: center;
+		padding-left: 25px;
+	}
+	.minors h4 {
+		color: $nmu-gray-darker;
+	}
+	
+	.doing {
+		background-color: black;
+		color: white;
+		text-align: center;
+		& > .overlay {
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, .7);
+			}
+		}
+		.overlay-text {
+			position: absolute;
+			width: 80%;
+			left: 10%;
+			top: 50%;
+			transform: translateY(-50%);
+			h3 {
+				padding-top: 0;
+				color: $nmu-gold;
+				background-color: inherit;
+			}
+		}
+	}
+}
+
+.contact-section {
+	border: solid thin $nmu-green-dark;
+	border-top-width: 10px;
+	text-align: center;
+	color: $nmu-black;
+	font-size: 1.2em;
+	padding: 4em 6em;
+	margin-bottom: 4em;
+	.button {
+		border: solid thin $nmu-green-dark;
+		color: $nmu-green-dark;
+		display: inline-block;
+		font-family: $avenir-black;
+		font-size: 1.2em;
+		padding: 1em 2em;
+		margin: 1em;
+		text-transform: uppercase;
+	}
+	.bullet {
+		margin: 0 5px;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	p:first-of-type {
+		font-weight: bold;
+		margin: 2em auto;
+		a {
+			text-decoration: none;
+		}
+	}
+}

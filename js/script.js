@@ -103,6 +103,8 @@ Drupal.behaviors.my_custom_behavior = {
 		});
 		selectNavItem();
 
+		setupCycle2Nav();
+
   } // end attach
 };
 
@@ -139,5 +141,20 @@ function breadcrumbBuilder(){
 		var sectionLabel = ' / <a>'+sectionLabel+'</a>';
 
 		$('div.breadcrumbs').html(nmuLink + dept + sectionLabel);
+	});
+}
+
+function setupCycle2Nav() {
+	function setupClickHandlers($) {
+		$('#cycle-slideshow').on('click', '.cycle-nav .cycle-prev', function(e) {
+			$('.cycle-slideshow').cycle('prev');
+		});
+		$('#cycle-slideshow').on('click', '.cycle-nav .cycle-next', function(e) {
+			$('.cycle-slideshow').cycle('next');
+		});
+	}
+	if(!jQuery('#cycle-slideshow').length) return;
+	jQuery('#cycle-slideshow').on('cycle-initialized', function(event, optHash) {
+		setupClickHandlers(jQuery);
 	});
 }
