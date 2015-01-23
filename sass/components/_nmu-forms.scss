@@ -93,8 +93,9 @@
 	//added to form builder, no customizations needed yet
 }
 
-form {
+form:not(.web-form) {
 	//reset bootstrap's blockquote for forms
+	//the not selector makes sure chris's forms are not affected by this
 	blockquote {
 		font-size:inherit;
 		border-left:none;
