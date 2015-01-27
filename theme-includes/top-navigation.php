@@ -33,7 +33,7 @@ if (is_file($theRequire)) {
 	      <li class="toolbar-main-nav"><a class="allcaps" href="/academics">Academics</a></li>
 	      <li class="toolbar-main-nav"><a class="allcaps" href="/sports">Sports</a></li>
 	      <li class="toolbar-main-nav"><a class="allcaps" href="/admissions/life">Campus Life</a></li>
-	      <li class="toolbar-home"><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
+	      <li class="toolbar-home"><a href="/"><span class="glyphicon glyphicon-home" title="NMU Homepage"></span></a></li>
         <li><a class="allcaps" href="/admissions">Future Students</a></li>
         <li><a class="allcaps" href="/students">Current Students</a></li>
       	<li><a class="allcaps" href="/facultystaff">Faculty & Staff</a></li>
@@ -47,7 +47,7 @@ if (is_file($theRequire)) {
         <li><a class="allcaps" href="/apply">Apply</a></li>
         <li><a class="allcaps" href="/atozsearch">A-Z</a></li>
         <li><a class="allcaps" href="https://payment.nmu.edu/alumni/foundation_cc.php">Give</a></li>
-        <li class="toolbar-search dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="search-icon"><span class="glyphicon glyphicon-search"></span></a>
+        <li class="toolbar-search dropdown yamm-fw"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="search-icon"><span class="glyphicon glyphicon-search" title="Search NMU"></span></a>
 					<ul class="dropdown-menu dropdown-search yamm-content" role="menu">
 						<li class="dropdown-menu-width-wrapper" id="search-dropdown">
 							<!-- js to add search dropdown stuff here -->
