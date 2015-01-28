@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 
 		console.log(	'Greetings from the NMU Web Development team.  \n' +
 									' If you\'re reading this message odds are you love poking around in code as much as we do. \n' +
-									' Feel free to dig into our work and if you\'re interested, you can view the the source files on github: https://github.com/johns996/NMU-Zen. \n' +
+									' Feel free to dig into our work and send any feedback to webhelp@nmu.edu. \n' +
 									' We also built in some keyboard commands for the HTML5 video loop. \n\n' +
 									' stop = stop the video || play = play the video \n\n');
 		var typedWord = '';
