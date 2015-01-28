@@ -16,7 +16,7 @@
 			echo '
 			<div class="alert alert-info alert-dismissible alert-nmu" id="nmu-alert" role="alert">
 				<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				With regret, we inform you of the passing of Dr. Paul Lang, Provost and Vice President of Academic Affairs. <a href="/communicationsandmarketing/news-releases?articleID=172886&">Read more</a>
+				message goes here
 			</div>
 			';
 	}
