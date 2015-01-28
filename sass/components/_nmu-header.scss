@@ -4,13 +4,6 @@
  */
 
 
-//styles specific to front pages
-.front {
-	.region-main-navigation {
-		height:50px;  //set the height to 50 for front pages, removing the extra space added when a page has the top image displayed (line 282 // search for region-main-navigation)
-	}
-}
-
 //* top navigation
 $top-navigation-height: 60px; //this height must correspond with the offset number applied to the main navigation so they stick together on scroll
 

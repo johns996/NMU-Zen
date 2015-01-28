@@ -21,7 +21,7 @@
 	display:none;
 }
 header .region-main-navigation {
-	height: auto;
+	height: 50px;  //set the height to 50, removing the extra 50 pixes added for pages that display the spanning image in this area
 	.navbar {
 		margin-bottom: 0;
 	}
