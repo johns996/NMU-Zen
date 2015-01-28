@@ -267,13 +267,15 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 
 //* main navigation
 .region-main-navigation {
+	position: relative;
 
 	.header-spanning-image {
-		margin-top:-70px;
-		//background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/grads-pano.jpg);
 		background-repeat:repeat-x;
 		background-position:center;
 		height:100px;
+		top: 0;
+		width: 100%;
+		position: absolute;
 		&.image1 {
 			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-1.jpg);
 		}
@@ -446,7 +448,17 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 }
 
 //* This tweak only applied to users logged into drupal.  it makes the main nav stick in the right spot when the drupal toolbar is present
-body.logged-in .region-main-navigation nav.affix {
+body.logged-in {
+	.region-main-navigation nav.affix {
 	top:#{$top-navigation-height +30};  //switched to 29.2 to remove the phantom line that shows up on tablets above the nav bar
 }
 
+	#header-main-navigation {
+		margin-bottom:-50px;
+	}
+
+	.is-active .active {
+		background-color: #dedede;
+	}
+
+}
