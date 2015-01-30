@@ -307,7 +307,8 @@ body > #page,
  */
 .node-fearless-internal-page-2-column {
 	@media all and #{$mq-bootstrap-md-min} {
-		@include columns(2);
+		@include column-gap(20px);
+		@include column-count(2);
 	}
 }
 
