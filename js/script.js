@@ -106,7 +106,7 @@ Drupal.behaviors.my_custom_behavior = {
 function selectNavItem(){
 	jQuery(document).ready(function($){
 		$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
-		var passedItem = $('.field-name-field-nav-expand div div').text();
+		var passedItem = $('#field-nav-expand').text();
 		if(!passedItem){  //show the first one by default
 			$('#left-nav li').first().addClass('active');
 			$('#left-nav li ul').first().show();
@@ -134,7 +134,7 @@ function breadcrumbBuilder(siteIdentifier){
 		}
 
 		//nav section currently expanded
-		var section = $( ".field-name-field-nav-expand" ).text();
+		var section = $( "#field-nav-expand" ).text();
 		var sectionLabel = $('#' + section).find("a").eq(0).text();
 		if(sectionLabel =='' || sectionLabel == 'Undefined'){
 			sectionLabel = 'Northern Michigan University';
