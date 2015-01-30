@@ -101,7 +101,7 @@ body > #page,
 		img {
 			//width:100%;  //this will blow up all images to fit into the content zone and that would be undesired  -- keep this comment
 			max-width:100%;
-			height:auto;
+			height:auto !important;  //force the important height so images scale correctly
 		}
 		table img {
 			max-width:inherit;  //this is needed for images in tables without fixed sizes.  it stops the images from shrinking down to accommodate the text
