@@ -204,7 +204,8 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		}
 		input.search-radio {
 			margin-right:8px;
-			@include appearance(checkbox);
+			//removed by request
+			//@include appearance(checkbox);
 		}
 	}
 	.search-options-second {
