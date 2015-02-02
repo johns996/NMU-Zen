@@ -44,8 +44,43 @@
  * @ingroup themeable
  */
 ?>
+
+
 <section class="slideshow-section row">
-	<?php foreach ($items as $delta => $item): ?>
-		<?php print render($item); ?>
-	<?php endforeach; ?>
+	<div class="cycle-caption col-md-6"></div>
+		<div id="cycle-slideshow" class="cycle-slideshow col-md-6"
+		 data-cycle-fx="scrollHorz"
+		 data-cycle-swipe="true"
+		 data-cycle-swipe-fx="scrollHorz"
+		 data-cycle-timeout="0"
+		 data-cycle-caption=".cycle-caption"
+		 data-cycle-caption-template="{{cycleCaption}}"
+		 data-cycle-overlay-template="<div class='button'>Cycle Through News</div>
+			<div class='cycle-nav'>
+				<div class='cycle-prev'>&#10142;</div>
+				<div class='cycle-next'>&#10142;</div>
+			</div>"
+		 data-cycle-log="false">
+		<div class="cycle-overlay"></div>
+	<?php
+		foreach ($items as $delta => $item) {
+			$strURL = file_create_url($item['#item']['uri']);
+			echo '<img src="'.$strURL.'"',
+						'data-cycle-caption="<div class=\'button\'>'.$item['#item']['title'].'</div>',
+						'<p>'.$item['#item']['alt'].'</p>"',
+						'alt=\''.$item['#item']['alt'].'\'/>';
+		}
+	?>
 </section>
+
+<?php
+/* //sample of what the cycle entires will look like if done by hand
+		<img 	src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/internal-homepage/slideshow-not-green.jpg"
+					data-cycle-caption="<div class='button'>What's new in the department?</div>
+					<p>NMU music graduates have a 100 percent placement rate due to the national shortage of certified music teachers. Our graduates not only work as educators, but also as band directors, professional musicians, voice-over actors, jingle writers, composers, music marketers and in many other careers.</p>"
+					alt='The NMU "Pride of the North" Marching Band'/>
+		<img 	src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/internal-homepage/slideshow-not-green.jpg"
+					data-cycle-caption="<p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto Pidgeot Rattata Raticate Spearow Fearow Ekans Arbok Pikachu Raichu Sandshrew Sandslash Nidoran Nidorina Nidoqueen Nidoran Nidorino Nidoking Clefairy Clefable Vulpix Ninetales.</p>"
+					alt='The NMU "Pride of the North" Marching Band'/>
+*/
+?>
