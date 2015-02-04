@@ -44,20 +44,27 @@
  * @ingroup themeable
  */
 ?>
+<?php
+	$theSection = '';
+	$theEmail = '';
+	foreach ($items as $delta => $item){
 
-<div class="button">Contact</div>
-<p>
-<?php foreach ($items as $delta => $item): ?>
-	<?php
 		if($delta > 0) {
-			print '<span class="bullet">&bull;</span>';
+			$theSection .= '<span class="bullet">&bull;</span>';
 		}
 		if(strpos($item['#markup'], '@') !== false){
-			print '<a href="mailto:'.render($item).'">'.render($item).'</a>';
+			$theEmail = render($item);
+			$theSection .= '<a href="mailto:'.render($item).'">'.render($item).'</a>';
 		} else {
-			print render($item);
+			$theSection .= render($item);
 		}
-	?>
+	}
 
-<?php endforeach; ?>
-</p>
+	if($theEmail !== ''){
+		print '<div class="button"><a href="mailto:'.$theEmail.'">Contact</a></div>';
+	}
+	else {
+		print '<div class="button button-no-link">Contact</div>';
+	}
+	print '<p>'.$theSection.'</p>';
+?>

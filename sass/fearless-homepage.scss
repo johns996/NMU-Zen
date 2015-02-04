@@ -215,15 +215,23 @@ h2, h3, h4 {
 	font-size: 1.2em;
 	padding: 4em 6em;
 	margin-bottom: 4em;
-	.button {
+	.button-no-link {
 		border: solid thin $nmu-green-dark;
 		color: $nmu-green-dark;
+		padding: 1em 2em;
+	}
+	.button {
 		display: inline-block;
 		font-weight: bold;
 		font-size: 1.2em;
-		padding: 1em 2em;
 		margin: 1em;
 		text-transform: uppercase;
+		a {
+			border: solid thin $nmu-green-dark;
+			text-decoration:none;
+			padding: 1em 2em;
+			color: $nmu-green-dark;
+		}
 	}
 	.bullet {
 		margin: 0 5px;
