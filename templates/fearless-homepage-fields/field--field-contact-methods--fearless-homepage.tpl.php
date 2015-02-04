@@ -44,10 +44,20 @@
  * @ingroup themeable
  */
 ?>
-<section class="row what-do">
-	<div class="col-md-12 doing">
-		<?php foreach ($items as $delta => $item): ?>
-			<?php print render($item); ?>
-		<?php endforeach; ?>
-	</div>
-</section>
+
+<div class="button">Contact</div>
+<p>
+<?php foreach ($items as $delta => $item): ?>
+	<?php
+		if($delta > 0) {
+			print '<span class="bullet">&bull;</span>';
+		}
+		if(strpos($item['#markup'], '@') !== false){
+			print '<a href="mailto:'.render($item).'">'.render($item).'</a>';
+		} else {
+			print render($item);
+		}
+	?>
+
+<?php endforeach; ?>
+</p>

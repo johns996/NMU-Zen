@@ -43,10 +43,11 @@
  *
  * @ingroup themeable
  */
-?>
 
-<section class="row title-section">
-	<?php foreach ($items as $delta => $item): ?>
-		<?php print render($item); ?>
-	<?php endforeach; ?>
-</section>
+ //all of the field-banner-xxx items have fieldgroups wrapped around them giving them the necessary <section> tag
+ //the title and text have another fieldgroup wrapped around them giving them the necessary <div> tag
+
+?>
+<?php foreach ($items as $delta => $item): ?>
+	<p><?php print render($item); ?></p>
+<?php endforeach; ?>

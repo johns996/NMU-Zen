@@ -139,7 +139,6 @@ h2, h3, h4 {
 .degrees {
 	background-color: $nmu-gray-evenlighter;
 	color: $nmu-black;
-	border-top: solid 10px $nmu-green-dark;
 	h3 {
 		text-align: center;
 		padding: 40px;
@@ -166,14 +165,11 @@ h2, h3, h4 {
 	}
 	.majors, .minors, .masters {
 		border-top: solid 2px $nmu-gray-light;
+		padding-left: 25px;
 	}
 	.minors, .masters {
 		border-left: solid 2px $nmu-gray-light;
-		text-align: center;
-		padding-left: 25px;
-	}
-	.minors h4 {
-		color: $nmu-gray-darker;
+
 	}
 }
 
@@ -231,6 +227,7 @@ h2, h3, h4 {
 	}
 	.bullet {
 		margin: 0 5px;
+
 	}
 	a {
 		color: inherit;

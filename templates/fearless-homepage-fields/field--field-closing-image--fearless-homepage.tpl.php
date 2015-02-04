@@ -45,9 +45,8 @@
  */
 ?>
 
-<section class="row contact-section">
-	<div class="button">Contact</div>
-    <?php foreach ($items as $delta => $item): ?>
-      <?php print render($item); ?>
-    <?php endforeach; ?>
-</section>
+<div class="overlay">
+	<?php foreach ($items as $delta => $item): ?>
+		<?php print render($item); ?>
+	<?php endforeach; ?>
+</div>
