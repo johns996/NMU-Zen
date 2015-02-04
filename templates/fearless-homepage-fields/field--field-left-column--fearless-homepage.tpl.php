@@ -44,8 +44,8 @@
  * @ingroup themeable
  */
 ?>
-<section class="learning-career row">
+<div class="col-md-7 learning">
 	<?php foreach ($items as $delta => $item): ?>
 		<?php print render($item); ?>
 	<?php endforeach; ?>
-</section>
+</div>
