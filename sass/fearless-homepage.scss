@@ -50,7 +50,7 @@ h2, h3, h4 {
 	}
 	h2 {
 		color: $nmu-gold;
-		font-size: 2.8em;
+		font-size: 2.5em;
 	}
 	p {
 		color: white;
@@ -157,7 +157,7 @@ h2, h3, h4 {
 		list-style-type: none;
 		padding-left: 0;
 		& > li {
-			padding: 10px 0;
+			padding: 5px 0 5px 10px;
 		}
 		ul {
 			list-style-type: disc;
@@ -167,9 +167,16 @@ h2, h3, h4 {
 		border-top: solid 2px $nmu-gray-light;
 		padding-left: 25px;
 	}
-	.minors, .masters {
-		border-left: solid 2px $nmu-gray-light;
-
+	@media all and #{$mq-bootstrap-md-min} {
+		//these border styles assume that col-md-7 will always be on the left
+		.col-md-7 {
+			border-right: solid 2px $nmu-gray-light;
+			margin-right:-2px;
+		}
+		//and that col-md-5 will always be on the right
+		.col-md-5 {
+			border-left: solid 2px $nmu-gray-light;
+		}
 	}
 }
 
