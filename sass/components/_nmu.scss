@@ -305,7 +305,8 @@ body > #page,
 /**
  * Two Column Layout.
  */
-.node-fearless-internal-page-2-column {
+.node-fearless-internal-page-2-column,
+.two-column {
 	@media all and #{$mq-bootstrap-md-min} {
 		@include column-gap(20px);
 		@include column-count(2);
