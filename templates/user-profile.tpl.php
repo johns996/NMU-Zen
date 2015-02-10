@@ -1,5 +1,10 @@
 <script>
 	jQuery(document).ready(function($) {
+		<?php
+		if(!isset($_REQUEST['type'])){
+			?>$( "#webhelp" ).addClass( "hidden" );<?php
+		}
+		?>
 		$("#toggle_cm_users").click(function(){
 			$('#show_label').toggle();
 			$("#div_cm_users").toggle('slow');
@@ -20,6 +25,12 @@
 			$(this).one("click", viewAllSites1);
 		}
 		$("#view_all_link").one("click", viewAllSites1);
+		$("#webhelp_change_button").click(function() {
+  			$( "#webhelp" ).removeClass( "hidden" );
+		});
+		$("#webhelp_close_form").click(function() {
+  			$( "#webhelp" ).addClass( "hidden" );
+		});
 	});
 </script>
 
@@ -157,13 +168,18 @@
 
 					echo '<div>',
 					'<a href="https://docs.google.com/document/d/1eK3EtEycdW7Gsmaeift6R2JYxIFQFyRZCfDJRDdPJps/edit" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/guide.png" width="100" height="120" title="CMS Guide" style="padding-right:5px;" /></a>',
-					'<a href="https://share.nmu.edu/moodle/mod/forum/discuss.php?d=107" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/issues.png" width="100" height="120" title="Report Website Issues" style="padding-right:5px;" /></a>',
-					'<a href="https://share.nmu.edu/moodle/mod/forum/discuss.php?d=108" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/changes.png" width="100" height="120" title="Request changes or enhancements to your website" style="padding-right:5px;" /></a>';
+					'<a href="#webhelp_change_button" id="webhelp_change_button"><img src="/sites/all/themes/nmu/images/user_icons/changes.png" width="100" height="120" title="Request changes or enhancements to your website" style="padding-right:5px;" /></a>';
 					echo $user_button_ga;
 					echo '<a href="/webadmin" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/webadmin.png" width="100" height="120" title="Web Admin" style="padding-right:5px;" /></a>',
 					'<a href="http://images.nmu.edu" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/imagedb.png" width="100" height="120" title="Image Database" style="padding-right:5px;" /></a>',
 					'<a href="http://myweb.nmu.edu/forms" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/formservices.png" width="100" height="120" title="Form Services" style="padding-right:5px;" /></a>',
 					'<br /><br /></div>';
+
+			echo("<div id='webhelp' class='bs-callout bs-callout-default'>".PHP_EOL);
+			echo("<a id='webhelp_close_form' href='#'>(Close Form)</a>");
+			echo("<h3>Request Web Help</h3>");
+			include '/htdocs/cmsphp/WebHelp/HelpForm.php';
+			echo("</div>".PHP_EOL);
 
 			//recently edited
 			$q_RecentlyEdited = db_query("SELECT nid, title FROM {node_revision} WHERE uid = '".$QueryUID."' ORDER BY timestamp DESC LIMIT 10")->fetchAllKeyed();
@@ -214,7 +230,6 @@
 						echo $str_cm_users;
 					echo '</div>';
 				echo '</div>';
-
 				echo '</ul><br />';
 			}
 
