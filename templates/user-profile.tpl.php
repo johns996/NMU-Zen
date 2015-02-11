@@ -1,39 +1,3 @@
-<script>
-	jQuery(document).ready(function($) {
-		<?php
-		if(!isset($_REQUEST['type'])){
-			?>$( "#webhelp" ).addClass( "hidden" );<?php
-		}
-		?>
-		$("#toggle_cm_users").click(function(){
-			$('#show_label').toggle();
-			$("#div_cm_users").toggle('slow');
-		});
-
-		$("#read_more_link").click(function(){
-			$('.read_more').slideToggle("slow");
-		});
-
-		function viewAllSites1() {
-			$('#sites_list').slideDown("slow");
-			$(this).html("Hide all sites");
-			$(this).one("click", viewAllSites2);
-		}
-		function viewAllSites2() {
-			$('#sites_list').slideUp("slow");
-			$(this).html("Show all sites");
-			$(this).one("click", viewAllSites1);
-		}
-		$("#view_all_link").one("click", viewAllSites1);
-		$("#webhelp_change_button").click(function() {
-  			$( "#webhelp" ).removeClass( "hidden" );
-		});
-		$("#webhelp_close_form").click(function() {
-  			$( "#webhelp" ).addClass( "hidden" );
-		});
-	});
-</script>
-
 <div id="drupal_user_profile">
 	<?php
 		require_once "/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php";
@@ -196,7 +160,7 @@
 
 			site_access_check($QueryUID, $user->name);
 
-			echo '<p>The following users have access to <strong>'.$SiteName.'</strong>.  <a href="https://share.nmu.edu/moodle/mod/forum/discuss.php?d=109" target="_blank">Use this forum</a> to request user removal.</p>';
+			echo '<p>The following users have access to <strong>'.$SiteName.'</strong>:</p>';
 
 			//users with access
 				$strQuery = "SELECT Username FROM Administrative.UserType";
@@ -218,10 +182,12 @@
 					if(!empty($q_UserNames))
 					{
 						foreach($q_UserNames as $key => $val)
+							$userinfo = CORE_GetUserInfo($val);
+							$fullName = $userinfo['FirstName']." ".$userinfo['LastName'];
 							if(in_array($val, $a_CMUsers))
-								$str_cm_users .= '<li class="class_cm_user">'.$val.' - Communications & Marketing User</li>'."\n";
+								$str_cm_users .= '<li class="class_cm_user">'.$fullName." - ".$val.' - Communications & Marketing User</li>'."\n";
 							else
-								$str_site_users .= '<li>'.$val.'</li>'."\n";
+								$str_site_users .= '<li>'.$fullName." - ".$val.' (<a id="remove_user_button_'.$val.'" class="remove_user_button" href="#userRemoval">Request Removal</a>)</li>'."\n";
 					}
 				}
 				echo $str_site_users;
@@ -231,6 +197,16 @@
 					echo '</div>';
 				echo '</div>';
 				echo '</ul><br />';
+				
+				echo '<div id="request_user_removal" class="bs-callout bs-callout-default">';
+				echo '	<div id="div_user_removal_confirm" class="alert alert-warning">';
+				echo('		Please confirm your request to remove <span id="user_to_remove"></span> from <b>'.$SiteName.'</b><br />');
+				echo('		<input id="input_user_to_remove" name="input_user_to_remove" type="hidden" value="">');
+				echo('		<button id="user_removal_confirm" type="submit" class="btn btn-default">Confirm</button>');
+				echo '	</div>';
+				echo '	<div id="div_user_removal_results" class="hidden">';
+				echo '	</div>';
+				echo '</div>';
 			}
 
 			/*
@@ -242,10 +218,72 @@
 				 http://drupal.org/node/310072
 			*/
 			echo '<br /><hr />';
-			//print_r(get_defined_vars());
-
 			echo render($user_profile);
 		}
 
 	?>
 </div>
+<script>
+	jQuery(document).ready(function($) {
+		<?php
+		if(!isset($_REQUEST['type'])){
+			?>
+			$( "#webhelp" ).addClass( "hidden" );
+			$( "#request_user_removal" ).addClass( "hidden" );
+			<?php
+		}
+		?>
+		$("#toggle_cm_users").click(function(){
+			$('#show_label').toggle();
+			$("#div_cm_users").toggle('slow');
+		});
+
+		$("#read_more_link").click(function(){
+			$('.read_more').slideToggle("slow");
+		});
+
+		function viewAllSites1() {
+			$('#sites_list').slideDown("slow");
+			$(this).html("Hide all sites");
+			$(this).one("click", viewAllSites2);
+		}
+		function viewAllSites2() {
+			$('#sites_list').slideUp("slow");
+			$(this).html("Show all sites");
+			$(this).one("click", viewAllSites1);
+		}
+		$("#view_all_link").one("click", viewAllSites1);
+		$("#webhelp_change_button").click(function() {
+  			$( "#webhelp" ).removeClass( "hidden" );
+		});
+		$("#webhelp_close_form").click(function() {
+  			$( "#webhelp" ).addClass( "hidden" );
+		});
+
+		$(".remove_user_button").click(function() {
+  			$( "#request_user_removal" ).removeClass( "hidden" );
+  			$( "#div_user_removal_confirm" ).removeClass( "hidden" );
+  			$( "#div_user_removal_results" ).addClass( "hidden" );
+  			var $selectedId = $(this).attr('id');
+  			var $splitItems = $selectedId.split("_");
+  			$( "#user_to_remove" ).html( "<b>"+$splitItems[3]+"</b>" );
+  			$( "#input_user_to_remove" ).val( $splitItems[3] );
+		});
+		
+		$("#user_removal_confirm").click(function() {
+			$.post( "/cgi-bin/WebHelp/ajax_user_removal_request.php", { input_user_to_remove: $( "#input_user_to_remove" ).val(), input_user_removal_submitter: "<?php echo($user->name); ?>", input_site_to_remove_from: "<?php echo($SiteName); ?>", uid: "<?php echo($user->uid); ?>", sid: "<?php echo($user->sid); ?>" }, function ( data ) {
+					if(data.result == "0"){
+						$( "#div_user_removal_results" ).addClass( "alert alert-success" );
+						$( "#div_user_removal_confirm" ).addClass( "hidden" );
+						$( "#div_user_removal_results" ).removeClass( "hidden" );
+					}
+					else{
+						$( "#div_user_removal_results" ).addClass( "alert alert-danger" );
+						$( "#div_user_removal_confirm" ).addClass( "hidden" );
+						$( "#div_user_removal_results" ).removeClass( "hidden" );
+					}
+					$( "#div_user_removal_results" ).html( "<p>"+data.message+"</p>" );
+ 		 		}, "json");	
+		});
+	});
+</script>
