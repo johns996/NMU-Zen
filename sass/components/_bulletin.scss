@@ -1,0 +1,149 @@
+/* This SCSS file contains styles that will only be used on the NMU bulletin pages
+	none of the bulletins are currently responsive so these styles are only designed for the wide view
+	this file is included in the CSS array using the template.php file and is not included in any of the standard nmu styles
+	when the bulletin is made responsive, these styles can be moved into the classes file to follow the standard CSS-class process used by other sites
+*/
+
+/* COURSE BULLETIN */
+
+
+
+.not-front #content img.EmployeeImage {
+	margin-right:20px;
+		@media all and #{$mq-bootstrap-xs-max} {
+			max-width:100px;
+		}
+}
+
+.EmployeeBio {
+	padding-top:20px;
+	padding-bottom:20px;
+	#EmployeeBioWrapper {
+		display:inline-block;
+		@media all and #{$mq-bootstrap-xs-max} {
+			max-width:225px;
+		}
+		.Name {
+			padding:6px 0 12px 0;
+			font-size:1.4em;
+			font-weight:bold;
+		}
+		.Title1, .Title2, .Title3,
+		.EmploymentType, .Deptartment,
+		.Address, .Phone, .Fax, .Email,
+		.Homepage, .Since, .Biography {
+			padding-bottom:5px;
+		}
+		.BiographyTitle {
+			padding-top:15px;
+			font-weight:bold;
+		}
+		.Degrees {
+			padding-top:5px;
+			padding-bottom:5px;
+			ul {
+				margin:0px;
+				padding: 0px;
+			}
+			ul li {
+					margin:0px;
+					padding-bottom:3px;
+					padding-top:0px;
+					margin-left:20px;
+			}
+		}
+		.OtherQualifications {
+			padding-bottom:5px;
+		}
+		.SpecialtiesTitle {
+			padding-top:15px;
+			font-weight:bold;
+		}
+		.Specialties {
+			padding-bottom:5px;
+		}
+	}
+}
+
+
+
+
+/*
+.DegreeTypeTitle {font-size:12pt;font-weight:bold;}
+.SectionTitle {font-size:12pt;font-weight:bold;padding-bottom:0px;margin-bottom:0px;}
+.SectionSubtitle {font-size:11pt;font-style:italic;padding-bottom:4px;}
+.SectionText {padding-bottom:18px;}
+	.MinusPad {margin-top:-20px;}
+	.PlusPad {margin-bottom:10px;}
+	.SectionText p {margin-top:0px;}
+.AdditionalInfo {padding-top:12px;}
+
+.LibStud {padding-bottom:10px;}
+	.LibStud .LibStudTitle {font-size:12pt;font-weight:bold;padding-bottom:4px;clear:both;}
+	.LibStud .LibStudSubTitle {padding-bottom:14px;clear:both;}
+	.LibStud .LibStudPreText {padding-bottom:10px;clear:both;}
+		.LibStud .LibStudPreText p {padding:0px;margin:0px;padding-bottom:10px;}
+	.LibStud .Course {padding-bottom:4px;}
+		.LibStud .Course a, .LibStud .Course a:visited {color:#000000;text-decoration: none;}
+		.LibStud .Course a:hover {text-decoration:underline;}
+			.LibStud .Course .Lab a, .LibStud .Course .Lab a:visited {color:#000000;text-decoration: none;}
+			.LibStud .Course .Lab a:hover {	text-decoration: none;}
+	.LibStud .LibStudPostText {padding-bottom:10px;clear:both;}
+
+.Dept {padding-bottom:10px;}
+	.Dept .DeptTitle {font-size:18pt;font-weight:bold;padding-bottom:12px;}
+	.Dept  .ContactTitle {font-weight:bold;font-size:12pt;padding-bottom:4px;}
+	.Dept .ContactInfo {padding-bottom:20px;width:250px;}
+		.Dept .ContactInfo .TheTopLine {border-top: 1px solid #006699;padding-bottom:5px;}
+		.Dept .ContactInfo .Line {padding-bottom:5px;padding-left:2px;}
+			.Dept .ContactInfo .Line .Tag {	font-weight:bold;}
+		.Dept .ContactInfo .TheBottomLine {clear:both;border-bottom: 1px solid #006699;padding-top:0px;}
+	.Dept .ImageWithContact {float:right;width:300px;}
+		.Dept .ImageWithContact img {padding:0px;margin:0px;}
+	.Dept .BulletinDeptDegreeListUL {list-style-type:none;margin:0px;
+			padding:0px;padding-top:0px;padding-bottom:10px;}
+		.Dept .BulletinDeptDegreeListLI {margin:0px;
+			padding:0px;padding-top:0px;padding-bottom:4px;}
+	.Dept .Text {clear:both;}
+		.Dept .Text img {float:right;padding:0px;padding-left:10px;padding-bottom:10px;margin:0px;}
+
+.ProgramBottom {padding-bottom:20px;}
+
+.Line {margin-bottom:6px;}
+	.Line .ProgramLive {width:100%;}
+		.Line .ProgramLive a, .Line .ProgramLive a:visited {color:#000000;text-decoration: none;}
+		.Line .ProgramLive a:hover {text-decoration:underline;}
+	.Line hr {padding:0px;margin:0px;margin-top:6px;margin-bottom:3px;}
+
+.CourseDesc {padding-bottom:20px;}
+	.CourseDesc .CourseTitleWrapper {padding-bottom:10px;}
+		.CourseDesc .CourseTitleWrapper .CourseTitle {font-weight:bold;max-width:460px;}
+		.CourseDesc .CourseTitleWrapper .CourseCredits {float:right;font-weight:bold;}
+	.CourseDesc .Offered {padding-bottom:8px;clear:both;}
+	.CourseDesc .Graded {padding-bottom:8px;clear:both;}
+	.CourseDesc .LibStuds {clear:both;padding-bottom:8px;}
+		.CourseDesc .LibStuds ul {margin:0px;padding:0px;padding-left:14px;padding-bottom:4px;}
+		.CourseDesc .LibStuds li {margin:0px;padding:0px;}
+		.CourseDesc .LibStuds a, .CourseDesc .LibStuds a:visited {color:#000000;text-decoration: none;}
+		.CourseDesc .LibStuds a:hover {text-decoration:underline;}
+	.CourseDesc .Prerequisites {padding-bottom:8px;clear:both;}
+	.CourseDesc .Description {padding-bottom:8px;clear:both;}
+	.CourseDesc .Notes {padding-bottom:8px;font-style:italic;}
+		.CourseDesc .Notes .NotesTitle {font-style:italic;font-weight:bold;}
+		.CourseDesc .Notes .TheNotes {font-style:italic;}
+	.CourseDesc .Worksheet {text-align:right;clear:both;}
+
+
+.ExamEquivCol1 {width:200px;float:left; clear:left;}
+.ExamEquivCol2 {text-align:center;width:75px;float:left;}
+.ExamEquivCol3 {width:250px;float:left;}
+.ExamEquivCol4 {text-align:right;width:50px;float:left;}
+.ExamEquivBlockHeading {font-weight:bold;}
+.ExamPostText {padding-bottom:15px;clear:both;}
+
+
+ul.BulltinBullet {margin: 0 0 0 3px; padding: 0px;list-style-type:disc;}
+ul.BulltinBullet li {margin: 0 0 0 10px;padding: 0px;}
+
+.BulletinPageTitle {clear:both;padding-bottom:10px;}
+*/
