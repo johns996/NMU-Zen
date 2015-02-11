@@ -11,16 +11,21 @@ jQuery(document).ready(function($) {
         idleTime = 0;
     });
 
-		/* ie needs a work around for this to work
+
+   if (typeof console === "undefined" || typeof console.log === "undefined") {
+     console = {};
+     console.log = function() {};
+   }
 		console.log(	'Greetings from the NMU Web Development team.  \n' +
 									' If you\'re reading this message odds are you love poking around in code as much as we do. \n' +
-									' Feel free to dig into our work and send any feedback to webhelp@nmu.edu. \n' +
+									' Feel free to dig into our work and send any feedback to edesign@nmu.edu. \n' +
 									' We also built in some keyboard commands for the HTML5 video loop. \n\n' +
-									' stop = stop the video || play = play the video \n\n');
-		*/
+									' stop ==> stop the loop || play ==> play the loop \n\n');
+
+
 		var typedWord = '';
 		window.addEventListener('keypress', function(e){
-			var c = String.fromCharCode(e.keyCode);
+			var c = String.fromCharCode(e.keyCode || e.charCode);  //Some browsers use keyCode (chrome, IE), others use charCode (ff).
 			typedWord += c.toLowerCase();
 			if(typedWord.length > 4) typedWord = typedWord.slice(1);
 			if(typedWord == 'stop') Video_back.pause();
