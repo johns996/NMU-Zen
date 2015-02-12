@@ -112,7 +112,7 @@
 						}
 						$user_button_ga = '<a href="'.$strBaseURL.'/admin/reports/google-analytics"><img src="/sites/all/themes/nmu/images/user_icons/googleanalytics.png" width="100" height="120" title="Google Analytics for Profile '.$ProfileID.'" style="padding-right:5px;" /></a>';
 					}
-
+					if($form['#block']->theme == "zen_nmu")
 						echo '<div class="user_msg new_feature"><p>This website has recently been converted to use a new theme.  The basic structure of your website and the content within it has not changed.  However, this new theme has changed how certain aspects of your site look and work.  A summary of the changes and how they affect editing page on your site is <a href="/new-theme-changes" target="_blank">available here</a>.</p></div>';
 						/*
 						echo '<div class="user_msg new_feature"><p>If you are having problems editing a web page using the CMS, please follow the steps outlined in <a href="http://www.nmu.edu/node/274">this guide</a> to resolve the issue.</p></div>';
