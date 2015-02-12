@@ -67,7 +67,7 @@
 			$strURL = file_create_url($item['#item']['uri']);
 			echo '<img src="'.$strURL.'"',
 						'data-cycle-caption="<div class=\'button\'>'.$item['#item']['title'].'</div>',
-						'<p>'.$item['#item']['alt'].'</p>"',
+						'<p>'.str_replace('"','\'',$item['#item']['alt']).'</p>"',
 						'alt=\''.$item['#item']['alt'].'\'/>';
 		}
 	?>
