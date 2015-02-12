@@ -40,12 +40,12 @@ h2, h3, h4 {
 	}
 	& > .right {
 		position: absolute;
-		top: 50px;
+		top: 20px;
 		right: 10px;
 	}
 	& > .left {
 		position: absolute;
-		top: 50px;
+		top: 20px;
 		left: 10px;
 	}
 	h2 {
@@ -58,34 +58,26 @@ h2, h3, h4 {
 }
 
 .learning-career {
-	background-color: $nmu-gray;
+	background-color: $nmu-gray-evenlighter;  //set this as the bg color because most likely the right column will be the longer one since it is narrower
 	position: relative;
-	.learning {
-		background-color: $nmu-gray-evenlighter;
-		color: $nmu-gray-dark;
+	.learning,
+	.career {
+		min-height:300px;
 		padding: 20px 50px 30px 50px;
 		h3 {
-			color: $nmu-green-dark;
 			padding-bottom:10px;
 			margin-bottom:15px;
-			//border-bottom: solid thin $nmu-gray-light;
 		}
 	}
-
+	.learning {
+		color: $nmu-gray-dark;
+		h3 {
+			color: $nmu-green-dark;
+		}
+	}
 	.career {
-		padding:0 50px;
 		background-color: $nmu-gray;
 		color: white;
-		position: absolute;
-		top: 50%;
-		max-height:100%;  //needed to auto-clip text that is too long for the box
-		@include transform(translateY(-50%));
-		right: 0;
-		h3 {
-			padding-bottom:10px;
-			margin-bottom:15px;
-			//border-bottom: solid thin white;
-		}
 	}
 }
 
@@ -96,6 +88,13 @@ h2, h3, h4 {
 		padding: 35px;
 		text-align: center;
 		color: white;
+		a {
+			text-decoration:none;
+			color: $nmu-gold;
+			&:hover {
+				text-decoration:underline;
+			}
+		}
 		.button {
 			font-family: $avenir-black;
 			font-size: 2em;
@@ -105,6 +104,7 @@ h2, h3, h4 {
 			padding: 1em 1.5em;
 			line-height: 1.5em;
 			margin: 25px 10px 50px 10px;
+
 		}
 	}
 	.cycle-overlay {
