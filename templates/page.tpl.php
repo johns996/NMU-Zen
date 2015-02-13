@@ -28,8 +28,8 @@
 			<?php
 				if ($sidebar_first && $sidebar_second){
 					print '<aside class="sidebars">';
-						print '<div class="col-md-3">'.$sidebar_first.'</div>';
-						print '<div class="col-md-2">'.$sidebar_second.'</div>';
+						print '<div class="col-md-2">'.$sidebar_first.'</div>';
+						print '<div class="col-md-2  col-md-push-8">'.$sidebar_second.'</div>';
 					print '</aside>';
 				}
 				elseif ($sidebar_first && !$sidebar_second){
@@ -39,18 +39,18 @@
 				}
 				elseif (!$sidebar_first && $sidebar_second){
 					print '<aside class="sidebars">';
-						print '<div class="col-md-2">'.$sidebar_second.'</div>';
+						print '<div class="col-md-2 col-md-push-10">'.$sidebar_second.'</div>';
 					print '</aside>';
 				}
 			?>
 
 			<?php
 				if ($sidebar_first && $sidebar_second)
-					$sidebar_class = 'col-md-8';
+					$sidebar_class = 'col-md-8 col-md-pull-2';
 				elseif ($sidebar_first && !$sidebar_second)
 					$sidebar_class = 'col-md-10';
 				elseif (!$sidebar_first && $sidebar_second)
-					$sidebar_class = 'col-md-10';
+					$sidebar_class = 'col-md-10 col-md-pull-2';
 				elseif(drupal_is_front_page())
 					$sidebar_class = 'col-md-12-nmu';
 				else  //no sidebars, not the front page
