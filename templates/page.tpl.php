@@ -23,38 +23,16 @@
 				// Render the sidebars to see if there's anything in them.
 				$sidebar_first  = render($page['sidebar_first']);
 				$sidebar_second = render($page['sidebar_second']);
-			?>
 
-			<?php
-				if ($sidebar_first && $sidebar_second){
-					print '<aside class="sidebars">';
-						print '<div class="col-md-2">'.$sidebar_first.'</div>';
-						print '<div class="col-md-2  col-md-push-8">'.$sidebar_second.'</div>';
-					print '</aside>';
-				}
-				elseif ($sidebar_first && !$sidebar_second){
-					print '<aside class="sidebars">';
+				if ($sidebar_first){
+					print '<aside class="sidebar-first">';
 						print '<div class="col-md-2">'.$sidebar_first.'</div>';
 					print '</aside>';
-				}
-				elseif (!$sidebar_first && $sidebar_second){
-					print '<aside class="sidebars">';
-						print '<div class="col-md-2 col-md-push-10">'.$sidebar_second.'</div>';
-					print '</aside>';
-				}
-			?>
-
-			<?php
-				if ($sidebar_first && $sidebar_second)
-					$sidebar_class = 'col-md-8 col-md-pull-2';
-				elseif ($sidebar_first && !$sidebar_second)
 					$sidebar_class = 'col-md-10';
-				elseif (!$sidebar_first && $sidebar_second)
-					$sidebar_class = 'col-md-10 col-md-pull-2';
-				elseif(drupal_is_front_page())
-					$sidebar_class = 'col-md-12-nmu';
-				else  //no sidebars, not the front page
+				}
+				else {
 					$sidebar_class = 'col-md-12';
+				}
 			?>
 
 			<div id="content" class="column <?php print $sidebar_class ?>" role="main">
@@ -73,6 +51,13 @@
 				<?php if ($action_links): ?>
 					<ul class="action-links"><?php print render($action_links); ?></ul>
 				<?php endif; ?>
+				<?php
+				if ($sidebar_second){
+					print '<aside class="sidebar-second">';
+						print $sidebar_second;
+					print '</aside>';
+				}
+				?>
 				<?php print render($page['content']); ?>
 				<?php print $feed_icons; ?>
 			</div>

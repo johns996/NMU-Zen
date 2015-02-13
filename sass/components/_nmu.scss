@@ -303,6 +303,52 @@ body > #page,
 }
 
 /**
+ * Sidebar Second
+ */
+.sidebar-second {
+		//these are generic enough to work with any type of sidebar
+		min-width: 200px;
+		float: right;
+		min-height: 50px;
+		margin: 0 0 15px 15px;
+
+	.sub-navigation {
+
+		.sub-navigation-head {
+			//background-color:$nmu-gray-lighter;
+			//color:$nmu-green-text;
+			background-color:$nmu-green;
+			color:white;
+			border:1px solid $nmu-green;
+			padding:15px;
+			h4 {
+				margin:0;
+				font-size:1.2em;
+				text-transform: uppercase;
+				font-weight:400;
+			}
+		}
+
+		ul {
+			border:1px solid $nmu-gray-yetanother;
+			padding:20px 10px 20px 20px;
+			margin:0;
+			li {
+				list-style:none;
+				padding-top:5px;
+				&:first-child {
+					padding-top:0;
+				}
+			}
+		}
+		a {
+			color:$nmu-green-text;
+		}
+	}
+
+}
+
+/**
  * Two Column Layout.
  */
 .node-fearless-internal-page-2-column,
@@ -316,18 +362,6 @@ body > #page,
 /**
  * Generic Classes.
  */
-
- //this is nmu's bootstrap helper class.  we can't use bootstraps 12 column class on the main body area because it breaks the homepage video
- //so this is just a basic replacement to give most of the same styles without the relative position
-.col-md-12-nmu {
- //everything removed because I don't know if we need this or not
- //padding-right:15px;
- //padding-left:15px;
- //width:100%;
- //@media all and #{$mq-bootstrap-md-min} {
- 	//float:left;
- //}
-}
 
 .allcaps {
 	text-transform:uppercase;
