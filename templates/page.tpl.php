@@ -30,6 +30,8 @@
 					print '</aside>';
 					$sidebar_class = 'col-md-10';
 				}
+				elseif(!$sidebar_first && drupal_is_front_page())
+-					$sidebar_class = 'col-md-12-nmu';  //not used in styles but needed for the main NMU homepage since the video exists outside the grid
 				else {
 					$sidebar_class = 'col-md-12';
 				}
