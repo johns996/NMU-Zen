@@ -3,10 +3,15 @@
 $aResults = array();
 $theRequire = '/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php';
 if (is_file($theRequire)) {
+  try{
   require_once($theRequire);
   $classSqlQuery = new SqlDataQueries();
 	$strQuery = "SELECT dept, display FROM www_adit.department_pulldown";
 	$aResults = $classSqlQuery->MySQL_Queries($strQuery);
+	}
+	catch (Exception $e) {
+		printR('Caught exception: ',  $e->getMessage(), "\n");
+	}
 }
 ?>
 
