@@ -55,7 +55,7 @@
 				$('#search-department').show();
 				$('#search-department').focus();
 				$('#searchform').attr({
-					action: '//aditweb3.nmu.edu/telephone/directory/web/dept_listing.php',
+					action: '//aditweb.nmu.edu/telephone/directory/web/dept_listing.php',
 					method: 'post'
 				});
 			});
@@ -66,7 +66,7 @@
 				$('#search-query').attr('name', 'searchname');
 				$('#search-department').attr('name', 'dept-searchname');  //change this name to prevent its data from blocking the people search
 				$('#searchform').attr({
-					action: '//aditweb3.nmu.edu/telephone/directory/web/default.php',
+					action: '//aditweb.nmu.edu/telephone/directory/web/default.php',
 					method: 'post'
 				});
 			});
