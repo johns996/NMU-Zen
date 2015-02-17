@@ -161,6 +161,9 @@ h2, h3, h4 {
 		}
 		ul {
 			list-style-type: disc;
+			li {
+				padding: 2px 0 2px 0;
+			}
 		}
 	}
 	.majors, .minors, .masters, .certifications, .diplomas .certificates .associates,
