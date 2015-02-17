@@ -313,6 +313,7 @@ body > #page,
 		margin: 0 0 15px 15px;
 
 	.sub-navigation {
+		max-width:255px;
 
 		.sub-navigation-head {
 			//background-color:$nmu-gray-lighter;
@@ -408,7 +409,8 @@ display:block;
 	}
 }
 
-#field-nav-expand {
+#field-nav-expand,
+.facilities-title {
 	display:none;
 }
 
