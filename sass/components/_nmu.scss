@@ -312,7 +312,9 @@ body > #page,
 		min-height: 50px;
 		margin: 0 0 15px 15px;
 
-	.sub-navigation {
+
+	.sub-navigation,
+	.sub-navigation-big {
 		max-width:255px;
 
 		.sub-navigation-head {
@@ -344,6 +346,19 @@ body > #page,
 		}
 		a {
 			color:$nmu-green-text;
+		}
+	}
+
+	.sub-navigation-big {
+		min-width:400px;
+		max-width:500px;
+		.sub-navigation-head {
+			h4 {
+				text-align:center;
+			}
+		}
+		ul {
+			@extend .two-column;
 		}
 	}
 
