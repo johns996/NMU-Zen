@@ -19,6 +19,15 @@ CKEDITOR.editorConfig = function(config) {
 	//set this option at the profile level
 	//config.codemirror_theme = 'monokai';
 
+	/* not working
+	config.codemirror = {
+    autoCloseBrackets: false,
+    autoCloseTags: false,
+    showAutoCompleteButton: true,
+    theme: 'monokai'
+	}
+	*/
+
 
 
 
