@@ -323,8 +323,6 @@ body > #page,
 		}
 
 		.sub-navigation-head {
-			//background-color:$nmu-gray-lighter;
-			//color:$nmu-green-text;
 			background-color:$nmu-green;
 			color:white;
 			border:1px solid $nmu-green;
@@ -342,9 +340,9 @@ body > #page,
 			padding:20px 10px 20px 20px;
 			margin:0;
 			@include column-gap(20px);
-			@include column-count(2);
+			@include column-count(2);  //show this menu as two columns on mobile since it will have more space to do so
 			@media all and #{$mq-bootstrap-sm-min} {
-				@include column-count(1);
+				@include column-count(1);  //show this menu as one column on desktop
 			}
 			li {
 				list-style:none;
