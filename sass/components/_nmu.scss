@@ -304,16 +304,23 @@ body > #page,
  * Sidebar Second
  */
 .sidebar-second {
-		//these are generic enough to work with any type of sidebar
+	//these are generic enough to work with any type of sidebar
+	min-height: 50px;
+	@media all and #{$mq-bootstrap-sm-min} {
 		min-width: 200px;
 		float: right;
-		min-height: 50px;
 		margin: 0 0 15px 15px;
-
+	}
 
 	.sub-navigation,
 	.sub-navigation-big {
-		max-width:255px;
+		width:100%;  //on small screens this section spans the entire page
+		@media all and #{$mq-bootstrap-sm-min} {
+			max-width:200px;
+		}
+		@media all and #{$mq-bootstrap-lg-min} {
+			max-width:255px;
+		}
 
 		.sub-navigation-head {
 			//background-color:$nmu-gray-lighter;
@@ -334,6 +341,11 @@ body > #page,
 			border:1px solid $nmu-gray-yetanother;
 			padding:20px 10px 20px 20px;
 			margin:0;
+			@include column-gap(20px);
+			@include column-count(2);
+			@media all and #{$mq-bootstrap-sm-min} {
+				@include column-count(1);
+			}
 			li {
 				list-style:none;
 				padding-top:5px;
