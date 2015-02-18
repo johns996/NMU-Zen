@@ -195,11 +195,6 @@ body > #page,
 		margin-top: 0px;
 	}
 
-	//apply nmu styles
-	.nav-label>a {
-		margin: 0 -15px;
-		text-transform: uppercase;
-	}
 	.nav {
 		margin:0 -15px;  //make the nav extend to the sides of the nav column
 		&>li>a {
@@ -247,6 +242,8 @@ body > #page,
 		font-size: 1em;
 		line-height: 1.3em;
 		&>a{
+			margin: 0 -15px;
+			text-transform: uppercase;
 			display: block;
 			padding: 10px 15px;
 			background-color:$nmu-green;
@@ -286,7 +283,8 @@ body > #page,
 	@media all and #{$mq-bootstrap-sm-max} {
 		.nav-label a {
 			cursor:pointer;
-			font-size: 2em;
+			font-size: 1.5em;
+			line-height: 1.2em;
 		}
 		.nav-stacked {
 			display: none;
