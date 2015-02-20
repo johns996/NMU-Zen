@@ -263,6 +263,9 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	.alert-nmu {
 		width: 80%;
 		margin: 15px auto;
+		p {
+			margin:0;
+		}
 	}
 }
 
