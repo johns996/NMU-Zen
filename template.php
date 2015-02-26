@@ -60,6 +60,15 @@ function zen_nmu_preprocess_html(&$variables, $hook) {
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
+
+  //pass field variables into the html template for display in the head
+  $node = menu_get_object();
+  if($node){
+     $variables['thumbnail_image'] = $node->field_thumbnail_image['und'][0]['uri'];
+     $variables['meta_description'] = $node->field_meta_description['und'][0]['value'];
+  }
+
+
 }
 
 /**
