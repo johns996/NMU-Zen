@@ -109,7 +109,7 @@ h2, h3, h4 {
 	}
 	.cycle-overlay {
 		height: 100%;
-		background-color: rgba(0, 104, 72, .6);
+		background-color: rgba(0, 104, 72, .5);
 		.button {
 			font-size: 1.2em;
 			padding: 0;
@@ -167,7 +167,10 @@ h2, h3, h4 {
 		}
 	}
 	.majors, .minors, .masters, .certifications, .diplomas, .certificates, .associates,
-	.major, .minor, .master, .certification, .diploma, .diploma, .certificate, .associate {
+	.major, .minor, .master, .certification, .diploma, .diploma, .certificate, .associate,
+	//classes from the bulletin
+	.bachelor-degree, .pre-professional, .minor, .associate-degree, .diploma, .certificate, .certification, .enrichment,
+	.doctor-of-nursing-practice, .education-specialist, .master-of-fine-arts, .master-of-arts, .master-of-arts-in-education, .master-of-individualized-studies, .master-of-public-administration, .master-of-business-administration, .master-of-science, .graduate-certificate, .certification, .endorsement, .master-of-science-in-nursing, .post-masters-certificate {
 		border-top: solid 2px $nmu-gray-light;
 		padding-left: 25px;
 	}
@@ -200,7 +203,7 @@ h2, h3, h4 {
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0, 0, 0, .7);
+				background-color: rgba(0, 0, 0, .6);
 			}
 		}
 		.overlay-text {

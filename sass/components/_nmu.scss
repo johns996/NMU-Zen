@@ -195,11 +195,6 @@ body > #page,
 		margin-top: 0px;
 	}
 
-	//apply nmu styles
-	.nav-label>a {
-		margin: 0 -15px;
-		text-transform: uppercase;
-	}
 	.nav {
 		margin:0 -15px;  //make the nav extend to the sides of the nav column
 		&>li>a {
@@ -247,6 +242,8 @@ body > #page,
 		font-size: 1em;
 		line-height: 1.3em;
 		&>a{
+			margin: 0 -15px;
+			text-transform: uppercase;
 			display: block;
 			padding: 10px 15px;
 			background-color:$nmu-green;
@@ -286,7 +283,8 @@ body > #page,
 	@media all and #{$mq-bootstrap-sm-max} {
 		.nav-label a {
 			cursor:pointer;
-			font-size: 2em;
+			font-size: 1.5em;
+			line-height: 1.2em;
 		}
 		.nav-stacked {
 			display: none;
@@ -306,20 +304,25 @@ body > #page,
  * Sidebar Second
  */
 .sidebar-second {
-		//these are generic enough to work with any type of sidebar
+	//these are generic enough to work with any type of sidebar
+	min-height: 50px;
+	@media all and #{$mq-bootstrap-sm-min} {
 		min-width: 200px;
 		float: right;
-		min-height: 50px;
 		margin: 0 0 15px 15px;
-
+	}
 
 	.sub-navigation,
 	.sub-navigation-big {
-		max-width:255px;
+		width:100%;  //on small screens this section spans the entire page
+		@media all and #{$mq-bootstrap-sm-min} {
+			max-width:200px;
+		}
+		@media all and #{$mq-bootstrap-lg-min} {
+			max-width:255px;
+		}
 
 		.sub-navigation-head {
-			//background-color:$nmu-gray-lighter;
-			//color:$nmu-green-text;
 			background-color:$nmu-green;
 			color:white;
 			border:1px solid $nmu-green;
@@ -336,6 +339,11 @@ body > #page,
 			border:1px solid $nmu-gray-yetanother;
 			padding:20px 10px 20px 20px;
 			margin:0;
+			@include column-gap(20px);
+			@include column-count(2);  //show this menu as two columns on mobile since it will have more space to do so
+			@media all and #{$mq-bootstrap-sm-min} {
+				@include column-count(1);  //show this menu as one column on desktop
+			}
 			li {
 				list-style:none;
 				padding-top:5px;
