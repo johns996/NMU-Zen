@@ -23,12 +23,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
-	<?php if ($thumbnail_image): ?>
-		<meta name="thumbnail" content="<?php print file_create_url($thumbnail_image); ?>" />
-	<?php endif; ?>
-	<?php if ($meta_description): ?>
-		<meta name="description" content="<?php print $meta_description; ?>" />
-	<?php endif; ?>
+  <?php if ($thumbnail_image): ?>
+    <meta name="thumbnail" content="<?php print file_create_url($thumbnail_image); ?>" />
+  <?php endif; ?>
+  <?php if ($meta_description): ?>
+    <meta name="description" content="<?php print $meta_description; ?>" />
+  <?php endif; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <?php if ($add_html5_shim and !$add_respond_js): ?>
