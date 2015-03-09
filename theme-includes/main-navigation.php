@@ -157,7 +157,7 @@
 						<li class="dropdown-menu-width-wrapper">
 							<div class="row">
 								<div class="col-sm-6">
-									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-campus-life.png" align="left" />Yes, you’ll attend your classes, but what else will you be doing as a student at Northern?  There’s so much stuff to choose from. There’s a student organization or club – almost 300 at last count-- for just about every interest. If you’re into investigating the paranormal, anime or improv comedy, there’s a group. Cheer on your fellow Wildcats at a hockey game or volleyball match. Join a competitive club sport or an intramural team.  The sky is the limit.
+									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-campus-life.png" align="left" />Yes, you'll attend your classes, but what else will you be doing as a student at Northern?  There's so much stuff to choose from. There's a student organization or club – almost 300 at last count-- for just about every interest. If you're into investigating the paranormal, anime or improv comedy, there's a group. Cheer on your fellow Wildcats at a hockey game or volleyball match. Join a competitive club sport or an intramural team.  The sky is the limit.
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
@@ -166,11 +166,12 @@
 										<li><a href="/dso">Dean of Students</a></li>
 										<li><a href="/dining">Dining Services</a></li>
 										<li><a href="/healthcenter">Health Center</a></li>
+										<li><a href="/housing">Housing</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="/housing">Housing</a></li>
+										<li><a href="/internationalprograms">International Programs</a></li>
 										<li><a href="/calendar">Master Calendar</a></li>
 										<li><a href="/multiculturaledandres">Multicultural Education and Resource Center</a></li>
 										<li><a href="/organizations">Student Organizations</a></li>
