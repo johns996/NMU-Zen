@@ -43,22 +43,22 @@
 
 <?php if ($add_html5_shim and !$add_respond_js): ?>
 <!--[if lt IE 9]>
-<script src="<?php print $base_path . $path_to_zen; ?>/js/html5.js"></script>
+<script src="<?php print $base_path . $path_to_zen; ?>/js/html5.js?v1.0"></script>
 <![endif]-->
 <?php elseif ($add_html5_shim and $add_respond_js): ?>
 <!--[if lt IE 9]>
-<script src="<?php print $base_path . $path_to_zen; ?>/js/html5-respond.js"></script>
+<script src="<?php print $base_path . $path_to_zen; ?>/js/html5-respond.js?v1.0"></script>
 <![endif]-->
 <?php elseif ($add_respond_js): ?>
 <!--[if lt IE 9]>
-<script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
+<script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js?v1.0"></script>
 <![endif]-->
 <?php endif; ?>
 
 <?php if ($add_bootstrap): ?>
-<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap-theme.min.css">
-<script src="<?php print $base_path . $path_to_zen; ?>_nmu/js/vendor/bootstrap.js"></script>
+<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap.min.css?v1.0">
+<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap-theme.min.css?v1.0">
+<script src="<?php print $base_path . $path_to_zen; ?>_nmu/js/vendor/bootstrap.js?v1.0"></script>
 <?php endif; ?>
 
 </head>
