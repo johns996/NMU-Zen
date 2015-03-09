@@ -27,13 +27,13 @@ Drupal.behaviors.my_custom_behavior = {
 				//first test need for polyfill
 				{
 						test: window.matchMedia,
-						nope: ["/sites/all/themes/zen_nmu/js/vendor/matchMedia.js", "/sites/all/themes/zen_nmu/js/vendor/matchMedia.addListener.js"]
+						nope: ["https://www.nmu.edu/sites/all/themes/zen_nmu/js/vendor/matchMedia.js", "https://www.nmu.edu/sites/all/themes/zen_nmu/js/vendor/matchMedia.addListener.js"]
 				},
 
 				//and then load enquire
-				"/sites/all/themes/zen_nmu/js/vendor/enquire.min.js",
+				"https://www.nmu.edu/sites/all/themes/zen_nmu/js/vendor/enquire.min.js",
 				//finally, load the scripts that depend on enquire
-				"/sites/all/themes/zen_nmu/js/enquire-helper.js"
+				"https://www.nmu.edu/sites/all/themes/zen_nmu/js/enquire-helper.js"
 			]);
 		}
 
