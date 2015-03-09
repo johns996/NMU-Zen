@@ -29,11 +29,11 @@
 <meta http-equiv="cleartype" content="on">
 
 <?php if ($thumbnail_image): ?>
-<meta name="thumbnail" content="<?php print file_create_url($thumbnail_image); ?>" />
+<meta name="thumbnail" content="<?php print file_create_url($thumbnail_image); ?>">
 <meta name="og:image" content="<?php print file_create_url($thumbnail_image); ?>">
 <?php endif; ?>
 <?php if ($meta_description): ?>
-<meta name="description" content="<?php print $meta_description; ?>" />
+<meta name="description" content="<?php print $meta_description; ?>">
 <meta name="og:description" content="<?php print $meta_description; ?>">
 <?php endif; ?>
 
