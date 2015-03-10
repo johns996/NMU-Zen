@@ -88,6 +88,7 @@ body > #page,
 #content {
 	//there was a background color here at one point, it has been removed to prevent the sidebar background image being clipped when zoomed in
 	padding-top:1em;
+	padding-bottom:1em;
 	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
 	min-height:500px;
 }
