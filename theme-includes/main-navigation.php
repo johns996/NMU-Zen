@@ -54,6 +54,7 @@
 								</div>
 								<div class="col-sm-6">
 									<img src="/sites/all/themes/zen_nmu/images/main-navigation/nav-about.png" align="right" />Northern Michigan University, located in Marquette, Michigan, is a dynamic four-year, public, comprehensive university that has grown its reputation based on its award-winning leadership programs, cutting-edge technology initiatives and nationally recognized academic programs.  Northern has a population of about 9,000 undergraduate and graduate students.
+								</div>
 							</div>
 						</li>
           </ul>
@@ -73,7 +74,6 @@
 										<li><a href="/admissions/contactcounselor">Contact a Counselor</a></li>
 										<li><a href="/financialaid">Financial Aid and Scholarships</a></li>
 										<li><a href="/graduatestudies">Graduate Students</a></li>
-
 									</ul>
 								</div>
 								<div class="col-sm-3">
