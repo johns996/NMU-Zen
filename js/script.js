@@ -51,12 +51,19 @@ Drupal.behaviors.my_custom_behavior = {
 			$(this).find('.dropdown-menu').first().stop(true, true).fadeOut(300);
 		});
 
+		// make sure the search box is focused when a user clicks on the search icon
+		// chrome does not need this since it respects the autofocus tag on the form element, no other browser does
+		$('#search-icon').click(function(){
+			setTimeout(function() {
+				$('#search-query').focus();;
+			}, 0);
+		});
+
 		$('#main-navigation-collapse a').click(function(){
 				//make a nav item loose its focus if a user clicks on the item to hide the dropdown menu
 				//not 100% sure why this lets the item come into focus on the first click
 				$(this).blur();
 		});
-
 
 		//add or remove a class to the navbar to keep it opaque when actively showing navigation items
 		$('#header-main-navigation').on('show.bs.dropdown', function () {
