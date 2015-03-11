@@ -1,20 +1,3 @@
-<?php
-//nmu-zen
-$aResults = array();
-$theRequire = '/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php';
-if (is_file($theRequire)) {
-  try{
-  require_once($theRequire);
-  $classSqlQuery = new SqlDataQueries();
-	$strQuery = "SELECT dept, display FROM www_adit.department_pulldown";
-	$aResults = $classSqlQuery->MySQL_Queries($strQuery);
-	}
-	catch (Exception $e) {
-		printR('Caught exception: ',  $e->getMessage(), "\n");
-	}
-}
-?>
-
 <nav class="navbar yamm navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid" id="top-nav-container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -91,15 +74,14 @@ if (is_file($theRequire)) {
 								<input type="hidden" name="return" value="yes">
 								<select name="searchname" id="search-department" class="form-control search-txt-box" style="display:none;">
 									<?php
-										if(count($aResults) > 0)
-										{
-											foreach($aResults as $aRow)
-												if($aRow['dept'] != '')
-													print'<option value="'.$aRow['dept'].'">'.$aRow['display'].'</option>'."\n";
-										}
-										else
-											echo '<option value="">An error has occurred.  Please notify edesign@nmu.edu if this error persists.</option>';
+										/*
+										//for the boilerplate, use the full URL
+										$deptDirectory = file_get_contents('http://www.nmu.edu/sites/all/themes/zen_nmu/theme-includes/department-list.html');
+										*/
+										$deptDirectory = file_get_contents('/htdocs/Drupal/sites/all/themes/zen_nmu/theme-includes/department-list.html');
+										echo $deptDirectory;
 									?>
+
 								</select>
 								<span class="input-group-btn">
 									<input type="submit" class="allcaps search-submit-button btn btn-default" name="submit" value="Submit" />
