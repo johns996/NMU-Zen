@@ -151,7 +151,17 @@
 @media all and #{$mq-bootstrap-xs-min} {
 	.hp-column-container {
 		.hp-column-one,
+		.hp-column-two,
 		.hp-column-three {
+			hr {
+				margin-top:15px;
+				margin-bottom:15px;
+			}
+		}
+
+		.hp-column-one,
+		.hp-column-three {
+			padding-top:10px;
 			.homepage-section {
 				padding: 40px 150px;
 			}
@@ -201,11 +211,13 @@
 		.hp-column-one,
 		.hp-column-two,
 		.hp-column-three {
+			hr {
+				margin-top:20px; //override the styles set for tablets
+				margin-bottom:25px;
+			}
 			.homepage-section {
-				text-align: left;
-				padding: 20px;
+				padding: 10px 20px;
 				&:first-of-type {
-					text-align: center;
 					padding-top: 0;
 				}
 			}
