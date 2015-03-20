@@ -212,7 +212,7 @@
 		.hp-column-two,
 		.hp-column-three {
 			.homepage-section {
-				padding: 10px 20px;
+				padding: 10px 10px;
 				&:first-of-type {
 					padding-top: 0;
 				}
@@ -243,6 +243,9 @@
 		.hp-column-one,
 		.hp-column-two,
 		.hp-column-three {
+			.homepage-section {
+				padding: 10px 20px;
+			}
 			hr {
 				margin-top:20px;
 				margin-bottom:25px;
