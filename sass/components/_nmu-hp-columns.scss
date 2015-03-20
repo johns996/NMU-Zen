@@ -211,10 +211,6 @@
 		.hp-column-one,
 		.hp-column-two,
 		.hp-column-three {
-			hr {
-				margin-top:20px; //override the styles set for tablets
-				margin-bottom:25px;
-			}
 			.homepage-section {
 				padding: 10px 20px;
 				&:first-of-type {
@@ -236,6 +232,20 @@
 				position:absolute; //force the section to align with the bottom of the column
 				bottom:0;
 				left:0;
+			}
+		}
+	}
+}
+
+/* large desktop */
+@media all and #{$mq-bootstrap-lg-min} {
+	.hp-column-container {
+		.hp-column-one,
+		.hp-column-two,
+		.hp-column-three {
+			hr {
+				margin-top:20px;
+				margin-bottom:25px;
 			}
 		}
 	}
