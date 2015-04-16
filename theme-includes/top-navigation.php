@@ -84,7 +84,7 @@
 
 								</select>
 								<span class="input-group-btn">
-									<input type="submit" class="allcaps search-submit-button btn btn-default" name="submit" value="Submit" />
+									<input type="submit" class="allcaps search-submit-button btn btn-default" name="search" value="Submit" />
 								</span>
 							</div>
 						</div>
