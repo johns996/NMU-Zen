@@ -1,3 +1,7 @@
+/*
+ NMU photo galleries.  For example: http://www.nmu.edu/admissions/gallery (def: node/396)
+*/
+
 #gallery-wrapper {
     max-width:100%;
     width:700px;
@@ -96,4 +100,18 @@
 		margin-left:30%;
 	}
 }
+
+//help tall images scale correctly
+@media #{$mq-bootstrap-xs-max} {
+	#gallery-wrapper .tall {
+		width: auto;
+		max-height:100%;
+	}
+}
+
+//in landscape mode on phones, shrink the gallery so the whole image can be viewed
+@media #{$mq-bootstrap-xs-max} and (orientation: landscape) {
+	#gallery-wrapper {width:85%;}
+}
+
 
