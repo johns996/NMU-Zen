@@ -45,6 +45,12 @@
  */
 ?>
 
-<?php foreach ($items as $delta => $item): ?>
-	<p><?php print render($item); ?></p>
-<?php endforeach; ?>
+<?php
+	foreach ($items as $delta => $item){
+	 $theContent = render($item);
+	 //turn the field into htmp with drupal_html_to_text
+	 //use strip_tags to remove everything but a tags becasue the drupal function cannot do this (apparently)
+	 $theRevisedContent = strip_tags(drupal_html_to_text($theContent), '<a>');
+	 echo '<p>'.$theRevisedContent.'</p>';
+	}
+?>
