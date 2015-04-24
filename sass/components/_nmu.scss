@@ -120,6 +120,9 @@ body > #page,
 		img[style*="float:right"]{
 			margin-left:5px;
 		}
+		#map-container img {
+			max-width:none !important; //override the max width for the campus map otherwise the sprite will shrink down to its parent size
+		}
 		table {
 			//width:100%;  //with this option enabled, tables used for image captions take up the whole screen in mobile view  -- keep this comment
 			max-width:100%;
