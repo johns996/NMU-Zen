@@ -68,7 +68,7 @@
 			echo '<img src="'.$strURL.'"',
 						'data-cycle-caption="<div class=\'button\'>'.$item['#item']['title'].'</div>',
 						'<p>'.str_replace('"','\'',$item['#item']['alt']).'</p>"',
-						'alt=\''.$item['#item']['alt'].'\'/>';
+						'alt=\''.str_replace('\'','&quo;',$item['#item']['alt']).'\'/>';
 		}
 	?>
 </section>
