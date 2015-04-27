@@ -79,6 +79,14 @@ h2, h3, h4 {
 		background-color: $nmu-gray;
 		color: white;
 	}
+	a {
+	text-decoration:none;
+	color: $nmu-green;
+		&:hover {
+			text-decoration:underline;
+			color: $nmu-green;
+		}
+	}
 }
 
 .slideshow-section {
@@ -217,6 +225,14 @@ h2, h3, h4 {
 				color: $nmu-gold;
 				background-color: inherit;
 			}
+		}
+	}
+	a {
+	text-decoration:none;
+	color: $nmu-gold;
+		&:hover {
+			text-decoration:underline;
+			color: $nmu-gold;
 		}
 	}
 }
