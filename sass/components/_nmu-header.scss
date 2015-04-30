@@ -272,10 +272,6 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 //* main navigation
 .region-main-navigation {
 	position: relative;
-	@media all and #{$mq-bootstrap-xs-max} {
-		display:none;  //
-		@include transition-duration(0s);
-	}
 
 	.header-spanning-image {
 		background-repeat:repeat-x;
@@ -307,6 +303,13 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		&.image6 {
 			//background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-6.jpg);
 			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/spring/2015-20.jpg);
+		}
+	}
+
+	#header-main-navigation {
+		@media all and #{$mq-bootstrap-xs-max} {
+			visibility:hidden;  //hide the navbar on xs screens but keep the flow of the page
+			@include transition-duration(0s);
 		}
 	}
 
