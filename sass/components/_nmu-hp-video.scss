@@ -5,6 +5,9 @@
 		position:absolute;
 		left:0;
 		margin-top:-50px;
+		@media all and #{$mq-bootstrap-xs-max} {
+			margin-top:0;  //mobile does not have top nav, so the video will overlap branding without this reset
+		}
 		display:block;
 		z-index:95;
 	}
