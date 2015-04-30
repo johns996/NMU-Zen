@@ -262,6 +262,10 @@ h2, h3, h4 {
 	@media all and #{$mq-bootstrap-xs-max} {
 		padding: 2em;
 		margin-bottom:0;
+		font-size: 1em;
+		a[href^=tel]{
+			display:inline-block; //make sure the phone number does not have a line break in it on mobile
+		}
 	}
 	.button-no-link {
 		border: solid thin $nmu-green-dark;
