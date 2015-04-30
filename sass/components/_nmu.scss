@@ -50,6 +50,11 @@ body > #page,
 	//this is the method I use to make the columns to always appear equal in height.
 	//background-image: url(../images/nav-background.png);
 	//background-repeat:repeat-y;
+	h1.page__title {
+		@media all and #{$mq-bootstrap-xs-max} {
+			font-size: 30px;
+		}
+	}
 	.page__title {
 		margin-bottom:20px;
 		&::after{
@@ -66,6 +71,13 @@ body > #page,
 .not-front .field-name-body .field-item {
 	h2:first-child{
 		//display:none;
+	}
+}
+
+.region-breadcrumbs {
+	@media all and #{$mq-bootstrap-xs-max} {
+		display:none;
+		@include transition-duration(0s);
 	}
 }
 
@@ -296,6 +308,12 @@ body > #page,
 			&.expanded {
 				display: block;
 			}
+		}
+		.glyphicon {
+			padding-right:5px;
+		}
+		.block {
+			margin-bottom:0;
 		}
 	}
 	@media all and #{$mq-bootstrap-md-min} {

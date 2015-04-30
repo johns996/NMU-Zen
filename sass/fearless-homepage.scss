@@ -51,6 +51,9 @@ h2, h3, h4 {
 	h2 {
 		color: $nmu-gold;
 		font-size: 2.5em;
+		@media all and #{$mq-bootstrap-xs-max} {
+			font-size: 2em;
+		}
 	}
 	p {
 		color: white;
@@ -112,7 +115,10 @@ h2, h3, h4 {
 			padding: 1em 1.5em;
 			line-height: 1.5em;
 			margin: 25px 10px 50px 10px;
-
+			@media all and #{$mq-bootstrap-xs-max} {
+				font-size: 1.5em;
+				margin: 25px auto;
+			}
 		}
 	}
 	.cycle-overlay {
@@ -127,6 +133,9 @@ h2, h3, h4 {
 			width: 65%;
 			position: absolute;
 			bottom: 20px;
+			@media all and #{$mq-bootstrap-xs-max} {
+				display:none;
+			}
 		}
 		.cycle-nav {
 			bottom: 20px;
@@ -139,6 +148,11 @@ h2, h3, h4 {
 			.cycle-prev {
 				background-color: $nmu-gold;
 				color: $nmu-green;
+				@include scaleX(-1);
+			}
+			@media all and #{$mq-bootstrap-xs-max} {
+				width:200px;
+				margin: 10px auto;
 			}
 		}
 	}
@@ -245,6 +259,10 @@ h2, h3, h4 {
 	font-size: 1.2em;
 	padding: 4em 6em;
 	margin-bottom: 4em;
+	@media all and #{$mq-bootstrap-xs-max} {
+		padding: 2em;
+		margin-bottom:0;
+	}
 	.button-no-link {
 		border: solid thin $nmu-green-dark;
 		color: $nmu-green-dark;

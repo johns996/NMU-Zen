@@ -272,6 +272,10 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 //* main navigation
 .region-main-navigation {
 	position: relative;
+	@media all and #{$mq-bootstrap-xs-max} {
+		display:none;  //
+		@include transition-duration(0s);
+	}
 
 	.header-spanning-image {
 		background-repeat:repeat-x;
@@ -303,13 +307,6 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		&.image6 {
 			//background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/winter/winter-6.jpg);
 			background-image:url(/sites/all/themes/zen_nmu/images/internal-spanning/spring/2015-20.jpg);
-		}
-	}
-
-	#header-main-navigation {
-		@media all and #{$mq-bootstrap-xs-max} {
-			visibility:hidden;  //hide the navbar on xs screens but keep the flow of the page
-			@include transition-duration(0s);
 		}
 	}
 
@@ -439,20 +436,6 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		//if we want the menus to have a width instead of the full screen width use the following
 		//max-width:1200px;
 		//margin: 0 auto;
-	}
-
-	//*** collapsed view tweaks
-
-	//* make the toggle nav button (in collapsed view) have a background otherwise bootstrap makes it transparent
-	.navbar-toggle {
-		background:white;
-	}
-
-	//* make the dropdown menus have a white background when collapsed otherwise bootstrap makes it transparent
-	@media all and #{$mq-bootstrap-xs-max} {
-		.navbar-nav .open .dropdown-menu {
-			background:$nmu-off-white;
-		}
 	}
 
 }
