@@ -10,6 +10,15 @@
 //font-size: 12px;
 //line-height: 1.75em;
 
+
+.title-section,
+.what-do {
+	img {
+		max-width:100%;
+		height:auto;
+	}
+}
+
 .tabs-primary.tabs.primary {
 	position: absolute;
 	top: -144px;
