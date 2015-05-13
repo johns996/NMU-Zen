@@ -43,7 +43,7 @@
  *
  * @ingroup themeable
  */
- 
+
  $buttons = (count ($items) > 1) ? "<div class='button'>Cycle Through News</div>
 			<div class='cycle-nav'>
 				<div class='cycle-prev'>&#10142;</div>
@@ -67,10 +67,11 @@
 	<?php
 		foreach ($items as $delta => $item) {
 			$strURL = file_create_url($item['#item']['uri']);
+			$itemAlt = htmlspecialchars($item['#item']['alt']);
 			echo '<img src="'.$strURL.'"',
 						'data-cycle-caption="<div class=\'button\'>'.$item['#item']['title'].'</div>',
-						'<p>'.str_replace('"','\'',$item['#item']['alt']).'</p>"',
-						'alt=\''.$item['#item']['alt'].'\'/>';
+						'<p>'.$itemAlt.'</p>"',
+						'alt=\''.$itemAlt.'\'/>';
 		}
 	?>
 </section>
