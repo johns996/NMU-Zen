@@ -105,3 +105,13 @@ form:not(.web-form) {
 		font-weight:inherit;
 	}
 }
+
+
+.web-form {
+	.checkbox-inline {
+		padding-right:5px;
+		input[type="checkbox"] {
+			margin-left:-15px;
+		}
+	}
+}
