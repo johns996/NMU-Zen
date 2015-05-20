@@ -114,4 +114,21 @@ form:not(.web-form) {
 			margin-left:-15px;
 		}
 	}
+	ul.checkbox-list li {
+    		display:inline;
+	}
+	.checkbox-list {
+		display:block;
+		width:90%;
+		float:left;
+	}
+	ul {
+		margin:0;
+		padding:0;
+	}
+	.checkbox-list-label {
+		display:block;
+		width:50px;
+	float:left;
+	}
 }
