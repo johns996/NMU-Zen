@@ -20,14 +20,17 @@
 <title><?php print $head_title; ?></title>
 <meta property="og:title" content="<?php print $head_title_array['title']; ?>">
 <meta property="og:site_name" content="<?php print $head_title_array['name']; ?>">
-
-<?php if ($default_mobile_metatags): ?>
-<meta name="MobileOptimized" content="width">
-<meta name="HandheldFriendly" content="true">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<?php endif; ?>
-<meta http-equiv="cleartype" content="on">
-
+<?php
+	$base = $GLOBALS['base_url'].'/';
+	$path = current_path();
+	$alias = drupal_lookup_path('alias',$path);
+	if($alias){
+		$url = $base.$alias;
+	} else {
+		$url = $base.$path;
+	}
+?>
+<meta property="og:url" content="<?php print $url; ?>">
 <?php if ($thumbnail_image): ?>
 <?php $result = image_get_info($thumbnail_image); ?>
 <!--
@@ -41,11 +44,17 @@
 -->
 <meta property="og:image" content="<?php print file_create_url($thumbnail_image); ?>">
 <?php endif; ?>
-
 <?php if ($meta_description): ?>
-<meta name="description" content="<?php print $meta_description; ?>">
 <meta property="og:description" content="<?php print $meta_description; ?>">
+<meta name="description" content="<?php print $meta_description; ?>">
 <?php endif; ?>
+
+<?php if ($default_mobile_metatags): ?>
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php endif; ?>
+<meta http-equiv="cleartype" content="on">
 
 <?php print $styles; ?>
 
