@@ -29,12 +29,22 @@
 <meta http-equiv="cleartype" content="on">
 
 <?php if ($thumbnail_image): ?>
-<meta name="thumbnail" content="<?php print file_create_url($thumbnail_image); ?>">
-<meta name="og:image" content="<?php print file_create_url($thumbnail_image); ?>">
+<?php $result = image_get_info($thumbnail_image); ?>
+<!--
+  <PageMap>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="<?php print file_create_url($thumbnail_image); ?>"/>
+      <Attribute name="width" value="<?php print $result['width']; ?>"/>
+      <Attribute name="height" value="<?php print $result['height']; ?>"/>
+    </DataObject>
+  </PageMap>
+-->
+<meta property="og:image" content="<?php print file_create_url($thumbnail_image); ?>">
 <?php endif; ?>
+
 <?php if ($meta_description): ?>
 <meta name="description" content="<?php print $meta_description; ?>">
-<meta name="og:description" content="<?php print $meta_description; ?>">
+<meta property="og:description" content="<?php print $meta_description; ?>">
 <?php endif; ?>
 
 <?php print $styles; ?>
