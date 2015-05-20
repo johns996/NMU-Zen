@@ -18,8 +18,8 @@
 <?php print $head; ?>
 
 <title><?php print $head_title; ?></title>
-<meta name="og:title" content="<?php print $head_title_array['title']; ?>">
-<meta name="og:site_name" content="<?php print $head_title_array['name']; ?>">
+<meta property="og:title" content="<?php print $head_title_array['title']; ?>">
+<meta property="og:site_name" content="<?php print $head_title_array['name']; ?>">
 
 <?php if ($default_mobile_metatags): ?>
 <meta name="MobileOptimized" content="width">
