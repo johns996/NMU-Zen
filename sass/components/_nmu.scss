@@ -143,6 +143,11 @@ body > #page,
 				padding:2px;  //restore the browser default since botstrap removes it
 			}
 		}
+		//make sure tables with the bootstrap .table style have the right padding (so they look like the bootstrap examples)
+		table.table td,
+		table.table th {
+			padding:10px;
+		}
 		//*** end of copied styles
 	}
 }
@@ -474,4 +479,10 @@ display:block;
 .overflow-table {  //allow a table to scroll to the left and right in mobile view (this will be placed on a div surrounding the table)
 	width:101%;  //having this at 101% allows webkit browsers to hide the scrollbar when there actually is room for the content
 	overflow-x: auto;
+}
+
+//this is used where an image and text need to stay together (like a headshot + bio) where you don't want the next one showing up right next to it.
+.text-image-block {
+	display:inline-block;
+	margin-bottom:20px;
 }
