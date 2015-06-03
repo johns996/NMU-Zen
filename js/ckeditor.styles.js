@@ -32,6 +32,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             //{ name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
             { name : 'Callout Text Block'		, element : 'div', attributes : { 'class' : 'callout-text-block' } },
             { name : 'Column Break'		, element : 'div', attributes : { 'class' : 'column-break' } },
+            { name : 'Text + Image Block'		, element : 'div', attributes : { 'class' : 'text-image-block' } },
 
             /* Inline Styles */
 
