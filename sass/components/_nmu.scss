@@ -486,3 +486,78 @@ display:block;
 	display:inline-block;
 	margin-bottom:20px;
 }
+
+
+/**
+ * Marketing and Communications
+ */
+.up-media-guide {
+	list-style-type:none;
+	padding:10px;
+}
+.up-media-outlet {
+	display: inline-block;
+  padding: 10px;
+  min-width: 100%;
+  @media all and #{$mq-bootstrap-md-min} {
+		min-width: 45%;
+	}
+  ul {
+  	padding:5px 5px 5px 20px;
+  	list-style-type:none;
+  }
+}
+
+
+.cm-horizons-cover {
+    min-width: 185px;
+    float: left;
+    width: 30%;
+  }
+.cm-horizons-info {
+ float: left;
+}
+ul.NewsArchive {
+	margin: 0px;
+	list-style-type: none;
+	padding: 5px 0 0 8px;
+	li {
+		margin: 0px;
+		padding-bottom: 5px;
+		padding-top: 0px;
+	}
+}
+.NewsArchive-L1-Date {
+	text-align:left;
+	font-weight:bold;
+}
+.NewsArchive-L1-Title {
+
+}
+
+.NewsArchive-L1-Content {
+	.NewsArchive-L1-MediaWrapper {}
+	.NewsArchive-L1-ImageWrapper {
+		float:right;
+		padding:20px 0px 20px 20px;
+		max-width:280px;
+	}
+}
+.NewsArchive-L1-PreparedBy {
+	.NewsArchive-L1-PreparedByTitle {
+		font-weight:bold;
+	}
+}
+
+.NewsArchive-Return {
+	clear:both;
+	text-align:center;
+	padding-top:10px;
+}
+.NewsArchive-Image {
+	margin:-5px;
+	text-align:center;
+}
+/**
+ * End Marketing and Communications
+ */
