@@ -109,6 +109,19 @@ body > #page,
 .not-front {
 	#content {
 
+
+
+		//some padding tweaks applied to the bootstrap defaults
+		div.field-name-body {
+			h1, h2, h3, h4,
+			.h1, .h2, .h3, .h4 {
+				margin-top:20px;
+				&:first-child {
+					margin-top:10px;
+				}
+			}
+		}
+
 		//*** styles copied in from the old theme to fix various mobile issues
 		word-wrap: break-word;
 		img {
