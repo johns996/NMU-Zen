@@ -266,6 +266,12 @@ body > #page,
 				@include transition-duration(.5s);  //animate the caret movement when the active class is applied
 			}
 		}
+		&>li.single-nav>a {
+			cursor:default;
+			&::after{
+				content:none;
+			}
+		}
 	}
 	.nav-pills>li.active>a{
 		background-color:$nmu-gray-lighter;
