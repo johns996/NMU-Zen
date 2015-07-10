@@ -21,7 +21,8 @@
 
 .tabs-primary.tabs.primary {
 	position: absolute;
-	top: -144px;
+	//top: -144px; //this puts the tabs up in the branding section
+	top: -46px; //this puts the tabs at the bottom of the spannign image or the bottom of the spanning, depending on what is being shown
 }
 
 .page__title {
