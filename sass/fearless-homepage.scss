@@ -38,6 +38,9 @@ h2, h3, h4 {
 
 .title-section {
 	position: relative;
+	p {
+		@include text-shadow(rgba(0, 104, 72, 0.6) 1px 1px 1px);
+	}
 	& > .overlay {
 		position: relative;
 		&:before {
@@ -47,7 +50,7 @@ h2, h3, h4 {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 100, 0, .5);
+			background-color: rgba(0, 100, 0, .6);
 		}
 	}
 	& > .right {
