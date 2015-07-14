@@ -360,7 +360,7 @@ body > #page,
 /**
  * Sidebar Second
  */
-.sidebar-second {
+body.two-sidebars .sidebar-second {
 	//these are generic enough to work with any type of sidebar
 	min-height: 50px;
 	@media all and #{$mq-bootstrap-sm-min} {
