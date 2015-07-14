@@ -28,16 +28,19 @@
 					print '<aside class="sidebar-first">';
 						print '<div class="col-md-2">'.$sidebar_first.'</div>';
 					print '</aside>';
-					$sidebar_class = 'col-md-10';
+					$content_class = 'col-md-10';
+				}
+				elseif(!$sidebar_first && $sidebar_second){
+					$content_class = 'col-sm-9';
 				}
 				elseif(!$sidebar_first && drupal_is_front_page())
--					$sidebar_class = 'col-md-12-nmu';  //not used in styles but needed for the main NMU homepage since the video exists outside the grid
+-					$content_class = 'col-md-12-nmu';  //not used in styles but needed for the main NMU homepage since the video exists outside the grid
 				else {
-					$sidebar_class = 'col-md-12';
+					$content_class = 'col-md-12';
 				}
 			?>
 
-			<div id="content" class="column <?php print $sidebar_class ?>" role="main">
+			<div id="content" class="column <?php print $content_class ?>" role="main">
 				<?php //print render($page['highlighted']); ?>
 				<?php //print $breadcrumb; ?>
 				<a id="main-content"></a>
@@ -54,7 +57,7 @@
 					<ul class="action-links"><?php print render($action_links); ?></ul>
 				<?php endif; ?>
 				<?php
-				if ($sidebar_second){
+				if ($sidebar_first && $sidebar_second){
 					print '<aside class="sidebar-second">';
 						print $sidebar_second;
 					print '</aside>';
@@ -63,7 +66,13 @@
 				<?php print render($page['content']); ?>
 				<?php print $feed_icons; ?>
 			</div>
-
+		<?php
+			if(!$sidebar_first && $sidebar_second){
+				print '<aside class="sidebar-second">';
+					print '<div class="col-sm-3">'.$sidebar_second.'</div>';
+				print '</aside>';	
+			}
+		?>
 		</div>
   </div>
 
