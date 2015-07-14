@@ -138,7 +138,9 @@ h2, h3, h4 {
 	}
 	.cycle-overlay {
 		height: 100%;
-		background-color: rgba(0, 104, 72, .5);
+		//background-color: rgba(0, 104, 72, .5);
+		//the background color technique can leave part of the image without an overlay if the text is too long.  fixed by adding an overlay right to the image.
+		background-color:transparent;
 		.button {
 			font-size: 1.2em;
 			padding: 0;
@@ -170,6 +172,9 @@ h2, h3, h4 {
 				margin: 10px auto;
 			}
 		}
+	}
+	img {
+		@include imp_opacity(0.5, isImportant) // with !important
 	}
 }
 

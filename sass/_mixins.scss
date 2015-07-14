@@ -35,3 +35,18 @@
     @include element-invisible-off;
   }
 }
+
+//opacity mixin that includes important argument
+@mixin imp_opacity($opac, $impt) {
+
+    @if $impt == isImportant {
+        opacity: $opac !important;
+        $opac-ie: $opac * 100;
+        filter: alpha(opacity=$opac-ie) !important; //IE8
+    }
+    @else {
+        opacity: $opac;
+        $opac-ie: $opac * 100;
+        filter: alpha(opacity=$opac-ie); //IE8
+    }
+}
