@@ -1,0 +1,342 @@
+//these styles should be included only on the NMU homepage
+//the template.php file is looking for a specific content type
+//when it finds it, it will append this stylesheet to the css array
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+@import 'components/drupal-tabs';
+
+
+#content .block {
+	margin:0px !important;
+}
+
+
+.NNDate {
+	background-color:#034030;
+	color:#fd0;
+	height:50px;
+	padding:12px 0px 0px 10px;
+	margin-right:4px;
+
+	.styled-select {
+		select {
+			//background: $base-color-dark;
+			//background: transparent;
+			font-family:"AvenirLTStd-Medium","Helvetica Neue",Helvetica,Tahoma,Verdana,Arial,sans-serif;
+			background: url("/sites/all/themes/zen_nmu/images/ArrowYellow.png") no-repeat right transparent;
+			font-size:1.15em;
+			color: #fd0;
+			font-weight:400;
+			border: 0;
+			margin-top: 3px;
+			-webkit-appearance: none;
+			width: 265px;
+			letter-spacing: .06em;
+			text-transform: uppercase;
+		}
+	}
+
+
+	.ie-styled-select {
+		select {
+			//background: $base-color-dark;
+			//color: white;
+			font-family:"AvenirLTStd-Medium","Helvetica Neue",Helvetica,Tahoma,Verdana,Arial,sans-serif;
+			background: url("/sites/all/themes/zen_nmu/images/ArrowYellow.png") no-repeat right transparent;
+			font-size:1.15em;
+			font-weight:400;
+			border: 0;
+			margin-top: 3px;
+			-webkit-appearance: none;
+			width: 265px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+.NNTabs {
+	.TabCommon {
+		border:0px;
+		margin:0px; 
+		width:24%; 
+		height:50px;
+		float:left;
+		text-align: center;
+		font-size: 2.2em;
+		padding-top:8px;
+		border-right:2px solid white;
+		border-top:2px solid white;
+	}
+
+	.TabBackgroundSelected {
+		background-color:#ddd
+	}
+
+	.TabBackground {
+		background-color:darkgrey
+	}
+
+	 div:hover {
+		background:#ddd;
+		cursor: pointer;
+	}
+
+	#Tab1 {
+		font-size: 2.3em;
+	}
+
+	#Tab2 {
+	}
+
+	#Tab3 {
+	}
+
+	#Tab4 {
+		font-size: 2.2em;
+		padding-top:10px;
+	}
+}
+
+
+.NNContent {
+	background-color:#ddd;
+	padding:10px 45px 10px 10px;
+	margin:0px 4px 0px 0px;
+
+	.notes-text-header {
+		margin:5px 0px 0px 0px;
+		padding:10px 10px 10px 10px;
+		border:1px solid black;
+		background:$nmu-green;
+		color:#fd0;
+		border-color: black;
+		border:1px 1px 0px 1px;
+	}
+	.notes-text-header:hover {
+		cursor: pointer;
+	}
+
+	.notes-text {
+		margin:0px 0px 0px 0px;
+		padding:20px 12px 20px 20px;
+
+		-moz-border-bottom-right-radius:12px;
+		-moz-border-bottom-left-radius:12px;
+		border-bottom-right-radius:12px;
+		border-bottom-left-radius:12px;
+
+		border-color: black;
+		border:0px 1px 1px 1px;
+		background:white;
+	}
+	
+	.northern-news-content-divs {
+		.northern-news-content-story-div {
+			padding-left:40px;
+		}
+	}
+}
+
+
+.container {
+	.col-sm-3, .col-sm-9, .block {
+		padding:0px 0px 0px 0px;
+		margin-bottom:0px;
+	}
+}
+
+
+
+.region-sidebar-second {
+	min-width:300px;
+	margin:0px 0px 0px 2px;
+	
+	.sub-navigation {
+		width:100%;  //on small screens this section spans the entire page
+		@media all and #{$mq-bootstrap-sm-min} {
+			max-width:200px;
+		}
+		@media all and #{$mq-bootstrap-lg-min} {
+			max-width:485px;
+		}
+
+		.sub-navigation-head-inner {
+			@media all and #{$mq-bootstrap-only-sm} { margin-left:0px; margin-right:0px; }
+			@media all and #{$mq-bootstrap-only-md} { margin-left:0px; margin-right:0px; }
+			@media all and #{$mq-bootstrap-lg-min} { margin-left:50px; margin-right:50px; }
+			@media all and #{$mq-bootstrap-xs-max} { margin-left:30px; margin-right:30px; }
+
+			border:1px solid $nmu-green;
+			font-size:14px;
+		}
+
+		.sub-navigation-body { padding:5px; }
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;        
+
+		padding-bottom:10px;
+	}
+}
+
+
+.sub-navigation-head {
+	border:0px;
+	padding:5px;
+	text-transform: uppercase;
+	text-align:center; 
+	height:50px; 
+	padding-top:14px; 
+	font-size:1.15em;
+	a:hover, a:link, a:active, a:visited { color:$nmu-green; text-decoration:none; }
+}
+
+
+.NNSubmitAnnouncement {
+	.sub-navigation-head {
+		background-color:#fd0;
+		color:$nmu-green;
+	}
+
+	.sub-navigation-head-inner {
+	}
+ 
+	.sub-error-msg {
+		padding:7px 0px 10px 5px;
+		border-left:1px solid #fd0;
+		border-right:1px solid #fd0;
+		font-size:12px;
+
+		ul {
+			padding-bottom:0px;
+			margin-bottom:0px;
+		}
+	}
+
+	.sub-navigation-body {
+		border-left:1px solid #fd0;
+		border-right:1px solid #fd0;
+
+		font-size:.9em;
+
+		.resp-input-wrapper {
+			input { width: 100%; line-height:100%; }
+			select { width: 100%; }
+		}
+		.resp-input-phone {
+			input { line-height:100% }
+		}
+		.resp-radio-wrapper {
+			padding:0px;
+			margin:0px;
+		}
+		.resp-check-wrapper {
+			margin:5px 0px 0px 0px;
+		}
+
+		#Required {
+			text-align:right;
+
+			@media all and #{$mq-bootstrap-only-sm} { float:left; }
+			@media all and #{$mq-bootstrap-only-md} { float:left; }
+
+			margin-top:5px; 
+			margin-right:8px; 
+
+		}
+		
+	}
+
+	.sub-navigation-bottom-line {
+		border-bottom:1px solid #fd0;
+	}
+}
+
+
+
+.NNPhoto {
+	.sub-navigation-head {
+		background-color:darkgrey;
+		color:#fff;
+	}
+	
+	.sub-navigation-body {
+		border:1px solid darkgrey;
+	}
+}
+
+
+.NNQuestion {
+	.sub-navigation-head {
+		background-color:$nmu-green;
+		color:#fd0;
+	}
+
+	.sub-navigation-body {
+		border:1px solid $nmu-green;
+	}
+}
+
+
+.NNFAQs {
+	.sub-navigation-head {
+		background-color:darkgrey;
+		color:#fff;
+		@media all and #{$mq-bootstrap-only-sm} { height:65px !important; }
+		@media all and #{$mq-bootstrap-only-md} { height:65px !important; }
+	}
+
+	.sub-navigation-body {
+		border:1px solid darkgrey;
+	}
+}
+
+
+.NNClassifides {
+	.sub-navigation-head {
+		background-color:$nmu-green;
+		color:#fd0;
+	}
+
+	.sub-navigation-body {
+		border:1px solid $nmu-green;
+	}
+}
+
+
+
+// STUFF THAT NEEDS TO MOVE TO MAIN
+.closed-2015 {
+	display:none;
+}
+
+.smaller-2015 {
+	font-size:smaller;
+}
+
+.center-2015 {
+	text-align:center;
+}
+
+.fade-2015:hover {
+	opacity: 0.6;
+}
+
+.grey-2015 {
+	color:$nmu-gray-darker;
+}
+
+.base-font-size-2015 {
+	font-size:inherit;
+}
+
+
+
+
+
+
