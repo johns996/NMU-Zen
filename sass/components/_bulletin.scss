@@ -18,6 +18,8 @@
 .EmployeeBio {
 	padding-top:20px;
 	padding-bottom:20px;
+	display:inline-block;
+	width:100%;
 	#EmployeeBioWrapper {
 		display:inline-block;
 		@media all and #{$mq-bootstrap-xs-max} {

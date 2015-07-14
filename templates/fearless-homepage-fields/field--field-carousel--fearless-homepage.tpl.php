@@ -43,6 +43,12 @@
  *
  * @ingroup themeable
  */
+
+ $buttons = (count ($items) > 1) ? "<div class='button'>Cycle Through News</div>
+			<div class='cycle-nav'>
+				<div class='cycle-prev'>&#10142;</div>
+				<div class='cycle-next'>&#10142;</div>
+			</div>":"<div></div>";
 ?>
 
 
@@ -55,20 +61,18 @@
 		 data-cycle-timeout="0"
 		 data-cycle-caption=".cycle-caption"
 		 data-cycle-caption-template="{{cycleCaption}}"
-		 data-cycle-overlay-template="<div class='button'>Cycle Through News</div>
-			<div class='cycle-nav'>
-				<div class='cycle-prev'>&#10142;</div>
-				<div class='cycle-next'>&#10142;</div>
-			</div>"
+		 data-cycle-overlay-template="<?php echo($buttons); ?>"
 		 data-cycle-log="false">
 		<div class="cycle-overlay"></div>
 	<?php
 		foreach ($items as $delta => $item) {
 			$strURL = file_create_url($item['#item']['uri']);
+			$itemAlt = htmlspecialchars($item['#item']['alt']);
+			$itemTitle = htmlspecialchars($item['#item']['title']);
 			echo '<img src="'.$strURL.'"',
-						'data-cycle-caption="<div class=\'button\'>'.$item['#item']['title'].'</div>',
-						'<p>'.str_replace('"','\'',$item['#item']['alt']).'</p>"',
-						'alt=\''.str_replace('\'','&quo;',$item['#item']['alt']).'\'/>';
+						'data-cycle-caption="<div class=\'button\'>'.$itemTitle.'</div>',
+						'<p>'.$itemAlt.'</p>"',
+						'alt=\''.$itemAlt.'\'/>';
 		}
 	?>
 </section>

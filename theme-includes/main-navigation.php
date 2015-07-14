@@ -166,7 +166,7 @@
 										<li><a href="/dso">Dean of Students</a></li>
 										<li><a href="/dining">Dining Services</a></li>
 										<li><a href="/healthcenter">Health Center</a></li>
-										<li><a href="/housing">Housing</a></li>
+										<li><a href="/housing">Housing and Residence Life</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-3">

@@ -90,16 +90,20 @@ Drupal.behaviors.my_custom_behavior = {
 		});
 
 		//left navigation functionality
-		$('#left-nav li a:not([href])').click(function(){
-			var parentSelector = $(this).parent();
-			var activate = !$(parentSelector).hasClass('active');
-			$('#left-nav li ul').slideUp();  //start by sliding up all nav lists
-			$('#left-nav li').removeClass('active');  //remove all active classes
-			if(activate) {
-				$(parentSelector).find('ul').slideDown();
-				$(parentSelector).addClass('active');
-			}
-		});
+		if($('#left-nav li ul').length > 1){
+			$('#left-nav li a:not([href])').click(function(){
+				var parentSelector = $(this).parent();
+				var activate = !$(parentSelector).hasClass('active');
+				$('#left-nav li ul').slideUp();  //start by sliding up all nav lists
+				$('#left-nav li').removeClass('active');  //remove all active classes
+				if(activate) {
+					$(parentSelector).find('ul').slideDown();
+					$(parentSelector).addClass('active');
+				}
+			});
+		} else {
+			$('#left-nav li').addClass('single-nav');
+		}
 		selectNavItem();
 
 		setupCycle2Nav();

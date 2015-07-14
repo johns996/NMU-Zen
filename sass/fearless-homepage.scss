@@ -10,9 +10,21 @@
 //font-size: 12px;
 //line-height: 1.75em;
 
+
+.title-section,
+.what-do {
+	img {
+		max-width:100%;
+		height:auto;
+	}
+}
+
 .tabs-primary.tabs.primary {
 	position: absolute;
-	top: -144px;
+	top: -96px;
+	@media all and #{$mq-bootstrap-md-min} {
+		top:-46px;  //bottom of spanning image or whatever else is there.  -144 was the old value, used to put in branding
+	}
 }
 
 .page__title {
@@ -26,6 +38,9 @@ h2, h3, h4 {
 
 .title-section {
 	position: relative;
+	p {
+		@include text-shadow(rgba(0, 104, 72, 0.6) 1px 1px 1px);
+	}
 	& > .overlay {
 		position: relative;
 		&:before {
@@ -35,7 +50,7 @@ h2, h3, h4 {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 100, 0, .5);
+			background-color: rgba(0, 100, 0, .6);
 		}
 	}
 	& > .right {
@@ -51,6 +66,9 @@ h2, h3, h4 {
 	h2 {
 		color: $nmu-gold;
 		font-size: 2.5em;
+		@media all and #{$mq-bootstrap-xs-max} {
+			font-size: 2em;
+		}
 	}
 	p {
 		color: white;
@@ -62,7 +80,7 @@ h2, h3, h4 {
 	position: relative;
 	.learning,
 	.career {
-		min-height:300px;
+		min-height:250px;
 		padding: 20px 50px 30px 50px;
 		h3 {
 			padding-bottom:10px;
@@ -105,14 +123,17 @@ h2, h3, h4 {
 		}
 		.button {
 			font-family: $avenir-black;
-			font-size: 2em;
+			font-size: 1.9em;
 			color: $nmu-gold;
 			border: solid thin $nmu-gold;
 			text-transform: uppercase;
 			padding: 1em 1.5em;
 			line-height: 1.5em;
-			margin: 25px 10px 50px 10px;
-
+			margin: 10px 10px 40px 10px;
+			@media all and #{$mq-bootstrap-xs-max} {
+				font-size: 1.5em;
+				margin: 25px auto;
+			}
 		}
 	}
 	.cycle-overlay {
@@ -127,6 +148,9 @@ h2, h3, h4 {
 			width: 65%;
 			position: absolute;
 			bottom: 20px;
+			@media all and #{$mq-bootstrap-xs-max} {
+				display:none;
+			}
 		}
 		.cycle-nav {
 			bottom: 20px;
@@ -139,6 +163,11 @@ h2, h3, h4 {
 			.cycle-prev {
 				background-color: $nmu-gold;
 				color: $nmu-green;
+				@include scaleX(-1);
+			}
+			@media all and #{$mq-bootstrap-xs-max} {
+				width:200px;
+				margin: 10px auto;
 			}
 		}
 	}
@@ -245,6 +274,14 @@ h2, h3, h4 {
 	font-size: 1.2em;
 	padding: 4em 6em;
 	margin-bottom: 4em;
+	@media all and #{$mq-bootstrap-xs-max} {
+		padding: 2em;
+		margin-bottom:0;
+		font-size: 1em;
+		a[href^=tel]{
+			display:inline-block; //make sure the phone number does not have a line break in it on mobile
+		}
+	}
 	.button-no-link {
 		border: solid thin $nmu-green-dark;
 		color: $nmu-green-dark;

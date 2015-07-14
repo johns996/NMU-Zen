@@ -105,3 +105,40 @@ form:not(.web-form) {
 		font-weight:inherit;
 	}
 }
+
+
+.web-form {
+	.checkbox-inline {
+		padding-right:5px;
+		input[type="checkbox"] {
+			margin-left:-15px;
+		}
+	}
+	ul.checkbox-list {
+  		display:block;
+  		width:90%;
+  		float:left;
+  		margin:0;
+			padding:0;
+  		li {
+    			display:inline-block;
+    			//padding-left:15px;
+  		}
+	}
+	.checkbox-list-label-inline {
+		min-width: 50px;
+		display:block;
+		padding-right:20px;
+		float:left;
+		font-weight:600;
+		@media screen and (min-width: 768px) {
+			max-width:55px;
+		}
+		@media screen and (min-width: 992px) {
+			max-width:75px;
+		}
+		@media screen and (min-width: 1200px) {
+			max-width:95px;
+		}
+	}
+}

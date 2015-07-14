@@ -18,8 +18,36 @@
 <?php print $head; ?>
 
 <title><?php print $head_title; ?></title>
-<meta name="og:title" content="<?php print $head_title_array['title']; ?>">
-<meta name="og:site_name" content="<?php print $head_title_array['name']; ?>">
+<meta property="og:title" content="<?php print $head_title_array['title']; ?>">
+<meta property="og:site_name" content="<?php print $head_title_array['name']; ?>">
+<?php
+	$base = $GLOBALS['base_url'].'/';
+	$path = current_path();
+	$alias = drupal_lookup_path('alias',$path);
+	if($alias){
+		$url = $base.$alias;
+	} else {
+		$url = $base.$path;
+	}
+?>
+<meta property="og:url" content="<?php print $url; ?>">
+<?php if ($thumbnail_image): ?>
+<?php $result = image_get_info($thumbnail_image); ?>
+<!--
+  <PageMap>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="<?php print file_create_url($thumbnail_image); ?>"/>
+      <Attribute name="width" value="<?php print $result['width']; ?>"/>
+      <Attribute name="height" value="<?php print $result['height']; ?>"/>
+    </DataObject>
+  </PageMap>
+-->
+<meta property="og:image" content="<?php print file_create_url($thumbnail_image); ?>">
+<?php endif; ?>
+<?php if ($meta_description): ?>
+<meta property="og:description" content="<?php print $meta_description; ?>">
+<meta name="description" content="<?php print $meta_description; ?>">
+<?php endif; ?>
 
 <?php if ($default_mobile_metatags): ?>
 <meta name="MobileOptimized" content="width">
@@ -27,15 +55,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php endif; ?>
 <meta http-equiv="cleartype" content="on">
-
-<?php if ($thumbnail_image): ?>
-<meta name="thumbnail" content="<?php print file_create_url($thumbnail_image); ?>">
-<meta name="og:image" content="<?php print file_create_url($thumbnail_image); ?>">
-<?php endif; ?>
-<?php if ($meta_description): ?>
-<meta name="description" content="<?php print $meta_description; ?>">
-<meta name="og:description" content="<?php print $meta_description; ?>">
-<?php endif; ?>
 
 <?php print $styles; ?>
 
@@ -56,9 +75,9 @@
 <?php endif; ?>
 
 <?php if ($add_bootstrap): ?>
-<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap.min.css?v1.0">
-<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap-theme.min.css?v1.0">
-<script src="<?php print $base_path . $path_to_zen; ?>_nmu/js/vendor/bootstrap.js?v1.0"></script>
+<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap.min.css?v3.3.4">
+<link rel="stylesheet" href="<?php print $base_path . $path_to_zen; ?>_nmu/css/bootstrap-theme.min.css?v3.3.4">
+<script src="<?php print $base_path . $path_to_zen; ?>_nmu/js/vendor/bootstrap.js?v3.3.4"></script>
 <?php endif; ?>
 
 </head>
