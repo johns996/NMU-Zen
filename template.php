@@ -112,8 +112,8 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/nmu-admissions.css');
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
-	} 
-	
+	}
+	//add a css file to the fearless_homepage content type
 	elseif($variables['type'] == 'fearless_homepage'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-homepage.css');
 		$css = drupal_add_css();
