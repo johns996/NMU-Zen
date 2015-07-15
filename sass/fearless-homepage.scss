@@ -183,16 +183,18 @@ h2, h3, h4 {
 	background-color: $nmu-gray-evenlighter;
 	border-bottom: solid 10px $nmu-green-dark;
 	color: $nmu-gray-dark;
+
 	h3 {
 		margin-top:0;
 		color: $nmu-green-dark;
 	}
 	.image-wrapper{
 		display:none;
-		overflow:hidden;
 		@media all and #{$mq-bootstrap-md-min} {
 			display:block;
 		}
+		position: relative;  //make sure the :before overlay is relative to the wrapper
+		overflow:hidden;
 		float:right;
 		&:before{  //add a color overlay to the images
 			position: absolute;
@@ -216,10 +218,8 @@ h2, h3, h4 {
 		margin-top:10px;
 	}
 	.image-2{
-		//make sure the image is not too big
-		max-width:160px;
+		max-width:160px;  //the bottom image can't be too big or it will break the layout.  because I use one field for both images, i have to force the widt here
 		height:auto;
-
 
 		display:inline-block;
 		float:right;
