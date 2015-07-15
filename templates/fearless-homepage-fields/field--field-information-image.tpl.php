@@ -44,16 +44,19 @@
  * @ingroup themeable
  */
 ?>
-<div class="image-wrapper col-lg-5 col-md-7">
+
 <?php
-	if (isset($items) && count($items) > 1){
+	if (count($items) > 1){
 		$_SESSION["hp_info_images"] = "2";
-		print '<div class="image-2">'.render($items[1])."</div>";
-		print '<div class="image-1">'.render($items[0])."</div>";
+		print '<div class="image-wrapper col-lg-5 col-md-7">';
+			print '<div class="image-2">'.render($items[1])."</div>";
+			print '<div class="image-1">'.render($items[0])."</div>";
+		print '</div>';
 	}
-	elseif (isset($items) && count($items) == 1) {
+	elseif (count($items) == 1) {
 		$_SESSION["hp_info_images"] = "1";
-		print '<div class="image-0">'.render($items[0])."</div>";
+		print '<div class="image-wrapper">';
+			print '<div class="image-0">'.render($items[0])."</div>";
+		print '</div>';
 	}
 ?>
-</div>

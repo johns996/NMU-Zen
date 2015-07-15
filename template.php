@@ -114,7 +114,7 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$styles = drupal_get_css($css);
 	}
 	//add a css file to the fearless_homepage content type
-	elseif($variables['type'] == 'fearless_homepage'){
+	elseif($variables['type'] == 'fearless_homepage' || $variables['type'] == 'fearless_homepage_info'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-homepage.css');
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
@@ -127,7 +127,13 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$styles = drupal_get_css($css);
 	}
 }
-//
+
+function zen_nmu_preprocess_field(&$variables, $hook) {
+	if ($variables['element']['#field_name'] == 'field_information_image') {
+		$GLOBALS['info_images_present'] = true;
+	}
+}
+
 
 /**
  * Override or insert variables into the comment templates.

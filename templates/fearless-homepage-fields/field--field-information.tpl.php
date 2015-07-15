@@ -44,11 +44,23 @@
  * @ingroup themeable
  */
 ?>
-<div class="col-lg-7 col-md-5">
-<?php foreach ($items as $delta => $item): ?>
-	<?php print render($item); ?>
-<?php endforeach; ?>
-</div>
 <?php
-	//echo $_SESSION["hp_info_images"];
+
+if($GLOBALS['info_images_present']){
+	if($_SESSION["hp_info_images"] == '2'){
+		print '<div class="col-lg-7 col-md-5">';
+	}
+	else{
+		print '<div class="single-image">';
+	}
+}
+
+foreach ($items as $delta => $item){
+	 print render($item);
+}
+
+if($GLOBALS['info_images_present']){
+	print '</div>';
+}
+
 ?>
