@@ -38,6 +38,7 @@ h2, h3, h4 {
 
 .title-section {
 	position: relative;
+	background-color:$nmu-green;
 	p {
 		@include text-shadow(rgba(0, 104, 72, 0.6) 1px 1px 1px);
 	}
@@ -54,26 +55,82 @@ h2, h3, h4 {
 		}
 	}
 	& > .right {
-		position: absolute;
-		top: 20px;
-		right: 10px;
+		padding: 20px 50px 30px 50px;
+		@media all and #{$mq-bootstrap-md-min} {
+			position: absolute;
+			padding:0;
+			top: 20px;
+			right: 10px;
+		}
 	}
 	& > .left {
-		position: absolute;
-		top: 20px;
-		left: 10px;
+		@media all and #{$mq-bootstrap-md-min} {
+			position: absolute;
+			top: 20px;
+			left: 10px;
+		}
 	}
 	h2 {
+		font-size: 2em;
 		color: $nmu-gold;
-		font-size: 2.5em;
-		@media all and #{$mq-bootstrap-xs-max} {
-			font-size: 2em;
+		@media all and #{$mq-bootstrap-md-min} {
+			font-size: 2.5em;
 		}
 	}
 	p {
 		color: white;
 	}
 }
+
+.info-section {
+	padding: 20px 35px 30px 35px;
+	background-color: $nmu-gray-evenlighter;
+	border-bottom: solid 10px $nmu-green-dark;
+	color: $nmu-gray-dark;
+
+	h3 {
+		margin-top:0;
+		color: $nmu-green-dark;
+	}
+	.image-wrapper{
+		display:none;
+		@media all and #{$mq-bootstrap-md-min} {
+			display:block;
+		}
+		position: relative;  //make sure the :before overlay is relative to the wrapper
+		overflow:hidden;
+		float:right;
+		&:before{  //add a color overlay to the images
+			position: absolute;
+			content:" ";
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			display: block;
+			z-index:0;
+			background-color: rgba(240,240,240,0.3);  //this must match the background color of the section
+		}
+	}
+	.image-0{
+		float:right;
+	}
+	.image-1{
+		display:inline-block;
+		float:right;
+		margin-right:-60px;
+		margin-top:10px;
+	}
+	.image-2{
+		max-width:160px;  //the bottom image can't be too big or it will break the layout.  because I use one field for both images, i have to force the widt here
+		height:auto;
+
+		display:inline-block;
+		float:right;
+		margin-top:60px;
+	}
+}
+
 
 .learning-career {
 	background-color: $nmu-gray-evenlighter;  //set this as the bg color because most likely the right column will be the longer one since it is narrower
@@ -178,55 +235,6 @@ h2, h3, h4 {
 	}
 }
 
-.info-section {
-	padding:50px;
-	background-color: $nmu-gray-evenlighter;
-	border-bottom: solid 10px $nmu-green-dark;
-	color: $nmu-gray-dark;
-
-	h3 {
-		margin-top:0;
-		color: $nmu-green-dark;
-	}
-	.image-wrapper{
-		display:none;
-		@media all and #{$mq-bootstrap-md-min} {
-			display:block;
-		}
-		position: relative;  //make sure the :before overlay is relative to the wrapper
-		overflow:hidden;
-		float:right;
-		&:before{  //add a color overlay to the images
-			position: absolute;
-			content:" ";
-			top:0;
-			left:0;
-			width:100%;
-			height:100%;
-			display: block;
-			z-index:0;
-			background-color: rgba(240,240,240,0.3);  //this must match the background color of the section
-		}
-	}
-	.image-0{
-		float:right;
-	}
-	.image-1{
-		display:inline-block;
-		float:right;
-		margin-right:-60px;
-		margin-top:10px;
-	}
-	.image-2{
-		max-width:160px;  //the bottom image can't be too big or it will break the layout.  because I use one field for both images, i have to force the widt here
-		height:auto;
-
-		display:inline-block;
-		float:right;
-		margin-top:60px;
-	}
-}
-
 .degrees {
 	background-color: $nmu-gray-evenlighter;
 	color: $nmu-black;
@@ -280,9 +288,13 @@ h2, h3, h4 {
 
 .what-do {
 	.doing {
-		background-color: black;
+		background-color:$nmu-green;
 		color: white;
-		text-align: center;
+		text-align: left;
+		@media all and #{$mq-bootstrap-md-min} {
+			text-align: center;
+			background-color: black;
+		}
 		& > .overlay {
 			position: relative;
 			margin-left: -15px;
@@ -298,11 +310,15 @@ h2, h3, h4 {
 			}
 		}
 		.overlay-text {
-			position: absolute;
-			width: 80%;
-			left: 10%;
-			top: 50%;
-			transform: translateY(-50%);
+			padding: 20px 35px 30px 35px;
+			@media all and #{$mq-bootstrap-md-min} {
+				padding:0;
+				position: absolute;
+				width: 80%;
+				left: 10%;
+				top: 50%;
+				transform: translateY(-50%);
+			}
 			h3 {
 				padding-top: 0;
 				color: $nmu-gold;
