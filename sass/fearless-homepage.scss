@@ -10,7 +10,6 @@
 //font-size: 12px;
 //line-height: 1.75em;
 
-
 .title-section,
 .what-do {
 	img {
@@ -128,6 +127,14 @@ h2, h3, h4 {
 		display:inline-block;
 		float:right;
 		margin-top:60px;
+	}
+	a {
+		text-decoration:none;
+		color: $nmu-green;
+		&:hover {
+			text-decoration:underline;
+			color: $nmu-green;
+		}
 	}
 }
 
