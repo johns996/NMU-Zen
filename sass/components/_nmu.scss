@@ -507,6 +507,54 @@ display:block;
 	width:100%;
 }
 
+body{
+	.btn-nmu {
+		color: #FFFFFF;
+		background-color: #006848;
+		border-color: #034030;
+	}
+
+	.btn-nmu:hover,
+	.btn-nmu:focus,
+	.btn-nmu:active,
+	.btn-nmu.active,
+	.open .dropdown-toggle.btn-nmu {
+		color: #FFFFFF;
+		background-color: #065540;
+		border-color: #034030;
+	}
+
+	.btn-nmu:active,
+	.btn-nmu.active,
+	.open .dropdown-toggle.btn-nmu {
+		background-image: none;
+	}
+
+	.btn-nmu.disabled,
+	.btn-nmu[disabled],
+	fieldset[disabled] .btn-nmu,
+	.btn-nmu.disabled:hover,
+	.btn-nmu[disabled]:hover,
+	fieldset[disabled] .btn-nmu:hover,
+	.btn-nmu.disabled:focus,
+	.btn-nmu[disabled]:focus,
+	fieldset[disabled] .btn-nmu:focus,
+	.btn-nmu.disabled:active,
+	.btn-nmu[disabled]:active,
+	fieldset[disabled] .btn-nmu:active,
+	.btn-nmu.disabled.active,
+	.btn-nmu[disabled].active,
+	fieldset[disabled] .btn-nmu.active {
+		background-color: #006848;
+		border-color: #034030;
+	}
+
+	.btn-nmu .badge {
+		color: #006848;
+		background-color: #FFFFFF;
+	}
+}
+
 
 /**
  * Marketing and Communications
