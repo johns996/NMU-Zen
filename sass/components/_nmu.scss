@@ -286,6 +286,32 @@ body > #page,
 			@include transform(rotate(90deg) scale(1, -1));  //rotate the caret so it points down when a menu is active
 		}
 	}
+
+	//use for cse style site-navigation
+	.nav-site {
+		border-left: 10px solid $nmu-gray-evenlighter;
+    border-right: 10px solid $nmu-gray-evenlighter;
+    border-bottom:1px solid $nmu-gray-evenlighter;
+		padding:20px 15px 15px;  //15 on bottom padding to accomidate the padding on the a items
+    &>li>a {
+    	text-transform:none;
+    	background-color:white;
+    	border:none;
+    	cursor:default;
+    	padding:0 5px 5px 5px;
+    	&:hover,
+			&:active,
+			&:focus{
+				background-color:white;
+				text-decoration: underline;
+				cursor:pointer;
+			}
+    	&::after{
+    		content:none;
+    	}
+    }
+	}
+
 	//top label on nav menu
 	.nav-label {
 		margin: 0;
