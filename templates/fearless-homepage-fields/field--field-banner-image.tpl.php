@@ -49,7 +49,12 @@
 
 ?>
 <div class="overlay">
-	<?php foreach ($items as $delta => $item): ?>
-		<?php print render($item); ?>
-	<?php endforeach; ?>
+	<?php
+		$intItems = count($items) - 1;
+		$intRandItem = 0;
+		if($intItems > 0){
+			$intRandItem = rand(0, $intItems);
+		}
+		print render($items[$intRandItem]);
+	?>
 </div>
