@@ -109,8 +109,6 @@ body > #page,
 .not-front {
 	#content {
 
-
-
 		//some padding tweaks applied to the bootstrap defaults
 		div.field-name-body {
 			h1, h2, h3, h4,
@@ -183,6 +181,17 @@ body > #page,
 	}
 	.page__title {
 		display:block;
+	}
+	//these image styles are copied from the .not-front stuff above.  there should be a better way to do this
+	img[align="left"],
+	img[style*="float: left"],
+	img[style*="float:left"]{
+		margin-right:5px;
+	}
+	img[align="right"],
+	img[style*="float: right"],
+	img[style*="float:right"]{
+		margin-left:5px;
 	}
 }
 
