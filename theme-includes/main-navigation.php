@@ -136,7 +136,6 @@
 								</div>
 								<div class="col-sm-3">
 									<ul class="list-unstyled" role="menu">
-										<li><a href="/sports/schedule">Complete Athletics Schedule</a></li>
 										<li><a href="http://www.nmuwildcats.com/">Intercollegiate Athletics</a></li>
 										<li><a href="/sportsrecsports/">Recreational Sports</a></li>
 										<li><a href="http://www.nmuwildcats.com/information/SportCamps">Sports Camps</a></li>
