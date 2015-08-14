@@ -11,7 +11,9 @@
 
 #main.container {
 	position: relative;
-	top: -50px; //underneath the nav
+	@media all and #{$mq-bootstrap-sm-min} {
+		top: -50px; //underneath the nav
+	}
 }
 
 .row #content {
@@ -132,6 +134,13 @@ header .region-main-navigation {
 		padding-top: 3em;
 		font-size: .9em;
 		background-color: $nmu-gray-lightest;
+		padding-right: 30px;
+    padding-left: 30px;
+		@media all and #{$mq-bootstrap-md-min} {
+			padding-right: 0px;
+			padding-left: 0px;
+    }
+
 		h2 {
 			font-size: 1em;
 			color: $nmu-green-darker;
