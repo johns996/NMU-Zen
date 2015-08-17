@@ -119,10 +119,15 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
-
 	//add a css file to the fearless_northern_notes content type
 	elseif($variables['type'] == 'fearless_northern_notes'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-northern-notes.css');
+		$css = drupal_add_css();
+		$styles = drupal_get_css($css);
+	}
+	//add a css file to the ALUMNI NEWSLETTER content type
+	elseif($variables['type'] == 'programs_what_s_new_nmu'){
+		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-alumni-newsletter.css');
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
