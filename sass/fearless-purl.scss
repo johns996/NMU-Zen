@@ -56,9 +56,8 @@
 	height: 350px;
 	p{
 		font-family: $avenir-medium;
-		font-weight: bold;
 		padding-left: 20px;
-		padding-right: 20px;
+		padding-right: 15px;
 	}
 }
 
@@ -66,7 +65,7 @@
 	background-color: $nmu-gray-light;
 	padding: 20px 0px 0px 0px;
 	.top-image{
-		background: url(http://cdanikpc.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Grad_Cap.png) no-repeat left;
+		background: url(http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Grad_Cap.png) no-repeat left;
 		height: 25%;
 		margin-left: 20px;
 		h2{
@@ -80,6 +79,9 @@
 			width: 230px;
 			text-align: center;
 			border-bottom: 2px solid $nmu-black-dark;
+			@media all and #{$mq-bootstrap-only-md}{
+				margin-left: 60px;
+			}
 		}
 	}
 	ul{
@@ -113,9 +115,9 @@
 	padding: 0px 0px 0px 0px;
 	background-color: $nmu-gray-light;
 	.top-image{
-		background: url(http://cdanikpc.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/College_Compare.png) no-repeat center;
+		background: url(http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/College_Compare.png) no-repeat center;
 		background-color: $nmu-gray-lighter;
-		height: 120px;
+		height: 160px;
 	}
 	h2{
 		font-family: $avenir-black;
@@ -128,13 +130,15 @@
 		text-align: center;
 		padding-top: 15px;
 		padding-bottom: 11px;
-		margin-top: -25px;
+		margin-top: -35px;
 	}
 	.descriptive-text{
-		height: 167px;
+		height: 127px;
 		p{
   			position: relative;
  			top: 50%;
+ 			-ms-transform: translateY(-50%);
+ 			-webkit-transform: translateY(-50%);
   			transform: translateY(-50%);
 		}
 	}
@@ -142,7 +146,7 @@
 #purl-grid-13{
 	background-color: $nmu-gray;
 	.top-image{
-		background: url(http://cdanikpc.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Scholarship.png) no-repeat left top;
+		background: url(http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Scholarship.png) no-repeat left top;
 		background-position-y: 10px;
 		height: 25%;
 		h2{
@@ -162,6 +166,10 @@
 				padding-top: 15px;
 				padding-left: 70px;
 			}
+			@media all and #{$mq-bootstrap-only-md}{
+				padding-left: 65px;
+				padding-bottom: 15px;
+			}
 		}
 	}
 	.descriptive-text{
@@ -169,6 +177,8 @@
 		p{
   			position: relative;
  			top: 50%;
+  			-ms-transform: translateY(-50%);
+ 			-webkit-transform: translateY(-50%);
   			transform: translateY(-50%);
 		}
 	}
@@ -187,10 +197,10 @@
 		text-align: center;
 		padding-top: 15px;
 		padding-bottom: 11px;
-		margin-top: -25px;
+		margin-top: -35px;
 	}
 	.top-image{
-		background: url(http://cdanikpc.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/students.jpg) no-repeat center;
+		background: url(http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/students.jpg) no-repeat center;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -201,14 +211,17 @@
 		p{
   			position: relative;
  			top: 50%;
+  			-ms-transform: translateY(-50%);
+ 			-webkit-transform: translateY(-50%);
   			transform: translateY(-50%);
+  			padding-top: 15px;
 		}
 	}
 }
 #purl-grid-22{
 	background-color: $nmu-gray;
 	.top-image{
-		background: url(http://cdanikpc.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Marquette.png) no-repeat center;
+		background: url(http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Marquette.png) no-repeat center;
 		height: 50%;
 		border-bottom: 2px solid $nmu-black-dark;
 	}
@@ -217,6 +230,8 @@
 		p{
   			position: relative;
  			top: 50%;
+  			-ms-transform: translateY(-50%);
+ 			-webkit-transform: translateY(-50%);
   			transform: translateY(-50%);
 		}
 	}
@@ -224,14 +239,15 @@
 #purl-grid-23{
 	background-color: $nmu-gray-lighter;
 	.top-image{
-		background: url(http://cdanikpc.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Social_Media.png) no-repeat left;
+		background: url(http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/Social_Media.png) no-repeat left;
 		height: 80%;
 	}
 	#social-accounts{
 		padding-top: 48px;
 		p{
 			font-family: $avenir-black;
-			padding-top: 8px;
+			padding-top: 7px;
+			font-size: 1.1em;
 			&:nth-child(odd){
 				color: $nmu-gray-dark;
 				padding-left: 45px;
@@ -252,7 +268,7 @@
 		margin-right: -15px;
 		font-size: 1.4em;
 		padding-top: 23px;
-		background-image: url("http://cdanikpc.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/green-dot.png");
+		background-image: url("http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/green-dot.png");
 		background-repeat: repeat-x;
 		background-position: center;
 		span{
