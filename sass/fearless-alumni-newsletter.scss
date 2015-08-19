@@ -6,7 +6,13 @@
 @import "init";
 @import 'components/drupal-tabs';
 
-.field-name-field-sidebar {
+//hide the drupal page title since it's not needed here
+.page__title {
+	display: none;
+}
+
+
+.whats-new-sidebar {
 	width:300px;
 	float:right;
 	margin:50px 0 20px 20px;
@@ -20,8 +26,8 @@
 	}
 }
 
-.field-name-field-feature-section {
-
+.whats-new-feature{
+	//nothing in this section yet
 }
 
 
@@ -31,19 +37,34 @@
 	clear:both;
 	background: $nmu-gray-evenlighter;
 	padding:10px;
+	@include border-radius (5px);
 }
-.field-name-field-events-section {
+.whats-new-events {
 	display:inline-block;
 	vertical-align: top;
 	width: 48%;
-	margin-right:4%;
+	margin-right:2%;
+	padding:2%;
+	border-right:2px solid white;
 }
-
-.field-name-field-connected-section {
+.whats-new-connected {
 	width:48%;
 	display:inline-block;
 	vertical-align: top;
 }
+
+
+// ******************* after middle
+.whats-new-visitors{
+	margin:10px 0;
+	position:relative;
+	hr {
+		width: 80%;
+		color: $nmu-green;
+		border-color: inherit
+	}
+}
+
 
 
 
@@ -52,46 +73,28 @@
 	margin-top:20px;
 	margin-bottom:20px;
 }
-.field-name-field-footer-section {
+.whats-new-footer {
 	display:inline-block;
 	vertical-align: top;
-	width: 38%;
+	width: 30%;
 	margin-right:1%;
 }
-.field-name-field-social-media-1 {
+.whats-new-social-1 {
 	display:inline-block;
 	vertical-align: top;
-	width: 25%;
+	width: 32%;
 	margin-right:1%;
 	.fb_iframe_widget {
 		display:block;
 	}
 }
-.field-name-field-social-media-2 {
+.whats-new-social-2 {
 	display:inline-block;
 	vertical-align: top;
 	width: 35%;
 }
 
-.field-name-field-visitors{
-	margin:10px 0;
-	position:relative;
-}
-div.field-name-field-visitors::after {
-	content: '';
-	width: 80%;
-	border-bottom: 1px solid $nmu-green;
-	position:absolute;
-	bottom:0; left:0;
-	margin: 0 10%;
-}
 
-
-.visitor_section {
-	width:42%;
-	display:inline-block;
-	margin-right:6%;
-}
 
 .fb-comments.fb_iframe_widget {
 	max-height: 400px;
