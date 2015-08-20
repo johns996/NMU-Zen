@@ -43,8 +43,10 @@
  *
  * @ingroup themeable
  */
-?>
 
+ //12 col grid opened here, closed in feature section
+?>
+<div class="col-md-12">
 <div class="whats-new-sidebar">
 	<?php foreach ($items as $delta => $item): ?>
 		<?php print render($item); ?>

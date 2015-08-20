@@ -45,7 +45,7 @@
  */
 ?>
 
-<div class="whats-new-connected">
+<div class="whats-new-connected col-md-6">
 	<?php foreach ($items as $delta => $item): ?>
 		<?php print render($item); ?>
 	<?php endforeach; ?>

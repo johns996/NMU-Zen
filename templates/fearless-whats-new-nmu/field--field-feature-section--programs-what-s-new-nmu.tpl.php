@@ -43,13 +43,16 @@
  *
  * @ingroup themeable
  */
+
+//bottom div closes the 12 col grid opened in sidebar
 ?>
 
-<div class="whats-new-feature">
-	<p class="rtecenter">
-		<img alt="What's New NMU - Alumni Association Newsletter" src="http://www.nmu.edu/alumniassociation/sites/DrupalAlumniAssociation/files/UserFiles/banner-wnn.jpg" />
-	</p>
-	<?php foreach ($items as $delta => $item): ?>
-		<?php print render($item); ?>
-	<?php endforeach; ?>
+	<div class="whats-new-feature">
+		<p class="whats-new-banner-wrapper">
+			<img class="whats-new-banner" alt="What's New NMU - Alumni Association Newsletter" src="http://www.nmu.edu/alumniassociation/sites/DrupalAlumniAssociation/files/UserFiles/banner-wnn.jpg" />
+		</p>
+		<?php foreach ($items as $delta => $item): ?>
+			<?php print render($item); ?>
+		<?php endforeach; ?>
 </div>
+</diV>

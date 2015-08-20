@@ -45,7 +45,7 @@
  */
 ?>
 
-<div class="whats-new-footer well">
+<div class="whats-new-footer well col-md-4 col-sm-12">
 	<?php foreach ($items as $delta => $item): ?>
 		<?php print render($item); ?>
 	<?php endforeach; ?>

@@ -45,7 +45,7 @@
  */
 ?>
 
-<div class="whats-new-social-2">
+<div class="whats-new-social-2 col-md-4 col-sm-6">
 	<?php foreach ($items as $delta => $item): ?>
 		<?php print render($item); ?>
 	<?php endforeach; ?>

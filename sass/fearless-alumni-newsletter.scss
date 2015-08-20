@@ -13,51 +13,86 @@
 
 
 .whats-new-sidebar {
-	width:300px;
-	float:right;
-	margin:50px 0 20px 20px;
-	padding:10px;
+	width:100%;
+	padding:20px;
+	margin-bottom:10px;
+	margin-top:91px;
 	@include border-radius(10px);
 	background-color:#ebb11f;
-	h1,
-	h2,
-	h3{
+	@media all and #{$mq-bootstrap-md-min} {
+		float:right;
+		margin:50px 0 20px 20px;
+		padding:10px;
+		width:250px;
+	}
+	@media all and #{$mq-bootstrap-lg-min} {
+		width:300px;
+	}
+	h1, h2, h3 {
 		color:#00754D;
 	}
 }
 
+.whats-new-banner-wrapper {
+	position:absolute;
+	top:-91px;
+	margin-right:15px;
+	max-width:90%;
+	@media all and #{$mq-bootstrap-md-min} {
+		max-width:100%;
+		position:relative;
+		top:0;
+		text-align:center;
+		margin-right:0;
+	}
+}
+
+.whats-new-banner {
+	height:auto;
+	@media all and #{$mq-bootstrap-md-min} {
+		width:500px;
+	}
+	@media all and #{$mq-bootstrap-lg-min} {
+		width:580px;
+	}
+}
+
 .whats-new-feature{
-	//nothing in this section yet
+	//nothing in this section
 }
 
 
 
 // ************** middle
 .group-middle {
-	clear:both;
 	background: $nmu-gray-evenlighter;
-	padding:10px;
 	@include border-radius (5px);
 }
 .whats-new-events {
-	display:inline-block;
-	vertical-align: top;
-	width: 48%;
-	margin-right:2%;
-	padding:2%;
-	border-right:2px solid white;
+	@media all and #{$mq-bootstrap-md-min} {
+		border-right:2px solid white;
+		border-bottom:none;
+		margin-top:20px;  //margin needed to ensure the border does not run up to the top of the box
+		:first-child{
+			margin-top:0px;  //compensate for the additional margin by zeroing out the first childs top margin
+		}
+	}
+	border-bottom:2px solid white;  //seperator for mobile
 }
 .whats-new-connected {
-	width:48%;
-	display:inline-block;
-	vertical-align: top;
+	//make sure margin is consistent on the first element in these sections
+	@media all and #{$mq-bootstrap-md-min} {
+		margin-top:20px;
+		:first-child{
+			margin-top:0px;
+		}
+	}
 }
 
 
 // ******************* after middle
 .whats-new-visitors{
 	margin:10px 0;
-	position:relative;
 	hr {
 		width: 80%;
 		color: $nmu-green;
@@ -67,31 +102,22 @@
 
 
 
-
 // *************** footer
 .group-footer {
 	margin-top:20px;
 	margin-bottom:20px;
 }
 .whats-new-footer {
-	display:inline-block;
-	vertical-align: top;
-	width: 30%;
-	margin-right:1%;
+	//bootstrap handles the grid now
 }
 .whats-new-social-1 {
-	display:inline-block;
-	vertical-align: top;
-	width: 32%;
-	margin-right:1%;
+	//bootstrap handles the grid now
 	.fb_iframe_widget {
 		display:block;
 	}
 }
 .whats-new-social-2 {
-	display:inline-block;
-	vertical-align: top;
-	width: 35%;
+	//bootstrap handles the grid now
 }
 
 
