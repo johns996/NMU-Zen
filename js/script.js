@@ -116,7 +116,9 @@ Drupal.behaviors.my_custom_behavior = {
 
 function selectNavItem(){
 	jQuery(document).ready(function($){
-		$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
+		if($('#left-nav li ul').length > 1){  //done ever hide the nav if only one is present
+			$('#left-nav li ul').hide(); //first hide all of the sub nav lists b/c they are shown by default
+		}
 		var passedItem = $('#field-nav-expand').text();
 		if(!passedItem){  //show the first one by default
 			$('#left-nav li').first().addClass('active');
