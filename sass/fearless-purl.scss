@@ -240,7 +240,7 @@
 	.top-image{
 		background: url(http://www.nmu.edu/cgi-bin/Departments/Admissions/PURL/assets/up.png) no-repeat center;
 		background-position-y: 20px;
-		height: 60%;
+		height: 50%;
 		border-bottom: 2px solid $nmu-black-dark;
 		h2{
 			font-family: $avenir-black;
@@ -253,7 +253,7 @@
 		}
 	}
 	.descriptive-text{
-		height: 40%;
+		height: 50%;
 		p{
   			position: relative;
  			top: 50%;
@@ -281,10 +281,16 @@
 			&:nth-child(odd){
 				color: $nmu-gray-dark;
 				padding-left: 56px;
+				a{
+					color: $nmu-gray-dark;
+				}
 			}
 			&:nth-child(even){
 				color: $nmu-green-dark;
 				padding-left: 78px;
+				a{
+					color: $nmu-green-dark;
+				}
 			}
 		}
 	}
