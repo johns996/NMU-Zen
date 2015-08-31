@@ -52,13 +52,12 @@
 	}
 }
 
-.region-branding {
-	display:none;
-}
+.region-branding { display:none; }
+#header-main-navigation { display:none; }
 
-#header-main-navigation {
-	display:none;
-}
+.region-main-navigation { background-image: url("/sites/all/themes/zen_nmu/CampusConnect/CampusConnectBG.jpg") !important; }
+.header-campus-connect-logo { text-align:center; padding-top:12px;}
+
 
 .NNContent {
 	background-color:#F0F0F0;
@@ -70,20 +69,65 @@
 		.northern-content-divs-page-header {
 			padding:15px 0px 10px 0px;
 
-			h3 { float:left; padding:0px; margin:0px;}
+			.northern-content-divs-title-wrapper {
+				float:left; 
+				h3 { padding:0px 0px 0px 18px; margin:0px; }
+			}
 
-			.northern-content-divs-cat-select-div {
+			.northern-content-divs-cat-wrapper {
 				float:right; 
-				padding-top:5px;
 
-				.northern-content-divs-cat-select {
+				.northern-content-divs-cat-submit-div {
+					display:inline-block;
+					padding-right:8px;
+					font-size:smaller;
+				}
+
+				.northern-content-divs-cat-search-div {
+					display:inline-block;
+					padding-right:8px;
+					font-size:smaller;
+				}
+
+				.northern-content-divs-cat-bar-div {
+					display:inline-block;
+					padding-right:8px;
+				}
+
+				.northern-content-divs-cat-select-div {
 					width:250px;
+					display:inline-block;
+					padding-top:5px;
+
+					.northern-content-divs-cat-select {
+						width:250px;
+					}
+				}
+
+				.northern-content-divs-cat-input-div {
+					width:250px;
+					display:inline-block;
+					padding-top:5px;
+					text-align:right;
+					font-size:smaller;
+
+					.northern-content-divs-cat-input {
+						height:20px;
+						width:230px;
+						margin-right:6px;
+					}
+
 				}
 			}
-		}
+ 		}
 		.northern-content-divs-cat-top-items {
 			text-align:center;
 			padding-top:15px;
+		}
+
+		.northern-content-submission {
+			margin:0px 0px 5px 20px;
+			display:none;
 		}
 
 		.northern-content-summaries {
@@ -96,7 +140,7 @@
 					padding:8px 0px 8px 0px;
 					margin:8px 0px 0px 0px;
 					text-align:right;
-					font-size:larger;
+					font-size:normal;
 					font-style:italic;
 					border-top:1px solid grey;
 				}
@@ -104,6 +148,10 @@
 				.northern-wrapper-title {
 					padding:0px 0px 2px 5px;
 					font-weight:bold;
+				}
+
+				.northern-wrapper-cat {
+					padding:0px 0px 2px 10px;
 				}
 
 				.northern-wrapper-blurb {
@@ -134,13 +182,14 @@
 
 						.northern-content-header-wrapper {
 							.northern-content-header-close {
-								font-size:.9em;
-								margin:.82em .6em 0px 0px; 
-								padding:.0em .45em 0em .45em; 
+								font-size:.8em;
+								margin:.94em .6em 0px 0px; 
+								padding:.02em .45em 1.4em .45em; 
 								float:left;
 								border:.1em solid $nmu-green;
 								color:$nmu-green;
-								height:1.5em
+								height:1.5em;
+								font-weight:bold;
 							}
 							.northern-content-header-close:hover {
 								cursor: pointer;
@@ -166,20 +215,23 @@
 
 						.northern-content-text {
 							.northern-content-text-images {
-								text-align:center;
 								padding-top:20px;
 								padding-bottom:15px;
 							}
 
 							.northern-content-text-title {
 								padding-top:8px;
-								padding-bottom:8px;
+								padding-bottom:4px;
 								color:$nmu-green; 
 								font-size:16px; 
 							}
 
+							.northern-wrapper-text-cat {
+								padding:0px 0px 0px 0px;
+							}
+
 							.northern-content-text-audio-article-wrapper {
-								padding:20px 0px 20px 0px;
+								padding:0px 0px 20px 0px;
 
 								.northern-content-text-audio-article-file {
 								}
@@ -198,11 +250,14 @@
 							}
 
 							.northern-content-text-prepared-by {
-								.northern-content-text-repared-by-title {}
-								.northern-content-text-repared-by-name {}
-								.northern-content-text-repared-by-authortitle {}
-								.northern-content-text-repared-by-phone {}
-								.northern-content-text-repared-by-email {}
+								.northern-content-text-prepared-by-title { font-style:italic; }
+								.northern-content-text-prepared-by-title {}
+								.northern-content-text-prepared-by-name {}
+								.northern-content-text-prepared-by-authortitle {}
+								.northern-content-text-prepared-by-address {}
+								.northern-content-text-prepared-by-phone {}
+								.northern-content-text-prepared-by-email {}
+								.northern-content-text-prepared-by-date { display:inline-block; margin:10px 10px 0px 0px; font-size:smaller; }
 							}
 						}
 					}
@@ -312,7 +367,7 @@
 
 .sub-error-msg {
 	display:none;
-	padding:7px 0px 10px 5px;
+	padding:0px 0px 12px 5px;
 	border-left:1px solid #fd0;
 	border-right:1px solid #fd0;
 	font-size:12px;
@@ -375,6 +430,10 @@
 		}
 	}
 
+	.sub-error-msg {
+		padding-top:10px;
+	}
+
 	.sub-navigation-body {
 		border-left:1px solid #fd0;
 		border-right:1px solid #fd0;
@@ -382,6 +441,87 @@
 
 	.sub-navigation-bottom-line {
 		border-bottom:1px solid #fd0;
+	}
+}
+
+
+.NNPresidentialMsg {
+	.sub-navigation-head {
+		background-color:#D80000;
+		color:#fd0;
+	}
+	.sub-navigation-body {
+		border:1px solid #D80000;
+
+		.notes-presidential-wrapper {
+
+			.notes-presidential-msg {
+
+				.notes-presidential-msg-title {
+					font-weight:bold;
+					padding-bottom:10px;
+				}
+
+				.notes-presidential-msg-body {
+
+					.notes-presidential-msg-image {
+						float:left;
+						padding:4px 5px 5px 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.NNWorksMsg {
+	.sub-navigation-head {
+		background-color:$nmu-green;
+		color:#fd0;
+	}
+	.sub-navigation-body {
+		border:1px solid $nmu-green;
+
+		.notes-works-wrapper {
+
+			.notes-works-msg {
+
+				.notes-works-msg-title {
+					font-weight:bold;
+					padding-bottom:10px;
+				}
+
+				.notes-works-msg-body {
+
+					.notes-works-msg-image {
+						float:left;
+						padding:4px 5px 5px 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.NNEmergancy {
+	.sub-navigation-head {
+		background-color:#D80000;
+		color:#fd0;
+	}
+	.sub-navigation-body {
+		border:1px solid #D80000;
+
+		.notes-emergancy-wrapper {
+			.notes-emergancy-msg {
+				.notes-emergancy-msg-title {
+					font-weight:bold;
+					padding-bottom:10px;
+				}
+
+				.notes-emergancy-msg-body {
+				}
+			}
+		}
 	}
 }
 
@@ -470,19 +610,57 @@
 	
 	.sub-navigation-body {
 		border:1px solid #C0C0C0;
+		padding:0px 0px 0px 0px;
+
+		.sub-navigation-body-wrapper {
+			margin:5px 3px 3px 3px;
+		}
 
 		#SlideShow {
 			.cycle-slide { width:100% }
 		}
 
-		.nn-photo-slide-show-hr { border:0; height: 1.5px; padding:0px 0px 0px 0px; margin:7px 0px 7px 0px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #C0C0C0, rgba(0, 0, 0, 0)); }
+		.cycle-caption { min-height:25px; }
 
-		#Pager {
+		.CORE_ModalAddCarousel img {
+			padding-right:0px;
+			z-index:-5;
+		}
+
+		.glyphicon-triangle-left, .glyphicon-eetriangle-right {
+			display:inline-block;
+			top:90px;
+			z-index:1000;
+			font-size:40px;
+			position:absolute;
+			color:white;
+			opacity:.3;
+		}
+
+		.glyphicon-triangle-right {
+			display:inline-block;
+			top:90px;
+			z-index:1000;
+			font-size:40px;
+			position:absolute;
+			color:white;
+			opacity:.3;
+			right:0;
+		}
+
+		.glyphicon-triangle-highlight {
+			opacity:.65;
+		}
+
+		.slide-pager {
 			text-align:center;
-
+			margin-top:-20px;
+			z-index:1000;
+			position:absolute;
+			width:100%;
 
 			span {
-				font-size:50px;
+				font-size:30px;
 				color:#C0C0C0;
 				width:12px; 
 				height:12px;
@@ -502,10 +680,31 @@
 }
 
 
+.northern-submit-news {
+	display:none;
+	position:absolute;
+	margin-top:60px;
+	background-color:white;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+	min-width:325px;
+
+	.sub-navigation-head {
+		background-color:#C0C0C0;
+		color:#fff;
+	}
+
+	#DIV_NewsIdeaErrorMsg {
+		padding:10px 8px 10px 8px;
+	}
+
+	.sub-navigation-body {
+		padding:10px 8px 10px 8px;
+		border:1px solid #C0C0C0;
+	}
+}
 
 
-
-.NNClassifides {
+.NNClassifieds {
 	.sub-navigation-head {
 		background-color:#C0C0C0;
 		color:#fff;
@@ -514,13 +713,138 @@
 	.sub-navigation-body {
 		border:1px solid #C0C0C0;
 
+		.sub-navigation-body-wrapper {
+			padding:3px;
+
+			.notes-classifieds-title 		{ font-weight:bold; text-transform: uppercase; }
+			.notes-classifieds-description	{ padding-top:5px; }
+			.sub-navigation-photo-actions	{ }
+			.FileUploadJQ_DisplayAll 		{ padding:5px; padding-top:10px; }
+
+			.notes-classifieds-owner-wrapper{ padding-top:10px; }
+				.notes-classifieds-owner 		{ font-weight:bold; }
+				.notes-classifieds-owner-address{}
+				.notes-classifieds-owner-phone 	{}
+		}
+
+		.sub-navigation-classified-body {
+			padding-top:5px;
+			text-align:center;
+			margin:5px -3px 12px 0px;
+
+			.sub-navigation-body-button-wrapper {
+				margin:0px 65px 0px 65px;
+				text-align:center;
+
+				.sub-navigation-body-button {
+					border:1px solid #B0B0B0;
+					text-transform: uppercase;
+					padding:3px;
+					font-size:.95em;
+					color:#888888;
+					text-align:center; 
+				}
+
+				.sub-navigation-body-button:hover {
+					background-color:#F0F0F0;
+					cursor: pointer;
+					opacity: 0.7;
+				}
+			}
+
+			.sub-navigation-classified-body-fields {
+				padding:12px 3px 8px 3px;
+				border-left:1px solid #C0C0C0;
+				border-right:1px solid #C0C0C0;
+				border-bottom:1px solid #C0C0C0;
+				text-align:left;
+				display:none;
+			}
+
+
+
+			.notes-classifieds-optional-title {
+				margin:0px 0px 0px 0px;
+				padding:0px;
+				font-weight:bold;
+				font-size:1em;
+			}
+
+			.notes-classifieds-optional {
+				padding:5px;
+				background-color:#E8E8E8;
+				margin-bottom:10px;
+			}
+
+			.DisplayAddClassifiedBottomPadding { padding-bottom:5px; }
+		}
 	}
 }
 
 
 
+.notes-classifieds-ul {
+}
+.notes-classifieds-li {
+}
+
+.classifieds-heading {
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	display:inline-block;
+}
+.classifieds-add-new {
+	padding:10px 0px 10px 20px;
+	margin:0px 0px 0px 0px;
+	font-size:smaller;
+	display:inline-block;
+}
+
+.notes-classifieds-wrapper {
+}
+	.notes-classifieds {
+		border:1px solid grey;
+		padding:8px 8px 10px 8px;
+		margin:10px 0px 20px 0px;
+	}
+
+		.northern-content-text-content {
+			padding-right:20px;
+			padding-top:10px;
+		}
+
+		.notes-classifieds-actions {
+			padding:15px 10px 0px 0px;
+			font-size:smaller;
+			display:inline-block;
+		}
+
+		.FileUploadJQ_DisplayAll { display:inline-block; padding:5px; padding-top:10px; }
+
+		.northern-classified-images {
+			padding:10px 0px 10px 0px;
+		}
+
+
+
 
 // STUFF THAT NEEDS TO MOVE TO MAIN
+
+.ADD_AddAddress-wrapper {
+	input.ADD-AddAddress-2015-address { width:222px; }
+	input.ADD-AddAddress-2015-city { width:100px; }
+	input.ADD-AddAddress-2015-state { }
+	input.ADD-AddAddress-2015-zip { width:50px; }
+	input.ADD-AddAddress-2015-phone {}
+
+	.ADD-AddState-2015-wrapper {
+		input.ADD-AddState-2015-select {}
+	}
+}
+
+.ADD-AddState-2015-wrapper {
+	input.ADD-AddState-2015-select {}
+}
 
 .close-2015 {
 	padding:1px 5px 0px 6px;
@@ -568,7 +892,9 @@
 	font-size:inherit;
 }
 
-
+.image-pad-2015 button {
+	padding-bottom:50px;
+}
 
 
 
