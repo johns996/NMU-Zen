@@ -15,8 +15,8 @@
 .NNTabs {
 	.TabCommon {
 		border:0px;
-		margin:0px; 
-		width:24%; 
+		margin:0px;
+		width:24%;
 		height:50px;
 		float:left;
 		text-align: center;
@@ -70,12 +70,12 @@
 			padding:15px 0px 10px 0px;
 
 			.northern-content-divs-title-wrapper {
-				float:left; 
+				float:left;
 				h3 { padding:0px 0px 0px 18px; margin:0px; }
 			}
 
 			.northern-content-divs-cat-wrapper {
-				float:right; 
+				float:right;
 
 				.northern-content-divs-cat-submit-div {
 					display:inline-block;
@@ -174,7 +174,7 @@
 					padding:7px 5px 10px 5px;
 					margin:0px 0px 20px 6px;
 					background-color:white;
-					
+
 					.northern-detail-wrapper {
 						border:1px solid lightgray;
 						border-top:4px solid $nmu-green;
@@ -183,8 +183,8 @@
 						.northern-content-header-wrapper {
 							.northern-content-header-close {
 								font-size:.8em;
-								margin:.94em .6em 0px 0px; 
-								padding:.02em .45em 1.4em .45em; 
+								margin:.94em .6em 0px 0px;
+								padding:.02em .45em 1.4em .45em;
 								float:left;
 								border:.1em solid $nmu-green;
 								color:$nmu-green;
@@ -197,14 +197,14 @@
 							}
 
 							.northern-content-header-title {
-								text-transform:uppercase; 
+								text-transform:uppercase;
 								font-size:18px;
-								padding:7px 0px 5px 0px; 
+								padding:7px 0px 5px 0px;
 								float:left;
 							}
 
-							.northern-content-header-date { 
-								font-size:12px; 
+							.northern-content-header-date {
+								font-size:12px;
 								padding-top:14px;
 								white-space: nowrap;
 								float:right;
@@ -222,8 +222,8 @@
 							.northern-content-text-title {
 								padding-top:8px;
 								padding-bottom:4px;
-								color:$nmu-green; 
-								font-size:16px; 
+								color:$nmu-green;
+								font-size:16px;
 							}
 
 							.northern-wrapper-text-cat {
@@ -243,7 +243,7 @@
 							.northern-content-text-audio-wrapper {
 								padding-top:0px;
 								padding-bottom:20px;
-							
+
 								.northern-content-text-audio-file {
 									padding-bottom:5px;
 								}
@@ -313,7 +313,7 @@
 .region-sidebar-second {
 	min-width:300px;
 	margin:2px 0px 0px 2px;
-	
+
 	.sub-navigation {
 		width:100%;  //on small screens this section spans the entire page
 		@media all and #{$mq-bootstrap-sm-min} {
@@ -333,16 +333,16 @@
 			font-size:14px;
 		}
 
-		.sub-navigation-body { 
-			padding:5px; 
-			font-size:.9em; 
+		.sub-navigation-body {
+			padding:5px;
+			font-size:.9em;
 		}
 
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-o-box-sizing: border-box;
 		-ms-box-sizing: border-box;
-		box-sizing: border-box;        
+		box-sizing: border-box;
 
 		padding-bottom:10px;
 	}
@@ -355,9 +355,9 @@
 	border:0px;
 	padding:5px;
 	text-transform: uppercase;
-	text-align:center; 
-	height:50px; 
-	padding-top:14px; 
+	text-align:center;
+	height:50px;
+	padding-top:14px;
 	font-size:1.15em;
 	a:hover, a:link, a:active, a:visited { color:$nmu-green; text-decoration:none; }
 }
@@ -403,7 +403,7 @@
 	}
 
 	.sub-navigation-body-content {
-		padding:0px 0px 0px 0px;		
+		padding:0px 0px 0px 0px;
 	}
 }
 
@@ -413,8 +413,8 @@
 	@media all and #{$mq-bootstrap-only-sm} { float:left; }
 	@media all and #{$mq-bootstrap-only-md} { float:left; }
 
-	margin-top:5px; 
-	margin-right:8px; 
+	margin-top:5px;
+	margin-right:8px;
 }
 
 
@@ -577,7 +577,7 @@
 					padding:3px;
 					font-size:.95em;
 					color:$nmu-green;
-					text-align:center; 
+					text-align:center;
 				}
 
 				.sub-navigation-body-button:hover {
@@ -607,7 +607,7 @@
 		background-color:#C0C0C0;
 		color:#fff;
 	}
-	
+
 	.sub-navigation-body {
 		border:1px solid #C0C0C0;
 		padding:0px 0px 0px 0px;
@@ -662,7 +662,7 @@
 			span {
 				font-size:30px;
 				color:#C0C0C0;
-				width:12px; 
+				width:12px;
 				height:12px;
 				display:inline-block;
 				margin:-25px 5px 0px 5px;
@@ -742,7 +742,7 @@
 					padding:3px;
 					font-size:.95em;
 					color:#888888;
-					text-align:center; 
+					text-align:center;
 				}
 
 				.sub-navigation-body-button:hover {
@@ -895,7 +895,3 @@
 .image-pad-2015 button {
 	padding-bottom:50px;
 }
-
-
-
-
