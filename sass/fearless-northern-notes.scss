@@ -59,6 +59,19 @@
 .header-campus-connect-logo { text-align:center; padding-top:12px;}
 
 
+/*
+$mq-bootstrap-xs-min: '(min-width: 480px)';
+	$mq-bootstrap-xs-max: '(max-width: 767px)';
+$mq-bootstrap-sm-min: '(min-width: 768px)';
+	$mq-bootstrap-sm-max: '(max-width: 991px)';
+$mq-bootstrap-md-min: '(min-width: 992px)';
+	$mq-bootstrap-md-max: '(max-width: 1199px)';
+$mq-bootstrap-lg-min: '(min-width: 1200px)';
+
+$mq-bootstrap-only-sm: '(min-width: 768px) and (max-width: 991px)';  //target only smaller screens, does not scale upwards
+$mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target only normal screens, does not scale upwards
+*/
+
 .NNContent {
 	background-color:#F0F0F0;
 	padding:10px 45px 10px 10px;
@@ -445,35 +458,6 @@
 }
 
 
-.NNPresidentialMsg {
-	.sub-navigation-head {
-		background-color:#D80000;
-		color:#fd0;
-	}
-	.sub-navigation-body {
-		border:1px solid #D80000;
-
-		.notes-presidential-wrapper {
-
-			.notes-presidential-msg {
-
-				.notes-presidential-msg-title {
-					font-weight:bold;
-					padding-bottom:10px;
-				}
-
-				.notes-presidential-msg-body {
-
-					.notes-presidential-msg-image {
-						float:left;
-						padding:4px 5px 5px 0px;
-					}
-				}
-			}
-		}
-	}
-}
-
 .NNWorksMsg {
 	.sub-navigation-head {
 		background-color:$nmu-green;
@@ -482,23 +466,24 @@
 	.sub-navigation-body {
 		border:1px solid $nmu-green;
 
-		.notes-works-wrapper {
+		.notes-works-msg-title {
+			font-weight:bold;
+			padding-bottom:10px;
+			text-transform: uppercase; 
+			a:link, a:active, a:visited { color:black; text-decoration:none; }
+			a:hover { text-decoration:underline; }
+		}
 
-			.notes-works-msg {
+		.notes-works-msg-more {
+			font-size:.9em;
+			a:link, a:active, a:visited { color:$nmu-green; text-decoration:none; }
+			a:hover { text-decoration:underline; }
+			padding:12px 0px 5px 0px;
+			text-align:center;
+			text-transform: uppercase; 
+		}
 
-				.notes-works-msg-title {
-					font-weight:bold;
-					padding-bottom:10px;
-				}
-
-				.notes-works-msg-body {
-
-					.notes-works-msg-image {
-						float:left;
-						padding:4px 5px 5px 0px;
-					}
-				}
-			}
+		.notes-works-msg-body {
 		}
 	}
 }
