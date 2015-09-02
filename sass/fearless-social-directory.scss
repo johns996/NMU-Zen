@@ -6,14 +6,22 @@
 
 .social-directory{
 	.row{
-		height: 40px;
-		.social-directory-cell{
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-		}
+		padding-top: 5px;
+		padding-bottom: 5px;
 		&:nth-of-type(even){
 			background-color: $nmu-gray-lighter;
+		}
+		@media all and #{$mq-bootstrap-md-min}{
+			.social-directory-cell{
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+			}
+			height: 40px;
+		}
+		@media all and #{$mq-bootstrap-xs-max}{
 		}
 	}
 	.social-directory-account{
