@@ -20,8 +20,12 @@
 		height:50px;
 		float:left;
 		text-align: center;
-		font-size: 1.5em;
-		padding-top:8px;
+		@media all and #{$mq-bootstrap-md-min}{
+			font-size: 1.5em;
+			padding-top:8px;
+		}
+		font-size: 1.2em;
+		padding-top:12px;		
 		border-right:2px solid white;
 		border-top:2px solid white;
 	}
@@ -562,14 +566,20 @@
 		.sub-navigation-body-question-wrapper {
 		}
 
+		//this should be combined into a generic button class
+		//combine with .sub-navigation-classified-body
 		.sub-navigation-question-body {
 			padding-top:5px;
 			text-align:center;
 			margin:5px -3px 12px 0px;
 
 			.sub-navigation-body-button-wrapper {
-				margin:0px 65px 0px 65px;
+				margin:0px 25px 0px 25px;
 				text-align:center;
+				//adjust the padding on the buttons so the margin accommodates the smaller screens
+				@media all and #{$mq-bootstrap-lg-min}{
+					margin:0px 65px 0px 65px;
+				}
 
 				.sub-navigation-body-button {
 					border:1px solid $nmu-green;
@@ -733,9 +743,12 @@
 			margin:5px -3px 12px 0px;
 
 			.sub-navigation-body-button-wrapper {
-				margin:0px 65px 0px 65px;
+				margin:0px 25px 0px 25px;
 				text-align:center;
-
+				@media all and #{$mq-bootstrap-lg-min}{
+					margin:0px 65px 0px 65px;
+				}
+				
 				.sub-navigation-body-button {
 					border:1px solid #B0B0B0;
 					text-transform: uppercase;
