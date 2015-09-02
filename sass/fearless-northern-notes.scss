@@ -16,14 +16,20 @@
 	.TabCommon {
 		border:0px;
 		margin:0px;
-		width:24%;
-		height:50px;
+		@media not all and #{$mq-bootstrap-xs-max} {
+			width:24%;
+			height:50px;
+		}
+
 		float:left;
 		text-align: center;
-		@media all and #{$mq-bootstrap-md-min}{
-			font-size: 1.5em;
-			padding-top:8px;
+		@media all and #{$mq-bootstrap-xs-max} {
+			font-size: .9em;
+			padding:5px 5px 5px 5px; 
+			font-weight:bold;
+			margin-top:5px;
 		}
+
 		font-size: 1.2em;
 		padding-top:12px;		
 		border-right:2px solid white;
@@ -43,17 +49,23 @@
 		cursor: pointer;
 	}
 
-	#Tab1 {
+/*
+	#AddNewsContent {
+		@media all and #{$mq-bootstrap-xs-max} { }
 	}
 
-	#Tab2 {
+	#AddAnnouncementContent {
+		@media all and #{$mq-bootstrap-xs-max} { padding:0px 5px 0px 5px; }
 	}
 
-	#Tab3 {
+	#AddCalContent {
+		@media all and #{$mq-bootstrap-xs-max} { padding:0px 5px 0px 5px; }
 	}
 
-	#Tab4 {
+	#AddClassifiedsContent {
+		@media all and #{$mq-bootstrap-xs-max} { padding:0px 5px 0px 5px; }
 	}
+*/
 }
 
 .region-branding { display:none; }
@@ -79,6 +91,10 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 .NNContent {
 	background-color:#F0F0F0;
 	padding:10px 45px 10px 10px;
+	@media all and #{$mq-bootstrap-xs-max} {
+		padding:10px 10px 10px 5px;
+	}
+
 	margin:0px 6px 0px 0px;
 	a:hover, a:link, a:active, a:visited { color:$nmu-green; }
 
@@ -88,11 +104,21 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 
 			.northern-content-divs-title-wrapper {
 				float:left;
+
 				h3 { padding:0px 0px 0px 18px; margin:0px; }
+				@media all and #{$mq-bootstrap-xs-max} {
+					h3 { padding:0px 0px 0px 5px; margin:0px; }
+				}
 			}
 
 			.northern-content-divs-cat-wrapper {
 				float:right;
+
+				@media all and #{$mq-bootstrap-xs-max} {
+					width:100%;
+					text-align:right;
+					padding-top:4px;
+				}
 
 				.northern-content-divs-cat-submit-div {
 					display:inline-block;
@@ -106,9 +132,13 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 					font-size:smaller;
 				}
 
-				.northern-content-divs-cat-bar-div {
+				.northern-content-divs-cat-bar-div1, .northern-content-divs-cat-bar-div2 {
 					display:inline-block;
 					padding-right:8px;
+				}
+
+				@media all and #{$mq-bootstrap-xs-max} {
+					.northern-content-divs-cat-bar-div2 { display:none; }
 				}
 
 				.northern-content-divs-cat-select-div {
@@ -116,8 +146,12 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 					display:inline-block;
 					padding-top:5px;
 
+					@media all and #{$mq-bootstrap-xs-max} { display:inherit; width:100% }
+
 					.northern-content-divs-cat-select {
 						width:250px;
+
+						@media all and #{$mq-bootstrap-xs-max} { width:200px; }
 					}
 				}
 
@@ -150,6 +184,11 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 		.northern-content-summaries {
 			margin:0px 0px 5px 20px;
 
+
+			@media all and #{$mq-bootstrap-xs-max} {
+				margin:0px 0px 5px 5px;
+			}
+
 			.northern-wrapper {
 				padding-bottom:15px;
 
@@ -181,6 +220,10 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 					a:hover, a:link, a:active, a:visited { color:black; }
 					padding:0px 0px 2px 10px;
 					font-size:12px;
+
+					@media all and #{$mq-bootstrap-xs-max} {
+						font-size:10px;
+					}
 				}
 
 				.northern-header {
@@ -234,6 +277,7 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 							.northern-content-text-images {
 								padding-top:20px;
 								padding-bottom:15px;
+								overflow: auto; 
 							}
 
 							.northern-content-text-title {
@@ -315,7 +359,6 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 		color: #fd0;
 	}
 }
-
 
 .container {
 	.col-sm-3, .col-sm-9, .block {
@@ -559,12 +602,7 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 			margin:5px -3px 12px 0px;
 
 			.sub-navigation-body-button-wrapper {
-				margin:0px 25px 0px 25px;
 				text-align:center;
-				//adjust the padding on the buttons so the margin accommodates the smaller screens
-				@media all and #{$mq-bootstrap-lg-min}{
-					margin:0px 65px 0px 65px;
-				}
 
 				.sub-navigation-body-button {
 					border:1px solid $nmu-green;
@@ -595,6 +633,16 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 }
 
 
+// This allows jquery to animate class changes
+@media all and #{$mq-bootstrap-sm-min}{
+	.sub-navigation-body-button-wrapper-std-width { margin:0px 25px 0px 25px; font-weight:normal; border:0px solid $nmu-green; }
+}
+
+@media all and #{$mq-bootstrap-lg-min}{
+	.sub-navigation-body-button-wrapper-std-width { margin:0px 65px 0px 65px; font-weight:normal; border:0px solid $nmu-green; }
+}
+
+.sub-navigation-body-button-wrapper-full-width { margin:0px 0px 0px 0px; font-weight:bold; border:0px solid white; }
 
 
 .NNPhoto {
@@ -728,11 +776,7 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 			margin:5px -3px 12px 0px;
 
 			.sub-navigation-body-button-wrapper {
-				margin:0px 25px 0px 25px;
 				text-align:center;
-				@media all and #{$mq-bootstrap-lg-min}{
-					margin:0px 65px 0px 65px;
-				}
 				
 				.sub-navigation-body-button {
 					border:1px solid #B0B0B0;
