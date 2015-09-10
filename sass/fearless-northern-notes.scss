@@ -668,6 +668,7 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 		.CORE_ModalAddCarousel img {
 			padding-right:0px;
 			z-index:-5;
+			max-width:100%;  //don't let the image spill outside of the container
 		}
 
 		.glyphicon-triangle-left, .glyphicon-eetriangle-right {
