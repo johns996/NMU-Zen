@@ -674,7 +674,7 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 		.glyphicon-triangle-left, .glyphicon-eetriangle-right {
 			display:inline-block;
 			top:90px;
-			z-index:1000;
+			z-index:500;
 			font-size:40px;
 			position:absolute;
 			color:white;
@@ -684,7 +684,7 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 		.glyphicon-triangle-right {
 			display:inline-block;
 			top:90px;
-			z-index:1000;
+			z-index:500;
 			font-size:40px;
 			position:absolute;
 			color:white;
@@ -699,7 +699,7 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 		.slide-pager {
 			text-align:center;
 			margin-top:-20px;
-			z-index:1000;
+			z-index:500;
 			position:absolute;
 			width:100%;
 
