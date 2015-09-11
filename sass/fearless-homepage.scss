@@ -259,14 +259,15 @@ h2, h3, h4 {
 		color: inherit;
 		text-decoration: underline;
 	}
-	& > div > ul {
-		list-style-type: none;
-		padding-left: 0;
+	ul {
+		margin-top:20px;  //margins for lists added to this box that are not in the degree format
+		margin-bottom:20px;
 		& > li {
-			padding: 5px 0 5px 10px;
+			padding: 2px 0 2px 0;
 		}
 		ul {
-			list-style-type: disc;
+			margin-top:0;
+			margin-bottom:0;
 			li {
 				padding: 2px 0 2px 0;
 			}
@@ -279,6 +280,21 @@ h2, h3, h4 {
 	.doctor-of-nursing-practice, .education-specialist, .master-of-fine-arts, .master-of-arts, .master-of-arts-in-education, .master-of-individualized-studies, .master-of-public-administration, .master-of-business-administration, .master-of-science, .graduate-certificate, .certification, .endorsement, .master-of-science-in-nursing, .post-masters-certificate {
 		border-top: solid 2px $nmu-gray-light;
 		padding-left: 25px;
+		ul {
+			margin-top:0;  //reset margin to bootstrap defaults
+			margin-bottom:10px;  //reset to bootstrap
+			list-style-type: none;
+			padding-left: 0;
+			& > li {
+				padding: 5px 0 5px 10px;
+			}
+			ul {
+				list-style-type: disc;
+				li {
+					padding: 2px 0 2px 0;
+				}
+			}
+		}
 	}
 	@media all and #{$mq-bootstrap-md-min} {
 		//these border styles assume that col-md-7 will always be on the left
