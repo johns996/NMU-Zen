@@ -75,19 +75,6 @@
 .header-campus-connect-logo { text-align:center; padding-top:12px;}
 
 
-/*
-$mq-bootstrap-xs-min: '(min-width: 480px)';
-	$mq-bootstrap-xs-max: '(max-width: 767px)';
-$mq-bootstrap-sm-min: '(min-width: 768px)';
-	$mq-bootstrap-sm-max: '(max-width: 991px)';
-$mq-bootstrap-md-min: '(min-width: 992px)';
-	$mq-bootstrap-md-max: '(max-width: 1199px)';
-$mq-bootstrap-lg-min: '(min-width: 1200px)';
-
-$mq-bootstrap-only-sm: '(min-width: 768px) and (max-width: 991px)';  //target only smaller screens, does not scale upwards
-$mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target only normal screens, does not scale upwards
-*/
-
 .NNContent {
 	background-color:#F0F0F0;
 	padding:10px 45px 10px 10px;
@@ -761,6 +748,9 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 
 			.notes-classifieds-title 		{ font-weight:bold; text-transform: uppercase; }
 			.notes-classifieds-description	{ padding-top:5px; }
+			.notes-classifieds-details		{ }
+			.notes-classifieds-details 		a:hover, a:link, a:active, a:visited { color:black; }
+			#DIV_ClassifiedSideNavDetails	{ display:none; padding-top:10px; }
 			.sub-navigation-photo-actions	{ }
 			.FileUploadJQ_DisplayAll 		{ padding:5px; padding-top:10px; }
 
@@ -802,8 +792,6 @@ $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target o
 				text-align:left;
 				display:none;
 			}
-
-
 
 			.notes-classifieds-optional-title {
 				margin:0px 0px 0px 0px;
