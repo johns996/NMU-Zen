@@ -50,7 +50,7 @@
 	 $theContent = render($item);
 	 //turn the field into htmp with drupal_html_to_text
 	 //use strip_tags to remove everything but a tags becasue the drupal function cannot do this (apparently)
-	 $theRevisedContent = strip_tags(drupal_html_to_text($theContent), '<a><br>');
+	 $theRevisedContent = strip_tags(drupal_html_to_text($theContent), '<a><br><h4><p><ul><li>');
 	 echo '<p>'.$theRevisedContent.'</p>';
 	}
 ?>

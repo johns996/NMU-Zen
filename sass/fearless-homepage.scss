@@ -354,6 +354,16 @@ h2, h3, h4 {
 				color: $nmu-gold;
 				background-color: inherit;
 			}
+			h4 {
+				margin-top:20px;
+			}
+		}
+	}
+	ul{
+		margin:0;
+		padding:0;
+		li {
+			list-style:none;
 		}
 	}
 	a {
