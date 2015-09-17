@@ -43,14 +43,7 @@
  *
  * @ingroup themeable
  */
-
- $buttons = (count ($items) > 1) ? "<div class='button'>Cycle Through News</div>
-			<div class='cycle-nav'>
-				<div class='cycle-prev'>&#10142;</div>
-				<div class='cycle-next'>&#10142;</div>
-			</div>":"<div></div>";
 ?>
-
 
 <section class="slideshow-section row">
 	<div class="cycle-caption col-md-6"></div>
@@ -61,30 +54,33 @@
 		 data-cycle-timeout="0"
 		 data-cycle-caption=".cycle-caption"
 		 data-cycle-caption-template="{{cycleCaption}}"
-		 data-cycle-overlay-template="<?php echo($buttons); ?>"
+		 data-cycle-overlay-template="{{cycleOverlay}}"
 		 data-cycle-log="false">
 		<div class="cycle-overlay"></div>
 	<?php
+
 		foreach ($items as $delta => $item) {
 			$strURL = file_create_url($item['#item']['uri']);
 			$itemAlt = htmlspecialchars($item['#item']['alt']);
 			$itemTitle = htmlspecialchars($item['#item']['title']);
-			echo '<img src="'.$strURL.'"',
-						'data-cycle-caption="<div class=\'button\'>'.$itemTitle.'</div>',
-						'<p>'.$itemAlt.'</p>"',
+
+			$numberOfItems = count($items);
+			if($delta+1 >= $numberOfItems)
+				$itemTitleNext = htmlspecialchars($items[0]['#item']['title']);
+			else
+			 $itemTitleNext = htmlspecialchars($items[$delta+1]['#item']['title']);
+
+			if($numberOfItems > 1)
+				$itemOverlay = '<div class=\'cycle-overlay\'><div class=\'button\' id=\'custom_pager\'>Cycle To: '.$itemTitleNext.'</div><div class=\'cycle-nav\'><div class=\'cycle-prev\'>&#10142;</div><div class=\'cycle-next\'>&#10142;</div></div></div>';
+			else
+				$itemOverlay = '';
+
+			echo '<img src="'.$strURL.'" ',
+						'data-cycle-overlay="'.$itemOverlay.'" ',
+						'data-cycle-caption="<div class=\'button\'>'.$itemTitle.'</div> ',
+						'<p>'.$itemAlt.'</p>" ',
 						'alt=\''.$itemAlt.'\'/>';
 		}
 	?>
-</section>
 
-<?php
-/* //sample of what the cycle entires will look like if done by hand
-		<img 	src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/internal-homepage/slideshow-not-green.jpg"
-					data-cycle-caption="<div class='button'>What's new in the department?</div>
-					<p>NMU music graduates have a 100 percent placement rate due to the national shortage of certified music teachers. Our graduates not only work as educators, but also as band directors, professional musicians, voice-over actors, jingle writers, composers, music marketers and in many other careers.</p>"
-					alt='The NMU "Pride of the North" Marching Band'/>
-		<img 	src="/responsivenmu/sites/DrupalResponsiveNMU/files/UserFiles/internal-homepage/slideshow-not-green.jpg"
-					data-cycle-caption="<p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto Pidgeot Rattata Raticate Spearow Fearow Ekans Arbok Pikachu Raichu Sandshrew Sandslash Nidoran Nidorina Nidoqueen Nidoran Nidorino Nidoking Clefairy Clefable Vulpix Ninetales.</p>"
-					alt='The NMU "Pride of the North" Marching Band'/>
-*/
-?>
+</section>
