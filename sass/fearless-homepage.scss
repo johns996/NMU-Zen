@@ -148,7 +148,9 @@ h2, h3, h4 {
 .learning-career {
 	background-color: $nmu-gray-evenlighter;  //set this as the bg color because most likely the right column will be the longer one since it is narrower
 	position: relative;
-	@include display-flex;
+	@media all and #{$mq-bootstrap-md-min} {
+		@include display-flex;
+	}
 	.learning,
 	.career {
 		min-height:250px;
