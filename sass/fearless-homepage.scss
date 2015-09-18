@@ -153,6 +153,12 @@ h2, h3, h4 {
 	}
 	.learning,
 	.career {
+		@media all and #{$mq-bootstrap-xs-max} {
+			img{
+				float:none !important;
+				display:block;
+			}
+		}
 		min-height:250px;
 		padding: 20px 50px 30px 50px;
 		h3 {
