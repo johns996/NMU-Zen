@@ -491,6 +491,17 @@ body.two-sidebars .sidebar-second {
 	//}
 }
 
+a:not([href]) {
+	cursor: text;
+	text-decoration: none;
+	color:black;
+	&:hover{
+		text-decoration: none;
+		color:black;
+		cursor:text;
+	}
+}
+
 .allcaps {
 	text-transform:uppercase;
 	font-family: $base-font-family;  //if we're converting to allcaps, it is probably a type of heading and should be in avenir
@@ -638,18 +649,20 @@ ul.NewsArchive {
 
 }
 
-.NewsArchive-L1-Content {
-	.NewsArchive-L1-MediaWrapper {}
-	.NewsArchive-L1-ImageWrapper {
+.NewsArchive-L1-Content {}
+
+.NewsArchive-L1-MediaWrapper {}
+
+.NewsArchive-L1-ImageWrapper {
 		float:right;
 		padding:20px 0px 20px 20px;
 		max-width:280px;
-	}
 }
-.NewsArchive-L1-PreparedBy {
-	.NewsArchive-L1-PreparedByTitle {
-		font-weight:bold;
-	}
+
+.NewsArchive-L1-PreparedBy {}
+
+.NewsArchive-L1-PreparedByTitle {
+	font-weight:bold;
 }
 
 .NewsArchive-Return {
