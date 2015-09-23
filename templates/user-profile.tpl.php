@@ -133,7 +133,8 @@
 					echo '<div>',
 					'<a href="https://docs.google.com/document/d/1eK3EtEycdW7Gsmaeift6R2JYxIFQFyRZCfDJRDdPJps/edit" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/guide.png" width="100" height="120" title="CMS Guide" style="padding-right:5px;" /></a>',
 					'<a href="#webhelp_change_button" id="webhelp_change_button"><img src="/sites/all/themes/nmu/images/user_icons/changes.png" width="100" height="120" title="Request changes or enhancements to your website" style="padding-right:5px;" /></a>';
-					echo $user_button_ga;
+					//turned off for now
+					//echo $user_button_ga;
 					echo '<a href="/webadmin" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/webadmin.png" width="100" height="120" title="Web Admin" style="padding-right:5px;" /></a>',
 					'<a href="http://images.nmu.edu" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/imagedb.png" width="100" height="120" title="Image Database" style="padding-right:5px;" /></a>',
 					'<a href="http://myweb.nmu.edu/forms" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/formservices.png" width="100" height="120" title="Form Services" style="padding-right:5px;" /></a>',
@@ -197,7 +198,7 @@
 					echo '</div>';
 				echo '</div>';
 				echo '</ul><br />';
-				
+
 				echo '<div id="request_user_removal" class="bs-callout bs-callout-default">';
 				echo '	<div id="div_user_removal_confirm" class="alert alert-warning">';
 				echo('		Please confirm your request to remove <span id="user_to_remove"></span> from <b>'.$SiteName.'</b><br />');
@@ -269,7 +270,7 @@
   			$( "#user_to_remove" ).html( "<b>"+$splitItems[3]+"</b>" );
   			$( "#input_user_to_remove" ).val( $splitItems[3] );
 		});
-		
+
 		$("#user_removal_confirm").click(function() {
 			$.post( "/cgi-bin/WebHelp/ajax_user_removal_request.php", { input_user_to_remove: $( "#input_user_to_remove" ).val(), input_user_removal_submitter: "<?php echo($user->name); ?>", input_site_to_remove_from: "<?php echo($SiteName); ?>", uid: "<?php echo($user->uid); ?>", sid: "<?php echo($user->sid); ?>" }, function ( data ) {
 					if(data.result == "0"){
@@ -283,7 +284,7 @@
 						$( "#div_user_removal_results" ).removeClass( "hidden" );
 					}
 					$( "#div_user_removal_results" ).html( "<p>"+data.message+"</p>" );
- 		 		}, "json");	
+ 		 		}, "json");
 		});
 	});
 </script>
