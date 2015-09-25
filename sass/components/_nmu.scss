@@ -612,6 +612,17 @@ body{
 	}
 }
 
+/**
+ * International Programs
+ */
+#content #google_translate_element {
+	@media all and #{$mq-bootstrap-md-min} {
+		position: absolute;
+		top:-75px;
+		right:0;
+	}
+}
+
 
 /**
  * Marketing and Communications
