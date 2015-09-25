@@ -559,6 +559,17 @@ body{
 		background-color: #006848;
 		border-color: #034030;
 	}
+	//used on the online orientation site
+	.btn-nmu-wide {
+		padding-right:30px;
+		padding-left:30px;
+		margin-right:10px;
+		margin-left:10px;
+	}
+	.btn-nmu-pre {
+		white-space:pre;  //make sure the two line buttons show up correctly when they are form elements and not just links
+		// such as: <input type="button" value="line &#10; break" />
+	}
 
 	.btn-nmu:hover,
 	.btn-nmu:focus,

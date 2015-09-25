@@ -21,12 +21,28 @@
 		&:focus {
 			background-color:rgba(202, 200, 200, 0.2);
 		}
+		@media all and #{$mq-bootstrap-xs-max}{
+			font-size: 2em;
+		}
 	}
 }
 
-#fearless-video{
-	background-color:black;
+.video-row{
+	#fearless-video{
+		background-color:black;
+		@media all and #{$mq-bootstrap-xs-max}{
+			height: 130px;
+		}
+	}
+	.video-overlay{
+		top: 35px;
+	}
+	@media all and #{$mq-bootstrap-xs-max}{
+		max-height: 90px;
+	}
 }
+
+
 
 #welcome{
 	background-color: $nmu-green-darker;
@@ -48,7 +64,7 @@
 		padding: 30px 60px 0px 60px;
 	}
 	@media all and #{$mq-bootstrap-xs-max}{
-		margin-top: 40px;
+		margin-top: 10px;
 	}
 }
 
@@ -114,9 +130,6 @@
 			font-family: $avenir-black;
 			font-size: 1.1em;
 			padding-bottom: .2em;
-			&:nth-child(odd){
-				background-color: $nmu-gray;
-			}
 		}
 	}
 }
