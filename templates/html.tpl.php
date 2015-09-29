@@ -55,6 +55,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php endif; ?>
 <meta http-equiv="cleartype" content="on">
+<link rel="search" type="application/opensearchdescription+xml" title="Northern Michigan University" href="/opensearch.xml" />
 
 <?php print $styles; ?>
 
