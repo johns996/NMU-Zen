@@ -217,8 +217,9 @@ h2, h3, h4 {
 	}
 	.cycle-overlay {
 		height: 100%;
+
 		//background-color: rgba(0, 104, 72, .5);
-		//the background color technique can leave part of the image without an overlay if the text is too long.  fixed by adding an overlay right to the image.
+		//the background color technique can leave part of the image without an overlay if the text is too long.  fixed by adding an overlay right to the image and the color to the main containter.
 		background-color:transparent;
 		.button {
 			font-size: 1.2em;
@@ -251,8 +252,14 @@ h2, h3, h4 {
 			}
 		}
 	}
+	.cycle-slideshow{
+		//this is a possible solution to the first-slide-too-small problem but needs more work before it can be implementd
+		//height:450px;
+	}
 	img {
-		@include imp_opacity(0.5, isImportant) // with !important
+		@include imp_opacity(0.5, isImportant); // with !important
+		//translate could be used here to center the image but consecutive slides will not display correctly
+		//this translate would also need to be added to the cycle-overlay pager to make sure it does not sit on the middle of the image
 	}
 }
 
