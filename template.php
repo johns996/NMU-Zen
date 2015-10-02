@@ -102,7 +102,7 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$styles = drupal_get_css($css);
 	}
 
-	//not yet turned on
+	//just a sample of how to add js
 	//drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/homepage-v2.js');
 	//$js = drupal_add_js();
 	//$scripts = drupal_get_js($js);
