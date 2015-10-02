@@ -68,6 +68,18 @@ function zen_nmu_preprocess_html(&$variables, $hook) {
      $variables['meta_description'] = $node->field_meta_description['und'][0]['value'];
   }
 
+  //set site-specific stylesheets
+	if(isset($GLOBALS['conf']['syslog_identity']))
+	{
+		// bulletin css
+		if(strpos($GLOBALS['conf']['syslog_identity'], 'Bulletin') !== false)  //match any site with Bulletin in its identity
+		{
+			drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-bulletin.css'); //add a bulletin css to the start of the styles array
+			$css = drupal_add_css();
+			$styles = drupal_get_css($css);
+		}
+	}
+
 
 }
 
@@ -101,12 +113,6 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
-
-	//just a sample of how to add js
-	//drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/homepage-v2.js');
-	//$js = drupal_add_js();
-	//$scripts = drupal_get_js($js);
-
 	//add a css file to the fearless_admissions_home content type
 	elseif($variables['type'] == 'fearless_admissions_home'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/nmu-admissions.css');
@@ -131,6 +137,11 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
+
+	//just a sample of how to add js
+	//drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/homepage-v2.js');
+	//$js = drupal_add_js();
+	//$scripts = drupal_get_js($js);
 }
 
 function zen_nmu_preprocess_field(&$variables, $hook) {

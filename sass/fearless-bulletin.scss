@@ -1,76 +1,5 @@
-/* This SCSS file contains styles that will only be used on the NMU bulletin pages
-	none of the bulletins are currently responsive so these styles are only designed for the wide view
-	this file is included in the CSS array using the template.php file and is not included in any of the standard nmu styles
-	when the bulletin is made responsive, these styles can be moved into the classes file to follow the standard CSS-class process used by other sites
-*/
+//these styles were carried over from the old bulletin design (omega-base).  they will only show up on pages in sites that contain bulletin in their name
 
-/* COURSE BULLETIN */
-
-
-
-.not-front #content img.EmployeeImage {
-	margin-right:20px;
-		@media all and #{$mq-bootstrap-xs-max} {
-			max-width:100px;
-		}
-}
-
-.EmployeeBio {
-	padding-top:20px;
-	padding-bottom:20px;
-	display:inline-block;
-	width:100%;
-	#EmployeeBioWrapper {
-		display:inline-block;
-		@media all and #{$mq-bootstrap-xs-max} {
-			max-width:225px;
-		}
-		.Name {
-			padding:6px 0 12px 0;
-			font-size:1.4em;
-			font-weight:bold;
-		}
-		.Title1, .Title2, .Title3,
-		.EmploymentType, .Deptartment,
-		.Address, .Phone, .Fax, .Email,
-		.Homepage, .Since, .Biography {
-			padding-bottom:5px;
-		}
-		.BiographyTitle {
-			padding-top:15px;
-			font-weight:bold;
-		}
-		.Degrees {
-			padding-top:5px;
-			padding-bottom:5px;
-			ul {
-				margin:0px;
-				padding: 0px;
-			}
-			ul li {
-					margin:0px;
-					padding-bottom:3px;
-					padding-top:0px;
-					margin-left:20px;
-			}
-		}
-		.OtherQualifications {
-			padding-bottom:5px;
-		}
-		.SpecialtiesTitle {
-			padding-top:15px;
-			font-weight:bold;
-		}
-		.Specialties {
-			padding-bottom:5px;
-		}
-	}
-}
-
-
-
-
-/*
 .DegreeTypeTitle {font-size:12pt;font-weight:bold;}
 .SectionTitle {font-size:12pt;font-weight:bold;padding-bottom:0px;margin-bottom:0px;}
 .SectionSubtitle {font-size:11pt;font-style:italic;padding-bottom:4px;}
@@ -148,4 +77,3 @@ ul.BulltinBullet {margin: 0 0 0 3px; padding: 0px;list-style-type:disc;}
 ul.BulltinBullet li {margin: 0 0 0 10px;padding: 0px;}
 
 .BulletinPageTitle {clear:both;padding-bottom:10px;}
-*/

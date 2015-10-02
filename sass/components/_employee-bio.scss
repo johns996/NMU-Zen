@@ -1,0 +1,60 @@
+//this is the employee bio styles used in the bulletin and many faculty-staff pages that pull their listing from the bulletin database
+
+.not-front #content img.EmployeeImage {
+	margin-right:20px;
+		@media all and #{$mq-bootstrap-xs-max} {
+			max-width:100px;
+		}
+}
+
+.EmployeeBio {
+	padding-top:20px;
+	padding-bottom:20px;
+	display:inline-block;
+	width:100%;
+	#EmployeeBioWrapper {
+		display:inline-block;
+		@media all and #{$mq-bootstrap-xs-max} {
+			max-width:225px;
+		}
+		.Name {
+			padding:6px 0 12px 0;
+			font-size:1.4em;
+			font-weight:bold;
+		}
+		.Title1, .Title2, .Title3,
+		.EmploymentType, .Deptartment,
+		.Address, .Phone, .Fax, .Email,
+		.Homepage, .Since, .Biography {
+			padding-bottom:5px;
+		}
+		.BiographyTitle {
+			padding-top:15px;
+			font-weight:bold;
+		}
+		.Degrees {
+			padding-top:5px;
+			padding-bottom:5px;
+			ul {
+				margin:0px;
+				padding: 0px;
+			}
+			ul li {
+					margin:0px;
+					padding-bottom:3px;
+					padding-top:0px;
+					margin-left:20px;
+			}
+		}
+		.OtherQualifications {
+			padding-bottom:5px;
+		}
+		.SpecialtiesTitle {
+			padding-top:15px;
+			font-weight:bold;
+		}
+		.Specialties {
+			padding-bottom:5px;
+		}
+	}
+}
