@@ -85,6 +85,14 @@ h2, h3, h4 {
 	p {
 		color: white;
 	}
+	a {
+	text-decoration:none;
+	color: $nmu-gold;
+		&:hover {
+			text-decoration:underline;
+			color: $nmu-gold;
+		}
+	}
 }
 
 .info-section {
