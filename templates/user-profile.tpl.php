@@ -85,6 +85,7 @@
 		{
 			//boss mode engaged
 			//use this for testing new features without letting the world see them
+			echo '<a href="javascript:history.go(-2)"> [Go Back]</A>';
 		}
 
 		if (!node_access('update', 'node/1')) //check to see if the user has access to manage this site
