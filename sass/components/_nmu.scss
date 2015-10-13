@@ -502,6 +502,23 @@ a:not([href]) {
 	}
 }
 
+.list-padded > li { //helper class for the bootstrap list-unstyled
+	padding-bottom:5px;
+	padding-left:10px;
+}
+
+
+//helper classes for rows that do not need a gutter.  just add this class to the row div
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .allcaps {
 	text-transform:uppercase;
 	font-family: $base-font-family;  //if we're converting to allcaps, it is probably a type of heading and should be in avenir
