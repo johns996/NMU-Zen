@@ -138,7 +138,6 @@
 					//echo $user_button_ga;
 					echo '<a href="/webadmin" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/webadmin.png" width="100" height="120" title="Web Admin" style="padding-right:5px;" /></a>',
 					'<a href="http://images.nmu.edu" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/imagedb.png" width="100" height="120" title="Image Database" style="padding-right:5px;" /></a>',
-					'<a href="http://myweb.nmu.edu/forms" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/formservices.png" width="100" height="120" title="Form Services" style="padding-right:5px;" /></a>',
 					'<br /><br /></div>';
 
 			echo("<div id='webhelp' class='bs-callout bs-callout-default'>".PHP_EOL);
