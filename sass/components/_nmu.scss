@@ -491,6 +491,17 @@ body.two-sidebars .sidebar-second {
 	//}
 }
 
+//this pseudo selector matches when the hash in a URL (..../index.html#one) matches the id of an element (<a name="one" id="one">)
+:target {
+	&:before { //this section is used to add padding to anchor links so the stick nav does not sit on top of it
+		display: block;
+		content: " ";
+		margin-top: -110px;
+		height: 110px;
+		visibility: hidden;
+  }
+}
+
 a:not([href]) {
 	cursor: text;
 	text-decoration: none;
