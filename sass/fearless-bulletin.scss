@@ -38,6 +38,7 @@
 	.Dept .Text {clear:both;}
 		.Dept .Text img {float:right;padding:0px;padding-left:10px;padding-bottom:10px;margin:0px;}
 
+
 .ProgramBottom {padding-bottom:20px;}
 
 .Line {margin-bottom:6px;}
@@ -77,3 +78,6 @@ ul.BulltinBullet {margin: 0 0 0 3px; padding: 0px;list-style-type:disc;}
 ul.BulltinBullet li {margin: 0 0 0 10px;padding: 0px;}
 
 .BulletinPageTitle {clear:both;padding-bottom:10px;}
+
+#content form tbody { border-top:0 !important; }  //fix for a bootstrap style
+body.two-sidebars #content table { display: inline; } //fix for the tables used in the getting started section
