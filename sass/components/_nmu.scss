@@ -581,7 +581,23 @@ display:block;
 	width:100%;
 }
 
+
+
 body{
+	//used in hr employee orientation
+	.nav-pills-nmu{
+		>li{
+			>a{
+				color: $nmu-green-text;
+			}
+		}
+		>li.active{
+			>a{
+				background-color: $nmu-green;
+				color: white;
+			}
+		}
+	}
 	.btn-nmu {
 		color: #FFFFFF;
 		background-color: #006848;
