@@ -296,6 +296,17 @@ body > #page,
 		}
 	}
 
+	.nav-standout {
+		margin-left:10px;
+		display:block;
+		position: relative;;
+		&:before {
+			position: absolute;
+			left:-7px;
+			content: "-";
+		}
+	}
+
 	//use for cse style site-navigation
 	.nav-site {
 		border-left: 10px solid $nmu-gray-evenlighter;
@@ -392,9 +403,54 @@ body > #page,
 	}
 }
 
+
+/**
+ * Sidebar Second (rendered as a 3 column grid)
+ */
+//wrapped in this body class to prevent campus connect from rendering these styles
+body.node-type-fearless-internal-page {
+	.sidebar-second-full {
+		//used for hr new employee orietation navigation with multiple embedded lists
+		.sub-navigation > ul > ul {
+			border: none;
+			padding: 10px 0px 10px 20px;
+		}
+		.sub-navigation-head {
+			background-color:$nmu-green;
+			color:white;
+			border:1px solid $nmu-green;
+			padding:15px;
+			h4 {
+				margin:0;
+				font-size:1.2em;
+				text-transform: uppercase;
+				font-weight:400;
+			}
+		}
+		ul {
+			border:1px solid $nmu-gray-yetanother;
+			padding:20px 10px 20px 20px;
+			margin:0;
+			li {
+				list-style:none;
+				padding-top:5px;
+				&:first-child {
+					padding-top:0;
+				}
+			}
+		}
+		a {
+			color:$nmu-green-text;
+		}
+	}
+}
+
+
 /**
  * Sidebar Second
  */
+//the body class is being checked here to ensure that the grid system is not being applied to the sidebar second
+//the grid system is applied when there is only a sidebar second on the page
 body.two-sidebars .sidebar-second {
 	//these are generic enough to work with any type of sidebar
 	min-height: 50px;
@@ -402,6 +458,12 @@ body.two-sidebars .sidebar-second {
 		min-width: 200px;
 		float: right;
 		margin: 0 0 15px 15px;
+	}
+
+	//used for hr new employee orietation navigation with multiple embedded lists
+	.sub-navigation > ul > ul {
+		border: none;
+		padding: 10px 0px 10px 20px;
 	}
 
 	.sub-navigation,
