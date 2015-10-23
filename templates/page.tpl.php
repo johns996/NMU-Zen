@@ -31,7 +31,7 @@
 					$content_class = 'col-md-10';
 				}
 				elseif(!$sidebar_first && $sidebar_second){
-					$content_class = 'col-sm-9';
+					$content_class = 'col-sm-8 col-md-9';
 				}
 				elseif(!$sidebar_first && drupal_is_front_page())
 -					$content_class = 'col-md-12-nmu';  //not used in styles but needed for the main NMU homepage since the video exists outside the grid
@@ -68,9 +68,9 @@
 			</div>
 		<?php
 			if(!$sidebar_first && $sidebar_second){
-				print '<aside class="sidebar-second">';
-					print '<div class="col-sm-3">'.$sidebar_second.'</div>';
-				print '</aside>';	
+				print '<aside class="sidebar-second sidebar-second-full">';
+					print '<div class="col-sm-4 col-md-3">'.$sidebar_second.'</div>';
+				print '</aside>';
 			}
 		?>
 		</div>
