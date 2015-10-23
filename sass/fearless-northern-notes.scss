@@ -364,7 +364,7 @@
 	.sub-navigation {
 		width:100%;  //on small screens this section spans the entire page
 		@media all and #{$mq-bootstrap-sm-min} {
-			max-width:200px;
+			max-width:220px;
 		}
 		@media all and #{$mq-bootstrap-lg-min} {
 			max-width:485px;
