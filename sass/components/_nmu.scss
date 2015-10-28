@@ -109,6 +109,13 @@ body > #page,
 .not-front {
 	#content {
 
+		ul {
+			//this will stop bullets from floating on top of left-aligned (or floated) images
+			//it may break other things so it is only applied to internal pages.  more specifity may be needed if issues arise.
+			//http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements
+			overflow: hidden;
+		}
+
 		//some padding tweaks applied to the bootstrap defaults
 		div.field-name-body {
 			h1, h2, h3, h4,
