@@ -1,0 +1,9 @@
+//these styles should be included only on the pages that use a block style, no-navigation layout
+//this is currently used on ACAC
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+@import 'components/nmu-hp-columns';
+@import 'components/drupal-tabs';
+
