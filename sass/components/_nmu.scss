@@ -103,6 +103,11 @@ body > #page,
 	padding-bottom:1em;
 	height: 100%; //make sure drupal's admin bar does not add some phantom padding to the bottom of main
 	min-height:500px;
+
+	//remove the bootstrap border on the top of forms with a tbody
+	form tbody {
+		border-top:none;
+	}
 }
 
 //styles specific to internal pages
