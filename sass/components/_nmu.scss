@@ -429,7 +429,8 @@ body > #page,
  * Sidebar Second (rendered as a 3 column grid)
  */
 //wrapped in this body class to prevent campus connect from rendering these styles
-body.node-type-fearless-internal-page {
+body.node-type-fearless-internal-page,
+body.node-type-fearless-homepage-basic,{
 	.sidebar-second-full {
 		//used for hr new employee orietation navigation with multiple embedded lists
 		.sub-navigation > ul > ul {
