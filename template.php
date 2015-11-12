@@ -119,7 +119,7 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
-	//add a css file to the fearless_admissions_home content type
+	//add a css file to the fearless_block_newsletter content type (acac newsletter)
 	elseif($variables['type'] == 'fearless_block_newsletter'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-block-newsletter.css');
 		$css = drupal_add_css();
