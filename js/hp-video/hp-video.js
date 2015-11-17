@@ -46,8 +46,8 @@ jQuery(document).ready(function($) {
         "autoplay": true, //Autoplay at start
         "muted": true, //Muted at start
 
-        "mp4": "//www.nmu.edu/sites/default/files/UserFiles/hp-video/August-Fearless.mp4", //mp4 video link (splash-video.mp4 to see unl's video)
-        "webm": "//www.nmu.edu/sites/default/files/UserFiles/hp-video/August-Fearless.webm", //Path to video webm format
+        "mp4": "//dfvhnmfzxdnpm.cloudfront.net/fearless-hp-video/August-Fearless.mp4", //mp4 video link
+        "webm": "//dfvhnmfzxdnpm.cloudfront.net/fearless-hp-video/August-Fearless.webm", //Path to video webm format
         "priority": "html5",
         "video_ratio": 1.7777778, // width/height -> If none provided sizing of the video is set to adjust
 
