@@ -130,6 +130,8 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-homepage.css');
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
+		//homepages need this JS library for the cycle to work
+		drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/vendor/jquery.cycle2.min.js', array('type' => 'file', 'scope' => 'header'));
 	}
 	//add a css file to the fearless_northern_notes content type
 	elseif($variables['type'] == 'fearless_northern_notes'){
@@ -144,10 +146,6 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$styles = drupal_get_css($css);
 	}
 
-	//just a sample of how to add js
-	//drupal_add_js(drupal_get_path('theme', 'zen_nmu') . '/js/homepage-v2.js');
-	//$js = drupal_add_js();
-	//$scripts = drupal_get_js($js);
 }
 
 function zen_nmu_preprocess_field(&$variables, $hook) {
