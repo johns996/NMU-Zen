@@ -3,7 +3,46 @@
 
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
-
 @import 'components/nmu-hp-columns';
 @import 'components/drupal-tabs';
 
+
+.page__title {
+	display: none;
+}
+
+.node-fearless-block-newsletter {
+	//remove the space leftover from hiding the page title
+	margin-top:-14px;
+}
+
+.acac-newsletter {
+	background-color:$nmu-gray-evenlighter;
+	//because this section has a background color, we need to add a negative bottom margin to hide the white padding
+	margin-bottom:-15px;
+}
+
+.col-md-6 {
+	height: 100%;
+	background-color: white;
+}
+
+.section-wildcatwire {
+	#page{
+		//this changes the background ouside of the body to gray
+		background-color:$nmu-gray-evenlighter;
+	}
+	.container {
+		//because the backround is grey, we need to make the body white
+		background-color:white;
+		//fix for a weird padding bug
+		padding:0;
+	}
+}
+
+.newsletter-content {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	height: 100%;
+}
