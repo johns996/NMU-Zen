@@ -24,6 +24,52 @@
 	margin: 20px auto;
 }
 
+//Sports Gateway
+.sports-tiles {
+	@media all and #{$mq-bootstrap-sm-min} {
+		 height:119px;
+	}
+	@media all and #{$mq-bootstrap-md-min} {
+		height:128px;
+	}
+	@media all and #{$mq-bootstrap-lg-min} {
+		height:156px;
+	}
+  text-indent:-9999px;
+  background-repeat: no-repeat;
+}
+
+.athletics-tile {
+  background-image:url(/sports/sites/DrupalSports/files/UserFiles/Pictures/Intercollegiate.jpg);
+}
+.olympic-tile {
+  background-image:url(/sports/sites/DrupalSports/files/UserFiles/Pictures/Olympic_Site.jpg);
+}
+.recreation-tile {
+  background-image:url(/sports/sites/DrupalSports/files/UserFiles/Pictures/Recreational.jpg);
+}
+
+
+
+.sports-tile-top {
+  width:100%;
+  display:block;
+	background-size: 100%;
+}
+.sports-tile-bottom-left {
+  width:50%;
+  display:inline-block;
+	background-position: 0 100%;
+	background-size:200%;
+}
+.sports-tile-bottom-right {
+  width:50%;
+  display:inline-block;
+	background-position: 100% 100%;
+	background-size: 200%;
+}
+
+
 //used on the emeritus page: http://www.nmu.edu/emeritusfaculty
 .emeritus {
 	padding: 8px 3px 8px 8px;
@@ -37,3 +83,88 @@
 	margin:0 auto;
 }
 //there is a print version of the emeritus page used for the campus directory each year with custom styles: http://www.nmu.edu/cgi-bin/Departments/HR/emeritus.shtml
+
+
+//Marketing and Communications
+.up-media-guide {
+	list-style-type:none;
+	padding:10px;
+}
+.up-media-outlet {
+	display: inline-block;
+  padding: 10px;
+  min-width: 100%;
+  @media all and #{$mq-bootstrap-md-min} {
+		min-width: 45%;
+	}
+  ul {
+  	padding:5px 5px 5px 20px;
+  	list-style-type:none;
+  }
+}
+
+
+.cm-horizons-cover {
+    min-width: 185px;
+    float: left;
+    width: 30%;
+  }
+.cm-horizons-info {
+ float: left;
+}
+ul.NewsArchive {
+	margin: 0px;
+	list-style-type: none;
+	padding: 5px 0 0 8px;
+	li {
+		margin: 0px;
+		padding-bottom: 5px;
+		padding-top: 0px;
+	}
+}
+.NewsArchive-L1-Date {
+	text-align:left;
+	font-weight:bold;
+}
+.NewsArchive-L1-Title {
+
+}
+
+.NewsArchive-L1-Content {}
+
+.NewsArchive-L1-MediaWrapper {}
+
+.NewsArchive-L1-ImageWrapper {
+		float:right;
+		padding:20px 0px 20px 20px;
+		max-width:280px;
+}
+
+.NewsArchive-L1-PreparedBy {}
+
+.NewsArchive-L1-PreparedByTitle {
+	font-weight:bold;
+}
+
+.NewsArchive-Return {
+	clear:both;
+	text-align:center;
+	padding-top:10px;
+}
+.NewsArchive-Image {
+	margin:-5px;
+	text-align:center;
+}
+
+
+/**
+ * International Programs
+ */
+#content #google_translate_element {
+	@media all and #{$mq-bootstrap-md-min} {
+		position: absolute;
+		top:-75px;
+		right:0;
+	}
+}
+
