@@ -39,15 +39,19 @@ jQuery(document).ready(function($) {
         }
     }
 
+		//can't use custom url over https without a cert, so fallback to cloudfront
+		var mp4Link = ('https:' == document.location.protocol ? 'https://dfvhnmfzxdnpm.cloudfront.net' : 'http://cdn.northernmichiganu.com') + '/fearless-hp-video/August-Fearless.mp4';
+		var webmLink = ('https:' == document.location.protocol ? 'https://dfvhnmfzxdnpm.cloudfront.net' : 'http://cdn.northernmichiganu.com') + '/fearless-hp-video/August-Fearless.webm';
+
     var Video_back = new video_background($("#fearless-video"), {
         "position": "absolute", //Stick within the div
         "z-index": "-1", //Behind everything
         "loop": true, //Loop when it reaches the end
         "autoplay": true, //Autoplay at start
         "muted": true, //Muted at start
+        "mp4": mp4Link,
+        "webm": webmLink,
 
-        "mp4": "//cdn.northernmichiganu.com/fearless-hp-video/August-Fearless.mp4", //mp4 video link
-        "webm": "//cdn.northernmichiganu.com/fearless-hp-video/August-Fearless.webm", //Path to video webm format
         "priority": "html5",
         "video_ratio": 1.7777778, // width/height -> If none provided sizing of the video is set to adjust
 
