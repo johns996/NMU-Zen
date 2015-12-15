@@ -83,6 +83,13 @@ function zen_nmu_preprocess_html(&$variables, $hook) {
 
 }
 
+//unset the generator meta tag
+//https://www.drupal.org/node/982034
+function zen_nmu_html_head_alter(&$head_elements) {
+  unset($head_elements['system_meta_generator']);
+}
+
+
 /**
  * Override or insert variables into the page templates.
  *
