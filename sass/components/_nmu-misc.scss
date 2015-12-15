@@ -25,6 +25,22 @@
 }
 
 //Sports Gateway
+
+.gateway-mobile {
+	display:block;
+	@media all and #{$mq-bootstrap-sm-min} {
+		display:none;
+	}
+}
+
+
+.gateway-desktop {
+	display:none;
+	@media all and #{$mq-bootstrap-sm-min} {
+		display:block;
+	}
+}
+
 .sports-tiles {
 	@media all and #{$mq-bootstrap-sm-min} {
 		 height:119px;
@@ -54,7 +70,7 @@
 .sports-tile-top {
   width:100%;
   display:block;
-	background-size: 100%;
+	@include background-size(cover);
 }
 .sports-tile-bottom-left {
   width:50%;
