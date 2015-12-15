@@ -92,16 +92,5 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-
-<script type="text/javascript">
-/*<![CDATA[*/
-(function() {
-var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
-sz.src = '//siteimproveanalytics.com/js/siteanalyze_20089.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
-})();
-/*]]>*/
-</script>
-
 </body>
 </html>
