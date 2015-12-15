@@ -293,6 +293,14 @@ body > #page,
 				content:none;
 			}
 		}
+		&>li.nav-pill-link>a {
+			&:hover{
+				text-decoration: underline;
+			}
+			&::after{
+				content:none;
+			}
+		}
 	}
 	.nav-pills>li.active>a{
 		background-color:$nmu-gray-lighter;
