@@ -43,10 +43,11 @@ access to a site, please contact <a href="mailto:ericjohn@nmu.edu">Eric Johnson<
 		}
 		</style>
 
+		<!--[if IE 9]>
 		<div class="alert alert-warning" role="alert">
-		<h3>State Information Lost Error</h3>
-		<p>Many Users have been reporting an error with the CMS log in process.  After entering their username and password an error screen with the message <em>State Information Lost</em> appears.  This error is specific to Internet Explorer 9 and how it handles SSL.  <strong>The only fix for the error at this point is using a different version of Internet Explorer (10 or 11) or using Firefox or Chrome</strong>.</p>
-		</div>
+		<h3>Incompatible Browser</h3>
+		<p>The browser you are using, Internet Explorer 9, is known to cause some issues with the NMU CMS and the log in process.  It is strongly recommended that you use a different version of Internet Explorer (10 or 11) or use Firefox or Chrome.</p>
+		</div><![endif]-->
 
 <div id="cms_login">
 	<strong>Authorized Users:</strong><br />

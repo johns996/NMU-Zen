@@ -113,9 +113,11 @@
 						}
 						$user_button_ga = '<a href="'.$strBaseURL.'/admin/reports/google-analytics"><img src="/sites/all/themes/nmu/images/user_icons/googleanalytics.png" width="100" height="120" title="Google Analytics for Profile '.$ProfileID.'" style="padding-right:5px;" /></a>';
 					}
-					if($form['#block']->theme == "zen_nmu")
-						echo '<div class="user_msg new_feature"><p>This website has recently been converted to use a new theme.  The basic structure of your website and the content within it has not changed.  However, this new theme has changed how certain aspects of your site look and work.  A summary of the changes and how they affect editing page on your site is <a href="/new-theme-changes" target="_blank">available here</a>.</p></div>';
-						/*
+
+					//if($form['#block']->theme == "zen_nmu")
+					//	echo '<div class="user_msg new_feature"><p>This website has recently been converted to use a new theme.  The basic structure of your website and the content within it has not changed.  However, this new theme has changed how certain aspects of your site look and work.  A summary of the changes and how they affect editing page on your site is <a href="/new-theme-changes" target="_blank">available here</a>.</p></div>';
+
+					/*
 						echo '<div class="user_msg new_feature"><p>If you are having problems editing a web page using the CMS, please follow the steps outlined in <a href="http://www.nmu.edu/node/274">this guide</a> to resolve the issue.</p></div>';
 						echo '<div class="user_msg new_feature"><p>Two changes have recently been made to the file manager used by the NMU CMS.  These changes have been made based on user feedback in hopes of improving the usability of the file manager. <span id="read_more_link">Read More</span>
 								<div class="user_msg read_more"><p><strong>1.)</strong> When a file is uploaded into a folder already containing a file with the same name as the one being uploaded, the system will now prompt the user and ask if they want to replace the file on the server with the one being uploaded.  If "yes" is selected, the file will be replaced and all links to the file will now direct users to the updated version.  If "no" is selected, nothing will be uploaded and the file on the server will remain untouched.</p>
