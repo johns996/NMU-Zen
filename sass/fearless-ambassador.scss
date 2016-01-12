@@ -1,0 +1,156 @@
+@import "init";
+
+.content-wrapper{
+  position: relative;
+}
+.row-margin{ //need this to cancel out the negative magrin provided by bootstrap rows
+	margin-left:0px;
+	margin-right:0px;
+}
+.Ambassador-Icon {
+	min-height:100px;
+	text-align: center;
+	position: relative;
+	margin-bottom:10px;
+}
+.amb-info-content {
+	cursor:pointer;
+}
+.amb-info-name {
+	position: absolute;
+	width: 100%;
+	padding:5px;
+	bottom: 10px;
+	left:0px;
+	background-color:white;
+	@include opacity(0.8);
+	cursor:pointer;
+}
+
+
+.extend {
+	display:none;
+  width: 80%;
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  border:1px solid $nmu-black;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.ambassador-large-image{}
+.ambassador-details{
+	padding:10px;
+}
+.ambassador-small-image{
+	float:left;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+.ambassador-info{}
+.ambassador-quote{}
+.ambassador-form{}
+
+
+.extend p {
+//  padding: 0px 5px;
+//  margin: 0;
+}
+.xbutton{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: $nmu-gray-lighter;
+  @include opacity(0.8);
+  color: black;
+  text-align: right;
+  padding: 3px 7px;
+  cursor: pointer;
+}
+.xbutton:after{
+  display: inline-block;
+  content: "\00d7";
+}
+.row1{
+//    position: relative;
+//    background-color:grey;
+}
+.ex {
+  .row1{
+//    position: relative;
+//    background-color:grey;
+  }
+  .sminfo{
+//    width: 100%;
+//    @media all and #{$mq-bootstrap-xs-min} {
+//      position: absolute;
+//      height: 100px;
+//      background-color: transparent;
+//    }
+//    background-color: $nmu-black;
+//    bottom: 0px;
+//    z-index: 200;
+  }
+  .transparent{
+//    @media all and #{$mq-bootstrap-xs-min} {
+//      position: absolute;
+//      display: inline;
+//    }
+//    display: none;
+//    bottom: 0;
+//    width: 100%;
+//    height: 100px;
+//    background-color: $nmu-black;
+//    opacity: 0.5;
+  }
+  .smimg {
+//    width: 100px;
+//    margin: 0 auto;
+//    padding-top: 10px;
+//    @media all and #{$mq-bootstrap-xs-min} {
+//      float: left;
+//      margin: 0;
+//      padding: 0;
+//    }
+  }
+  .smsminfo {
+//    padding:10px;
+//    padding-bottom:20px;
+//    text-align: center;
+//    width: calc(80%-100px);
+//    @media all and #{$mq-bootstrap-xs-min} {
+//      position: absolute;
+//      text-align: left;
+//      padding-bottom:10px;
+//    }
+//    left: 100px;
+//    bottom: 0px;
+  }
+  .smsminfoname{
+//    text-transform: uppercase;
+//    font-size: 130%;
+//    padding-bottom: 2px;
+  }
+  .row2{
+//    height: 300px;
+  }
+  .quote {
+//    padding: 4%;
+//    @media all and #{$mq-bootstrap-xs-min} {
+//      max-width: 38%;
+//      float: left;
+//      padding: 4% 2% 4% 4%;
+//   }
+  }
+  .form {
+//    padding: 4%;
+//    @media all and #{$mq-bootstrap-xs-min} {
+//      float: left;
+//      width: 50%;
+//      padding: 4% 4% 4% 2%;
+//    }
+  }
+}
