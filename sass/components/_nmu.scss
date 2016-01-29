@@ -685,6 +685,16 @@ display:block;
 	}
 }
 
+a.hide-link {  //hide the link styles (used on links that wrap a div, see the PURL)
+	color:inherit;
+	background-color:inherit;
+	text-decoration: inherit;
+	&:hover{
+		text-decoration:inherit;
+    color:inherit;
+	}
+}
+
 
 body{
 	//used in hr employee orientation
