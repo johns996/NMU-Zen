@@ -661,22 +661,24 @@
 		.glyphicon-triangle-left, .glyphicon-eetriangle-right {
 			display:inline-block;
 			top:90px;
-			z-index:500;
+			z-index:101;
 			font-size:40px;
 			position:absolute;
 			color:white;
 			opacity:.3;
+			cursor:pointer;
 		}
 
 		.glyphicon-triangle-right {
 			display:inline-block;
 			top:90px;
-			z-index:500;
+			z-index:101;
 			font-size:40px;
 			position:absolute;
 			color:white;
 			opacity:.3;
 			right:0;
+			cursor:pointer;
 		}
 
 		.glyphicon-triangle-highlight {
@@ -686,7 +688,7 @@
 		.slide-pager {
 			text-align:center;
 			margin-top:-20px;
-			z-index:500;
+			z-index:101;
 			position:absolute;
 			width:100%;
 
