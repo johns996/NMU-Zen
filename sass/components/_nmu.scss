@@ -695,6 +695,12 @@ a.hide-link {  //hide the link styles (used on links that wrap a div, see the PU
 	}
 }
 
+//this is a fix for forms that have a right-floated navigation element.
+//http://www.nmu.edu/acac/academic-suspensiondismissal-appeal-form
+.row-float-fix {
+	height:85px;
+}
+
 
 body{
 	//used in hr employee orientation
