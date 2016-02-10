@@ -324,6 +324,7 @@
 	}
 
 .northern-content-text-content {
+	a:hover, a:link, a:active, a:visited { color:$nmu-green; text-decoration:underline; }
 }
 
 .northern-content-text-audio-wrapper {
@@ -338,7 +339,7 @@
 	.northern-content-text-prepared-by-title { font-style:italic; }
 	.northern-content-text-prepared-by-title {}
 	.northern-content-text-prepared-by-name {}
-	.northern-content-textddd-prepared-by-authortitle {}
+	.northern-content-text-prepared-by-authortitle {}
 	.northern-content-text-prepared-by-address {}
 	.northern-content-text-prepared-by-phone {}
 	.northern-content-text-prepared-by-email {}
