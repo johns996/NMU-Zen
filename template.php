@@ -132,7 +132,7 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
-	//add a css file to the fearless_homepage content type
+	//add a css and js file to the fearless_homepage content type
 	elseif($variables['type'] == 'fearless_homepage' || $variables['type'] == 'fearless_homepage_info'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-homepage.css');
 		$css = drupal_add_css();
@@ -149,6 +149,12 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 	//add a css file to the ALUMNI NEWSLETTER content type
 	elseif($variables['type'] == 'programs_what_s_new_nmu'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-alumni-newsletter.css');
+		$css = drupal_add_css();
+		$styles = drupal_get_css($css);
+	}
+	//add a css file to the fearless_application content type
+	elseif($variables['type'] == 'fearless_application'){
+		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-application.css');
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}

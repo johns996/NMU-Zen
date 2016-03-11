@@ -93,9 +93,10 @@
 	//added to form builder, no customizations needed yet
 }
 
-form:not(.web-form) {
+form:not(.web-form):not(.admissions-application){
 	//reset bootstrap's blockquote for forms
 	//the not selector makes sure chris's forms are not affected by this
+	//chained in the admissions application, if you use a comma here it acts as an "and" meaning a form would need both classes for the not to register
 	blockquote {
 		font-size:inherit;
 		border-left:none;
