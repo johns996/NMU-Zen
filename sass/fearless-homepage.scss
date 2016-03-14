@@ -184,7 +184,8 @@ h2, h3, h4 {
 		background-color: $nmu-gray;
 		color: white;
 	}
-	a {
+	
+a:not(.btn) {
 	text-decoration:none;
 	color: $nmu-green;
 		&:hover {
