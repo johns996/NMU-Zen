@@ -10,6 +10,9 @@
  * aggregated with other stylesheets, for improved front-end performance.
  */
 @media print {
+* {
+	max-width:100% !important;
+}
 
   /* Underline all links. */
   a:link,
@@ -44,11 +47,17 @@
 
   /* Un-float the content. */
   #content {
-    float: none !important;
+    //border:5px solid blue;  //kept here because it is helpful for debugging
+    float:none !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+
   }
+
+.node-fearless-internal-page-2-column {
+	@include column-count(1);  //turn off two column for print
+}
 
   /* Turn off any background colors or images. */
   body,
@@ -68,28 +77,32 @@
   .region-main-navigation,
   .region-sidebar-first,
   .region-sidebar-second,
+  .region-breadcrumbs,
 //  #footer,
-  .breadcrumb,
   .tabs,
   .action-links,
   .links,
   .book-navigation,
   .forum-topic-navigation,
   .pager,
-  .feed-icons {
-    visibility: hidden;
+  .feed-icons,
+  .postscript,
+  .news-events,
+  .events-footer {
     display: none;
   }
 
   #footer{
-	  div {
-		  visibility: hidden;
-	  }
-	  .footer-main {
-		  visibility: visible;
-		  .reporting, hr, nav {
-			  visibility: hidden;
-		  }
-	  }
+  	page-break-inside: avoid;
+  	p,
+  	h4 {
+  		margin:0 0 2px !important;
+  	}
   }
-}
+  .footer-main {
+		.reporting, hr, nav {
+		  display: none;
+		}
+	}
+
+} //end of @media
