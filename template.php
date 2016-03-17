@@ -87,6 +87,18 @@ function zen_nmu_preprocess_html(&$variables, $hook) {
 //https://www.drupal.org/node/982034
 function zen_nmu_html_head_alter(&$head_elements) {
   unset($head_elements['system_meta_generator']);
+
+  // Search the head elements for the Favicon and append a version
+  foreach ($head_elements as $key => $element) {
+    if (!empty($element['#attributes'])) {
+      if (array_key_exists('href', $element['#attributes'])) {
+        if (strpos($element['#attributes']['href'], 'favicon.ico') > 0) {
+          $head_elements[$key]['#attributes']['href'] = base_path() .'favicon.ico?v=1';
+        }
+      }
+    }
+  }
+
 }
 
 
