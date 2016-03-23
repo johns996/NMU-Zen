@@ -1,0 +1,62 @@
+//these styles should be included only on the fearless admissions application
+//the template.php file is looking for a specific content type
+//when it finds it, it will append this stylesheet to the css array
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+.dev-note {
+	color:red;
+	font-size:.7em;
+	border-bottom:none;
+}
+
+section {
+	@include border-radius(10px);
+	background-color:$nmu-gray-lighter;
+	margin:10px auto;
+	width:50%;
+	padding:25px 50px;
+	h1 {
+		font-size:1.5em;
+		padding-bottom:.5em;
+		border-bottom:1px solid #d4d4d4;
+		margin-bottom:1em;
+		font-weight:400;
+		color:$nmu-gray-darker;
+	}
+}
+.radio-label,
+.checkbox-label {
+	display:block;
+	margin-bottom:-5px;
+}
+.radio,
+.checkbox {
+	margin-left:10px;
+}
+
+.note {
+	font-size:.9em;
+	color:$nmu-gray-darker;
+}
+
+
+/*
+.profile {
+	@include column-count(2);
+	@include column-width(50%);
+	section {
+		@include column-break-inside('avoid');
+	}
+}
+*/
+
+.profile {
+	clear:both;
+	section {
+		width:48%;
+		margin:10px;
+		float:left;
+	}
+}

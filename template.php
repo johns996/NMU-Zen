@@ -87,6 +87,18 @@ function zen_nmu_preprocess_html(&$variables, $hook) {
 //https://www.drupal.org/node/982034
 function zen_nmu_html_head_alter(&$head_elements) {
   unset($head_elements['system_meta_generator']);
+
+  // Search the head elements for the Favicon and append a version
+  foreach ($head_elements as $key => $element) {
+    if (!empty($element['#attributes'])) {
+      if (array_key_exists('href', $element['#attributes'])) {
+        if (strpos($element['#attributes']['href'], 'favicon.ico') > 0) {
+          $head_elements[$key]['#attributes']['href'] = base_path() .'favicon.ico?v=1';
+        }
+      }
+    }
+  }
+
 }
 
 
@@ -132,7 +144,7 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
-	//add a css file to the fearless_homepage content type
+	//add a css and js file to the fearless_homepage content type
 	elseif($variables['type'] == 'fearless_homepage' || $variables['type'] == 'fearless_homepage_info'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-homepage.css');
 		$css = drupal_add_css();
@@ -149,6 +161,12 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 	//add a css file to the ALUMNI NEWSLETTER content type
 	elseif($variables['type'] == 'programs_what_s_new_nmu'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-alumni-newsletter.css');
+		$css = drupal_add_css();
+		$styles = drupal_get_css($css);
+	}
+	//add a css file to the fearless_application content type
+	elseif($variables['type'] == 'fearless_application'){
+		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-application.css');
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
 	}
