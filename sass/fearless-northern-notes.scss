@@ -17,7 +17,7 @@
 		border:0px;
 		margin:0px;
 		@media not all and #{$mq-bootstrap-xs-max} {
-			width:24%;
+			width:32%;
 			height:50px;
 		}
 
@@ -48,24 +48,12 @@
 		background:#ddd;
 		cursor: pointer;
 	}
+}
 
-/*
-	#AddNewsContent {
-		@media all and #{$mq-bootstrap-xs-max} { }
+.TabCommonSmall {
+	@media not all and #{$mq-bootstrap-xs-max} {
+		width:20% !important;
 	}
-
-	#AddAnnouncementContent {
-		@media all and #{$mq-bootstrap-xs-max} { padding:0px 5px 0px 5px; }
-	}
-
-	#AddCalContent {
-		@media all and #{$mq-bootstrap-xs-max} { padding:0px 5px 0px 5px; }
-	}
-
-	#AddClassifiedsContent {
-		@media all and #{$mq-bootstrap-xs-max} { padding:0px 5px 0px 5px; }
-	}
-*/
 }
 
 .region-branding { display:none; }
@@ -182,6 +170,7 @@
 
 .northern-wrapper {
 	padding-bottom:15px;
+	padding:5px 5px 5px 5px;
 }
 
 .northern-wrapper-date {
@@ -410,10 +399,9 @@
 		.sub-navigation-head-inner {
 			@media all and #{$mq-bootstrap-only-sm} { margin-left:0px; margin-right:0px; }
 			@media all and #{$mq-bootstrap-only-md} { margin-left:0px; margin-right:0px; }
-			@media all and #{$mq-bootstrap-lg-min} { margin-left:50px; margin-right:50px; }
+			@media all and #{$mq-bootstrap-lg-min} { margin-left:15px; margin-right:15px; }
 			@media all and #{$mq-bootstrap-xs-max} { margin-left:30px; margin-right:30px; }
 
-			border:1px solid $nmu-green;
 			font-size:14px;
 		}
 
@@ -447,6 +435,14 @@
 }
 
 .sub-navigation-head-inner {
+	border:1px solid #B6B4B6;
+	color:#d5d2d2;
+}
+
+.sub-navigation-head-inner:hover {
+	border:1px solid white;
+	cursor: pointer;
+	opacity: 0.8;
 }
 
 .sub-error-msg {
@@ -502,16 +498,20 @@
 }
 
 
-.NNSubmitAnnouncement {
+.SubmitAnnouncement {
 	.sub-navigation-head {
 		background-color:#fd0;
 		color:$nmu-green;
+	}
 
-		.sub-navigation-head-inner:hover {
-			background-color:#F0F0F0;
-			cursor: pointer;
-			opacity: 0.8;
-		}
+	.sub-navigation-head-inner:hover {
+		background-color:#F0F0F0;
+		color:$nmu-green;
+	}
+
+	.sub-navigation-head-inner {
+		border-color:$nmu-green;
+		color:$nmu-green;
 	}
 
 	.sub-error-msg {
@@ -578,6 +578,104 @@
 				}
 			}
 		}
+	}
+}
+
+.SubmitProgram {
+	.sub-navigation-head {
+		background-color:#001E83;
+	}
+
+	.sub-navigation-head-inner:hover {
+		background-color:#002FD0;
+	}
+
+	.sub-navigation-body {
+		border:1px solid #001E83;
+		border-top:0px;
+
+		.notes-activity-msg-body {
+			padding:10px;
+		}
+	}
+
+	.sub-navigation-bottom-line {
+		border-bottom:1px solid #001E83;
+	}
+
+	.sub-error-msg {
+		border-color:#001E83;
+		border-bottom:0px;
+		padding-top:10px;
+	}
+}
+
+.Upcoming {
+	.sub-navigation-head {
+		background-color:#3333CC;
+		color:$nmu-green;
+	}
+
+	.sub-navigation-body {
+		border:1px solid $nmu-green;
+		border-top:0px;
+
+		.notes-activity-msg-body {
+			padding:10px;
+		}
+	}
+
+	.sub-navigation-bottom-line {
+		border-bottom:1px solid #3333CC;
+	}
+}
+
+.live-site {
+	.resp-radio-wrapper {
+		padding:0px;
+		margin:0px;
+	}
+	.form_l_float {
+		margin-bottom:0px;
+	}
+	label {
+		margin-bottom:0px;
+	}
+}
+
+.TimeType {
+	background-color:#EAEBE6;
+	margin:10px 10px 15px 20px;
+	padding:5px 5px 5px 10px;
+	float:left;
+}
+
+.SubmitVolunteer {
+	.sub-navigation-head {
+		background-color:#996600;
+	}
+
+	.sub-navigation-head-inner:hover {
+		background-color:#666633;
+	}
+
+	.sub-navigation-body {
+		border:1px solid #996600;
+		border-top:0px;
+
+		.notes-volunteer-msg-body {
+			padding:10px;
+		}
+	}
+
+	.sub-navigation-bottom-line {
+		border-bottom:1px solid #996600;
+	}
+
+	.sub-error-msg {
+		border-color:#996600;
+		border-bottom:0px;
+		padding-top:10px;
 	}
 }
 
@@ -903,6 +1001,83 @@
 
 .northern-content-divs-cat-input {
 	max-width:90%;  //needed for the search box to fit in its area on ie
+}
+
+
+.northern-program-date {
+	font-size:1.4em;
+	padding-top:15px;
+}
+
+.northern-program-heads {
+	max-width:70px;
+	width:100%;
+	float:left;
+	white-space: nowrap;
+}
+
+.northern-program-title {
+	font-weight:bold;
+	padding-top:15px;
+	padding-bottom:3px;
+	color:$nmu-green;
+	font-weight:bold;
+	font-size:larger;
+}
+
+.northern-program-time {
+}
+
+.northern-program-location {
+}
+
+.northern-program-sponsor {
+}
+
+.northern-program-details {
+}
+
+.northern-program-share {
+	text-align:right;
+}
+
+
+.northern-volunteer-heads {
+	max-width:80px;
+	width:100%;
+	float:left;
+	white-space: nowrap;
+}
+
+.northern-volunteer-title {
+	font-weight:bold;
+	padding-top:15px;
+	padding-bottom:3px;
+	color:$nmu-green;
+	font-weight:bold;
+	font-size:larger;
+}
+
+.northern-volunteer-type {
+	padding-top:2px;
+	img {
+		padding-top:-2px;
+		width:22px;
+		height:22px;
+	}
+}
+
+.northern-volunteer-time {
+}
+
+.northern-volunteer-location {
+}
+
+.northern-volunteer-details {
+}
+
+.northern-volunteer-share {
+	text-align:right;
 }
 
 // STUFF THAT NEEDS TO MOVE TO MAIN
