@@ -630,6 +630,16 @@
 	}
 }
 
+.upcoming-events {
+	a:link, a:active, a:visited { color:black; text-decoration:none; }
+	a:hover { text-decoration:underline; }
+}
+
+.upcoming-events-line {
+
+	padding:5px 0px 5px 0px;
+}
+
 .live-site {
 	.resp-radio-wrapper {
 		padding:0px;
