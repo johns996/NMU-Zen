@@ -12,3 +12,14 @@
     <?php print $content; ?>
   </footer>
 <?php endif; ?>
+
+<?php
+
+
+# require_once "/htdocs/cmsphp/Admin/Includes/FunctionsCommon.php";
+# PrintR($GLOBALS['conf']['syslog_identity']);
+if($GLOBALS['conf']['syslog_identity'] == "CommunicationsAndMarketing" || $GLOBALS['conf']['syslog_identity'] == "DrupalArtAndDesign" || $GLOBALS['conf']['syslog_identity'] == "DrupalBusiness")
+	require_once "/htdocs/cmsphp/Admin/MiscInterfaces/Tracker.php";
+
+
+?>
