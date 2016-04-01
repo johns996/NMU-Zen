@@ -237,9 +237,14 @@ $mq-bootstrap-sm-min: '(min-width: 768px)';
 $mq-bootstrap-md-min: '(min-width: 992px)';
 	$mq-bootstrap-md-max: '(max-width: 1199px)';
 $mq-bootstrap-lg-min: '(min-width: 1200px)';
+	$mq-bootstrap-lg-max: '(max-width: 1365px)';
+$mq-bootstrap-xl-min: '(min-width: 1366px)';
 
+$mq-bootstrap-only-xs: '(min-width: 480px) and (max-width: 767px)';  //target only screens larger than mobile but smaller than sm (ipad)
 $mq-bootstrap-only-sm: '(min-width: 768px) and (max-width: 991px)';  //target only smaller screens, does not scale upwards
 $mq-bootstrap-only-md: '(min-width: 992px) and (max-width: 1199px)';  //target only normal screens, does not scale upwards
+$mq-bootstrap-only-lg: '(min-width: 1200px) and (max-width: 1365px)';  //target only large screens, does not scale upwards
+
 
 // =============================================================================
 // Partials to be shared with all .scss files.
