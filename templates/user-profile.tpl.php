@@ -228,11 +228,11 @@
 </div>
 <script>
 	jQuery(document).ready(function($) {
+		$( "#request_user_removal" ).addClass( "hidden" );
 		<?php
 		if(!isset($_REQUEST['type'])){
 			?>
 			$( "#webhelp" ).addClass( "hidden" );
-			$( "#request_user_removal" ).addClass( "hidden" );
 			<?php
 		}
 		?>
