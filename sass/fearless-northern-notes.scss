@@ -241,7 +241,7 @@
 
 
 .ssk-email {
-	background-color:$nmu-green !important; 
+	background-color:$nmu-green !important;
 }
 
 .ssk-email:hover {
@@ -1007,6 +1007,7 @@
 
 .modal-body img {
 	max-width:100%; //images should not be bigger than their containter (ie fix)
+	height:auto !important;
 }
 
 .northern-content-divs-cat-input {
