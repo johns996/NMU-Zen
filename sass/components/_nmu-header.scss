@@ -247,7 +247,7 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 	background: $nmu-green-darker;
 	text-align:center;
 	letter-spacing:.06em;
-	padding:22px 0 16px 0;
+	padding:15px 0 15px 0;
 
 	.branding-one {
 		font-family:$avenir-black;
@@ -259,6 +259,12 @@ $top-navigation-height: 60px; //this height must correspond with the offset numb
 		font-family:$avenir-medium;
 		color:$nmu-gold;
 		font-size:1.2em;
+	}
+	.branding-logo {
+		img {
+			max-width:90%;
+			height:auto !important;
+		}
 	}
 	.alert-nmu {
 		width: 80%;

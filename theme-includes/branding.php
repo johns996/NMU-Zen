@@ -7,10 +7,18 @@
 //alert-info -> blue
 ?>
 
-<div class="branding-one allcaps">Northern</div>
-<div class="branding-two allcaps">Michigan University</div>
+<!-- div class="branding-one allcaps">Northern</div>
+<div class="branding-two allcaps">Michigan University</div -->
+
+<div class="branding-logo">
+	<img src="/Webb/Images/NMULogos/NMU_G_Horizontal_Transparent.png" style="width:500px; height:68px;" alt="NMU Logo" title="Northern Michigan University">
+</div>
 
 <?php
+// chunky stack
+//	<img src="/Webb/Images/NMULogos/NMU_G_Stacked_Transparent.png" style="width:500px; height:266px;" alt="NMU Logo" title="Northern Michigan University">
+
+
 //if($_SERVER['REMOTE_ADDR'] == '198.110.203.107'){
 	/*if($_SERVER['REQUEST_URI'] == '/'){
 			echo '

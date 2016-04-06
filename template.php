@@ -93,7 +93,7 @@ function zen_nmu_html_head_alter(&$head_elements) {
     if (!empty($element['#attributes'])) {
       if (array_key_exists('href', $element['#attributes'])) {
         if (strpos($element['#attributes']['href'], 'favicon.ico') > 0) {
-          $head_elements[$key]['#attributes']['href'] = base_path() .'favicon.ico?v=1';
+          $head_elements[$key]['#attributes']['href'] = base_path() .'favicon.ico?v=2';
         }
       }
     }
