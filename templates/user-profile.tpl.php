@@ -185,8 +185,9 @@
 					if(!empty($q_UserNames))
 					{
 						foreach($q_UserNames as $key => $val)
-							$userinfo = CORE_GetUserInfo($val);
-							$fullName = $userinfo['FirstName']." ".$userinfo['LastName'];
+							$strQuery = "SELECT FirstName, LastName FROM cms_admin_user WHERE Username = '".$val."'";
+							$aResults = $classSqlQuery->MySQL_Queries($strQuery);
+							$fullName = $aResults[0]['FirstName']." ".$aResults[0]['LastName'];
 							if(in_array($val, $a_CMUsers))
 								$str_cm_users .= '<li class="class_cm_user">'.$fullName." - ".$val.' - Communications & Marketing User</li>'."\n";
 							else
