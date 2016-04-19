@@ -16,6 +16,5 @@
 
 <?php
 	#### TRACKER
-	if($GLOBALS['conf']['syslog_identity'] == "DrupalArtAndDesign" || $GLOBALS['conf']['syslog_identity'] == "DrupalBusiness")
-		require_once "/htdocs/cmsphp/Admin/MiscInterfaces/Tracker.php";
+	require_once "/htdocs/cmsphp/Admin/MiscInterfaces/Tracker.php";
 ?>
