@@ -145,7 +145,7 @@ function zen_nmu_preprocess_node(&$variables, $hook) {
 		$styles = drupal_get_css($css);
 	}
 	//add a css and js file to the fearless_homepage content type
-	elseif($variables['type'] == 'fearless_homepage' || $variables['type'] == 'fearless_homepage_info'){
+	elseif($variables['type'] == 'fearless_homepage' || $variables['type'] == 'fearless_homepage_info' || $variables['type'] == 'fearless_homepage_link'){
 		drupal_add_css(drupal_get_path('theme', 'zen_nmu') . '/css/fearless-homepage.css');
 		$css = drupal_add_css();
 		$styles = drupal_get_css($css);
