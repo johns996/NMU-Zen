@@ -179,6 +179,27 @@ function zen_nmu_preprocess_field(&$variables, $hook) {
 	}
 }
 
+/*   Specific image field theming.   */
+function zen_nmu_field__field_image($variables) {
+	$output = '';
+	
+	foreach ($variables['items'] as $delta => $item){
+		$output .= '<figure class="page-img-figure">';
+			$output .= '<div class="page-fig-div">'.
+				drupal_render($item);
+				if($item['#item']['title']){
+					$img_uri = file_load($item['#item']['fid']); 
+					$img_style_uri = image_style_path('fearless_internal_image', $img_uri->uri); 
+					$img_server_path = drupal_realpath($img_style_uri); 
+					$img_info = image_get_info ($img_server_path);
+					$output .= '<figcaption class="page-img-caption"'.' style="max-width:'.$img_info['width'].'px;">'.$item['#item']['title'].'</figcaption>';
+				}
+			$output .= '</div>';
+		$output .= '</figure>';
+	}
+	
+	return $output;
+}
 
 /**
  * Override or insert variables into the comment templates.

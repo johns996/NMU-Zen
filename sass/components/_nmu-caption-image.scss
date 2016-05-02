@@ -1,0 +1,25 @@
+.page-img-figure {
+	text-align:center;
+	@media all and #{$mq-bootstrap-xs-max}{
+		padding:.5em 0;
+		margin: 0 -1em;
+	}
+	@media all and #{$mq-bootstrap-sm-min}{
+		padding:.5em;
+		float:right !important;
+	}
+}
+
+.page-fig-div {
+	display:inline-block;
+}
+
+.page-img-caption {
+	color: $nmu-gray-dark;
+	width: 100%;
+	font-size: .9em;
+	padding: 10px;
+    background-color: #FAFAFA;
+    border: 1px solid #E7E7E7;
+	text-align: center;
+}
