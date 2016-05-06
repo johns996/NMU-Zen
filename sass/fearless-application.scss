@@ -10,14 +10,30 @@
 	font-size:.7em;
 	border-bottom:none;
 }
+section .hidden{
+	&:before{
+		content: "This section is hidden";
+		font-size:.8em;
+		color:red;
+		position:absolute;
+		top:-15px;
+		right:10px;
+	}
+	padding:10px;
+	position:relative;
+	display:block !important;
+	border:1px dashed red;
+}
+
 
 section {
 	@include border-radius(10px);
 	background-color:$nmu-gray-lighter;
 	margin:10px auto;
-	width:50%;
-	padding:25px 50px;
-	h1 {
+	width:100%;
+	padding:25px 50px 60px;
+	position:relative;
+	h1 {  //section headings
 		font-size:1.5em;
 		padding-bottom:.5em;
 		border-bottom:1px solid #d4d4d4;
@@ -25,7 +41,63 @@ section {
 		font-weight:400;
 		color:$nmu-gray-darker;
 	}
+	.btn-save {  //position the button only when it is within a section
+		position:absolute;
+		right:20px;
+		bottom:20px;
+	}
+	.btn-previous {  //position the button only when it is within a section
+		position:absolute;
+		left:20px;
+		bottom:20px;
+	}
+	.note {
+		font-size:.9em;
+		color:$nmu-gray-darker;
+	}
 }
+.question {
+	margin-bottom:10px;
+	label {
+		display:block;
+		margin-bottom:10px; // make this consistent with the radio question margin
+	}
+	.radio-label,  //since labels are wrapped around radio and checkbox options, they need custom styling here
+	.checkbox-label {
+		font-weight:normal;
+		margin-left:30px;  //this is actually 10 px, the other 20 is used to account for the bootstrap negative margin
+	}
+}
+
+.question-label {
+	margin-bottom:10px;  //make a label that is outside of a question class look consistent
+}
+
+.radio-question,
+.checkbox-question {
+	font-weight:700;
+	margin-bottom:0;  //remove the default paragraph margin to account for the checkbox and radio margin
+}
+
+
+.spacer {  //uses to establish sub-sections that don't have a heading
+	margin:0 0 20px;
+	display:block;
+	&:after {
+		content: " ";
+		width:30px;
+		height:1px;
+		border-bottom:1px solid #d4d4d4;
+		display:inline-block;
+	}
+}
+
+
+
+
+
+
+/*
 .radio-label,
 .checkbox-label {
 	display:block;
@@ -41,8 +113,6 @@ section {
 	color:$nmu-gray-darker;
 }
 
-
-/*
 .profile {
 	@include column-count(2);
 	@include column-width(50%);
@@ -50,8 +120,6 @@ section {
 		@include column-break-inside('avoid');
 	}
 }
-*/
-
 .profile {
 	clear:both;
 	section {
@@ -60,3 +128,7 @@ section {
 		float:left;
 	}
 }
+
+
+*/
+
